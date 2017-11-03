@@ -10,14 +10,15 @@ namespace = REP
 character_event = {
 	id = REP.100
 	hide_window = yes
+	has_dlc = "The Republic"
 	min_age = 16
 	ai = yes
 	is_patrician = yes
 	capable_only = yes
 	prisoner = no
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Republic"
 		liege = {
 			is_merchant_republic = yes
 		}
@@ -79,8 +80,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 320
+	weight_multiplier = {
+		factor = 0.38462
 	}
 
 	immediate = {
@@ -219,12 +220,13 @@ narrative_event = {
 character_event = {
 	id = REP.103
 	hide_window = yes
+	has_dlc = "The Republic"
 	ai = yes
 	is_patrician = yes
 	has_character_flag = shamed_player_at_ball
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Republic"
 		liege = {
 			is_merchant_republic = yes
 		}
@@ -254,10 +256,6 @@ character_event = {
 				}
 			}
 		}
-	}
-
-	mean_time_to_happen = {
-		months = 80
 	}
 
 	immediate = {
@@ -359,11 +357,11 @@ narrative_event = {
 character_event = {
 	id = REP.109
 	hide_window = yes
+	has_dlc = "The Republic"
 	ai = yes
 	is_patrician = yes
 
 	trigger = {
-		has_dlc = "The Republic"
 		has_dynasty_flag = the_feuders
 		liege = {
 			is_merchant_republic = yes
@@ -497,11 +495,12 @@ character_event = {
 character_event = {
 	id = REP.150
 	hide_window = yes
+	has_dlc = "The Republic"
 	ai = yes
 	is_patrician = yes
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Republic"
 		has_dynasty_flag = the_feuders
 		liege = {
 			is_merchant_republic = yes
@@ -553,8 +552,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 520
+	weight_multiplier = {
+		factor = 0.23256
 	}
 
 	immediate = {
@@ -771,6 +770,7 @@ character_event = {
 	prisoner = no
 	has_dlc = "The Republic"
 	is_married = no
+	is_triggered_only = yes
 
 	trigger = {
 		has_dynasty_flag = the_feuders
@@ -935,10 +935,6 @@ character_event = {
 		}
 		set_character_flag = romeo
 	}
-
-	mean_time_to_happen = {
-		months = 100
-	}
 }
 
 # A Nightly Visit... (Daughter)
@@ -1039,6 +1035,7 @@ character_event = {
 	prisoner = no
 	has_dlc = "The Republic"
 	is_married = no
+	is_triggered_only = yes
 
 	trigger = {
 		has_dynasty_flag = the_feuders
@@ -1184,10 +1181,6 @@ character_event = {
 			}
 		}
 		set_character_flag = julia
-	}
-
-	mean_time_to_happen = {
-		months = 100
 	}
 }
 
@@ -1513,10 +1506,10 @@ narrative_event = {
 character_event = {
 	id = REP.167
 	hide_window = yes
+	has_dlc = "The Republic"
 	is_patrician = yes
 
 	trigger = {
-		has_dlc = "The Republic"
 		has_dynasty_flag = feud_peace_2
 		OR = {
 			AND = {
@@ -1619,14 +1612,15 @@ narrative_event = {
 character_event = {
 	id = REP.180
 	hide_window = yes
+	has_dlc = "The Republic"
 	min_age = 30
 	ai = yes
 	is_patrician = yes
 	capable_only = yes
 	prisoner = no
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Republic"
 		has_dynasty_flag = the_feuders
 		liege = {
 			is_merchant_republic = yes
@@ -1697,8 +1691,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 420
+	weight_multiplier = {
+		factor = 0.28571
 	}
 
 	immediate = {
@@ -1965,14 +1959,15 @@ narrative_event = {
 character_event = {
 	id = REP.190
 	hide_window = yes
+	has_dlc = "The Republic"
 	min_age = 16
 	ai = yes
 	is_patrician = yes
 	capable_only = yes
 	prisoner = no
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Republic"
 		in_command = no
 		NOT = {
 			trait = infirm
@@ -2031,8 +2026,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 720
+	weight_multiplier = {
+		factor = 0.16667
 	}
 
 	immediate = {
@@ -2266,14 +2261,15 @@ narrative_event = {
 character_event = {
 	id = REP.200
 	hide_window = yes
+	has_dlc = "The Republic"
 	min_age = 16
 	ai = yes
 	is_patrician = yes
 	prisoner = no
 	capable_only = yes
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Republic"
 		has_dynasty_flag = the_feuders
 		is_merchant_republic = yes
 		any_vassal = {
@@ -2286,8 +2282,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 320
+	weight_multiplier = {
+		factor = 0.38462
 	}
 
 	immediate = {
@@ -2335,11 +2331,12 @@ narrative_event = {
 character_event = {
 	id = REP.202
 	hide_window = yes
+	has_dlc = "The Republic"
 	ai = yes
 	is_patrician = yes
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Republic"
 		has_dynasty_flag = the_feuders
 		liege = {
 			is_merchant_republic = yes
@@ -2359,8 +2356,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 320
+	weight_multiplier = {
+		factor = 0.38462
 	}
 
 	immediate = {
@@ -2400,11 +2397,12 @@ narrative_event = {
 character_event = {
 	id = REP.205
 	hide_window = yes
+	has_dlc = "The Republic"
 	ai = yes
 	is_patrician = yes
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Republic"
 		has_dynasty_flag = the_feuders
 		liege = {
 			is_merchant_republic = yes
@@ -2425,8 +2423,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 420
+	weight_multiplier = {
+		factor = 0.28571
 	}
 
 	immediate = {

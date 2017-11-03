@@ -20,6 +20,7 @@ character_event = {
 	prisoner = no
 	only_men = yes
 	is_married = yes
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -48,8 +49,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -77,6 +78,7 @@ character_event = {
 	only_rulers = yes
 	only_capable = yes
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		has_character_flag = toy_army_prepare
@@ -87,10 +89,6 @@ character_event = {
 		NOT = {
 			is_inaccessible_trigger = yes
 		}
-	}
-
-	mean_time_to_happen = {
-		months = 60
 	}
 
 	immediate = {
@@ -218,6 +216,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -246,8 +245,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -350,6 +349,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -378,8 +378,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -402,6 +402,7 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	hide_from = yes
 	only_rulers = yes
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -409,10 +410,6 @@ character_event = {
 			has_focus = focus_war
 		}
 		has_character_flag = warrior_mentor_search
-	}
-
-	mean_time_to_happen = {
-		months = 60
 	}
 
 	immediate = {
@@ -568,6 +565,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -590,8 +588,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -615,6 +613,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -637,8 +636,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -674,6 +673,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		always = no
@@ -718,8 +718,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -862,6 +862,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -891,8 +892,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -1388,6 +1389,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1416,8 +1418,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -1481,6 +1483,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1506,8 +1509,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -1562,6 +1565,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1584,8 +1588,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -1609,6 +1613,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1631,8 +1636,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -1656,6 +1661,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1681,8 +1687,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -1709,6 +1715,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1737,8 +1744,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -2277,6 +2284,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -2308,8 +2316,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -2365,6 +2373,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		year = 1010
@@ -2395,8 +2404,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -2452,6 +2461,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -2484,8 +2494,8 @@ character_event = {
 		in_command = no
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -2614,6 +2624,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -2637,8 +2648,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -2662,6 +2673,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -2685,8 +2697,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -2710,6 +2722,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -2732,8 +2745,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -2760,6 +2773,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -2788,8 +2802,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -3092,6 +3106,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -3117,8 +3132,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -3143,6 +3158,7 @@ character_event = {
 	capable_only = yes
 	only_rulers = yes
 	prisoner = no
+	is_triggered_only = yes
 
 	trigger = {
 		has_character_flag = the_mirror
@@ -3150,10 +3166,6 @@ character_event = {
 			has_ambition = obj_improve_diplomacy
 			has_focus = focus_carousing
 		}
-	}
-
-	mean_time_to_happen = {
-		months = 60
 	}
 
 	immediate = {
@@ -3177,6 +3189,7 @@ character_event = {
 	capable_only = yes
 	only_rulers = yes
 	prisoner = no
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -3205,8 +3218,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -3414,6 +3427,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -3439,8 +3453,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -3464,6 +3478,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -3486,8 +3501,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -3511,6 +3526,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -3534,8 +3550,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -3562,6 +3578,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -3590,8 +3607,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -4179,6 +4196,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -4207,8 +4225,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -4264,6 +4282,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -4292,8 +4311,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -4392,6 +4411,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -4414,8 +4434,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -4439,6 +4459,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -4461,8 +4482,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -4486,6 +4507,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -4508,8 +4530,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -4537,6 +4559,7 @@ character_event = {
 	prisoner = no
 	min_age = 16
 	religion_group = ormazd_gods_group
+	is_triggered_only = yes
 
 	trigger = {
 		has_ambition = obj_lower_decadence
@@ -4557,8 +4580,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -4615,6 +4638,7 @@ character_event = {
 	prisoner = no
 	min_age = 16
 	religion_group = ormazd_gods_group
+	is_triggered_only = yes
 
 	trigger = {
 		has_ambition = obj_lower_decadence
@@ -4635,8 +4659,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -4827,6 +4851,7 @@ character_event = {
 	prisoner = no
 	min_age = 16
 	religion_group = ormazd_gods_group
+	is_triggered_only = yes
 
 	trigger = {
 		has_ambition = obj_lower_decadence
@@ -4847,8 +4872,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -4970,6 +4995,7 @@ character_event = {
 	prisoner = no
 	min_age = 16
 	religion_group = ormazd_gods_group
+	is_triggered_only = yes
 
 	trigger = {
 		has_ambition = obj_lower_decadence
@@ -4984,8 +5010,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -5010,6 +5036,7 @@ character_event = {
 	prisoner = no
 	min_age = 16
 	religion_group = ormazd_gods_group
+	is_triggered_only = yes
 
 	trigger = {
 		has_ambition = obj_lower_decadence
@@ -5027,8 +5054,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {
@@ -5053,6 +5080,7 @@ character_event = {
 	prisoner = no
 	min_age = 16
 	religion_group = ormazd_gods_group
+	is_triggered_only = yes
 
 	trigger = {
 		has_ambition = obj_lower_decadence
@@ -5067,8 +5095,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 280
+	weight_multiplier = {
+		factor = 0.43478
 	}
 
 	immediate = {

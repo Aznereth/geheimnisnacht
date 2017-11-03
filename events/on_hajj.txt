@@ -2162,7 +2162,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 60
+		months = 2
 	}
 
 	immediate = {
@@ -2214,7 +2214,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 60
+		months = 2
 	}
 
 	immediate = {
@@ -2248,7 +2248,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 60
+		months = 2
 	}
 
 	immediate = {
@@ -2317,6 +2317,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	religion_group = ormazd_gods_group
+	is_triggered_only = yes
 
 	trigger = {
 		job_spiritual = {
@@ -2360,14 +2361,14 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 240
+	weight_multiplier = {
+		factor = 0.50000
 		modifier = {
-			factor = 0.8
+			factor = 1.25
 			piety = 100
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.25
 			trait = faqih
 		}
 	}
@@ -2409,6 +2410,7 @@ character_event = {
 	religion_group = ormazd_gods_group
 	war = no
 	has_character_flag = promise_hajj
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -2430,10 +2432,6 @@ character_event = {
 			trait = on_hajj
 			has_character_flag = preparing_hajj
 		}
-	}
-
-	mean_time_to_happen = {
-		months = 60
 	}
 
 	immediate = {
@@ -2921,7 +2919,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 60
+		months = 2
 	}
 
 	immediate = {
@@ -2955,7 +2953,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 60
+		months = 2
 	}
 
 	immediate = {
@@ -2989,7 +2987,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 60
+		months = 2
 	}
 
 	immediate = {

@@ -1107,6 +1107,7 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	religion = sigmarite
+	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
@@ -1185,70 +1186,70 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		years = 100
+	weight_multiplier = {
+		factor = 0.10000
 		modifier = {
-			factor = 0.25
+			factor = 4.00
 			trait = zealous
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.00
 			trait = celibate
 		}
 		modifier = {
-			factor = 1.75
+			factor = 0.57
 			is_female = yes
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.00
 			trait = homosexual
 		}
 		modifier = {
-			factor = 0.7
+			factor = 1.43
 			trait = content
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.33
 			trait = chaste
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.33
 			NOT = {
 				age = 25
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.67
 			trait = slothful
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.50
 			trait = lustful
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.50
 			trait = cynical
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.50
 			trait = hedonist
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.50
 			trait = ambitious
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.50
 			any_heir_title = {
 				always = yes
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.50
 			is_primary_heir = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 0.50
 			any_spouse = {
 				reverse_opinion = {
 					who = ROOT
@@ -1257,13 +1258,13 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.0
+			factor = 0.33
 			NOT = {
 				culture_group = imperial_group
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.50
 			culture_group = kislevite_group
 		}
 	}
@@ -1674,8 +1675,10 @@ letter_event = {
 character_event = {
 	id = swhunters.9
 	hide_window = yes
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	religion_group = old_world_group
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1723,11 +1726,6 @@ character_event = {
 				trait = mutation_massive
 			}
 		}
-		has_dlc = "Sons of Abraham"
-	}
-
-	mean_time_to_happen = {
-		months = 120
 	}
 
 	immediate = {
@@ -1889,8 +1887,10 @@ letter_event = {
 character_event = {
 	id = swhunters.10
 	hide_window = yes
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	religion_group = old_world_group
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1915,7 +1915,6 @@ character_event = {
 				wealth = 300
 			}
 		}
-		has_dlc = "Sons of Abraham"
 		NOT = {
 			has_character_modifier = expelled_k_witch_hunters_order
 		}
@@ -1924,10 +1923,6 @@ character_event = {
 				has_character_modifier = expelled_k_witch_hunters_order
 			}
 		}
-	}
-
-	mean_time_to_happen = {
-		months = 60
 	}
 
 	immediate = {
@@ -2049,8 +2044,10 @@ province_event = {
 character_event = {
 	id = swhunters.15
 	hide_window = yes
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	religion_group = old_world_group
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -2078,7 +2075,6 @@ character_event = {
 			has_empty_holding = yes
 			region = world_old_world
 		}
-		has_dlc = "Sons of Abraham"
 		NOT = {
 			has_character_modifier = expelled_k_witch_hunters_order
 		}
@@ -2089,10 +2085,10 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 240
+	weight_multiplier = {
+		factor = 0.50000
 		modifier = {
-			factor = 0.5
+			factor = 2.00
 			k_witch_hunters_order = {
 				holder_scope = {
 					NOT = {
@@ -2102,7 +2098,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.00
 			k_witch_hunters_order = {
 				holder_scope = {
 					NOT = {
@@ -2112,7 +2108,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.50
 			k_witch_hunters_order = {
 				holder_scope = {
 					realm_size = 5

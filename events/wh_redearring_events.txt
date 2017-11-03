@@ -1003,6 +1003,7 @@ character_event = {
 	only_rulers = yes
 	capable_only = yes
 	prisoner = no
+	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -1014,10 +1015,10 @@ character_event = {
 		trait = undernourished
 	}
 
-	mean_time_to_happen = {
-		months = 120
+	weight_multiplier = {
+		factor = 1
 		modifier = {
-			factor = 0.5
+			factor = 2.00
 			trait = gluttonous
 		}
 	}
@@ -1063,6 +1064,7 @@ character_event = {
 # Depressed+Fair
 character_event = {
 	id = sinsa.1182
+	min_age = 20
 	desc = EVTDESCsinsa11182
 	picture = GFX_evt_bad_news
 	only_rulers = yes
@@ -1076,7 +1078,6 @@ character_event = {
 			is_female = yes
 		}
 		is_pregnant = no
-		age = 20
 		NOT = {
 			trait = creature_orc
 		}

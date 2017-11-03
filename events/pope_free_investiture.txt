@@ -7,6 +7,7 @@
 # The Pope singles out a Kingdom with Free Investiture (unless he has already targetted one)
 character_event = {
 	id = 67000
+	religion = sigmarite
 	desc = EVTDESC67000
 	picture = GFX_evt_icon
 	border = GFX_event_normal_frame_religion
@@ -17,9 +18,9 @@ character_event = {
 	prisoner = no
 	only_capable = yes
 	war = no
+	is_triggered_only = yes
 
 	trigger = {
-		religion = sigmarite
 		controls_religion = yes
 		religion_authority = 0.35
 		NOT = {
@@ -44,10 +45,10 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 50
+	weight_multiplier = {
+		factor = 2
 		modifier = {
-			factor = 0.25
+			factor = 4.00
 			trait = zealous
 		}
 	}
@@ -400,6 +401,7 @@ character_event = {
 # The Pope sends a delegate to a Bishop whose top liege has refused to change investiture Law
 character_event = {
 	id = 67010
+	religion = sigmarite
 	desc = EVTDESC67010
 	picture = GFX_evt_bishop
 	border = GFX_event_normal_frame_religion
@@ -411,9 +413,9 @@ character_event = {
 	only_capable = yes
 	war = no
 	has_character_flag = pope_currently_demanding
+	is_triggered_only = yes
 
 	trigger = {
-		religion = sigmarite
 		controls_religion = yes
 		wealth = 20
 		any_independent_ruler = {
@@ -436,10 +438,10 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 50
+	weight_multiplier = {
+		factor = 2
 		modifier = {
-			factor = 0.25
+			factor = 4.00
 			trait = zealous
 		}
 	}
@@ -595,6 +597,7 @@ character_event = {
 # The Pope contacts a powerful (preferably rebellious) vassal of a liege who has refused to change investiture Law
 character_event = {
 	id = 67020
+	religion = sigmarite
 	desc = EVTDESC67020
 	picture = GFX_evt_pope
 	border = GFX_event_normal_frame_religion
@@ -606,9 +609,9 @@ character_event = {
 	only_capable = yes
 	war = no
 	has_character_flag = pope_currently_demanding
+	is_triggered_only = yes
 
 	trigger = {
-		religion = sigmarite
 		controls_religion = yes
 		any_independent_ruler = {
 			religion = ROOT
@@ -633,10 +636,10 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 50
+	weight_multiplier = {
+		factor = 2
 		modifier = {
-			factor = 0.5
+			factor = 2.00
 			trait = ambitious
 		}
 	}

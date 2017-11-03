@@ -352,11 +352,11 @@ character_event = {
 	desc = EVTDESC37005
 	picture = GFX_evt_son_asking_father
 	is_triggered_only = yes
+	prisoner = no
 
 	trigger = {
 		independent = no
 		is_ruler = no
-		prisoner = no
 		NOT = {
 			trait = incapable
 		}
@@ -532,11 +532,11 @@ character_event = {
 	id = 37010
 	hide_window = yes
 	is_triggered_only = yes
+	prisoner = no
 
 	trigger = {
 		independent = no
 		is_ruler = no
-		prisoner = no
 		NOT = {
 			trait = incapable
 		}
@@ -657,11 +657,11 @@ character_event = {
 	id = 37015
 	hide_window = yes
 	is_triggered_only = yes
+	prisoner = no
 
 	trigger = {
 		independent = no
 		is_ruler = no
-		prisoner = no
 		NOT = {
 			trait = incapable
 		}
@@ -1042,18 +1042,12 @@ character_event = {
 character_event = {
 	id = 37049
 	hide_window = yes
+	is_triggered_only = yes
 	ai = no
 	capable_only = yes
 	prisoner = no
 	religion_group = old_world_group
 	war = no
-
-	trigger = {
-	}
-
-	mean_time_to_happen = {
-		months = 24
-	}
 
 	immediate = {
 		log = "work event id = 37049 for [Root.GetBestName]"
@@ -1374,6 +1368,7 @@ character_event = {
 	prisoner = no
 	has_character_flag = flag_denied_marriage
 	lacks_dlc = "Zeus"
+	is_triggered_only = yes
 
 	trigger = {
 		is_ruler = no
@@ -1388,22 +1383,22 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 120
+	weight_multiplier = {
+		factor = 1
 		modifier = {
-			factor = 0.25
+			factor = 4.00
 			trait = lustful
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.00
 			trait = ambitious
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.50
 			trait = slothful
 		}
 		modifier = {
-			factor = 5.0
+			factor = 0.20
 			trait = content
 		}
 	}

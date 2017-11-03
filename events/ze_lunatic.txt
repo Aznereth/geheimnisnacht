@@ -12,6 +12,7 @@ namespace = ZE
 # Horse Chancellor
 character_event = {
 	id = ZE.15000
+	has_dlc = "Zeus"
 	desc = EVTDESC6317
 	picture = GFX_evt_courier
 	border = GFX_event_normal_frame_religion
@@ -19,9 +20,9 @@ character_event = {
 	prisoner = no
 	only_capable = yes
 	only_playable = yes
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Zeus"
 		trait = lunatic
 		any_voter = {
 			has_job_title = job_chancellor
@@ -37,8 +38,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 420
+	weight_multiplier = {
+		factor = 0.28571
 	}
 
 	immediate = {

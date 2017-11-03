@@ -12,11 +12,12 @@
 # The Clergy demands a stop to commerce in all church squares
 province_event = {
 	id = 77000
+	religion_group = old_world_group
 	desc = EVTDESC77000
 	picture = GFX_evt_market
+	is_triggered_only = yes
 
 	trigger = {
-		religion_group = old_world_group
 		owner = {
 			religion_group = old_world_group
 		}
@@ -31,8 +32,8 @@ province_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 36000
+	weight_multiplier = {
+		factor = 0.00333
 	}
 
 	immediate = {
@@ -88,11 +89,12 @@ province_event = {
 # Burghers demands that city laws is set higher than canonical law
 province_event = {
 	id = 77001
+	religion_group = old_world_group
 	desc = EVTDESC77001
 	picture = GFX_evt_cathedral
+	is_triggered_only = yes
 
 	trigger = {
-		religion_group = old_world_group
 		owner = {
 			religion_group = old_world_group
 		}
@@ -104,8 +106,8 @@ province_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 36000
+	weight_multiplier = {
+		factor = 0.00333
 	}
 
 	immediate = {
@@ -154,11 +156,12 @@ province_event = {
 # The Nobility demands Prima Noctae rights
 province_event = {
 	id = 77002
+	religion_group = old_world_group
 	desc = EVTDESC77002
 	picture = GFX_evt_peasants
+	is_triggered_only = yes
 
 	trigger = {
-		religion_group = old_world_group
 		NOT = {
 			has_province_modifier = prima_noctae
 		}
@@ -195,8 +198,8 @@ province_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 36000
+	weight_multiplier = {
+		factor = 0.00333
 	}
 
 	option = {
@@ -231,6 +234,7 @@ province_event = {
 	id = 77003
 	desc = EVTDESC77003
 	picture = GFX_evt_market
+	is_triggered_only = yes
 
 	trigger = {
 		owner = {
@@ -249,8 +253,8 @@ province_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 36000
+	weight_multiplier = {
+		factor = 0.00333
 	}
 
 	immediate = {
@@ -293,11 +297,12 @@ province_event = {
 # The Nobles demands hunting rights on church lands
 province_event = {
 	id = 77004
+	religion_group = old_world_group
 	desc = EVTDESC77004
 	picture = GFX_evt_hunt
+	is_triggered_only = yes
 
 	trigger = {
-		religion_group = old_world_group
 		owner = {
 			religion_group = old_world_group
 		}
@@ -317,8 +322,8 @@ province_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 36000
+	weight_multiplier = {
+		factor = 0.00333
 	}
 
 	immediate = {
@@ -385,11 +390,12 @@ province_event = {
 # The Clergy demands right to collect extra tithe on free peasants
 province_event = {
 	id = 77005
+	religion_group = old_world_group
 	desc = EVTDESC77005
 	picture = GFX_evt_stone_church
+	is_triggered_only = yes
 
 	trigger = {
-		religion_group = old_world_group
 		owner = {
 			religion_group = old_world_group
 		}
@@ -401,8 +407,8 @@ province_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 36000
+	weight_multiplier = {
+		factor = 0.00333
 	}
 
 	immediate = {
@@ -437,6 +443,7 @@ province_event = {
 	id = 77006
 	desc = EVTDESC77006
 	picture = GFX_evt_market
+	is_triggered_only = yes
 
 	trigger = {
 		any_province_lord = {
@@ -454,8 +461,8 @@ province_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 36000
+	weight_multiplier = {
+		factor = 0.00333
 	}
 
 	immediate = {
@@ -504,12 +511,13 @@ province_event = {
 # Rights to spoils from shipwrecks
 province_event = {
 	id = 77007
+	religion_group = old_world_group
 	desc = EVTDESC77007
 	picture = GFX_evt_merchant_ship_at_sea_republic
+	is_triggered_only = yes
 
 	trigger = {
 		port = yes
-		religion_group = old_world_group
 		owner = {
 			religion_group = old_world_group
 		}
@@ -524,8 +532,8 @@ province_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 36000
+	weight_multiplier = {
+		factor = 0.00333
 	}
 
 	immediate = {

@@ -10,14 +10,15 @@ namespace = HL
 character_event = {
 	id = HL.100
 	hide_window = yes # Only fires for unplayable landless characters
+	has_dlc = "Horse Lords"
 	min_age = 16
 	max_age = 50
 	only_men = yes
 	capable_only = yes
 	prisoner = no
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Horse Lords"
 		NOT = {
 			has_game_rule = {
 				name = adventurers
@@ -124,54 +125,54 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		years = 30
+	weight_multiplier = {
+		factor = 0.33333
 		modifier = {
-			factor = 0.5
+			factor = 2.00
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.2
+			factor = 5.00
 			has_character_flag = flag_denied_title
 		}
 		modifier = {
-			factor = 0.2
+			factor = 5.00
 			has_character_flag = demon_child_non_pagan
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.33
 			diplomacy = 12
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.33
 			martial = 12
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.33
 			combat_rating = 3
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.33
 			trait = brave
 		}
 		modifier = {
-			factor = 0.85
+			factor = 1.18
 			trait = proud
 		}
 		modifier = {
-			factor = 3.0
+			factor = 0.33
 			trait = slothful
 		}
 		modifier = {
-			factor = 3.0
+			factor = 0.33
 			trait = humble
 		}
 		modifier = {
-			factor = 3.0
+			factor = 0.33
 			trait = kind
 		}
 		modifier = {
-			factor = 3.0
+			factor = 0.33
 			any_liege = {
 				ai = no
 			}
@@ -2119,13 +2120,13 @@ character_event = {
 	id = HL.130
 	hide_window = yes
 	is_triggered_only = yes
+	prisoner = no
 
 	trigger = {
 		has_game_started = yes
 		is_alive = yes
 		is_dying = no
 		is_nomadic = yes
-		prisoner = no
 		NOT = {
 			trait = incapable
 		}
@@ -2318,9 +2319,6 @@ character_event = {
 	has_character_flag = raiding_adventurer
 	war = no
 
-	trigger = {
-	}
-
 	immediate = {
 		log = "work event id = HL.190 for [Root.GetBestName]"
 		log = "[Root.GetTitledFirstName] got imprisoned while being a raiding adventurer."
@@ -2337,9 +2335,6 @@ character_event = {
 	hide_window = yes
 	has_character_flag = raiding_adventurer
 	war = no
-
-	trigger = {
-	}
 
 	immediate = {
 		log = "work event id = HL.191 for [Root.GetBestName]"

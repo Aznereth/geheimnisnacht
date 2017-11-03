@@ -14,9 +14,9 @@ character_event = {
 	picture = GFX_evt_viking_battle_oldgods
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		OR = {
 			religion = ulrican
 			culture_group = norscan_group
@@ -122,9 +122,9 @@ character_event = {
 	picture = GFX_evt_viking_battle_oldgods
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = berserker
 		NOT = {
 			trait = maimed
@@ -322,9 +322,9 @@ character_event = {
 	picture = GFX_evt_viking_battle_oldgods
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = berserker
 		NOT = {
 			trait = wounded
@@ -497,9 +497,9 @@ character_event = {
 	picture = GFX_evt_viking_battle_oldgods
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = berserker
 	}
 	weight_multiplier = {
@@ -742,9 +742,9 @@ character_event = {
 	picture = GFX_evt_viking_battle_oldgods
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = berserker
 	}
 	weight_multiplier = {
@@ -891,10 +891,10 @@ character_event = {
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 	min_age = 50
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = berserker
 		immortal = no
 	}
@@ -987,14 +987,15 @@ character_event = {
 	id = TOG.3009
 	hide_window = yes
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 	ai = yes
 	min_age = 16
 	only_men = yes
 	capable_only = yes
 	prisoner = no
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		host = {
 			character = liege
 			prisoner = no
@@ -1016,8 +1017,8 @@ character_event = {
 		is_pretender = no
 	}
 
-	mean_time_to_happen = {
-		months = 2080
+	weight_multiplier = {
+		factor = 0.05780
 	}
 
 	immediate = {
@@ -1038,6 +1039,8 @@ character_event = {
 # V�lva Appears
 character_event = {
 	id = TOG.3200
+	religion = norscan_gods
+	has_dlc = "The Old Gods"
 	desc = EVTDESC_TOG_3200
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_religion
@@ -1046,11 +1049,10 @@ character_event = {
 	capable_only = yes
 	only_playable = yes
 	prisoner = no
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		in_command = no
-		religion = norscan_gods
 		NOT = {
 			any_courtier = {
 				has_minor_title = title_volva
@@ -1058,8 +1060,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 2200
+	weight_multiplier = {
+		factor = 0.05464
 	}
 
 	immediate = {
@@ -1125,6 +1127,8 @@ character_event = {
 # Young V�lva Appears
 character_event = {
 	id = TOG.3201
+	religion = norscan_gods
+	has_dlc = "The Old Gods"
 	desc = EVTDESC_TOG_3201
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_religion
@@ -1133,11 +1137,10 @@ character_event = {
 	capable_only = yes
 	only_playable = yes
 	prisoner = no
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		in_command = no
-		religion = norscan_gods
 		NOT = {
 			any_courtier = {
 				has_minor_title = title_volva
@@ -1145,8 +1148,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 2200
+	weight_multiplier = {
+		factor = 0.05464
 	}
 
 	immediate = {
@@ -1213,6 +1216,8 @@ character_event = {
 # Old V�lva Appears
 character_event = {
 	id = TOG.3202
+	religion = norscan_gods
+	has_dlc = "The Old Gods"
 	desc = EVTDESC_TOG_3202
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_religion
@@ -1221,11 +1226,10 @@ character_event = {
 	capable_only = yes
 	only_playable = yes
 	prisoner = no
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		in_command = no
-		religion = norscan_gods
 		NOT = {
 			any_courtier = {
 				has_minor_title = title_volva
@@ -1233,8 +1237,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 2200
+	weight_multiplier = {
+		factor = 0.05464
 	}
 
 	immediate = {
@@ -1302,13 +1306,14 @@ character_event = {
 character_event = {
 	id = TOG.3203
 	hide_window = yes
+	has_dlc = "The Old Gods"
 	only_women = yes
 	min_age = 16
 	prisoner = no
 	only_capable = yes
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		# NOT = {
 		# has_game_rule = {
 		# name = supernatural_events
@@ -1333,8 +1338,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 550
+	weight_multiplier = {
+		factor = 0.22222
 	}
 
 	immediate = {
@@ -1409,9 +1414,9 @@ character_event = {
 	id = TOG.3206
 	hide_window = yes
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		mother = {
 			has_character_flag = pregnant_with_demon
 		}
@@ -1441,6 +1446,7 @@ character_event = {
 	max_age = 16
 	ai = yes
 	has_character_flag = demon_child
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1455,8 +1461,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 220
+	weight_multiplier = {
+		factor = 0.55556
 	}
 
 	immediate = {
@@ -1498,6 +1504,7 @@ character_event = {
 	max_age = 16
 	ai = yes
 	has_character_flag = demon_child
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1512,8 +1519,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 220
+	weight_multiplier = {
+		factor = 0.55556
 	}
 
 	immediate = {
@@ -1555,6 +1562,7 @@ character_event = {
 	max_age = 16
 	ai = yes
 	has_character_flag = demon_child
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1569,8 +1577,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 220
+	weight_multiplier = {
+		factor = 0.55556
 	}
 
 	immediate = {
@@ -1612,6 +1620,7 @@ character_event = {
 	max_age = 16
 	ai = yes
 	has_character_flag = demon_child
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1654,8 +1663,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 320
+	weight_multiplier = {
+		factor = 0.38462
 	}
 
 	immediate = {
@@ -1746,6 +1755,7 @@ character_event = {
 	max_age = 16
 	ai = yes
 	has_character_flag = demon_child
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1788,8 +1798,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 320
+	weight_multiplier = {
+		factor = 0.38462
 	}
 
 	immediate = {
@@ -1880,6 +1890,7 @@ character_event = {
 	max_age = 16
 	ai = yes
 	has_character_flag = demon_child
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1922,8 +1933,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 320
+	weight_multiplier = {
+		factor = 0.38462
 	}
 
 	immediate = {
@@ -2013,6 +2024,7 @@ character_event = {
 	min_age = 4
 	max_age = 16
 	ai = yes
+	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -2036,8 +2048,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 680
+	weight_multiplier = {
+		factor = 0.17857
 	}
 
 	immediate = {
@@ -2434,9 +2446,9 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	ai = no
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		NOT = {
 			has_artifact = loot_axe
 		}
@@ -2468,9 +2480,9 @@ character_event = {
 	border = GFX_event_normal_frame_economy
 	ai = no
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		NOT = {
 			has_artifact = strange_chest
 			has_character_flag = found_chest
@@ -2499,9 +2511,9 @@ character_event = {
 	border = GFX_event_normal_frame_economy
 	ai = no
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_artifact = strange_chest
 		has_character_flag = found_chest
 	}
@@ -2550,9 +2562,9 @@ character_event = {
 	border = GFX_event_normal_frame_economy
 	ai = no
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_artifact = strange_chest
 		NOT = {
 			has_character_flag = found_chest
@@ -2690,20 +2702,20 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	hide_from = yes
 	is_triggered_only = yes
+	religion = norscan_gods
+	has_dlc = "The Old Gods"
 	min_age = 16
 	capable_only = yes
 	prisoner = no
 	religion = norscan_gods
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		NOR = {
 			trait = viking
 			trait = ravager
 			trait = seaking
 			trait = sea_queen
 		}
-		religion = norscan_gods
 	}
 
 	immediate = {
@@ -2729,20 +2741,20 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	hide_from = yes
 	is_triggered_only = yes
+	religion = norscan_gods
+	has_dlc = "The Old Gods"
 	min_age = 16
 	capable_only = yes
 	prisoner = no
 	religion = norscan_gods
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = viking
 		NOR = {
 			trait = ravager
 			trait = seaking
 			trait = sea_queen
 		}
-		religion = norscan_gods
 		check_variable = {
 			which = viking_raids value = 50
 		}
@@ -2767,19 +2779,19 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	hide_from = yes
 	is_triggered_only = yes
+	religion = norscan_gods
+	has_dlc = "The Old Gods"
 	min_age = 16
 	capable_only = yes
 	prisoner = no
 	religion = norscan_gods
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = ravager
 		NOR = {
 			trait = seaking
 			trait = sea_queen
 		}
-		religion = norscan_gods
 		check_variable = {
 			which = viking_raids value = 100
 		}
@@ -2811,18 +2823,18 @@ character_event = {
 	id = TOG.3323
 	hide_window = yes
 	is_triggered_only = yes
+	religion = norscan_gods
+	has_dlc = "The Old Gods"
 	min_age = 16
 	capable_only = yes
 	prisoner = no
 	religion = norscan_gods
 
 	trigger = {
-		has_dlc = "The Old Gods"
 		OR = {
 			trait = viking
 			trait = ravager
 		}
-		religion = norscan_gods
 	}
 
 	immediate = {

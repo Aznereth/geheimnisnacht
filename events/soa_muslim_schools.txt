@@ -56,14 +56,15 @@ character_event = {
 character_event = {
 	id = SoA.602
 	hide_window = yes
+	has_dlc = "Sons of Abraham"
 	min_age = 16
 	only_capable = yes
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		NOR = {
 			liege = {
 				war = yes
@@ -92,8 +93,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 640
+	weight_multiplier = {
+		factor = 0.18868
 	}
 }
 
@@ -219,14 +220,15 @@ letter_event = {
 character_event = {
 	id = SoA.610
 	hide_window = yes
+	has_dlc = "Sons of Abraham"
 	min_age = 16
 	only_capable = yes
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		NOR = {
 			liege = {
 				war = yes
@@ -255,8 +257,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 640
+	weight_multiplier = {
+		factor = 0.18868
 	}
 }
 
@@ -381,6 +383,7 @@ letter_event = {
 # Cynical Ash'ari considers Mu'tazila
 character_event = {
 	id = SoA.620
+	has_dlc = "Sons of Abraham"
 	desc = EVTDESC_SoA_620
 	picture = GFX_evt_kaaba
 	border = GFX_event_normal_frame_religion
@@ -389,15 +392,15 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		trait = ashari
 		trait = cynical
 	}
 
-	mean_time_to_happen = {
-		months = 140
+	weight_multiplier = {
+		factor = 0.90909
 	}
 
 	immediate = {
@@ -438,6 +441,7 @@ character_event = {
 # Zealous Mu'tazila considers Ash'ari
 character_event = {
 	id = SoA.621
+	has_dlc = "Sons of Abraham"
 	desc = EVTDESC_SoA_621
 	picture = GFX_evt_kaaba
 	border = GFX_event_normal_frame_religion
@@ -446,15 +450,15 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		trait = mutazilite
 		trait = zealous
 	}
 
-	mean_time_to_happen = {
-		months = 140
+	weight_multiplier = {
+		factor = 0.90909
 	}
 
 	immediate = {

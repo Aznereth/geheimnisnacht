@@ -1087,6 +1087,7 @@ narrative_event = {
 	desc = EVTDESC_DR_misc_mists_of_albion
 	major = yes
 	only_playable = yes
+	is_triggered_only = yes
 
 	trigger = {
 		has_global_flag = mists_of_albion
@@ -1099,29 +1100,29 @@ narrative_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		years = 100
+	weight_multiplier = {
+		factor = 0.10000
 		modifier = {
-			factor = 0.001
+			factor = 1000.00
 			# Be'lakor arrives at Albion, mist barrier starts weakening
 			NOT = {
 				year = 2305
 			}
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.25
 			has_global_flag = doom_low
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.00
 			has_global_flag = doom_medium
 		}
 		modifier = {
-			factor = 0.3
+			factor = 3.33
 			has_global_flag = doom_high
 		}
 		modifier = {
-			factor = 0.1
+			factor = 10.00
 			has_global_flag = doom_very_high
 		}
 	}
@@ -1145,9 +1146,10 @@ narrative_event = {
 character_event = {
 	id = DR_misc.1030
 	hide_window = yes
+	ai = yes # Players instead use a similar decision, create_elective_league
+	is_triggered_only = yes
 
 	trigger = {
-		ai = yes # Players instead use a similar decision, create_elective_league
 		OR = {
 			real_tier = KING
 			real_tier = DUKE
@@ -1156,10 +1158,6 @@ character_event = {
 		is_feudal = yes
 		league_potential_trigger = yes
 		religion_allows_feudal_elective_trigger = yes
-	}
-
-	mean_time_to_happen = {
-		years = 1
 	}
 
 	immediate = {
@@ -1384,20 +1382,17 @@ character_event = {
 character_event = {
 	id = DR_misc.1040
 	hide_window = yes
+	only_independent = yes
+	ai = yes # Players instead use a targeted decision, vassalize_new_elector
+	is_triggered_only = yes
 
 	trigger = {
-		ai = yes # Players instead use a targeted decision, vassalize_new_elector
 		higher_real_tier_than = COUNT
-		independent = yes
 		in_revolt = no
 		primary_title = {
 			has_law = succ_feudal_elective
 			is_titular = yes
 		}
-	}
-
-	mean_time_to_happen = {
-		years = 1
 	}
 
 	immediate = {

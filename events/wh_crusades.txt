@@ -3,6 +3,7 @@ namespace = crusades
 # THE START OF THE GRAIL CRUSADES - 2040
 narrative_event = {
 	id = crusades.1
+	religion = grail
 	title = EVTNAME39660
 	desc = EVTDESCcrusades.1
 	picture = GFX_evt_jerusalem
@@ -12,18 +13,14 @@ narrative_event = {
 	hide_new = yes
 	only_playable = yes
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
 			has_global_flag = grail_crusades_unlocked
 		}
-		religion = grail
 		controls_religion = yes
 		year = 2040
-	}
-
-	mean_time_to_happen = {
-		months = 120
 	}
 
 	immediate = {
@@ -51,6 +48,7 @@ narrative_event = {
 # THE START OF THE GRAIL CRUSADES - ESTALIA FAILING
 narrative_event = {
 	id = crusades.2
+	religion = grail
 	title = EVTNAME39660
 	desc = EVTDESCcrusades.2
 	picture = GFX_evt_hagia_sofia
@@ -65,7 +63,6 @@ narrative_event = {
 		NOT = {
 			has_global_flag = grail_crusades_unlocked
 		}
-		religion = grail
 		controls_religion = yes
 		OR = {
 			e_estalia = {
@@ -182,6 +179,7 @@ narrative_event = {
 # THE START OF THE GRAIL CRUSADES - TILEA FAILING
 narrative_event = {
 	id = crusades.3
+	religion = grail
 	title = EVTNAME39660
 	desc = EVTDESCcrusades.3
 	picture = GFX_evt_hagia_sofia
@@ -196,7 +194,6 @@ narrative_event = {
 		NOT = {
 			has_global_flag = grail_crusades_unlocked
 		}
-		religion = grail
 		controls_religion = yes
 		OR = {
 			e_tilea = {
@@ -288,6 +285,7 @@ narrative_event = {
 # THE START OF THE GRAIL CRUSADES - BRETONNIA
 narrative_event = {
 	id = crusades.4
+	religion = grail
 	title = EVTNAME39660
 	desc = EVTDESCcrusades.4
 	picture = GFX_evt_crusaders
@@ -303,7 +301,6 @@ narrative_event = {
 		NOT = {
 			has_global_flag = grail_crusades_unlocked
 		}
-		religion = grail
 		controls_religion = yes
 		OR = {
 			844 = {
@@ -455,6 +452,7 @@ narrative_event = {
 # THE START OF THE GRAIL CRUSADES - EMPIRE
 narrative_event = {
 	id = crusades.5
+	religion = grail
 	title = EVTNAME39660
 	desc = EVTDESCcrusades.5
 	picture = GFX_evt_crusaders
@@ -470,7 +468,6 @@ narrative_event = {
 		NOT = {
 			has_global_flag = grail_crusades_unlocked
 		}
-		religion = grail
 		controls_religion = yes
 		OR = {
 			k_reikland = {

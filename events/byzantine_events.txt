@@ -10,16 +10,17 @@ namespace = LoR
 # Introduce Eunuch?
 character_event = {
 	id = LoR.800
+	culture = myken
+	has_dlc = "Legacy of Rome"
 	desc = EVTDESCLoR.800
 	picture = GFX_evt_emissary_byzantine
 	capable_only = yes
 	prisoner = no
 	only_playable = yes
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Legacy of Rome"
-		culture = myken
 		higher_tier_than = KING
 		is_inaccessible_trigger = no
 		NOR = {
@@ -29,8 +30,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 300
+	weight_multiplier = {
+		factor = 0.40000
 	}
 
 	immediate = {
@@ -439,16 +440,18 @@ character_event = {
 character_event = {
 	id = LoR.844
 	hide_window = yes
+	is_married = no
+	min_age = 16
+	only_women = yes
+	has_dlc = "Legacy of Rome"
 	only_playable = yes
 	only_capable = yes
 	min_age = 16
 	prisoner = no
 	ai = no
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Legacy of Rome"
-		is_female = yes
-		age = 16
 		father = {
 			ai = no
 			culture = myken
@@ -461,7 +464,6 @@ character_event = {
 			}
 			prisoner = no
 		}
-		is_married = no
 		NOR = {
 			trait = celibate
 			trait = chaste
@@ -469,8 +471,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 400
+	weight_multiplier = {
+		factor = 0.30303
 	}
 
 	immediate = {
@@ -580,15 +582,16 @@ character_event = {
 character_event = {
 	id = LoR.850
 	hide_window = yes
+	culture = myken
+	has_dlc = "Legacy of Rome"
 	capable_only = yes
 	only_rulers = yes
 	min_age = 16
 	prisoner = no
 	ai = yes
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Legacy of Rome"
-		culture = myken
 		lower_tier_than = COUNT
 		liege = {
 			ai = no
@@ -600,8 +603,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 1480
+	weight_multiplier = {
+		factor = 0.08130
 	}
 
 	immediate = {
@@ -683,6 +686,8 @@ character_event = {
 # Explosion
 narrative_event = {
 	id = LoR.860
+	culture = myken
+	has_dlc = "Legacy of Rome"
 	title = EVTNAMELoR.860
 	desc = EVTDESCLoR.860
 	picture = GFX_evt_throne_room_byzantine
@@ -692,10 +697,9 @@ narrative_event = {
 	ai = no
 	min_age = 16
 	religion_group = old_world_group
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Legacy of Rome"
-		culture = myken
 		higher_tier_than = KING
 		is_inaccessible_trigger = no
 		in_command = no
@@ -707,8 +711,8 @@ narrative_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 780
+	weight_multiplier = {
+		factor = 0.15385
 	}
 
 	immediate = {
@@ -1384,6 +1388,7 @@ narrative_event = {
 # Merchant Arrives
 character_event = {
 	id = LoR.885
+	has_dlc = "Legacy of Rome"
 	desc = EVTDESCLoR.885
 	picture = GFX_evt_carriage
 	ai = no
@@ -1391,9 +1396,9 @@ character_event = {
 	only_playable = yes
 	prisoner = no
 	min_age = 16
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Legacy of Rome"
 		in_command = no
 		is_inaccessible_trigger = no
 		NOR = {
@@ -1402,8 +1407,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 780
+	weight_multiplier = {
+		factor = 0.15385
 	}
 
 	immediate = {
@@ -1820,6 +1825,7 @@ character_event = {
 	prisoner = no
 	culture = myken
 	only_men = yes
+	is_triggered_only = yes
 
 	trigger = {
 		primary_title = {
@@ -1870,8 +1876,8 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 1800
+	weight_multiplier = {
+		factor = 0.06667
 	}
 
 	immediate = {

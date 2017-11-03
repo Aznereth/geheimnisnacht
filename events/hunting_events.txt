@@ -44,7 +44,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 200
+		months = 6
 		modifier = {
 			factor = 0.33
 			NOT = {
@@ -238,7 +238,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 200
+		months = 6
 		modifier = {
 			factor = 0.33
 			NOT = {
@@ -506,7 +506,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 100
+		months = 3
 		modifier = {
 			factor = 0.33
 			NOT = {
@@ -694,7 +694,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 100
+		months = 3
 		modifier = {
 			factor = 0.33
 			NOT = {
@@ -861,7 +861,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 100
+		months = 3
 		modifier = {
 			factor = 0.33
 			NOT = {
@@ -1024,7 +1024,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 200
+		months = 6
 		modifier = {
 			factor = 0.33
 			NOT = {
@@ -1146,7 +1146,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 100
+		months = 3
 		modifier = {
 			factor = 0.33
 			NOT = {
@@ -1228,7 +1228,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 100
+		months = 3
 		modifier = {
 			factor = 0.33
 			NOT = {
@@ -1310,7 +1310,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 100
+		months = 3
 		modifier = {
 			factor = 0.33
 			NOT = {
@@ -1383,6 +1383,7 @@ character_event = {
 	only_playable = yes
 	prisoner = no
 	capable_only = yes
+	is_triggered_only = yes
 
 	trigger = {
 		has_character_modifier = holding_grand_hunt
@@ -1414,32 +1415,32 @@ character_event = {
 		set_character_flag = hunt_killed_something
 	}
 
-	mean_time_to_happen = {
-		days = 400
+	weight_multiplier = {
+		factor = 1
 		modifier = {
-			factor = 0.33
+			factor = 3.03
 			NOT = {
 				has_character_flag = hunt_event_happened
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.67
 			has_character_flag = hunt_event_happened
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.25
 			trait = brave
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.25
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.25
 			trait = diligent
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.33
 			trait = hunter
 		}
 	}
@@ -1564,7 +1565,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 200
+		months = 6
 		modifier = {
 			factor = 0.33
 			NOT = {
@@ -1851,7 +1852,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 200
+		months = 6
 		modifier = {
 			factor = 0.33
 			NOT = {
