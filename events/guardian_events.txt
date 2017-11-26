@@ -93,15 +93,6 @@ character_event = {
 				trait = gluttonous
 			}
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		reverse_opinion = {
 			who = FROM
 			modifier = opinion_sad
@@ -474,15 +465,6 @@ character_event = {
 				trait = greedy
 			}
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		random = {
 			chance = 40
 			FROM = {
@@ -840,15 +822,6 @@ character_event = {
 			modifier = {
 				factor = 0.1
 				trait = slothful
-			}
-		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
 			}
 		}
 		random = {
@@ -1259,15 +1232,6 @@ character_event = {
 				trait = slothful
 			}
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		random = {
 			chance = 40
 			FROM = {
@@ -1466,10 +1430,8 @@ character_event = {
 	option = {
 		name = EVTOPTC2070 # Thank God for X's virtues!
 		trigger = {
-			NOT = {
+			nor = {
 				trait = cynical
-			}
-			NOT = {
 				religion_group = chaos_gods_group
 			}
 		}
@@ -1629,15 +1591,6 @@ character_event = {
 				trait = arbitrary
 			}
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		FROM = {
 			random_list = {
 				70 = {
@@ -1709,10 +1662,8 @@ character_event = {
 	option = {
 		name = EVTOPTD2080 # Pray for his sins
 		trigger = {
-			NOT = {
+			nor = {
 				trait = cynical
-			}
-			NOT = {
 				religion_group = chaos_gods_group
 			}
 		}
@@ -1847,10 +1798,8 @@ character_event = {
 	option = {
 		name = EVTOPTC2090 # Thank God for X's virtues!
 		trigger = {
-			NOT = {
+			nor = {
 				trait = cynical
-			}
-			NOT = {
 				religion_group = chaos_gods_group
 			}
 		}
@@ -2002,15 +1951,6 @@ character_event = {
 				trait = arbitrary
 			}
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		random_list = {
 			60 = {
 			}
@@ -2077,10 +2017,8 @@ character_event = {
 	option = {
 		name = EVTOPTD2100 # Pray for his sinsS
 		trigger = {
-			NOT = {
+			nor = {
 				religion_group = chaos_gods_group
-			}
-			NOT = {
 				trait = cynical
 			}
 		}
@@ -2333,15 +2271,6 @@ character_event = {
 				trait = wroth
 			}
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		random_list = {
 			50 = {
 			}
@@ -2421,10 +2350,8 @@ character_event = {
 	option = {
 		name = EVTOPTD2120 # Pray for his sins
 		trigger = {
-			NOT = {
+			nor = {
 				religion_group = chaos_gods_group
-			}
-			NOT = {
 				trait = cynical
 			}
 		}
@@ -3155,10 +3082,8 @@ character_event = {
 	option = {
 		name = EVTOPTB2170 # Birch Him!
 		trigger = {
-			NOT = {
+			nor = {
 				trait = kind
-			}
-			NOT = {
 				trait = shy
 			}
 		}
@@ -3175,15 +3100,6 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = shy
-			}
-		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
 			}
 		}
 		random_list = {
@@ -3401,10 +3317,8 @@ character_event = {
 	option = {
 		name = EVTOPTC2180 # Thank God for X's virtues!
 		trigger = {
-			NOT = {
+			nor = {
 				trait = cynical
-			}
-			NOT = {
 				religion_group = chaos_gods_group
 			}
 		}
@@ -3888,15 +3802,6 @@ character_event = {
 		}
 		if = {
 			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
-		if = {
-			limit = {
 				trait = kind
 			}
 			prestige = -5
@@ -3935,15 +3840,6 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = cruel
-			}
-		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
 			}
 		}
 		random_list = {
@@ -4053,17 +3949,12 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	capable_only = yes
-	is_triggered_only = yes
 
 	trigger = {
 		independent = no
-		NOT = {
+		nor = {
 			trait = stressed
-		}
-		NOT = {
 			trait = depressed
-		}
-		NOT = {
 			trait = leper
 		}
 		health = 4
@@ -4096,34 +3987,34 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			trait = slothful
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			trait = shy
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			trait = diligent
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			trait = gregarious
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = ambitious
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			martial = 12
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			stewardship = 12
 		}
 	}
@@ -4293,114 +4184,71 @@ character_event = {
 	max_age = 15
 	only_capable = yes
 	lacks_dlc = "Zeus"
-	is_triggered_only = yes
 
 	trigger = {
 		has_guardian = yes
 		guardian = {
-			NOT = {
+			nor = {
 				religion = ROOT
-			}
-			NOT = {
 				trait = tzeentch_demon
-			}
-			NOT = {
 				trait = slaanesh_demon
-			}
-			NOT = {
 				trait = nurgle_demon
-			}
-			NOT = {
 				trait = khorne_demon
-			}
-			NOT = {
 				trait = hashut_kdaai
-			}
-			NOT = {
 				trait = creature_beastman
-			}
-			NOT = {
 				trait = creature_nehekharan
-			}
-			NOT = {
 				trait = creature_forestspirit
-			}
-			NOT = {
 				trait = creature_treekin
-			}
-			NOT = {
 				trait = creature_orc
-			}
-			NOT = {
 				trait = creature_goblin
 			}
 			employer = {
 				religion = PREV
-				NOT = {
+				nor = {
 					trait = tzeentch_demon
-				}
-				NOT = {
 					trait = slaanesh_demon
-				}
-				NOT = {
 					trait = nurgle_demon
-				}
-				NOT = {
 					trait = khorne_demon
-				}
-				NOT = {
 					trait = hashut_kdaai
-				}
-				NOT = {
 					trait = creature_beastman
-				}
-				NOT = {
 					trait = creature_nehekharan
-				}
-				NOT = {
 					trait = creature_forestspirit
-				}
-				NOT = {
 					trait = creature_treekin
-				}
-				NOT = {
 					trait = creature_orc
-				}
-				NOT = {
 					trait = creature_goblin
 				}
 			}
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 10
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			guardian = {
 				trait = zealous
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			guardian = {
 				trait = diligent
 			}
 		}
 		modifier = {
-			factor = 5.00
+			factor = 0.2
 			guardian = {
 				is_priest = yes
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			guardian = {
 				trait = slothful
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			guardian = {
 				trait = cynical
 			}
@@ -4524,7 +4372,6 @@ character_event = {
 	max_age = 15
 	only_capable = yes
 	lacks_dlc = "Zeus"
-	is_triggered_only = yes
 
 	trigger = {
 		has_guardian = yes
@@ -4533,125 +4380,49 @@ character_event = {
 				is_nomadic = yes
 			}
 		}
-		NOT = {
+		nor = {
 			trait = tzeentch_demon
-		}
-		NOT = {
 			trait = slaanesh_demon
-		}
-		NOT = {
 			trait = nurgle_demon
-		}
-		NOT = {
 			trait = khorne_demon
-		}
-		NOT = {
 			trait = hashut_kdaai
-		}
-		NOT = {
 			trait = creature_beastman
-		}
-		NOT = {
 			trait = creature_nehekharan
-		}
-		NOT = {
 			trait = creature_forestspirit
-		}
-		NOT = {
 			trait = creature_treekin
-		}
-		NOT = {
 			trait = creature_orc
-		}
-		NOT = {
 			trait = creature_goblin
-		}
-		NOT = {
 			trait = vampire_lahmian_visible
-		}
-		NOT = {
 			trait = vampire_carstein_visible
-		}
-		NOT = {
 			trait = vampire_blood_visible
-		}
-		NOT = {
 			trait = vampire_strigoi_visible
-		}
-		NOT = {
 			trait = vampire_necrarch_visible
-		}
-		NOT = {
 			trait = vampire_jade_visible
-		}
-		NOT = {
 			trait = vampire_mahtmasi_visible
-		}
-		NOT = {
 			trait = vampire_lahmian_hidden
-		}
-		NOT = {
 			trait = vampire_carstein_hidden
-		}
-		NOT = {
 			trait = vampire_blood_hidden
-		}
-		NOT = {
 			trait = vampire_strigoi_hidden
-		}
-		NOT = {
 			trait = vampire_necrarch_hidden
-		}
-		NOT = {
 			trait = vampire_jade_hidden
-		}
-		NOT = {
 			trait = vampire_mahtmasi_hidden
 		}
 		guardian = {
-			NOT = {
+			nor = {
 				trait = tzeentch_demon
-			}
-			NOT = {
 				trait = slaanesh_demon
-			}
-			NOT = {
 				trait = nurgle_demon
-			}
-			NOT = {
 				trait = khorne_demon
-			}
-			NOT = {
 				trait = hashut_kdaai
-			}
-			NOT = {
 				trait = creature_beastman
-			}
-			NOT = {
 				trait = creature_nehekharan
-			}
-			NOT = {
 				trait = creature_forestspirit
-			}
-			NOT = {
 				trait = creature_treekin
-			}
-			NOT = {
 				trait = creature_orc
-			}
-			NOT = {
 				trait = creature_goblin
-			}
-			NOT = {
 				culture = witchhunter_culture
-			}
-			NOT = {
 				culture = blooddragons_culture
-			}
-			NOT = {
 				culture = living_jade
-			}
-			NOT = {
 				culture = ROOT
 			}
 			culture_group = ROOT
@@ -4661,28 +4432,28 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 10
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			guardian = {
 				trait = diligent
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			guardian = {
 				trait = gregarious
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			guardian = {
 				trait = shy
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			guardian = {
 				trait = slothful
 			}
@@ -8031,10 +7802,8 @@ character_event = {
 		trigger = {
 			any_courtier = {
 				age = 8
-				NOT = {
+				nor = {
 					age = 16
-				}
-				NOT = {
 					character = FROM
 				}
 			}
@@ -8042,10 +7811,8 @@ character_event = {
 		any_courtier = {
 			limit = {
 				age = 8
-				NOT = {
+				nor = {
 					age = 16
-				}
-				NOT = {
 					character = FROM
 				}
 			}
@@ -8213,16 +7980,10 @@ character_event = {
 	option = {
 		name = EVTOPTC38223
 		trigger = {
-			NOT = {
+			nor = {
 				trait = cruel
-			}
-			NOT = {
 				trait = impaler
-			}
-			NOT = {
 				trait = wroth
-			}
-			NOT = {
 				trait = arbitrary
 			}
 		}
@@ -9433,21 +9194,10 @@ character_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = {
+				nor = {
 					trait = cruel
-				}
-				NOT = {
 					trait = wroth
 				}
-			}
-		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
 			}
 		}
 		FROM = {
@@ -9531,10 +9281,8 @@ character_event = {
 		if = {
 			limit = {
 				FROM = {
-					NOT = {
+					nor = {
 						intrigue = 6
-					}
-					NOT = {
 						martial = 6
 					}
 				}

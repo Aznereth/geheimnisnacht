@@ -90,10 +90,8 @@ character_event = {
 			limit = {
 				FROM = {
 					is_dying = yes
-					NOT = {
+					nor = {
 						culture = ROOT
-					}
-					NOT = {
 						religion = ROOT
 					}
 				}
@@ -142,7 +140,7 @@ character_event = {
 		any_vassal = {
 			limit = {
 				ai = no
-				NOT = {
+				nor = {
 					OR = {
 						father = {
 							character = ROOT
@@ -151,8 +149,6 @@ character_event = {
 							character = ROOT
 						}
 					}
-				}
-				NOT = {
 					is_primary_heir = ROOT
 				} # Any vassal except primary heir which is handled in chronicle owner transfer event CM.10001
 			}
@@ -206,10 +202,8 @@ character_event = {
 				religion_head = {
 					character = ROOT
 				}
-				NOT = {
+				nor = {
 					is_primary_heir = ROOT
-				} # Not used for primary heir which is handled in chronicle owner transfer event CM.10001
-				NOT = {
 					OR = {
 						father = {
 							character = ROOT
@@ -578,10 +572,8 @@ character_event = {
 		any_player = {
 			limit = {
 				capital_scope = {
-					NOT = {
+					nor = {
 						region = world_india
-					}
-					NOT = {
 						region = world_africa_east
 					}
 				}
@@ -759,12 +751,10 @@ character_event = {
 		if = {
 			limit = {
 				new_character = {
-					NOT = {
+					nor = {
 						father_even_if_dead = {
 							always = yes
 						}
-					}
-					NOT = {
 						mother_even_if_dead = {
 							always = yes
 						}
@@ -1388,12 +1378,10 @@ character_event = {
 		if = {
 			limit = {
 				new_character = {
-					NOT = {
+					nor = {
 						father_even_if_dead = {
 							always = yes
 						}
-					}
-					NOT = {
 						mother_even_if_dead = {
 							always = yes
 						}

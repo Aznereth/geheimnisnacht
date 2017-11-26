@@ -20,10 +20,8 @@ character_event = {
 	max_age = 12
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -515,13 +513,9 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_haughty_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -539,19 +533,11 @@ character_event = {
 						educator = {
 							any_courtier = {
 								is_adult = yes
-								NOT = {
+								nor = {
 									trait = incapable
-								}
-								NOT = {
 									trait = chaste
-								}
-								NOT = {
 									trait = celibate
-								}
-								NOT = {
 									has_character_modifier = the_oubliette
-								}
-								NOT = {
 									has_character_modifier = the_dungeon
 								}
 							}
@@ -563,19 +549,11 @@ character_event = {
 					random_courtier = {
 						limit = {
 							is_adult = yes
-							NOT = {
+							nor = {
 								trait = incapable
-							}
-							NOT = {
 								trait = chaste
-							}
-							NOT = {
 								trait = celibate
-							}
-							NOT = {
 								has_character_modifier = the_oubliette
-							}
-							NOT = {
 								has_character_modifier = the_dungeon
 							}
 						}
@@ -604,10 +582,8 @@ character_event = {
 						educator = {
 							any_courtier = {
 								is_adult = yes
-								NOT = {
+								nor = {
 									is_rival = ROOT
-								}
-								NOT = {
 									trait = incapable
 								}
 								OR = {
@@ -620,10 +596,8 @@ character_event = {
 										trait = zealous
 									}
 								}
-								NOT = {
+								nor = {
 									has_character_modifier = the_oubliette
-								}
-								NOT = {
 									has_character_modifier = the_dungeon
 								}
 							}
@@ -634,26 +608,20 @@ character_event = {
 					random_courtier = {
 						limit = {
 							is_adult = yes
-							NOT = {
+							nor = {
 								is_rival = ROOT
-							}
-							NOT = {
 								trait = incapable
 							}
 							OR = {
 								trait = cruel
 								trait = impaler
 							}
-							NOT = {
+							nor = {
 								AND = {
 									religion = shallyan
 									trait = zealous
 								}
-							}
-							NOT = {
 								has_character_modifier = the_oubliette
-							}
-							NOT = {
 								has_character_modifier = the_dungeon
 							}
 						}
@@ -1310,13 +1278,9 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_affectionate_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -1333,19 +1297,11 @@ character_event = {
 					NOT = {
 						educator = {
 							any_courtier = {
-								NOT = {
+								nor = {
 									character = ROOT
-								}
-								NOT = {
 									age = 12
-								}
-								NOT = {
 									trait = incapable
-								}
-								NOT = {
 									has_character_modifier = the_oubliette
-								}
-								NOT = {
 									has_character_modifier = the_dungeon
 								}
 							}
@@ -1356,19 +1312,11 @@ character_event = {
 				educator = {
 					random_courtier = {
 						limit = {
-							NOT = {
+							nor = {
 								character = ROOT
-							}
-							NOT = {
 								age = 12
-							}
-							NOT = {
 								trait = incapable
-							}
-							NOT = {
 								has_character_modifier = the_oubliette
-							}
-							NOT = {
 								has_character_modifier = the_dungeon
 							}
 						}
@@ -1397,19 +1345,11 @@ character_event = {
 						educator = {
 							any_courtier = {
 								is_adult = yes
-								NOT = {
+								nor = {
 									is_rival = ROOT
-								}
-								NOT = {
 									is_friend = ROOT
-								}
-								NOT = {
 									trait = incapable
-								}
-								NOT = {
 									has_character_modifier = the_oubliette
-								}
-								NOT = {
 									has_character_modifier = the_dungeon
 								}
 							}
@@ -1420,19 +1360,11 @@ character_event = {
 					random_courtier = {
 						limit = {
 							is_adult = yes
-							NOT = {
+							nor = {
 								is_rival = ROOT
-							}
-							NOT = {
 								is_friend = ROOT
-							}
-							NOT = {
 								trait = incapable
-							}
-							NOT = {
 								has_character_modifier = the_oubliette
-							}
-							NOT = {
 								has_character_modifier = the_dungeon
 							}
 						}
@@ -2045,13 +1977,9 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_timid_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -2069,21 +1997,15 @@ character_event = {
 						educator = {
 							any_courtier = {
 								is_ruler = no
-								NOT = {
+								nor = {
 									character = ROOT
-								}
-								NOT = {
 									any_child = {
 										character = ROOT
 									}
 								}
-								NOT = {
+								nor = {
 									trait = incapable
-								}
-								NOT = {
 									has_character_modifier = the_oubliette
-								}
-								NOT = {
 									has_character_modifier = the_dungeon
 								}
 							}
@@ -2095,21 +2017,13 @@ character_event = {
 					random_courtier = {
 						limit = {
 							is_ruler = no
-							NOT = {
+							nor = {
 								character = ROOT
-							}
-							NOT = {
 								any_child = {
 									character = ROOT
 								}
-							}
-							NOT = {
 								trait = incapable
-							}
-							NOT = {
 								has_character_modifier = the_oubliette
-							}
-							NOT = {
 								has_character_modifier = the_dungeon
 							}
 						}
@@ -2137,25 +2051,13 @@ character_event = {
 					NOT = {
 						educator = {
 							any_courtier = {
-								NOT = {
+								nor = {
 									character = ROOT
-								}
-								NOT = {
 									age = 12
-								}
-								NOT = {
 									is_rival = ROOT
-								}
-								NOT = {
 									is_friend = ROOT
-								}
-								NOT = {
 									trait = incapable
-								}
-								NOT = {
 									has_character_modifier = the_oubliette
-								}
-								NOT = {
 									has_character_modifier = the_dungeon
 								}
 							}
@@ -2165,25 +2067,13 @@ character_event = {
 				educator = {
 					random_courtier = {
 						limit = {
-							NOT = {
+							nor = {
 								character = ROOT
-							}
-							NOT = {
 								age = 12
-							}
-							NOT = {
 								is_rival = ROOT
-							}
-							NOT = {
 								is_friend = ROOT
-							}
-							NOT = {
 								trait = incapable
-							}
-							NOT = {
 								has_character_modifier = the_oubliette
-							}
-							NOT = {
 								has_character_modifier = the_dungeon
 							}
 						}
@@ -2786,13 +2676,9 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_rowdy_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -2809,22 +2695,12 @@ character_event = {
 					NOT = {
 						educator = {
 							any_courtier = {
-								NOT = {
+								nor = {
 									character = ROOT
-								}
-								NOT = {
 									age = 12
-								}
-								NOT = {
 									is_rival = ROOT
-								}
-								NOT = {
 									trait = incapable
-								}
-								NOT = {
 									has_character_modifier = the_oubliette
-								}
-								NOT = {
 									has_character_modifier = the_dungeon
 								}
 							}
@@ -2835,22 +2711,12 @@ character_event = {
 				educator = {
 					random_courtier = {
 						limit = {
-							NOT = {
+							nor = {
 								character = ROOT
-							}
-							NOT = {
 								age = 12
-							}
-							NOT = {
 								is_rival = ROOT
-							}
-							NOT = {
 								trait = incapable
-							}
-							NOT = {
 								has_character_modifier = the_oubliette
-							}
-							NOT = {
 								has_character_modifier = the_dungeon
 							}
 						}
@@ -2878,22 +2744,12 @@ character_event = {
 					NOT = {
 						educator = {
 							any_courtier = {
-								NOT = {
+								nor = {
 									character = ROOT
-								}
-								NOT = {
 									age = 12
-								}
-								NOT = {
 									is_rival = ROOT
-								}
-								NOT = {
 									trait = incapable
-								}
-								NOT = {
 									has_character_modifier = the_oubliette
-								}
-								NOT = {
 									has_character_modifier = the_dungeon
 								}
 							}
@@ -2903,22 +2759,12 @@ character_event = {
 				educator = {
 					random_courtier = {
 						limit = {
-							NOT = {
+							nor = {
 								character = ROOT
-							}
-							NOT = {
 								age = 12
-							}
-							NOT = {
 								is_rival = ROOT
-							}
-							NOT = {
 								trait = incapable
-							}
-							NOT = {
 								has_character_modifier = the_oubliette
-							}
-							NOT = {
 								has_character_modifier = the_dungeon
 							}
 						}
@@ -3550,16 +3396,10 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_willful_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
 		}
 	}
@@ -3847,10 +3687,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -3995,10 +3833,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -4156,10 +3992,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -4301,16 +4135,10 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_brooding_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
 		}
 	}
@@ -4600,10 +4428,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -4785,10 +4611,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -5024,10 +4848,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -5210,16 +5032,10 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_indolent_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
 		}
 	}
@@ -5531,10 +5347,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -5714,10 +5528,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -5930,10 +5742,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -6063,16 +5873,10 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_playful_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
 		}
 	}
@@ -6387,10 +6191,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -6587,10 +6389,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -6746,10 +6546,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -6870,16 +6668,10 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_conscientious_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
 		}
 	}
@@ -7189,10 +6981,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -7359,10 +7149,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -7545,10 +7333,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -7667,16 +7453,10 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_fussy_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
 		}
 	}
@@ -7987,10 +7767,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -8200,10 +7978,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -8518,10 +8294,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -8733,16 +8507,10 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_curious_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
 		}
 	}
@@ -9033,10 +8801,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -9256,10 +9022,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -9494,10 +9258,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -9658,16 +9420,10 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_flag = ze_child_idolizer_events
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
 		}
 	}
@@ -9974,10 +9730,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -10186,10 +9940,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -10443,10 +10195,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = the_dungeon
 		}
 	}
@@ -10645,10 +10395,8 @@ character_event = {
 						}
 						host = {
 							any_courtier = {
-								NOT = {
+								nor = {
 									character = ROOT
-								}
-								NOT = {
 									trait = incapable
 								}
 								prisoner = yes
@@ -10745,10 +10493,8 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					is_ill = yes
-				}
-				NOT = {
 					trait = pneumonic
 				}
 			}
@@ -10885,10 +10631,8 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					is_ill = yes
-				}
-				NOT = {
 					trait = pneumonic
 				}
 			}
@@ -11030,10 +10774,8 @@ character_event = {
 		remove_character_modifier = pet_rat_dungeon
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = brooding
-				}
-				NOT = {
 					age = 12
 				}
 			}
@@ -11418,10 +11160,8 @@ character_event = {
 		}
 		host = {
 			any_courtier = {
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					trait = incapable
 				}
 				prisoner = yes
@@ -11437,10 +11177,8 @@ character_event = {
 		host = {
 			random_courtier = {
 				limit = {
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						trait = incapable
 					}
 					prisoner = yes

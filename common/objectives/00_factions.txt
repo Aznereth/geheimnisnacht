@@ -42,13 +42,11 @@ faction_succ_seniority = {
 				}
 			}
 		}
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			trait = creature_nehekharan
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 		NOT = {
@@ -58,7 +56,7 @@ faction_succ_seniority = {
 			NOT = {
 				trait = creature_nehekharan
 			}
-	  		NOT = {
+			NOT = {
 				culture_group = daemonic_group
 			}
 			is_vice_royalty = no
@@ -68,10 +66,8 @@ faction_succ_seniority = {
 				primary_title = {
 					is_tribal_type_title = no
 				}
-				NOT = {
+				nor = {
 					culture = ROOT
-				}
-				NOT = {
 					religion = ROOT
 				}
 			}
@@ -96,13 +92,9 @@ faction_succ_seniority = {
 		primary_title = {
 			higher_tier_than = BARON
 		}
-		NOT = {
+		nor = {
 			in_faction = faction_succ_primogeniture
-		}
-		NOT = {
 			in_faction = faction_succ_feudal_elective
-		}
-		NOT = {
 			in_faction = faction_succ_gavelkind
 		}
 		OR = {
@@ -153,13 +145,11 @@ faction_succ_seniority = {
 			}
 		}
 		holder_scope = {
-			NOT = {
+			nor = {
 				any_war = {
 					war_title = ROOT
 					using_cb = change_seniority_succession_law
 				}
-			}
-			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_leaving_faction
@@ -197,16 +187,10 @@ faction_succ_seniority = {
 					}
 				}
 			}
-			NOT = {
+			nor = {
 				religion_group = necromantic_group
-			}
-			NOT = {
 				in_faction = faction_succ_primogeniture
-			}
-			NOT = {
 				in_faction = faction_succ_feudal_elective
-			}
-			NOT = {
 				in_faction = faction_succ_gavelkind
 			}
 		}
@@ -649,12 +633,10 @@ faction_succ_seniority = {
 			opinion = {
 				who = LIEGE value = 25
 			}
-			NOT = {
+			nor = {
 				trait = deceitful
 				trait = ambitious
 				trait = envious
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -838,7 +820,7 @@ faction_succ_primogeniture = {
 		NOT = {
 			trait = creature_nehekharan
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 		NOT = {
@@ -872,7 +854,7 @@ faction_succ_primogeniture = {
 			NOT = {
 				trait = creature_nehekharan
 			}
-	  		NOT = {
+			NOT = {
 				culture_group = daemonic_group
 			}
 			NOT = {
@@ -883,10 +865,8 @@ faction_succ_primogeniture = {
 				primary_title = {
 					is_tribal_type_title = no
 				}
-				NOT = {
+				nor = {
 					culture = ROOT
-				}
-				NOT = {
 					religion = ROOT
 				}
 			}
@@ -911,13 +891,9 @@ faction_succ_primogeniture = {
 		primary_title = {
 			higher_tier_than = BARON
 		}
-		NOT = {
+		nor = {
 			in_faction = faction_succ_seniority
-		}
-		NOT = {
 			in_faction = faction_succ_feudal_elective
-		}
-		NOT = {
 			in_faction = faction_succ_gavelkind
 		}
 		OR = {
@@ -968,13 +944,11 @@ faction_succ_primogeniture = {
 			}
 		}
 		holder_scope = {
-			NOT = {
+			nor = {
 				any_war = {
 					war_title = ROOT
 					using_cb = change_primogeniture_succession_law
 				}
-			}
-			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_leaving_faction
@@ -1012,16 +986,10 @@ faction_succ_primogeniture = {
 					}
 				}
 			}
-			NOT = {
+			nor = {
 				religion_group = necromantic_group
-			}
-			NOT = {
 				in_faction = faction_succ_seniority
-			}
-			NOT = {
 				in_faction = faction_succ_feudal_elective
-			}
-			NOT = {
 				in_faction = faction_succ_gavelkind
 			}
 		}
@@ -1410,10 +1378,8 @@ faction_succ_primogeniture = {
 			FROM = {
 				# Remember: the faction leader is also the person who would inherit under this law
 				OR = {
-					NOT = {
+					nor = {
 						culture = ROOT
-					}
-					NOT = {
 						religion = ROOT
 					}
 				}
@@ -1447,12 +1413,10 @@ faction_succ_primogeniture = {
 			opinion = {
 				who = LIEGE value = 25
 			}
-			NOT = {
+			nor = {
 				trait = deceitful
 				trait = ambitious
 				trait = envious
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -1643,7 +1607,7 @@ faction_succ_gavelkind = {
 		NOT = {
 			trait = creature_nehekharan
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 		NOT = {
@@ -1672,16 +1636,12 @@ faction_succ_gavelkind = {
 		liege = {
 			is_vice_royalty = no
 			is_feudal = yes
-	  		NOT = {
+			NOT = {
 				culture_group = daemonic_group
 			}
-			NOT = {
+			nor = {
 				culture_group = lizardman_group
-			} #Lizardmen built for compliance to Lizardmen
-			NOT = {
 				trait = creature_nehekharan
-			}
-			NOT = {
 				religion_group = necromantic_group
 			}
 			OR = {
@@ -1689,10 +1649,8 @@ faction_succ_gavelkind = {
 				primary_title = {
 					is_tribal_type_title = no
 				}
-				NOT = {
+				nor = {
 					culture = ROOT
-				}
-				NOT = {
 					religion = ROOT
 				}
 			}
@@ -1708,13 +1666,9 @@ faction_succ_gavelkind = {
 		primary_title = {
 			higher_tier_than = BARON
 		}
-		NOT = {
+		nor = {
 			in_faction = faction_succ_seniority
-		}
-		NOT = {
 			in_faction = faction_succ_primogeniture
-		}
-		NOT = {
 			in_faction = faction_succ_feudal_elective
 		}
 		OR = {
@@ -1765,13 +1719,11 @@ faction_succ_gavelkind = {
 			}
 		}
 		holder_scope = {
-			NOT = {
+			nor = {
 				any_war = {
 					war_title = ROOT
 					using_cb = change_gavelkind_succession_law
 				}
-			}
-			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_leaving_faction
@@ -1807,16 +1759,10 @@ faction_succ_gavelkind = {
 					}
 				}
 			}
-			NOT = {
+			nor = {
 				religion_group = necromantic_group
-			}
-			NOT = {
 				in_faction = faction_succ_seniority
-			}
-			NOT = {
 				in_faction = faction_succ_primogeniture
-			}
-			NOT = {
 				in_faction = faction_succ_feudal_elective
 			}
 		}
@@ -1890,10 +1836,8 @@ faction_succ_gavelkind = {
 			factor = 0
 			holder_scope = {
 				OR = {
-					NOT = {
+					nor = {
 						culture = FROM
-					}
-					NOT = {
 						religion = FROM
 					}
 				}
@@ -2277,12 +2221,10 @@ faction_succ_gavelkind = {
 			opinion = {
 				who = LIEGE value = 25
 			}
-			NOT = {
+			nor = {
 				trait = deceitful
 				trait = ambitious
 				trait = envious
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -2482,13 +2424,9 @@ faction_succ_feudal_elective = {
 		primary_title = {
 			holy_order = no
 		}
-		NOT = {
+		nor = {
 			culture_group = daemonic_group
-		}
-		NOT = {
 			culture_group = lizardman_group
-		} #Lizardmen built for compliance to Lizardmen
-		NOT = {
 			trait = creature_nehekharan
 		}
 		OR = {
@@ -2525,7 +2463,7 @@ faction_succ_feudal_elective = {
 			NOT = {
 				trait = creature_nehekharan
 			}
-	  		NOT = {
+			NOT = {
 				culture_group = daemonic_group
 			}
 			NOT = {
@@ -2536,10 +2474,8 @@ faction_succ_feudal_elective = {
 				primary_title = {
 					is_tribal_type_title = no
 				}
-				NOT = {
+				nor = {
 					culture = ROOT
-				}
-				NOT = {
 					religion = ROOT
 				}
 			}
@@ -2549,13 +2485,9 @@ faction_succ_feudal_elective = {
 				}
 				is_reformed_religion = yes
 			}
-			NOT = {
+			nor = {
 				religion_group = nehekharan_gods_group
-			}
-			NOT = {
 				religion_group = necromantic_group
-			}
-			NOT = {
 				any_demesne_title = {
 					temporary = yes
 				}
@@ -2567,13 +2499,9 @@ faction_succ_feudal_elective = {
 		primary_title = {
 			higher_tier_than = BARON
 		}
-		NOT = {
+		nor = {
 			in_faction = faction_succ_seniority
-		}
-		NOT = {
 			in_faction = faction_succ_primogeniture
-		}
-		NOT = {
 			in_faction = faction_succ_gavelkind
 		}
 		OR = {
@@ -2624,13 +2552,11 @@ faction_succ_feudal_elective = {
 			higher_tier_than = DUKE
 		}
 		holder_scope = {
-			NOT = {
+			nor = {
 				any_war = {
 					war_title = ROOT
 					using_cb = change_feudal_elective_succession_law
 				}
-			}
-			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_leaving_faction
@@ -2666,16 +2592,10 @@ faction_succ_feudal_elective = {
 					}
 				}
 			}
-			NOT = {
+			nor = {
 				religion_group = necromantic_group
-			}
-			NOT = {
 				in_faction = faction_succ_seniority
-			}
-			NOT = {
 				in_faction = faction_succ_primogeniture
-			}
-			NOT = {
 				in_faction = faction_succ_gavelkind
 			}
 		}
@@ -2751,10 +2671,8 @@ faction_succ_feudal_elective = {
 			factor = 0
 			holder_scope = {
 				OR = {
-					NOT = {
+					nor = {
 						culture = FROM
-					}
-					NOT = {
 						religion = FROM
 					}
 				}
@@ -3148,12 +3066,10 @@ faction_succ_feudal_elective = {
 			opinion = {
 				who = LIEGE value = 25
 			}
-			NOT = {
+			nor = {
 				trait = deceitful
 				trait = ambitious
 				trait = envious
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -3365,20 +3281,18 @@ faction_lower_crown_authority = {
 		NOT = {
 			trait = creature_nehekharan
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
-		NOT = {
+		nor = {
 			culture_group = lizardman_group
-		} #Lizardmen built for compliance to Lizardmen
-		NOT = {
 			trait = incapable
 		}
 		liege = {
 			NOT = {
 				trait = creature_nehekharan
 			}
-	  		NOT = {
+			NOT = {
 				culture_group = daemonic_group
 			}
 			NOT = {
@@ -3390,10 +3304,8 @@ faction_lower_crown_authority = {
 				primary_title = {
 					is_tribal_type_title = no
 				}
-				NOT = {
+				nor = {
 					culture = ROOT
-				}
-				NOT = {
 					religion = ROOT
 				}
 			}
@@ -3424,13 +3336,11 @@ faction_lower_crown_authority = {
 			has_law = crown_authority_0
 		}
 		holder_scope = {
-			NOT = {
+			nor = {
 				any_war = {
 					war_title = ROOT
 					using_cb = lower_crown_authority_law
 				}
-			}
-			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_leaving_faction
@@ -3511,10 +3421,8 @@ faction_lower_crown_authority = {
 			factor = 0
 			holder_scope = {
 				OR = {
-					NOT = {
+					nor = {
 						culture = FROM
-					}
-					NOT = {
 						religion = FROM
 					}
 				}
@@ -3760,12 +3668,10 @@ faction_lower_crown_authority = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
+			nor = {
 				crownlaw_title = {
 					title = FROMFROM
 				}
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -3778,12 +3684,10 @@ faction_lower_crown_authority = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
+			nor = {
 				opinion = {
 					who = FROM value = -40
 				}
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -4031,13 +3935,11 @@ faction_lower_tribal_organization = {
 		primary_title = {
 			holy_order = no
 		}
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			trait = creature_nehekharan
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 		NOT = {
@@ -4068,7 +3970,7 @@ faction_lower_tribal_organization = {
 			NOT = {
 				trait = creature_nehekharan
 			}
-	  		NOT = {
+			NOT = {
 				culture_group = daemonic_group
 			}
 			NOT = {
@@ -4099,13 +4001,11 @@ faction_lower_tribal_organization = {
 			has_law = tribal_organization_0
 		}
 		holder_scope = {
-			NOT = {
+			nor = {
 				any_war = {
 					war_title = ROOT
 					using_cb = lower_tribal_organization_law
 				}
-			}
-			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_leaving_faction
@@ -4200,10 +4100,8 @@ faction_lower_tribal_organization = {
 			factor = 0
 			holder_scope = {
 				OR = {
-					NOT = {
+					nor = {
 						culture = FROM
-					}
-					NOT = {
 						religion = FROM
 					}
 				}
@@ -4463,12 +4361,10 @@ faction_lower_tribal_organization = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
+			nor = {
 				opinion = {
 					who = FROM value = -40
 				}
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -4734,27 +4630,17 @@ faction_independence = {
 					using_cb = cb_faction_independence
 				}
 			}
-			# Mongols and Aztecs do not have independence revolt problems before 1350
 			OR = {
-				year = 1350
 				primary_title = {
 					is_tribal = no
 				}
-				NOT = {
+				nor = {
 					culture = ROOT
-				}
-				NOT = {
 					religion = ROOT
-				}
-				NOT = {
-					OR = {
-						culture = nahuatl
-						culture = mongol
-					}
 				}
 			}
 			# Not allowed to start factions like this if our capital borders the liege's capital
-			NOT = {
+			nor = {
 				capital_scope = {
 					any_neighbor_province = {
 						ROOT = {
@@ -4764,8 +4650,6 @@ faction_independence = {
 						}
 					}
 				}
-			}
-			NOT = {
 				any_demesne_title = {
 					temporary = yes
 				}
@@ -4783,15 +4667,13 @@ faction_independence = {
 			}
 		}
 		# No independence factions in merchant republics
-		NOT = {
+		nor = {
 			AND = {
 				is_merchant_republic = yes
 				liege = {
 					is_merchant_republic = yes
 				}
 			}
-		}
-		NOT = {
 			has_character_modifier = faction_independence_ultimatum_timer
 		}
 		mercenary = no
@@ -4810,14 +4692,15 @@ faction_independence = {
 					}
 					capital_scope = {
 						empire = {
-							title = e_ulthuan }
+							title = e_ulthuan
+						}
 					}
 				}
 			}	#only heretics/apostates or colonies will try for independence
 		}
 		OR = {
 			ai = no
-			NOT = {
+			nor = {
 				AND = {
 					trait = creature_elf
 					religion = asrai_cadai
@@ -4826,12 +4709,11 @@ faction_independence = {
 					}
 					capital_scope = {
 						empire = {
-							title = e_athel_loren }
+							title = e_athel_loren
+						}
 					}
 				}
 			}	#same for Asrai
-		}
-		NOR = {
 			has_opinion_modifier = {
 				who = LIEGE
 				modifier = opinion_coerced_into_leaving_faction
@@ -4912,7 +4794,8 @@ faction_independence = {
 						religion = cadai
 						capital_scope = {
 							empire = {
-								title = e_ulthuan }
+								title = e_ulthuan
+							}
 						}
 					}
 				}	#only heretics/apostates or colonies will try for independence
@@ -5010,10 +4893,8 @@ faction_independence = {
 			lower_tier_than = KING
 			liege = {
 				OR = {
-					NOT = {
+					nor = {
 						culture = ROOT
-					}
-					NOT = {
 						religion = ROOT
 					}
 				}
@@ -5386,10 +5267,8 @@ faction_independence = {
 			factor = 0
 			liege = {
 				OR = {
-					NOT = {
+					nor = {
 						culture = ROOT
-					}
-					NOT = {
 						religion = ROOT
 					}
 				}
@@ -5797,7 +5676,7 @@ faction_claimant = {
 		NOT = {
 			trait = incapable
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 		NOT = {
@@ -5805,7 +5684,7 @@ faction_claimant = {
 		} #Lizardmen built for compliance to Lizardmen
 		liege = {
 			is_vice_royalty = no
-	  		NOT = {
+			NOT = {
 				culture_group = daemonic_group
 			}
 			NOT = {
@@ -5822,10 +5701,8 @@ faction_claimant = {
 				primary_title = {
 					is_tribal = no
 				}
-				NOT = {
+				nor = {
 					culture = ROOT
-				}
-				NOT = {
 					religion = ROOT
 				}
 			}
@@ -5895,10 +5772,8 @@ faction_claimant = {
 			higher_tier_than = DUKE
 		}
 		new_character = {
-			NOT = {
+			nor = {
 				has_landed_title = PREV
-			}
-			NOT = {
 				is_vassal_or_below = FROM
 			}
 			OR = {
@@ -5912,13 +5787,9 @@ faction_claimant = {
 			OR = {
 				is_female = no
 				AND = {
-					NOT = {
+					nor = {
 						religion = ormazd
-					}
-					NOT = {
 						religion = kitabid
-					}
-					NOT = {
 						ROOT = {
 							succ_law_title = {
 								has_law = agnatic_succession
@@ -6042,7 +5913,7 @@ faction_claimant = {
 			FROM = {
 				trait = creature_skaven
 			}
-			trait = creature_skaven
+			#trait = creature_skaven
 			new_character = {
 				trait = creature_skaven
 				is_female = no
@@ -6052,10 +5923,8 @@ faction_claimant = {
 		modifier = {
 			factor = 0
 			new_character = {
-				NOT = {
+				nor = {
 					trait = khemri_tomb_king
-				}
-				NOT = {
 					trait = creature_elf
 				}
 				is_female = yes
@@ -6068,10 +5937,8 @@ faction_claimant = {
 			new_character = {
 				FROM = {
 					liege = {
-						NOT = {
+						nor = {
 							trait = khemri_tomb_king
-						}
-						NOT = {
 							trait = creature_skaven
 						}
 						or = {
@@ -6089,10 +5956,8 @@ faction_claimant = {
 				has_law = succ_feudal_elective
 			}
 			current_heir = {
-				NOT = {
+				nor = {
 					trait = khemri_tomb_king
-				}
-				NOT = {
 					trait = creature_skaven
 				}
 				OR = {
@@ -6109,10 +5974,8 @@ faction_claimant = {
 			# Do not push non-dynasty claimants if liege is my dynasty
 			factor = 0
 			holder_scope = {
-				NOT = {
+				nor = {
 					trait = khemri_tomb_king
-				}
-				NOT = {
 					trait = creature_skaven
 				}
 				dynasty = FROM
@@ -6130,10 +5993,8 @@ faction_claimant = {
 			new_character = {
 				ROOT = {
 					holder_scope = {
-						NOT = {
+						nor = {
 							trait = khemri_tomb_king
-						}
-						NOT = {
 							trait = creature_skaven
 						}
 						is_child_of = PREVPREV
@@ -6145,10 +6006,8 @@ faction_claimant = {
 			factor = 0
 			new_character = {
 				OR = {
-					NOT = {
+					nor = {
 						religion = FROM
-					}
-					NOT = {
 						culture_group = FROM
 					}
 					trait = blinded
@@ -6163,23 +6022,15 @@ faction_claimant = {
 			factor = 0
 			has_law = succ_feudal_elective
 			new_character = {
-				NOT = {
+				nor = {
 					trait = khemri_tomb_king
-				}
-				NOT = {
 					trait = creature_skaven
 				}
 				character = FROM
-				NOT = {
+				nor = {
 					trait = ambitious
-				}
-				NOT = {
 					trait = deceitful
-				}
-				NOT = {
 					trait = proud
-				}
-				NOT = {
 					has_strong_claim = PREV
 				}
 			}
@@ -6262,12 +6113,10 @@ faction_claimant = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
+			nor = {
 				new_character = {
 					character = FROM
 				}
-			}
-			NOT = {
 				new_character = {
 					FROM = {
 						OR = {
@@ -6675,10 +6524,8 @@ faction_claimant = {
 		modifier = {
 			# If my liege is my dynasty, only push claimants of my dynasty
 			factor = 0
-			NOT = {
+			nor = {
 				trait = khemri_tomb_king
-			}
-			NOT = {
 				trait = creature_skaven
 			}
 			liege = {
@@ -6701,19 +6548,15 @@ faction_claimant = {
 		modifier = {
 			# Exclude heretics and obviously bad rulers
 			factor = 0
-			NOT = {
+			nor = {
 				trait = khemri_tomb_king
-			}
-			NOT = {
 				trait = creature_skaven
 			}
 			FROMFROM = {
 				new_character = {
 					OR = {
-						NOT = {
+						nor = {
 							religion = ROOT
-						}
-						NOT = {
 							culture_group = ROOT
 						}
 						trait = blinded
@@ -6784,12 +6627,10 @@ faction_claimant = {
 			FROMFROM = {
 				is_conquered = yes
 			}
-			NOT = {
+			nor = {
 				new_character = {
 					culture = ROOT
 				}
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -6802,12 +6643,10 @@ faction_claimant = {
 			FROMFROM = {
 				claimed_by = ROOT
 			}
-			NOT = {
+			nor = {
 				new_character = {
 					character = ROOT
 				}
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -6842,10 +6681,8 @@ faction_claimant = {
 			opinion = {
 				who = LIEGE value = 50
 			}
-			NOT = {
+			nor = {
 				trait = creature_skaven
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -6855,12 +6692,10 @@ faction_claimant = {
 		modifier = {
 			# If the claimant is not me, make sure I like the claimant more than my current liege
 			factor = 0
-			NOT = {
+			nor = {
 				new_character = {
 					character = ROOT
 				}
-			}
-			NOT = {
 				new_character = {
 					ROOT = {
 						OR = {
@@ -6887,8 +6722,6 @@ faction_claimant = {
 						}
 					}
 				}
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -6943,10 +6776,8 @@ faction_claimant = {
 		modifier = {
 			factor = 0.5
 			new_character = {
-				NOT = {
+				nor = {
 					age = 13
-				}
-				NOT = {
 					character = ROOT
 				}
 			}
@@ -6954,10 +6785,8 @@ faction_claimant = {
 		modifier = {
 			factor = 0.5
 			new_character = {
-				NOT = {
+				nor = {
 					age = 10
-				}
-				NOT = {
 					character = ROOT
 				}
 			}
@@ -6965,10 +6794,8 @@ faction_claimant = {
 		modifier = {
 			factor = 0.5
 			new_character = {
-				NOT = {
+				nor = {
 					age = 5
-				}
-				NOT = {
 					character = ROOT
 				}
 			}
@@ -7006,10 +6833,8 @@ faction_claimant = {
 					religion = ormazd
 					religion = kitabid
 				}
-				NOT = {
+				nor = {
 					trait = ormazd_sayyid
-				}
-				NOT = {
 					trait = ormazd_mirza
 				}
 			}
@@ -7270,563 +7095,561 @@ faction_claimant = {
 }
 # Antiking Faction
 
-faction_antiking = {
-	type = liege_titles
-	warning_level = 0.7 # At this level of faction power we give player an alert. Set to 0 for no alerts.
-	rel_head_loyalist = yes # Members consider the "real" pope to be the rightful religious head
-	cancel_on_leader_death = yes # The faction will not automatically continue under a new leader
-	# Plotter scope
-	potential = {
-		prisoner = no
-		is_ruler = yes
-		independent = no
-		is_landed = yes
-		is_adult = yes
-		primary_title = {
-			holy_order = no
-		}
-		OR = {
-			NOT = {
-				has_dlc = "Zeus"
-			}
-			is_voter = no
-			is_nomadic = yes
-			is_tribal = yes
-			liege = {
-				OR = {
-					is_council_content = no
-					NOT = {
-						primary_title = {
-							has_law = war_voting_power_1
-						}
-					}
-					#has_council = no
-				}
-			}
-		}
-		OR = {
-			religion = catholic
-			religion = fraticelli
-		}
-		NOT = {
-			trait = incapable
-		}
-		primary_title = {
-			higher_tier_than = COUNT
-		}
-		liege = {
-			religion = ROOT
-			rightful_religious_head_scope = {
-				OR = {
-					has_claim = k_papal_state
-					has_claim = d_fraticelli
-				}
-			}
-			NOT = {
-				any_demesne_title = {
-					temporary = yes
-				}
-			}
-		}
-		NOT = {
-			has_character_modifier = faction_antiking_ultimatum_timer
-		}
-	}
-	# Target scope
-	allow = {
-		higher_tier_than = DUKE
-		is_primary_holder_title = yes
-		holder_scope = {
-			independent = yes
-			NOT = {
-				any_war = {
-					war_title = ROOT
-					using_cb = cb_install_antiking
-				}
-			}
-			NOT = {
-				reverse_has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_leaving_faction
-				}
-			}
-		}
-		OR = {
-			culture = FROM
-			holder_scope = {
-				culture = FROM
-			}
-		}
-	}
-	# If false, shows the faction entry for players, but disabled
-	player_allow = {
-		FROM = {
-			piety = 500
-		}
-	}
-	# Faction member scope (ROOT = joiner, FROM = target)
-	allow_join = {
-		ROOT = {
-			is_ruler = yes
-			independent = no
-			is_landed = yes
-			is_adult = yes
-			NOT = {
-				trait = incapable
-			}
-			prisoner = no
-			OR = {
-				NOT = {
-					has_dlc = "Zeus"
-				}
-				is_voter = no
-				is_nomadic = yes
-				is_tribal = yes
-				liege = {
-					OR = {
-						is_council_content = no
-						NOT = {
-							primary_title = {
-								has_law = war_voting_power_1
-							}
-						}
-						#has_council = no
-					}
-				}
-			}
-		}
-	}
-	# AI creation weight
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 0.2
-			FROM = {
-				pacifist = yes
-			}
-		}
-		modifier = {
-			factor = 0
-			FROM = {
-				OR = {
-					prisoner = yes
-					has_character_modifier = in_seclusion
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			holder_scope = {
-				any_spouse = {
-					character = FROM
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			current_heir = {
-				character = FROM
-			}
-		}
-		modifier = {
-			factor = 0
-			FROM = {
-				opinion = {
-					who = LIEGE value = 25
-				}
-				NOT = {
-					trait = deceitful
-					trait = ambitious
-					trait = envious
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			FROM = {
-				opinion = {
-					who = LIEGE value = 50
-				}
-				OR = {
-					trait = deceitful
-					trait = ambitious
-					trait = envious
-				}
-			}
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				FROM = {
-					opinion = {
-						who = LIEGE value = -10
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = 2.0
-			NOT = {
-				FROM = {
-					opinion = {
-						who = LIEGE value = -50
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = 4.0
-			NOT = {
-				FROM = {
-					opinion = {
-						who = LIEGE value = -75
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = 0.25
-			NOT = {
-				claimed_by = FROM
-			}
-		}
-		modifier = {
-			factor = 0.01
-			FROM = {
-				trait = content
-			}
-		}
-		modifier = {
-			factor = 0.01
-			FROM = {
-				trait = imbecile
-			}
-		}
-		modifier = {
-			factor = 0.1
-			FROM = {
-				trait = inbred
-			}
-		}
-		modifier = {
-			factor = 0.1
-			FROM = {
-				trait = craven
-			}
-		}
-		modifier = {
-			factor = 0.2
-			FROM = {
-				OR = {
-					trait = slow
-					trait = dull
-				}
-			}
-		}
-		modifier = {
-			factor = 0.5
-			FROM = {
-				trait = kind
-			}
-		}
-		modifier = {
-			factor = 0.5
-			FROM = {
-				trait = charitable
-			}
-		}
-		modifier = {
-			factor = 0.5
-			FROM = {
-				trait = honest
-			}
-		}
-		modifier = {
-			factor = 0.75
-			FROM = {
-				trait = humble
-			}
-		}
-		modifier = {
-			factor = 0.75
-			FROM = {
-				trait = just
-			}
-		}
-		modifier = {
-			factor = 1.5
-			FROM = {
-				trait = proud
-			}
-		}
-		modifier = {
-			factor = 1.5
-			FROM = {
-				trait = brave
-			}
-		}
-		modifier = {
-			factor = 1.5
-			FROM = {
-				trait = arbitrary
-			}
-		}
-		modifier = {
-			factor = 2.0
-			FROM = {
-				trait = envious
-			}
-		}
-		modifier = {
-			factor = 2.0
-			FROM = {
-				trait = greedy
-			}
-		}
-		modifier = {
-			factor = 2.0
-			FROM = {
-				trait = impaler
-			}
-		}
-		modifier = {
-			factor = 2.0
-			FROM = {
-				trait = deceitful
-			}
-		}
-		modifier = {
-			factor = 4.0
-			FROM = {
-				trait = ambitious
-			}
-		}
-	}
-	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
-	membership = {
-		factor = 1
-		modifier = {
-			factor = 0
-			OR = {
-				prisoner = yes
-				trait = incapable
-				is_adult = no
-				is_landed = no
-				preparing_invasion = yes
-				NOT = {
-					religion = FROM
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			FROMFROM = {
-				current_heir = {
-					character = ROOT
-				}
-			}
-			NOT = {
-				has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_joining_faction
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			has_character_modifier = faction_antiking_ultimatum_timer
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				opinion = {
-					who = FROM value = -40
-				}
-			}
-			NOT = {
-				has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_joining_faction
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			has_opinion_modifier = {
-				who = LIEGE
-				modifier = opinion_coerced_into_leaving_faction
-			}
-		}
-		modifier = {
-			factor = 0
-			opinion = {
-				who = LIEGE value = 25
-			}
-			NOT = {
-				has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_joining_faction
-				}
-			}
-		}
-		modifier = {
-			factor = 1000
-			has_opinion_modifier = {
-				who = FROM
-				modifier = opinion_coerced_into_joining_faction
-			}
-		}
-		modifier = {
-			factor = 0.2
-			pacifist = yes
-			NOT = {
-				has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_joining_faction
-				}
-			}
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				opinion = {
-					who = LIEGE value = -10
-				}
-			}
-		}
-		modifier = {
-			factor = 2.0
-			NOT = {
-				opinion = {
-					who = LIEGE value = -50
-				}
-			}
-		}
-		modifier = {
-			factor = 4.0
-			NOT = {
-				opinion = {
-					who = LIEGE value = -75
-				}
-			}
-		}
-		modifier = {
-			factor = 0.01
-			trait = content
-			NOT = {
-				has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_joining_faction
-				}
-			}
-		}
-		modifier = {
-			factor = 0.01
-			trait = imbecile
-			NOT = {
-				has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_joining_faction
-				}
-			}
-		}
-		modifier = {
-			factor = 0.1
-			trait = inbred
-			NOT = {
-				has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_joining_faction
-				}
-			}
-		}
-		modifier = {
-			factor = 0.1
-			trait = craven
-			NOT = {
-				has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_joining_faction
-				}
-			}
-		}
-		modifier = {
-			factor = 0.2
-			OR = {
-				trait = slow
-				trait = dull
-			}
-			NOT = {
-				has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_joining_faction
-				}
-			}
-		}
-		modifier = {
-			factor = 0.5
-			trait = kind
-		}
-		modifier = {
-			factor = 0.5
-			trait = charitable
-		}
-		modifier = {
-			factor = 0.5
-			trait = honest
-		}
-		modifier = {
-			factor = 0.75
-			trait = humble
-		}
-		modifier = {
-			factor = 0.75
-			trait = just
-		}
-		modifier = {
-			factor = 1.5
-			trait = proud
-		}
-		modifier = {
-			factor = 1.5
-			trait = brave
-		}
-		modifier = {
-			factor = 1.5
-			trait = arbitrary
-		}
-		modifier = {
-			factor = 2.0
-			trait = envious
-		}
-		modifier = {
-			factor = 2.0
-			trait = greedy
-		}
-		modifier = {
-			factor = 2.0
-			trait = impaler
-		}
-		modifier = {
-			factor = 2.0
-			trait = deceitful
-		}
-		modifier = {
-			factor = 4.0
-			trait = ambitious
-		}
-	}
-	success = {
-		always = no
-	}
-	abort = {
-		always = no
-	}
-	abort_effect = {
-	}
-	effect = {
-	}
-}
+# faction_antiking = {
+# 	type = liege_titles
+# 	warning_level = 0.7 # At this level of faction power we give player an alert. Set to 0 for no alerts.
+# 	rel_head_loyalist = yes # Members consider the "real" pope to be the rightful religious head
+# 	cancel_on_leader_death = yes # The faction will not automatically continue under a new leader
+# 	# Plotter scope
+# 	potential = {
+# 		prisoner = no
+# 		is_ruler = yes
+# 		independent = no
+# 		is_landed = yes
+# 		is_adult = yes
+# 		primary_title = {
+# 			holy_order = no
+# 		}
+# 		OR = {
+# 			NOT = {
+# 				has_dlc = "Zeus"
+# 			}
+# 			is_voter = no
+# 			is_nomadic = yes
+# 			is_tribal = yes
+# 			liege = {
+# 				OR = {
+# 					is_council_content = no
+# 					NOT = {
+# 						primary_title = {
+# 							has_law = war_voting_power_1
+# 						}
+# 					}
+# 					#has_council = no
+# 				}
+# 			}
+# 		}
+# 		religion_group = old_world_group
+# 		NOT = {
+# 			trait = incapable
+# 		}
+# 		primary_title = {
+# 			higher_tier_than = COUNT
+# 		}
+# 		liege = {
+# 			religion = ROOT
+# 			rightful_religious_head_scope = {
+# 				OR = {
+# 					has_claim = k_papal_state
+# 					has_claim = d_fraticelli
+# 				}
+# 			}
+# 			NOT = {
+# 				any_demesne_title = {
+# 					temporary = yes
+# 				}
+# 			}
+# 		}
+# 		NOT = {
+# 			has_character_modifier = faction_antiking_ultimatum_timer
+# 		}
+# 	}
+# 	# Target scope
+# 	allow = {
+# 		higher_tier_than = DUKE
+# 		is_primary_holder_title = yes
+# 		holder_scope = {
+# 			independent = yes
+# 			NOT = {
+# 				any_war = {
+# 					war_title = ROOT
+# 					using_cb = cb_install_antiking
+# 				}
+# 			}
+# 			NOT = {
+# 				reverse_has_opinion_modifier = {
+# 					who = FROM
+# 					modifier = opinion_coerced_into_leaving_faction
+# 				}
+# 			}
+# 		}
+# 		OR = {
+# 			culture = FROM
+# 			holder_scope = {
+# 				culture = FROM
+# 			}
+# 		}
+# 	}
+# 	# If false, shows the faction entry for players, but disabled
+# 	player_allow = {
+# 		FROM = {
+# 			piety = 500
+# 		}
+# 	}
+# 	# Faction member scope (ROOT = joiner, FROM = target)
+# 	allow_join = {
+# 		ROOT = {
+# 			is_ruler = yes
+# 			independent = no
+# 			is_landed = yes
+# 			is_adult = yes
+# 			NOT = {
+# 				trait = incapable
+# 			}
+# 			prisoner = no
+# 			OR = {
+# 				NOT = {
+# 					has_dlc = "Zeus"
+# 				}
+# 				is_voter = no
+# 				is_nomadic = yes
+# 				is_tribal = yes
+# 				liege = {
+# 					OR = {
+# 						is_council_content = no
+# 						NOT = {
+# 							primary_title = {
+# 								has_law = war_voting_power_1
+# 							}
+# 						}
+# 						#has_council = no
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	# AI creation weight
+# 	chance = {
+# 		factor = 1
+# 		modifier = {
+# 			factor = 0.2
+# 			FROM = {
+# 				pacifist = yes
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				OR = {
+# 					prisoner = yes
+# 					has_character_modifier = in_seclusion
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			holder_scope = {
+# 				any_spouse = {
+# 					character = FROM
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			current_heir = {
+# 				character = FROM
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				opinion = {
+# 					who = LIEGE value = 25
+# 				}
+# 				NOT = {
+# 					trait = deceitful
+# 					trait = ambitious
+# 					trait = envious
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			FROM = {
+# 				opinion = {
+# 					who = LIEGE value = 50
+# 				}
+# 				OR = {
+# 					trait = deceitful
+# 					trait = ambitious
+# 					trait = envious
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			NOT = {
+# 				FROM = {
+# 					opinion = {
+# 						who = LIEGE value = -10
+# 					}
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 2.0
+# 			NOT = {
+# 				FROM = {
+# 					opinion = {
+# 						who = LIEGE value = -50
+# 					}
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 4.0
+# 			NOT = {
+# 				FROM = {
+# 					opinion = {
+# 						who = LIEGE value = -75
+# 					}
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.25
+# 			NOT = {
+# 				claimed_by = FROM
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.01
+# 			FROM = {
+# 				trait = content
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.01
+# 			FROM = {
+# 				trait = imbecile
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.1
+# 			FROM = {
+# 				trait = inbred
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.1
+# 			FROM = {
+# 				trait = craven
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.2
+# 			FROM = {
+# 				OR = {
+# 					trait = slow
+# 					trait = dull
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			FROM = {
+# 				trait = kind
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			FROM = {
+# 				trait = charitable
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			FROM = {
+# 				trait = honest
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.75
+# 			FROM = {
+# 				trait = humble
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.75
+# 			FROM = {
+# 				trait = just
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			FROM = {
+# 				trait = proud
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			FROM = {
+# 				trait = brave
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			FROM = {
+# 				trait = arbitrary
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 2.0
+# 			FROM = {
+# 				trait = envious
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 2.0
+# 			FROM = {
+# 				trait = greedy
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 2.0
+# 			FROM = {
+# 				trait = impaler
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 2.0
+# 			FROM = {
+# 				trait = deceitful
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 4.0
+# 			FROM = {
+# 				trait = ambitious
+# 			}
+# 		}
+# 	}
+# 	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
+# 	membership = {
+# 		factor = 1
+# 		modifier = {
+# 			factor = 0
+# 			OR = {
+# 				prisoner = yes
+# 				trait = incapable
+# 				is_adult = no
+# 				is_landed = no
+# 				preparing_invasion = yes
+# 				NOT = {
+# 					religion = FROM
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			FROMFROM = {
+# 				current_heir = {
+# 					character = ROOT
+# 				}
+# 			}
+# 			NOT = {
+# 				has_opinion_modifier = {
+# 					who = FROM
+# 					modifier = opinion_coerced_into_joining_faction
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			has_character_modifier = faction_antiking_ultimatum_timer
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			NOT = {
+# 				opinion = {
+# 					who = FROM value = -40
+# 				}
+# 			}
+# 			NOT = {
+# 				has_opinion_modifier = {
+# 					who = FROM
+# 					modifier = opinion_coerced_into_joining_faction
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			has_opinion_modifier = {
+# 				who = LIEGE
+# 				modifier = opinion_coerced_into_leaving_faction
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			opinion = {
+# 				who = LIEGE value = 25
+# 			}
+# 			NOT = {
+# 				has_opinion_modifier = {
+# 					who = FROM
+# 					modifier = opinion_coerced_into_joining_faction
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 1000
+# 			has_opinion_modifier = {
+# 				who = FROM
+# 				modifier = opinion_coerced_into_joining_faction
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.2
+# 			pacifist = yes
+# 			NOT = {
+# 				has_opinion_modifier = {
+# 					who = FROM
+# 					modifier = opinion_coerced_into_joining_faction
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			NOT = {
+# 				opinion = {
+# 					who = LIEGE value = -10
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 2.0
+# 			NOT = {
+# 				opinion = {
+# 					who = LIEGE value = -50
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 4.0
+# 			NOT = {
+# 				opinion = {
+# 					who = LIEGE value = -75
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.01
+# 			trait = content
+# 			NOT = {
+# 				has_opinion_modifier = {
+# 					who = FROM
+# 					modifier = opinion_coerced_into_joining_faction
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.01
+# 			trait = imbecile
+# 			NOT = {
+# 				has_opinion_modifier = {
+# 					who = FROM
+# 					modifier = opinion_coerced_into_joining_faction
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.1
+# 			trait = inbred
+# 			NOT = {
+# 				has_opinion_modifier = {
+# 					who = FROM
+# 					modifier = opinion_coerced_into_joining_faction
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.1
+# 			trait = craven
+# 			NOT = {
+# 				has_opinion_modifier = {
+# 					who = FROM
+# 					modifier = opinion_coerced_into_joining_faction
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.2
+# 			OR = {
+# 				trait = slow
+# 				trait = dull
+# 			}
+# 			NOT = {
+# 				has_opinion_modifier = {
+# 					who = FROM
+# 					modifier = opinion_coerced_into_joining_faction
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			trait = kind
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			trait = charitable
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			trait = honest
+# 		}
+# 		modifier = {
+# 			factor = 0.75
+# 			trait = humble
+# 		}
+# 		modifier = {
+# 			factor = 0.75
+# 			trait = just
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			trait = proud
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			trait = brave
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			trait = arbitrary
+# 		}
+# 		modifier = {
+# 			factor = 2.0
+# 			trait = envious
+# 		}
+# 		modifier = {
+# 			factor = 2.0
+# 			trait = greedy
+# 		}
+# 		modifier = {
+# 			factor = 2.0
+# 			trait = impaler
+# 		}
+# 		modifier = {
+# 			factor = 2.0
+# 			trait = deceitful
+# 		}
+# 		modifier = {
+# 			factor = 4.0
+# 			trait = ambitious
+# 		}
+# 	}
+# 	success = {
+# 		always = no
+# 	}
+# 	abort = {
+# 		always = no
+# 	}
+# 	abort_effect = {
+# 	}
+# 	effect = {
+# 	}
+# }
+
 # Overthrow a weak Khan faction
 
 faction_overthrow = {
@@ -8402,12 +8225,10 @@ faction_overthrow = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
+			nor = {
 				opinion = {
 					who = FROM value = -40
 				}
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -8887,10 +8708,8 @@ faction_increase_council_power = {
 				primary_title = {
 					is_tribal_type_title = no
 				}
-				NOT = {
+				nor = {
 					culture = ROOT
-				}
-				NOT = {
 					religion = ROOT
 				}
 			}
@@ -8942,13 +8761,11 @@ faction_increase_council_power = {
 					has_law = war_voting_power_0
 				}
 			}
-			NOT = {
+			nor = {
 				any_war = {
 					war_title = ROOT
 					using_cb = increase_council_power_war
 				}
-			}
-			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_leaving_faction
@@ -9023,10 +8840,8 @@ faction_increase_council_power = {
 			factor = 0
 			holder_scope = {
 				OR = {
-					NOT = {
+					nor = {
 						culture = FROM
-					}
-					NOT = {
 						religion = FROM
 					}
 				}
@@ -9082,25 +8897,13 @@ faction_increase_council_power = {
 			}
 			calc_true_if = {
 				amount = 6
-				NOT = {
+				nor = {
 					has_law = law_voting_power_1
-				}
-				NOT = {
 					has_law = banish_voting_power_1
-				}
-				NOT = {
 					has_law = execution_voting_power_1
-				}
-				NOT = {
 					has_law = revoke_title_voting_power_1
-				}
-				NOT = {
 					has_law = grant_title_voting_power_1
-				}
-				NOT = {
 					has_law = imprison_voting_power_1
-				}
-				NOT = {
 					has_law = war_voting_power_1
 				}
 			}
@@ -9112,25 +8915,13 @@ faction_increase_council_power = {
 			}
 			calc_true_if = {
 				amount = 4
-				NOT = {
+				nor = {
 					has_law = law_voting_power_1
-				}
-				NOT = {
 					has_law = banish_voting_power_1
-				}
-				NOT = {
 					has_law = execution_voting_power_1
-				}
-				NOT = {
 					has_law = revoke_title_voting_power_1
-				}
-				NOT = {
 					has_law = grant_title_voting_power_1
-				}
-				NOT = {
 					has_law = imprison_voting_power_1
-				}
-				NOT = {
 					has_law = war_voting_power_1
 				}
 			}
@@ -9142,25 +8933,13 @@ faction_increase_council_power = {
 			}
 			calc_true_if = {
 				amount = 2
-				NOT = {
+				nor = {
 					has_law = law_voting_power_1
-				}
-				NOT = {
 					has_law = banish_voting_power_1
-				}
-				NOT = {
 					has_law = execution_voting_power_1
-				}
-				NOT = {
 					has_law = revoke_title_voting_power_1
-				}
-				NOT = {
 					has_law = grant_title_voting_power_1
-				}
-				NOT = {
 					has_law = imprison_voting_power_1
-				}
-				NOT = {
 					has_law = war_voting_power_1
 				}
 			}
@@ -9347,12 +9126,10 @@ faction_increase_council_power = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
+			nor = {
 				opinion = {
 					who = FROM value = -40
 				}
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
@@ -9466,25 +9243,13 @@ faction_increase_council_power = {
 			FROMFROM = {
 				calc_true_if = {
 					amount = 6
-					NOT = {
+					nor = {
 						has_law = law_voting_power_1
-					}
-					NOT = {
 						has_law = banish_voting_power_1
-					}
-					NOT = {
 						has_law = execution_voting_power_1
-					}
-					NOT = {
 						has_law = revoke_title_voting_power_1
-					}
-					NOT = {
 						has_law = grant_title_voting_power_1
-					}
-					NOT = {
 						has_law = imprison_voting_power_1
-					}
-					NOT = {
 						has_law = war_voting_power_1
 					}
 				}
@@ -9496,25 +9261,13 @@ faction_increase_council_power = {
 			FROMFROM = {
 				calc_true_if = {
 					amount = 4
-					NOT = {
+					nor = {
 						has_law = law_voting_power_1
-					}
-					NOT = {
 						has_law = banish_voting_power_1
-					}
-					NOT = {
 						has_law = execution_voting_power_1
-					}
-					NOT = {
 						has_law = revoke_title_voting_power_1
-					}
-					NOT = {
 						has_law = grant_title_voting_power_1
-					}
-					NOT = {
 						has_law = imprison_voting_power_1
-					}
-					NOT = {
 						has_law = war_voting_power_1
 					}
 				}
@@ -9526,25 +9279,13 @@ faction_increase_council_power = {
 			FROMFROM = {
 				calc_true_if = {
 					amount = 2
-					NOT = {
+					nor = {
 						has_law = law_voting_power_1
-					}
-					NOT = {
 						has_law = banish_voting_power_1
-					}
-					NOT = {
 						has_law = execution_voting_power_1
-					}
-					NOT = {
 						has_law = revoke_title_voting_power_1
-					}
-					NOT = {
 						has_law = grant_title_voting_power_1
-					}
-					NOT = {
 						has_law = imprison_voting_power_1
-					}
-					NOT = {
 						has_law = war_voting_power_1
 					}
 				}
@@ -9753,10 +9494,8 @@ faction_powerful_vassal_takeover = {
 		}
 		liege = {
 			is_feudal = yes
-			NOT = {
+			nor = {
 				controls_religion = yes
-			}
-			NOT = {
 				any_demesne_title = {
 					temporary = yes
 				}
@@ -9793,13 +9532,11 @@ faction_powerful_vassal_takeover = {
 			}
 		}
 		holder_scope = {
-			NOT = {
+			nor = {
 				any_war = {
 					war_title = ROOT
 					using_cb = powerful_vassal_takeover_war
 				}
-			}
-			NOR = {
 				reverse_has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_leaving_faction
@@ -10137,12 +9874,10 @@ faction_powerful_vassal_takeover = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
+			nor = {
 				opinion = {
 					who = FROM value = -40
 				}
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction

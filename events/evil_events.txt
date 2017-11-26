@@ -13,24 +13,21 @@ province_event = {
 	desc = "EVTDESC68000"
 	picture = "GFX_evt_bandits"
 	notification = yes
-	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			owner = {
 				wealth = 0
 			}
-		}
-		NOT = {
 			has_province_modifier = incompetent_rule
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		# lower if really bad demesne efficiency
 		modifier = {
-			factor = 1.11
+			factor = 0.9
 			NOT = {
 				owner = {
 					wealth = -50
@@ -38,7 +35,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					wealth = -100
@@ -46,7 +43,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOT = {
 				owner = {
 					wealth = -200
@@ -54,7 +51,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 3.33
+			factor = 0.3
 			NOT = {
 				owner = {
 					wealth = -300
@@ -62,7 +59,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			NOT = {
 				owner = {
 					wealth = -500
@@ -71,56 +68,56 @@ province_event = {
 		}
 		# traits affect this
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				trait = ambitious
 			}
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			owner = {
 				trait = just
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				trait = arbitrary
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			owner = {
 				trait = greedy
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			owner = {
 				trait = cruel
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			owner = {
 				trait = slothful
 			}
 		}
 		modifier = {
-			factor = 5.00
+			factor = 0.2
 			owner = {
 				trait = incapable
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			owner = {
 				trait = infirm
 			}
 		}
 		# modify by stewardship and intrigue
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_stewardship = 15
@@ -128,7 +125,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_stewardship = 10
@@ -136,7 +133,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_stewardship = 5
@@ -144,25 +141,25 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			owner = {
 				realm_stewardship = 25
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				realm_stewardship = 20
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			owner = {
 				realm_intrigue = 25
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				realm_intrigue = 20
 			}
@@ -186,7 +183,6 @@ province_event = {
 	desc = "EVTDESC68001"
 	picture = "GFX_evt_council"
 	notification = yes
-	is_triggered_only = yes
 
 	trigger = {
 		owner = {
@@ -195,22 +191,22 @@ province_event = {
 		has_province_modifier = incompetent_rule
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				realm_stewardship = 20
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			owner = {
 				realm_intrigue = 20
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			owner = {
 				trait = just
 			}
@@ -249,24 +245,21 @@ province_event = {
 	desc = "EVTDESC68010"
 	picture = "GFX_evt_bandits"
 	notification = yes
-	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			owner = {
 				wealth = 0
 			}
-		}
-		NOT = {
 			has_province_modifier = thieves_guild
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		# lower if really bad demesne efficiency
 		modifier = {
-			factor = 1.11
+			factor = 0.9
 			NOT = {
 				owner = {
 					wealth = -50
@@ -274,7 +267,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					wealth = -100
@@ -282,7 +275,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOT = {
 				owner = {
 					wealth = -200
@@ -290,7 +283,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 3.33
+			factor = 0.3
 			NOT = {
 				owner = {
 					wealth = -300
@@ -298,7 +291,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			NOT = {
 				owner = {
 					wealth = -500
@@ -306,7 +299,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_stewardship = 15
@@ -314,7 +307,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_stewardship = 10
@@ -322,7 +315,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_stewardship = 5
@@ -330,62 +323,62 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				realm_stewardship = 20
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			owner = {
 				realm_stewardship = 25
 			}
 		}
 		# traits affect this
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				trait = ambitious
 			}
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			owner = {
 				trait = just
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				trait = arbitrary
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			owner = {
 				trait = greedy
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			owner = {
 				trait = cruel
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			owner = {
 				trait = slothful
 			}
 		}
 		modifier = {
-			factor = 5.00
+			factor = 0.2
 			owner = {
 				trait = incapable
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			owner = {
 				trait = infirm
 			}
@@ -411,7 +404,6 @@ province_event = {
 	desc = "EVTDESC68011"
 	picture = "GFX_evt_burning_house"
 	notification = yes
-	is_triggered_only = yes
 
 	trigger = {
 		owner = {
@@ -420,22 +412,22 @@ province_event = {
 		has_province_modifier = thieves_guild
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				realm_stewardship = 20
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			owner = {
 				realm_intrigue = 20
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			owner = {
 				trait = just
 			}
@@ -457,25 +449,22 @@ province_event = {
 	id = 68020
 	desc = "EVTDESC68020"
 	notification = yes
-	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			owner = {
 				wealth = 0
 			}
-		}
-		NOT = {
 			has_province_modifier = smugglers_ring
 		}
 	}
 	picture = "GFX_evt_bandits"
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		# lower if really bad demesne efficiency
 		modifier = {
-			factor = 1.11
+			factor = 0.9
 			NOT = {
 				owner = {
 					wealth = -50
@@ -483,7 +472,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					wealth = -100
@@ -491,7 +480,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOT = {
 				owner = {
 					wealth = -200
@@ -499,7 +488,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 3.33
+			factor = 0.3
 			NOT = {
 				owner = {
 					wealth = -300
@@ -507,7 +496,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			NOT = {
 				owner = {
 					wealth = -500
@@ -515,7 +504,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_diplomacy = 15
@@ -523,7 +512,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_diplomacy = 10
@@ -531,7 +520,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_diplomacy = 5
@@ -539,62 +528,62 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				realm_diplomacy = 20
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			owner = {
 				realm_diplomacy = 25
 			}
 		}
 		# traits affect this
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				trait = ambitious
 			}
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			owner = {
 				trait = just
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				trait = arbitrary
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			owner = {
 				trait = greedy
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			owner = {
 				trait = cruel
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			owner = {
 				trait = slothful
 			}
 		}
 		modifier = {
-			factor = 5.00
+			factor = 0.2
 			owner = {
 				trait = incapable
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			owner = {
 				trait = infirm
 			}
@@ -620,7 +609,6 @@ province_event = {
 	desc = "EVTDESC68021"
 	notification = yes
 	picture = "GFX_evt_burning_house"
-	is_triggered_only = yes
 
 	trigger = {
 		owner = {
@@ -629,22 +617,22 @@ province_event = {
 		has_province_modifier = smugglers_ring
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				realm_diplomacy = 20
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			owner = {
 				realm_intrigue = 20
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			owner = {
 				trait = just
 			}
@@ -667,23 +655,20 @@ province_event = {
 	desc = "EVTDESC68030"
 	notification = yes
 	picture = "GFX_evt_bandits"
-	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			owner = {
 				wealth = 0
 			}
-		}
-		NOT = {
 			has_province_modifier = highway_robber_band
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 1.11
+			factor = 0.9
 			NOT = {
 				owner = {
 					wealth = -50
@@ -691,7 +676,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					wealth = -100
@@ -699,7 +684,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOT = {
 				owner = {
 					wealth = -200
@@ -707,7 +692,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 3.33
+			factor = 0.3
 			NOT = {
 				owner = {
 					wealth = -300
@@ -715,7 +700,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			NOT = {
 				owner = {
 					wealth = -500
@@ -723,7 +708,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_martial = 15
@@ -731,7 +716,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_martial = 10
@@ -739,7 +724,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			NOT = {
 				owner = {
 					realm_martial = 5
@@ -747,62 +732,62 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				realm_martial = 20
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			owner = {
 				realm_martial = 25
 			}
 		}
 		# traits affect this
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				trait = ambitious
 			}
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			owner = {
 				trait = just
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				trait = arbitrary
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			owner = {
 				trait = greedy
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			owner = {
 				trait = cruel
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			owner = {
 				trait = slothful
 			}
 		}
 		modifier = {
-			factor = 5.00
+			factor = 0.2
 			owner = {
 				trait = incapable
 			}
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			owner = {
 				trait = infirm
 			}
@@ -828,7 +813,6 @@ province_event = {
 	desc = "EVTDESC68031"
 	picture = "GFX_evt_burning_house"
 	notification = yes
-	is_triggered_only = yes
 
 	trigger = {
 		owner = {
@@ -837,22 +821,22 @@ province_event = {
 		has_province_modifier = highway_robber_band
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				realm_martial = 20
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			owner = {
 				realm_intrigue = 20
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			owner = {
 				trait = just
 			}

@@ -4,15 +4,14 @@ namespace = sorcererapprentice
 character_event = {
 	id = sorcererapprentice.1
 	hide_window = yes
-	is_triggered_only = yes
 	prisoner = no
 	only_playable = yes
 	capable_only = yes
 	min_age = 12
 	max_age = 90
 
-	weight_multiplier = {
-		factor = 0.20000
+	mean_time_to_happen = {
+		years = 50
 	}
 
 	trigger = {
@@ -24,25 +23,13 @@ character_event = {
 			}
 		}
 		wh_is_mage_trigger = no
-		NOT = {
+		nor = {
 			religion = taalite
-		}
-		NOT = {
 			religion = ulrican
-		}
-		NOT = {
 			religion = manannite
-		}
-		NOT = {
 			religion = shallyan
-		}
-		NOT = {
 			religion = myrmidian
-		}
-		NOT = {
 			religion = grail
-		}
-		NOT = {
 			religion = sigmarite
 		}
 		OR = {
@@ -54,25 +41,13 @@ character_event = {
 		OR = {
 			independent = yes
 			liege = {
-				NOT = {
+				nor = {
 					religion = taalite
-				}
-				NOT = {
 					religion = ulrican
-				}
-				NOT = {
 					religion = manannite
-				}
-				NOT = {
 					religion = shallyan
-				}
-				NOT = {
 					religion = myrmidian
-				}
-				NOT = {
 					religion = grail
-				}
-				NOT = {
 					religion = sigmarite
 				}
 			}
@@ -898,7 +873,6 @@ character_event = {
 	picture = "GFX_evt_apprentice"
 	min_age = 8
 	max_age = 16
-	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_human
@@ -916,19 +890,19 @@ character_event = {
 				NOT = {
 					religion = ormazd
 				}
- 		 		NOT = {
+ 				NOT = {
 					religion = kitabid
 				}
- 		 		NOT = {
+ 				NOT = {
 					culture = ramaccan
 				}
- 		 		NOT = {
+ 				NOT = {
 					culture = medean
 				}
- 		 		NOT = {
+ 				NOT = {
 					culture = tevari
 				}
- 		 		NOT = {
+ 				NOT = {
 					culture = cophic
 				}
 			}
@@ -941,46 +915,24 @@ character_event = {
 				}
 			}
 		}
-		NOT = {
+		nor = {
 			age = 15
-		}
-		NOT = {
 			trait = hedge_wizard
-		}
-		NOT = {
 			trait = mage_apprentice
-		}
-		NOT = {
 			trait = incapable
-		}
-		NOT = {
 			has_character_modifier = apprenticeship_refused
 		}
 		wh_is_mage_trigger = no
 		guardian = {
 			wh_is_mage_trigger = yes
-			NOT = {
+			nor = {
 				trait = incapable
-			}
-			NOT = {
 				religion = taalite
-			}
-			NOT = {
 				religion = ulrican
-			}
-			NOT = {
 				religion = manannite
-			}
-			NOT = {
 				religion = shallyan
-			}
-			NOT = {
 				religion = myrmidian
-			}
-			NOT = {
 				religion = grail
-			}
-			NOT = {
 				religion = sigmarite
 			}
 			OR = {
@@ -1028,37 +980,37 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 2
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = genius
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = brilliant
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = bright
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = quick
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = smart
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10
 			OR = {
 				trait = content
 				trait = imbecile
 			}
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5
 			OR = {
 				trait = slothful
 				trait = idiot
@@ -1132,10 +1084,8 @@ character_event = {
 				FROM = {
 					if = {
 						limit = {
-							NOT = {
+							nor = {
 								trait = shy
-							}
-							NOT = {
 								trait = gregarious
 							}
 						}
@@ -1157,10 +1107,8 @@ character_event = {
 				FROM = {
 					if = {
 						limit = {
-							NOT = {
+							nor = {
 								trait = wroth
-							}
-							NOT = {
 								trait = patient
 							}
 						}
@@ -1182,10 +1130,8 @@ character_event = {
 				FROM = {
 					if = {
 						limit = {
-							NOT = {
+							nor = {
 								trait = humble
-							}
-							NOT = {
 								trait = proud
 							}
 						}
@@ -4928,25 +4874,13 @@ character_event = {
 					}
 					modifier = {
 						factor = 1.85
-						NOT = {
+						nor = {
 							trait = beautiful
-						}
-						NOT = {
 							trait = pretty
-						}
-						NOT = {
 							trait = fair
-						}
-						NOT = {
 							trait = plain
-						}
-						NOT = {
 							trait = ugly
-						}
-						NOT = {
 							trait = unsightly
-						}
-						NOT = {
 							trait = monstrous
 						}
 					}
@@ -6089,10 +6023,8 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = wounded
-				}
-				NOT = {
 					trait = maimed
 				}
 			}
@@ -6416,52 +6348,22 @@ character_event = {
 			}
 			if = {
 				limit = {
-					NOT = {
+					nor = {
 						trait = vampire_lahmian_visible
-					}
-					NOT = {
 						trait = vampire_carstein_visible
-					}
-					NOT = {
 						trait = vampire_blood_visible
-					}
-					NOT = {
 						trait = vampire_strigoi_visible
-					}
-					NOT = {
 						trait = vampire_necrarch_visible
-					}
-					NOT = {
 						trait = vampire_jade_visible
-					}
-					NOT = {
 						trait = vampire_mahtmasi_visible
-					}
-					NOT = {
 						trait = vampire_lahmian_hidden
-					}
-					NOT = {
 						trait = vampire_carstein_hidden
-					}
-					NOT = {
 						trait = vampire_blood_hidden
-					}
-					NOT = {
 						trait = vampire_strigoi_hidden
-					}
-					NOT = {
 						trait = vampire_necrarch_hidden
-					}
-					NOT = {
 						trait = vampire_jade_hidden
-					}
-					NOT = {
 						trait = vampire_mahtmasi_hidden
-					}
-					NOT = {
 						has_character_flag = undead_insight
-					}
-					NOT = {
 						has_character_flag = nagash_book_quest
 					}
 				}
@@ -6676,46 +6578,20 @@ character_event = {
 					}
 					modifier = {
 						factor = 1.85
-						NOT = {
+						nor = {
 							trait = vampire_lahmian_visible
-						}
-						NOT = {
 							trait = vampire_carstein_visible
-						}
-						NOT = {
 							trait = vampire_blood_visible
-						}
-						NOT = {
 							trait = vampire_strigoi_visible
-						}
-						NOT = {
 							trait = vampire_necrarch_visible
-						}
-						NOT = {
 							trait = vampire_jade_visible
-						}
-						NOT = {
 							trait = vampire_mahtmasi_visible
-						}
-						NOT = {
 							trait = vampire_lahmian_hidden
-						}
-						NOT = {
 							trait = vampire_carstein_hidden
-						}
-						NOT = {
 							trait = vampire_blood_hidden
-						}
-						NOT = {
 							trait = vampire_strigoi_hidden
-						}
-						NOT = {
 							trait = vampire_necrarch_hidden
-						}
-						NOT = {
 							trait = vampire_jade_hidden
-						}
-						NOT = {
 							trait = vampire_mahtmasi_hidden
 						}
 					}
@@ -6837,52 +6713,22 @@ character_event = {
 			}
 			if = {
 				limit = {
-					NOT = {
+					nor = {
 						trait = vampire_lahmian_visible
-					}
-					NOT = {
 						trait = vampire_carstein_visible
-					}
-					NOT = {
 						trait = vampire_blood_visible
-					}
-					NOT = {
 						trait = vampire_strigoi_visible
-					}
-					NOT = {
 						trait = vampire_necrarch_visible
-					}
-					NOT = {
 						trait = vampire_jade_visible
-					}
-					NOT = {
 						trait = vampire_mahtmasi_visible
-					}
-					NOT = {
 						trait = vampire_lahmian_hidden
-					}
-					NOT = {
 						trait = vampire_carstein_hidden
-					}
-					NOT = {
 						trait = vampire_blood_hidden
-					}
-					NOT = {
 						trait = vampire_strigoi_hidden
-					}
-					NOT = {
 						trait = vampire_necrarch_hidden
-					}
-					NOT = {
 						trait = vampire_jade_hidden
-					}
-					NOT = {
 						trait = vampire_mahtmasi_hidden
-					}
-					NOT = {
 						has_character_flag = undead_insight
-					}
-					NOT = {
 						has_character_flag = nagash_book_quest
 					}
 				}
@@ -7100,46 +6946,20 @@ character_event = {
 					}
 					modifier = {
 						factor = 1.85
-						NOT = {
+						nor = {
 							trait = vampire_lahmian_visible
-						}
-						NOT = {
 							trait = vampire_carstein_visible
-						}
-						NOT = {
 							trait = vampire_blood_visible
-						}
-						NOT = {
 							trait = vampire_strigoi_visible
-						}
-						NOT = {
 							trait = vampire_necrarch_visible
-						}
-						NOT = {
 							trait = vampire_jade_visible
-						}
-						NOT = {
 							trait = vampire_mahtmasi_visible
-						}
-						NOT = {
 							trait = vampire_lahmian_hidden
-						}
-						NOT = {
 							trait = vampire_carstein_hidden
-						}
-						NOT = {
 							trait = vampire_blood_hidden
-						}
-						NOT = {
 							trait = vampire_strigoi_hidden
-						}
-						NOT = {
 							trait = vampire_necrarch_hidden
-						}
-						NOT = {
 							trait = vampire_jade_hidden
-						}
-						NOT = {
 							trait = vampire_mahtmasi_hidden
 						}
 					}
@@ -7591,46 +7411,20 @@ character_event = {
 				factor = 0		# Vampire will desire to turn, not just convert, unless just
 				FROM = {
 					trait = creature_human
-					NOT = {
+					nor = {
 						trait = vampire_lahmian_visible
-					}
-					NOT = {
 						trait = vampire_carstein_visible
-					}
-					NOT = {
 						trait = vampire_blood_visible
-					}
-					NOT = {
 						trait = vampire_strigoi_visible
-					}
-					NOT = {
 						trait = vampire_necrarch_visible
-					}
-					NOT = {
 						trait = vampire_jade_visible
-					}
-					NOT = {
 						trait = vampire_mahtmasi_visible
-					}
-					NOT = {
 						trait = vampire_lahmian_hidden
-					}
-					NOT = {
 						trait = vampire_carstein_hidden
-					}
-					NOT = {
 						trait = vampire_blood_hidden
-					}
-					NOT = {
 						trait = vampire_strigoi_hidden
-					}
-					NOT = {
 						trait = vampire_necrarch_hidden
-					}
-					NOT = {
 						trait = vampire_jade_hidden
-					}
-					NOT = {
 						trait = vampire_mahtmasi_hidden
 					}
 				}
@@ -7663,46 +7457,20 @@ character_event = {
 					trait = creature_nehekharan
 				}
 				trait = creature_human
-				NOT = {
+				nor = {
 					trait = vampire_lahmian_visible
-				}
-				NOT = {
 					trait = vampire_carstein_visible
-				}
-				NOT = {
 					trait = vampire_blood_visible
-				}
-				NOT = {
 					trait = vampire_strigoi_visible
-				}
-				NOT = {
 					trait = vampire_necrarch_visible
-				}
-				NOT = {
 					trait = vampire_jade_visible
-				}
-				NOT = {
 					trait = vampire_mahtmasi_visible
-				}
-				NOT = {
 					trait = vampire_lahmian_hidden
-				}
-				NOT = {
 					trait = vampire_carstein_hidden
-				}
-				NOT = {
 					trait = vampire_blood_hidden
-				}
-				NOT = {
 					trait = vampire_strigoi_hidden
-				}
-				NOT = {
 					trait = vampire_necrarch_hidden
-				}
-				NOT = {
 					trait = vampire_jade_hidden
-				}
-				NOT = {
 					trait = vampire_mahtmasi_hidden
 				}
 			}
@@ -8207,52 +7975,22 @@ character_event = {
 		trigger = {
 			OR = {
 				AND = {
-					NOT = {
+					nor = {
 						learning = 29
-					}
-					NOT = {
 						trait = vampire_lahmian_visible
-					}
-					NOT = {
 						trait = vampire_carstein_visible
-					}
-					NOT = {
 						trait = vampire_blood_visible
-					}
-					NOT = {
 						trait = vampire_strigoi_visible
-					}
-					NOT = {
 						trait = vampire_necrarch_visible
-					}
-					NOT = {
 						trait = vampire_jade_visible
-					}
-					NOT = {
 						trait = vampire_mahtmasi_visible
-					}
-					NOT = {
 						trait = vampire_lahmian_hidden
-					}
-					NOT = {
 						trait = vampire_carstein_hidden
-					}
-					NOT = {
 						trait = vampire_blood_hidden
-					}
-					NOT = {
 						trait = vampire_strigoi_hidden
-					}
-					NOT = {
 						trait = vampire_necrarch_hidden
-					}
-					NOT = {
 						trait = vampire_jade_hidden
-					}
-					NOT = {
 						trait = vampire_mahtmasi_hidden
-					}
-					NOT = {
 						has_character_flag = undead_insight
 					}
 				}
@@ -8280,46 +8018,20 @@ character_event = {
 				trait = incapable
 				AND = {
 					wh_has_any_magic_potential_trigger = no
-					NOT = {
+					nor = {
 						trait = vampire_lahmian_visible
-					}
-					NOT = {
 						trait = vampire_carstein_visible
-					}
-					NOT = {
 						trait = vampire_blood_visible
-					}
-					NOT = {
 						trait = vampire_strigoi_visible
-					}
-					NOT = {
 						trait = vampire_necrarch_visible
-					}
-					NOT = {
 						trait = vampire_jade_visible
-					}
-					NOT = {
 						trait = vampire_mahtmasi_visible
-					}
-					NOT = {
 						trait = vampire_lahmian_hidden
-					}
-					NOT = {
 						trait = vampire_carstein_hidden
-					}
-					NOT = {
 						trait = vampire_blood_hidden
-					}
-					NOT = {
 						trait = vampire_strigoi_hidden
-					}
-					NOT = {
 						trait = vampire_necrarch_hidden
-					}
-					NOT = {
 						trait = vampire_jade_hidden
-					}
-					NOT = {
 						trait = vampire_mahtmasi_hidden
 					}
 				}
@@ -8419,52 +8131,22 @@ character_event = {
 		trigger = {
 			OR = {
 				AND = {
-					NOT = {
+					nor = {
 						learning = 29
-					}
-					NOT = {
 						trait = vampire_lahmian_visible
-					}
-					NOT = {
 						trait = vampire_carstein_visible
-					}
-					NOT = {
 						trait = vampire_blood_visible
-					}
-					NOT = {
 						trait = vampire_strigoi_visible
-					}
-					NOT = {
 						trait = vampire_necrarch_visible
-					}
-					NOT = {
 						trait = vampire_jade_visible
-					}
-					NOT = {
 						trait = vampire_mahtmasi_visible
-					}
-					NOT = {
 						trait = vampire_lahmian_hidden
-					}
-					NOT = {
 						trait = vampire_carstein_hidden
-					}
-					NOT = {
 						trait = vampire_blood_hidden
-					}
-					NOT = {
 						trait = vampire_strigoi_hidden
-					}
-					NOT = {
 						trait = vampire_necrarch_hidden
-					}
-					NOT = {
 						trait = vampire_jade_hidden
-					}
-					NOT = {
 						trait = vampire_mahtmasi_hidden
-					}
-					NOT = {
 						has_character_flag = undead_insight
 					}
 				}
@@ -8492,46 +8174,20 @@ character_event = {
 				trait = incapable
 				AND = {
 					wh_has_any_magic_potential_trigger = no
-					NOT = {
+					nor = {
 						trait = vampire_lahmian_visible
-					}
-					NOT = {
 						trait = vampire_carstein_visible
-					}
-					NOT = {
 						trait = vampire_blood_visible
-					}
-					NOT = {
 						trait = vampire_strigoi_visible
-					}
-					NOT = {
 						trait = vampire_necrarch_visible
-					}
-					NOT = {
 						trait = vampire_jade_visible
-					}
-					NOT = {
 						trait = vampire_mahtmasi_visible
-					}
-					NOT = {
 						trait = vampire_lahmian_hidden
-					}
-					NOT = {
 						trait = vampire_carstein_hidden
-					}
-					NOT = {
 						trait = vampire_blood_hidden
-					}
-					NOT = {
 						trait = vampire_strigoi_hidden
-					}
-					NOT = {
 						trait = vampire_necrarch_hidden
-					}
-					NOT = {
 						trait = vampire_jade_hidden
-					}
-					NOT = {
 						trait = vampire_mahtmasi_hidden
 					}
 				}
@@ -9085,49 +8741,21 @@ character_event = {
 					}
 					modifier = {
 						factor = 1.35
-						NOT = {
+						nor = {
 							trait = vampire_lahmian_visible
-						}
-						NOT = {
 							trait = vampire_carstein_visible
-						}
-						NOT = {
 							trait = vampire_blood_visible
-						}
-						NOT = {
 							trait = vampire_strigoi_visible
-						}
-						NOT = {
 							trait = vampire_necrarch_visible
-						}
-						NOT = {
 							trait = vampire_jade_visible
-						}
-						NOT = {
 							trait = vampire_mahtmasi_visible
-						}
-						NOT = {
 							trait = vampire_lahmian_hidden
-						}
-						NOT = {
 							trait = vampire_carstein_hidden
-						}
-						NOT = {
 							trait = vampire_blood_hidden
-						}
-						NOT = {
 							trait = vampire_strigoi_hidden
-						}
-						NOT = {
 							trait = vampire_necrarch_hidden
-						}
-						NOT = {
 							trait = vampire_jade_hidden
-						}
-						NOT = {
 							trait = vampire_mahtmasi_hidden
-						}
-						NOT = {
 							trait = khemri_tomb_king
 						}
 					}
@@ -9697,49 +9325,21 @@ character_event = {
 					}
 					modifier = {
 						factor = 1.35
-						NOT = {
+						nor = {
 							trait = vampire_lahmian_visible
-						}
-						NOT = {
 							trait = vampire_carstein_visible
-						}
-						NOT = {
 							trait = vampire_blood_visible
-						}
-						NOT = {
 							trait = vampire_strigoi_visible
-						}
-						NOT = {
 							trait = vampire_necrarch_visible
-						}
-						NOT = {
 							trait = vampire_jade_visible
-						}
-						NOT = {
 							trait = vampire_mahtmasi_visible
-						}
-						NOT = {
 							trait = vampire_lahmian_hidden
-						}
-						NOT = {
 							trait = vampire_carstein_hidden
-						}
-						NOT = {
 							trait = vampire_blood_hidden
-						}
-						NOT = {
 							trait = vampire_strigoi_hidden
-						}
-						NOT = {
 							trait = vampire_necrarch_hidden
-						}
-						NOT = {
 							trait = vampire_jade_hidden
-						}
-						NOT = {
 							trait = vampire_mahtmasi_hidden
-						}
-						NOT = {
 							trait = khemri_tomb_king
 						}
 					}
@@ -10282,49 +9882,21 @@ character_event = {
 					}
 					modifier = {
 						factor = 1.35
-						NOT = {
+						nor = {
 							trait = vampire_lahmian_visible
-						}
-						NOT = {
 							trait = vampire_carstein_visible
-						}
-						NOT = {
 							trait = vampire_blood_visible
-						}
-						NOT = {
 							trait = vampire_strigoi_visible
-						}
-						NOT = {
 							trait = vampire_necrarch_visible
-						}
-						NOT = {
 							trait = vampire_jade_visible
-						}
-						NOT = {
 							trait = vampire_mahtmasi_visible
-						}
-						NOT = {
 							trait = vampire_lahmian_hidden
-						}
-						NOT = {
 							trait = vampire_carstein_hidden
-						}
-						NOT = {
 							trait = vampire_blood_hidden
-						}
-						NOT = {
 							trait = vampire_strigoi_hidden
-						}
-						NOT = {
 							trait = vampire_necrarch_hidden
-						}
-						NOT = {
 							trait = vampire_jade_hidden
-						}
-						NOT = {
 							trait = vampire_mahtmasi_hidden
-						}
-						NOT = {
 							trait = khemri_tomb_king
 						}
 					}
@@ -10697,49 +10269,21 @@ character_event = {
 				}
 				AND = {
 					wh_has_any_magic_potential_trigger = no
-					NOT = {
+					nor = {
 						trait = vampire_lahmian_visible
-					}
-					NOT = {
 						trait = vampire_carstein_visible
-					}
-					NOT = {
 						trait = vampire_blood_visible
-					}
-					NOT = {
 						trait = vampire_strigoi_visible
-					}
-					NOT = {
 						trait = vampire_necrarch_visible
-					}
-					NOT = {
 						trait = vampire_jade_visible
-					}
-					NOT = {
 						trait = vampire_mahtmasi_visible
-					}
-					NOT = {
 						trait = vampire_lahmian_hidden
-					}
-					NOT = {
 						trait = vampire_carstein_hidden
-					}
-					NOT = {
 						trait = vampire_blood_hidden
-					}
-					NOT = {
 						trait = vampire_strigoi_hidden
-					}
-					NOT = {
 						trait = vampire_necrarch_hidden
-					}
-					NOT = {
 						trait = vampire_jade_hidden
-					}
-					NOT = {
 						trait = vampire_mahtmasi_hidden
-					}
-					NOT = {
 						trait = khemri_tomb_king
 					}
 				}
@@ -10820,49 +10364,21 @@ character_event = {
 				trait = incapable
 				AND = {
 					wh_has_any_magic_potential_trigger = no
-					NOT = {
+					nor = {
 						trait = vampire_lahmian_visible
-					}
-					NOT = {
 						trait = vampire_carstein_visible
-					}
-					NOT = {
 						trait = vampire_blood_visible
-					}
-					NOT = {
 						trait = vampire_strigoi_visible
-					}
-					NOT = {
 						trait = vampire_necrarch_visible
-					}
-					NOT = {
 						trait = vampire_jade_visible
-					}
-					NOT = {
 						trait = vampire_mahtmasi_visible
-					}
-					NOT = {
 						trait = vampire_lahmian_hidden
-					}
-					NOT = {
 						trait = vampire_carstein_hidden
-					}
-					NOT = {
 						trait = vampire_blood_hidden
-					}
-					NOT = {
 						trait = vampire_strigoi_hidden
-					}
-					NOT = {
 						trait = vampire_necrarch_hidden
-					}
-					NOT = {
 						trait = vampire_jade_hidden
-					}
-					NOT = {
 						trait = vampire_mahtmasi_hidden
-					}
-					NOT = {
 						trait = khemri_tomb_king
 					}
 				}

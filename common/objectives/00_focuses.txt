@@ -18,13 +18,11 @@ focus_rulership = {
 			trait = incapable
 		}
 		prisoner = no
-		NOT = {
+		nor = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
@@ -92,19 +90,13 @@ focus_business = {
 			trait = incapable
 		}
 		prisoner = no
-		NOT = {
+		nor = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
-		}
-		NOT = {
 			trait = creature_beastman
-		}
-		NOT = {
 			trait = creature_orc
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
@@ -169,67 +161,47 @@ focus_seduction = {
 	}
 	allow = {
 		is_adult = yes
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			trait = celibate
-		}
-		NOT = {
 			is_ascetic_trigger = yes
-		}
-		NOT = {
 			trait = eunuch
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
-		}
-		NOT = {
 			trait = creature_beastman
-		}
-		NOT = {
 			trait = creature_orc
-		}
-		NOT = {
 			trait = creature_goblin
 		}
-	  	NOT = {
+		NOT = {
 			trait = khorne_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = nurgle_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = tzeentch_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = witch_hunter
 		}
-	  	NOT = {
+		NOT = {
 			trait = druchi_witch_elf
 		}
-	  	NOT = {
+		NOT = {
 			trait = druchi_assassin
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = lizardman_group
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = skaven_group
 		}
 		custom_tooltip = {
 			text = is_not_ascetic
 			hidden_tooltip = {
-				NOT = {
+				nor = {
 					has_character_modifier = hindu_ascetic
-				}
-				NOT = {
 					has_character_modifier = buddhist_ascetic
-				}
-				NOT = {
 					has_character_modifier = jain_naked_ascetic
 				}
 			}
@@ -366,25 +338,19 @@ focus_intrigue = {
 			trait = incapable
 		}
 		prisoner = no
-		NOT = {
+		nor = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
-		}
-		NOT = {
 			trait = creature_beastman
-		}
-		NOT = {
 			trait = creature_orc
 		}
-	  	NOT = {
+		NOT = {
 			trait = khorne_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = nurgle_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = slaanesh_demon
 		}
 	}
@@ -486,28 +452,22 @@ focus_hunting = {
 	}
 	allow = {
 		is_adult = yes
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			religion = shallyan
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			trait = khorne_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = nurgle_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = slaanesh_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = tzeentch_demon
 		}
 		prisoner = no
@@ -567,22 +527,18 @@ focus_war = {
 	allow = {
 		prisoner = no
 		is_adult = yes
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			trait = nurgle_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = slaanesh_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = tzeentch_demon
 		}
 	}
@@ -675,40 +631,32 @@ focus_carousing = {
 			trait = hedonist
 			trait = drunkard
 		}
-		NOT = {
+		nor = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
-		}
-		NOT = {
 			trait = creature_beastman
 		}
-	  	NOT = {
+		NOT = {
 			trait = khorne_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = nurgle_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = slaanesh_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = tzeentch_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = witch_hunter
 		}
 		custom_tooltip = {
 			text = is_not_ascetic
 			hidden_tooltip = {
-				NOT = {
+				nor = {
 					has_character_modifier = hindu_ascetic
-				}
-				NOT = {
 					has_character_modifier = buddhist_ascetic
-				}
-				NOT = {
 					has_character_modifier = jain_naked_ascetic
 				}
 			}
@@ -771,40 +719,30 @@ focus_family = {
 	}
 	allow = {
 		is_adult = yes
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
-		}
-		NOT = {
 			trait = creature_skink
-		}
-		NOT = {
 			trait = creature_orc
-		}
-		NOT = {
 			trait = creature_goblin
 		}
-	  	NOT = {
+		NOT = {
 			trait = witch_hunter
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = lizardman_group
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = skaven_group
 		}
-	  	NOT = {
+		NOT = {
 			trait = khorne_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = slaanesh_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = tzeentch_demon
 		}
 		prisoner = no
@@ -814,12 +752,10 @@ focus_family = {
 		factor = 100
 		modifier = {
 			factor = 0.01
-			NOT = {
+			nor = {
 				any_sibling = {
 					always = yes
 				}
-			}
-			NOT = {
 				any_child = {
 					always = yes
 				}
@@ -907,31 +843,23 @@ focus_scholarship = {
 	}
 	allow = {
 		is_adult = yes
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
-		}
-		NOT = {
 			trait = creature_beastman
-		}
-		NOT = {
 			trait = creature_orc
 		}
-	  	NOT = {
+		NOT = {
 			trait = khorne_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = nurgle_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = slaanesh_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = tzeentch_demon
 		}
 		OR = {
@@ -940,7 +868,7 @@ focus_scholarship = {
 				NOT = {
 					religion = ormazd
 				}
-	 		 	NOT = {
+				NOT = {
 					religion = kitabid
 				}
 			}
@@ -1025,31 +953,23 @@ focus_theology = {
 	}
 	allow = {
 		is_adult = yes
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
-		}
-		NOT = {
 			trait = creature_beastman
-		}
-		NOT = {
 			trait = creature_orc
 		}
-	  	NOT = {
+		NOT = {
 			trait = khorne_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = nurgle_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = slaanesh_demon
 		}
-	  	NOT = {
+		NOT = {
 			trait = tzeentch_demon
 		}
 		OR = {
@@ -1058,7 +978,7 @@ focus_theology = {
 				NOT = {
 					religion = ormazd
 				}
-	 		 	NOT = {
+				NOT = {
 					religion = kitabid
 				}
 			}

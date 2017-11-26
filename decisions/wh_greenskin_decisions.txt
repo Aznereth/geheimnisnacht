@@ -139,6 +139,7 @@ decisions = {
 			# }
 		}
 		effect = {
+			log = "work decision unite_the_clans_1 for [Root.GetBestName]"
 			custom_tooltip = {
 				text = form_waaagh_kingdom_info_tooltip
 			}
@@ -245,6 +246,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision unite_the_clans for [Root.GetBestName]"
 			custom_tooltip = {
 				text = form_waaagh_info_tooltip
 			}
@@ -321,10 +323,8 @@ decisions = {
 				prisoner = no
 				has_regent = no
 				higher_tier_than = COUNT
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					trait = incapable
 				}
 				OR = {
@@ -350,10 +350,8 @@ decisions = {
 			OR = {
 				ai = no
 				AND = {
-					NOT = {
+					nor = {
 						trait = craven
-					}
-					NOT = {
 						trait = content
 					}
 				}
@@ -376,26 +374,16 @@ decisions = {
 		allow = {
 			prestige = 200
 			liege = {
-				NOT = {
+				nor = {
 					has_character_flag = do_not_disturb
-				}
-				NOT = {
 					war = yes
-				}
-				NOT = {
 					is_looting = yes
-				}
-				NOT = {
 					has_character_modifier = recent_greenskin_duel_timer
-				}
-				NOT = {
 					has_character_flag = duel
 				}
 			}
-			NOT = {
+			nor = {
 				has_character_flag = do_not_disturb
-			}
-			NOT = {
 				war = yes
 			}
 			custom_tooltip = {
@@ -406,16 +394,15 @@ decisions = {
 							has_character_modifier = recent_duel_timer
 						}
 					}
-					NOT = {
+					nor = {
 						has_character_modifier = recent_duel_timer
-					}
-					NOT = {
 						has_character_flag = duel
 					}
 				}
 			}
 		}
 		effect = {
+			log = "work decision duel_greenskin_liege_decision for [Root.GetBestName]"
 			ROOT = {
 				add_character_modifier = {
 					modifier = recent_duel_timer
@@ -958,6 +945,7 @@ decisions = {
 			prestige = 800
 		}
 		effect = {
+			log = "work decision gather_greenskin_army for [Root.GetBestName]"
 			prestige = -800
 			capital_scope = {
 				PREV = {
@@ -1003,6 +991,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision choose_greenskin_branch for [Root.GetBestName]"
 			# Choose branch
 			character_event = {
 				id = wh_greenskins.206
@@ -1040,10 +1029,8 @@ targetted_decisions = {
 			is_female = no
 			is_tribal = yes
 			is_liege_or_above = FROM
-			NOT = {
+			nor = {
 				character = FROM
-			}
-			NOT = {
 				is_close_relative = FROM
 			}
 		}
@@ -1077,16 +1064,10 @@ targetted_decisions = {
 			}
 			# opinion = { who = FROM value = 0 }
 			prisoner = no
-			NOT = {
+			nor = {
 				trait = incapable
-			}
-			NOT = {
 				trait = blinded
-			}
-			NOT = {
 				trait = weak
-			}
-			NOT = {
 				trait = imbecile
 			}
 			OR = {
@@ -1105,6 +1086,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision adopt_greenskin_heir for [Root.GetBestName]"
 			hidden_tooltip = {
 				father = {
 					ROOT = {
@@ -1201,10 +1183,8 @@ targetted_decisions = {
 			is_ruler = yes
 			higher_tier_than = DUKE
 			independent = yes
-			NOT = {
+			nor = {
 				has_any_opinion_modifier = preparing_waaagh_invasion_opinion
-			}
-			NOT = {
 				has_character_modifier = attempted_waaagh
 			}
 			OR = {
@@ -1218,16 +1198,10 @@ targetted_decisions = {
 			is_within_diplo_range = FROM
 			independent = yes
 			realm_size = 10
-			NOT = {
+			nor = {
 				character = FROM
-			}
-			NOT = {
 				trait = creature_orc
-			}
-			NOT = {
 				trait = creature_goblin
-			}
-			NOT = {
 				religion_group = greenskin_gods_group
 			}
 			higher_tier_than = DUKE
@@ -1251,6 +1225,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision declare_waaagh for [Root.GetBestName]"
 			FROM = {
 				prestige = -500
 				add_character_modifier = {
@@ -1377,10 +1352,8 @@ targetted_decisions = {
 			is_within_diplo_range = FROM
 			is_female = no
 			is_liege_or_above = FROM
-			NOT = {
+			nor = {
 				character = FROM
-			}
-			NOT = {
 				has_character_flag = duel
 			}
 			higher_tier_than = BARON
@@ -1396,6 +1369,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision bash_heads for [Root.GetBestName]"
 			custom_tooltip = {
 				text = weakwarbossremoved
 			}
@@ -1482,10 +1456,8 @@ targetted_decisions = {
 			is_within_diplo_range = FROM
 			is_female = no
 			same_realm = FROM
-			NOT = {
+			nor = {
 				character = FROM
-			}
-			NOT = {
 				has_character_flag = duel
 			}
 			higher_tier_than = BARON
@@ -1505,6 +1477,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision bash_runts for [Root.GetBestName]"
 			save_event_target_as = duelist_a
 			set_character_flag = duel
 			FROM = {
@@ -1626,6 +1599,7 @@ settlement_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision make_land_green for [Root.GetBestName]"
 			FROM = {
 				prestige = -50
 			}
@@ -1746,6 +1720,7 @@ settlement_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision cleanse_greenskin_presence for [Root.GetBestName]"
 			hidden_tooltip = {
 				FROM = {
 					character_event = {
@@ -1810,6 +1785,7 @@ title_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision establish_greenskin_tribe for [Root.GetBestName]"
 			FROM = {
 				prestige = -100
 			}

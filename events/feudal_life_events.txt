@@ -273,10 +273,8 @@ character_event = {
 		}
 		in_command = no
 		tier = count
-		NOT = {
+		nor = {
 			trait = stressed
-		}
-		NOT = {
 			trait = depressed
 		}
 		any_vassal = {
@@ -439,9 +437,7 @@ character_event = {
 			trait = lustful
 			religion_group = ormazd_gods_group
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1
@@ -477,15 +473,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTB4036 # Ordeal by water
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		add_character_modifier = {
 			name = modifier_witch
 			duration = 90
@@ -494,15 +481,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTC4036 # Torture
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		add_character_modifier = {
 			name = tortured_witch
 			duration = 90
@@ -582,15 +560,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTB4035 # Cut off hands
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		add_character_modifier = {
 			name = the_cruel
 			duration = 180
@@ -599,15 +568,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTC4035 # Kill!
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		add_character_modifier = {
 			name = kill_lawbreakers
 			duration = 180
@@ -705,15 +665,6 @@ character_event = {
 				trait = wroth
 			}
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		prestige = 15
 		any_courtier = {
 			limit = {
@@ -744,28 +695,15 @@ character_event = {
 				trait = cruel
 			}
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		add_trait = cruel
 	}
 
 	option = {
 		name = EVTOPTE4010
 		trigger = {
-			NOT = {
+			nor = {
 				trait = arbitrary
-			}
-			NOT = {
 				trait = diligent
-			}
-			NOT = {
 				trait = just
 			}
 		}
@@ -802,13 +740,9 @@ character_event = {
 				prisoner = no
 				treasury = 50
 				prestige = 50
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					trait = incapable
-				}
-				NOT = {
 					spouse = {
 						character = ROOT
 					}
@@ -817,10 +751,8 @@ character_event = {
 				OR = {
 					trait = trusting
 					is_dumb_trigger = yes
-					NOT = {
+					nor = {
 						trait = paranoid
-					}
-					NOT = {
 						trait = deceitful
 					}
 				}
@@ -851,13 +783,9 @@ character_event = {
 					prisoner = no
 					treasury = 50
 					prestige = 50
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						trait = incapable
-					}
-					NOT = {
 						spouse = {
 							character = ROOT
 						}
@@ -866,10 +794,8 @@ character_event = {
 					OR = {
 						trait = trusting
 						is_dumb_trigger = yes
-						NOT = {
+						nor = {
 							trait = paranoid
-						}
-						NOT = {
 							trait = deceitful
 						}
 					}
@@ -1022,15 +948,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTB4050 # Behead him!
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		add_character_modifier = {
 			name = the_ruthless
 			duration = 180
@@ -1060,20 +977,9 @@ character_event = {
 				trait = diligent
 				is_strong_trigger = yes
 			}
-			NOT = {
+			nor = {
 				is_weak_trigger = yes
-			}
-			NOT = {
 				trait = arbitrary
-			}
-		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
 			}
 		}
 		add_character_modifier = {
@@ -1087,15 +993,6 @@ character_event = {
 		tooltip_info = wroth
 		trigger = {
 			trait = wroth
-		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
 		}
 		add_character_modifier = {
 			name = the_cruel
@@ -1400,15 +1297,6 @@ character_event = {
 				trait = just
 			}
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		FROM = {
 			set_character_flag = dead_poachers
 			character_event = {
@@ -1426,15 +1314,6 @@ character_event = {
 			trait = diligent
 			NOT = {
 				trait = arbitrary
-			}
-		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
 			}
 		}
 		FROM = {
@@ -1492,15 +1371,6 @@ character_event = {
 		trigger = {
 			has_character_flag = ears_off
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		clr_character_flag = ears_off
 		FROM = {
 			character_event = {
@@ -1542,15 +1412,6 @@ character_event = {
 		name = EVTOPTF4023 # Bad
 		trigger = {
 			has_character_flag = dead_poachers
-		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
 		}
 		clr_character_flag = dead_poachers
 		FROM = {
@@ -1632,10 +1493,8 @@ character_event = {
 		host = {
 			age = 20
 			prisoner = no
-			NOT = {
+			nor = {
 				character = ROOT
-			}
-			NOT = {
 				trait = incapable
 			}
 			any_demesne_province = {
@@ -1728,15 +1587,6 @@ character_event = {
 		ai_chance = {
 			factor = 20
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		FROM = {
 			set_character_flag = heads_up
 			character_event = {
@@ -1755,15 +1605,6 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 30
-		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
 		}
 		FROM = {
 			set_character_flag = hands_off
@@ -1831,15 +1672,6 @@ character_event = {
 		ai_chance = {
 			factor = 30
 		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		clr_character_flag = hands_off
 		FROM = {
 			character_event = {
@@ -1857,15 +1689,6 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 70
-		}
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
 		}
 		clr_character_flag = hands_off
 		FROM = {
@@ -1987,18 +1810,12 @@ character_event = {
 				tier = duke
 				tier = king
 			}
-			NOT = {
+			nor = {
 				character = ROOT
-			}
-			NOT = {
 				spouse = {
 					character = ROOT
 				}
-			}
-			NOT = {
 				trait = incapable
-			}
-			NOT = {
 				has_character_modifier = the_judger
 			}
 		}
@@ -2279,9 +2096,9 @@ character_event = {
 
 	trigger = {
 		in_command = no
-		NOT = {
-			religion = jain
-		}
+		# NOT = {
+		# 	religion = jain
+		# }
 		OR = {
 			trait = falconer
 			trait = hunter
@@ -2395,19 +2212,15 @@ character_event = {
 		any_friend = {
 			age = 20
 			prisoner = no
-			NOT = {
+			nor = {
 				character = ROOT
-			}
-			NOT = {
 				trait = incapable
 			}
 			reverse_opinion = {
 				who = ROOT value = 25
 			}
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1
@@ -2435,10 +2248,8 @@ character_event = {
 			limit = {
 				age = 20
 				prisoner = no
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					trait = incapable
 				}
 				reverse_opinion = {
@@ -2715,9 +2526,7 @@ character_event = {
 				trait = gregarious
 			}
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1
@@ -2865,13 +2674,9 @@ character_event = {
 				who = ROOT value = 25
 			}
 		}
-		NOT = {
+		nor = {
 			has_character_modifier = the_pompous
-		}
-		NOT = {
 			has_character_modifier = the_cynical
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
 		}
 	}
@@ -2992,10 +2797,8 @@ character_event = {
 			tier = duke
 			tier = count
 		}
-		NOT = {
+		nor = {
 			has_character_modifier = the_cynical
-		}
-		NOT = {
 			has_character_modifier = the_pitiful
 		}
 		any_vassal = {
@@ -3004,9 +2807,7 @@ character_event = {
 			}
 			trait = brave
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1
@@ -3097,17 +2898,11 @@ character_event = {
 	trigger = {
 		in_command = no
 		num_of_rivals = 1
-		NOT = {
+		nor = {
 			tier = king
 			tier = emperor
-		}
-		NOT = {
 			trait = stressed
-		}
-		NOT = {
 			has_character_modifier = the_cynical
-		}
-		NOT = {
 			has_character_modifier = the_pitiful
 		}
 		any_vassal = {
@@ -3120,9 +2915,7 @@ character_event = {
 				trait = greedy
 			}
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1
@@ -3201,10 +2994,8 @@ character_event = {
 
 	trigger = {
 		in_command = no
-		NOT = {
+		nor = {
 			tier = king
-		}
-		NOT = {
 			tier = emperor
 		}
 		any_vassal = {
@@ -3219,9 +3010,7 @@ character_event = {
 				}
 			}
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1
@@ -3300,10 +3089,8 @@ character_event = {
 
 	trigger = {
 		in_command = no
-		NOT = {
+		nor = {
 			has_character_modifier = the_cynical
-		}
-		NOT = {
 			has_character_modifier = the_amiable
 		}
 		any_vassal = {
@@ -3790,9 +3577,7 @@ character_event = {
 			trait = ambitious
 			trait = wroth
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 3

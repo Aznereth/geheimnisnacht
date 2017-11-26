@@ -19,17 +19,14 @@ character_event = {
 	only_capable = yes
 	religion_group = ormazd_gods_group
 	is_married = yes
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
 			religion = ormazd
 			religion = kitabid
 		}
-		NOT = {
+		nor = {
 			has_character_modifier = qadi_divorce_timer
-		}
-		NOT = {
 			has_character_flag = qadi_granted_divorce
 		}
 		spouse = {
@@ -60,26 +57,26 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.62500
+	mean_time_to_happen = {
+		years = 16
 		modifier = {
-			factor = 0.20
+			factor = 5
 			trait = content
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = honest
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			num_of_children = 2
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3
 			num_of_children = 4
 		}
 		modifier = {
-			factor = 0.25
+			factor = 4
 			num_of_children = 6
 		}
 	}
@@ -580,7 +577,6 @@ character_event = {
 	capable_only = yes
 	religion_group = ormazd_gods_group
 	war = no
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -589,24 +585,16 @@ character_event = {
 		}
 		in_command = no
 		independent = no
-		NOT = {
+		nor = {
 			has_minor_title = title_chief_qadi
-		}
-		NOT = {
 			has_character_flag = qadi_suggester
-		}
-		NOT = {
 			has_character_flag = new_qadi_suggester
 		}
 		liege = {
 			uses_decadence = yes
-			NOT = {
+			nor = {
 				has_character_modifier = suggested_qadi_timer
-			}
-			NOT = {
 				has_character_modifier = suggested_new_qadi_timer
-			}
-			NOT = {
 				character = ROOT
 			}
 			prisoner = no
@@ -617,12 +605,10 @@ character_event = {
 				}
 			}
 			religion_group = ormazd_gods_group
-			NOT = {
+			nor = {
 				any_vassal = {
 					has_minor_title = title_chief_qadi
 				}
-			}
-			NOT = {
 				any_courtier = {
 					has_minor_title = title_chief_qadi
 				}
@@ -633,13 +619,9 @@ character_event = {
 					religion_group = ormazd_gods_group
 					is_female = no
 					prisoner = no
-					NOT = {
+					nor = {
 						has_minor_title = title_chief_qadi
-					}
-					NOT = {
 						character = ROOT
-					}
-					NOT = {
 						any_rival = {
 							character = ROOT
 						}
@@ -662,10 +644,8 @@ character_event = {
 						trait = scholarly_theologian
 						trait = mastermind_theologian
 					}
-					NOT = {
+					nor = {
 						has_minor_title = title_chief_qadi
-					}
-					NOT = {
 						any_rival = {
 							character = ROOT
 						}
@@ -687,22 +667,22 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = diligent
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = slothful
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = content
 		}
 	}
@@ -730,13 +710,9 @@ character_event = {
 					is_female = no
 					religion_group = ormazd_gods_group
 					prisoner = no
-					NOT = {
+					nor = {
 						character = PREV
-					}
-					NOT = {
 						character = ROOT
-					}
-					NOT = {
 						has_minor_title = title_chief_qadi
 					}
 					OR = {
@@ -760,13 +736,9 @@ character_event = {
 					religion_group = ormazd_gods_group
 					is_female = no
 					prisoner = no
-					NOT = {
+					nor = {
 						character = PREV
-					}
-					NOT = {
 						character = ROOT
-					}
-					NOT = {
 						has_minor_title = title_chief_qadi
 					}
 					OR = {
@@ -832,10 +804,8 @@ character_event = {
 					is_female = no
 					religion_group = ormazd_gods_group
 					prisoner = no
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						any_rival = {
 							character = ROOT
 						}
@@ -859,10 +829,8 @@ character_event = {
 					is_female = no
 					religion_group = ormazd_gods_group
 					prisoner = no
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						any_rival = {
 							character = ROOT
 						}
@@ -1103,7 +1071,6 @@ character_event = {
 	only_capable = yes
 	religion_group = ormazd_gods_group
 	war = no
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1111,13 +1078,9 @@ character_event = {
 			religion = kitabid
 		}
 		in_command = no
-		NOT = {
+		nor = {
 			has_minor_title = title_chief_qadi
-		}
-		NOT = {
 			has_character_flag = new_qadi_suggester
-		}
-		NOT = {
 			has_character_flag = qadi_suggester
 		}
 		liege = {
@@ -1130,13 +1093,9 @@ character_event = {
 				}
 			}
 			religion_group = ormazd_gods_group
-			NOT = {
+			nor = {
 				has_character_modifier = suggested_new_qadi_timer
-			}
-			NOT = {
 				has_character_modifier = suggested_qadi_timer
-			}
-			NOT = {
 				character = ROOT
 			}
 			any_vassal = {
@@ -1165,13 +1124,9 @@ character_event = {
 						trait = mastermind_theologian
 					}
 					learning = 15
-					NOT = {
+					nor = {
 						trait = arbitrary
-					}
-					NOT = {
 						trait = slothful
-					}
-					NOT = {
 						any_rival = {
 							character = ROOT
 						}
@@ -1185,10 +1140,8 @@ character_event = {
 					religion_group = ormazd_gods_group
 					is_female = no
 					prisoner = no
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						any_rival = {
 							character = ROOT
 						}
@@ -1200,10 +1153,8 @@ character_event = {
 						trait = mastermind_theologian
 					}
 					learning = 15
-					NOT = {
+					nor = {
 						trait = arbitrary
-					}
-					NOT = {
 						trait = slothful
 					}
 				}
@@ -1219,13 +1170,9 @@ character_event = {
 						trait = mastermind_theologian
 					}
 					learning = 15
-					NOT = {
+					nor = {
 						trait = arbitrary
-					}
-					NOT = {
 						trait = slothful
-					}
-					NOT = {
 						trait = content
 					}
 				}
@@ -1233,22 +1180,22 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.34483
+	mean_time_to_happen = {
+		years = 29
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = diligent
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = slothful
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = content
 		}
 	}
@@ -1326,13 +1273,9 @@ character_event = {
 						trait = mastermind_theologian
 					}
 					learning = 15
-					NOT = {
+					nor = {
 						trait = arbitrary
-					}
-					NOT = {
 						trait = slothful
-					}
-					NOT = {
 						any_rival = {
 							character = ROOT
 						}
@@ -1357,13 +1300,9 @@ character_event = {
 						trait = mastermind_theologian
 					}
 					learning = 15
-					NOT = {
+					nor = {
 						trait = arbitrary
-					}
-					NOT = {
 						trait = slothful
-					}
-					NOT = {
 						any_rival = {
 							character = ROOT
 						}
@@ -1417,10 +1356,8 @@ character_event = {
 					is_female = no
 					religion_group = ormazd_gods_group
 					prisoner = no
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						any_rival = {
 							character = ROOT
 						}
@@ -1432,10 +1369,8 @@ character_event = {
 						trait = mastermind_theologian
 					}
 					learning = 15
-					NOT = {
+					nor = {
 						trait = arbitrary
-					}
-					NOT = {
 						trait = slothful
 					}
 				}
@@ -1451,10 +1386,8 @@ character_event = {
 					is_female = no
 					religion_group = ormazd_gods_group
 					prisoner = no
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						any_rival = {
 							character = ROOT
 						}
@@ -1466,10 +1399,8 @@ character_event = {
 						trait = mastermind_theologian
 					}
 					learning = 15
-					NOT = {
+					nor = {
 						trait = arbitrary
-					}
-					NOT = {
 						trait = slothful
 					}
 				}
@@ -1753,7 +1684,6 @@ character_event = {
 	prisoner = no
 	religion_group = ormazd_gods_group
 	war = no
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -1780,14 +1710,14 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.62500
+	mean_time_to_happen = {
+		years = 16
 		modifier = {
-			factor = 0.20
+			factor = 5
 			trait = drunkard
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = zealous
 		}
 	}
@@ -1994,10 +1924,8 @@ character_event = {
 	option = {
 		name = "EVTOPTD105031"
 		trigger = {
-			NOT = {
+			nor = {
 				trait = wounded
-			}
-			NOT = {
 				trait = drunkard
 			}
 		}
@@ -2066,7 +1994,6 @@ character_event = {
 	prisoner = no
 	capable_only = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -2080,10 +2007,8 @@ character_event = {
 				religion = kitabid
 			}
 		}
-		NOT = {
+		nor = {
 			has_character_modifier = ignored_muslim_sins
-		}
-		NOT = {
 			has_minor_title = title_chief_qadi
 		}
 		liege = {
@@ -2097,15 +2022,11 @@ character_event = {
 			OR = {
 				any_courtier = {
 					has_minor_title = title_chief_qadi
-					NOT = {
-						is_inaccessible_trigger = yes
-					}
+					is_inaccessible_trigger = no
 				}
 				any_vassal = {
 					has_minor_title = title_chief_qadi
-					NOT = {
-						is_inaccessible_trigger = yes
-					}
+					is_inaccessible_trigger = no
 				}
 			}
 			any_vassal = {
@@ -2131,25 +2052,23 @@ character_event = {
 						}
 					}
 				}
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 			}
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.40000
+	mean_time_to_happen = {
+		years = 25
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = deceitful
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = just
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = zealous
 		}
 	}
@@ -2181,9 +2100,7 @@ character_event = {
 							}
 						}
 					}
-					NOT = {
-						is_inaccessible_trigger = yes
-					}
+					is_inaccessible_trigger = no
 				}
 				save_event_target_as = unfaithful_vassal
 			}
@@ -2515,10 +2432,8 @@ character_event = {
 		name = "EVTOPTA105039"
 		trigger = {
 			has_character_flag = qadi_ignored
-			NOT = {
+			nor = {
 				has_character_flag = permission_zina
-			}
-			NOT = {
 				has_character_flag = qadi_confront
 			}
 		}
@@ -2536,10 +2451,8 @@ character_event = {
 		name = "EVTOPTB105039"
 		trigger = {
 			has_character_flag = permission_zina
-			NOT = {
+			nor = {
 				has_character_flag = qadi_ignored
-			}
-			NOT = {
 				has_character_flag = qadi_confront
 			}
 		}
@@ -2565,10 +2478,8 @@ character_event = {
 		name = "EVTOPTC105039"
 		trigger = {
 			has_character_flag = qadi_confront
-			NOT = {
+			nor = {
 				has_character_flag = permission_zina
-			}
-			NOT = {
 				has_character_flag = qadi_ignored
 			}
 		}
@@ -2600,10 +2511,8 @@ character_event = {
 		name = "EVTOTPA105040"
 		trigger = {
 			has_character_flag = money_silenced
-			NOT = {
+			nor = {
 				has_character_flag = ignored_threat
-			}
-			NOT = {
 				has_character_flag = lover_silenced
 			}
 		}
@@ -2620,10 +2529,8 @@ character_event = {
 		name = "EVTOTPB105040" # Tell Chief Qadi
 		trigger = {
 			has_character_flag = money_silenced
-			NOT = {
+			nor = {
 				has_character_flag = ignored_threat
-			}
-			NOT = {
 				has_character_flag = lover_silenced
 			}
 		}
@@ -2643,10 +2550,8 @@ character_event = {
 		name = "EVTOTPC105040" # Tell Chief Qadi
 		trigger = {
 			has_character_flag = ignored_threat
-			NOT = {
+			nor = {
 				has_character_flag = money_silenced
-			}
-			NOT = {
 				has_character_flag = lover_silenced
 			}
 		}
@@ -2666,10 +2571,8 @@ character_event = {
 		name = "EVTOTPD105040" # Stop caring
 		trigger = {
 			has_character_flag = ignored_threat
-			NOT = {
+			nor = {
 				has_character_flag = money_silenced
-			}
-			NOT = {
 				has_character_flag = lover_silenced
 			}
 		}
@@ -2681,10 +2584,8 @@ character_event = {
 		name = "EVTOTPE105040" # Tell Chief Qadi
 		trigger = {
 			has_character_flag = lover_silenced
-			NOT = {
+			nor = {
 				has_character_flag = money_silenced
-			}
-			NOT = {
 				has_character_flag = ignored_threat
 			}
 		}
@@ -2703,10 +2604,8 @@ character_event = {
 		name = "EVTOTPF105040" # Stop caring
 		trigger = {
 			has_character_flag = lover_silenced
-			NOT = {
+			nor = {
 				has_character_flag = money_silenced
-			}
-			NOT = {
 				has_character_flag = ignored_threat
 			}
 		}
@@ -3195,10 +3094,8 @@ character_event = {
 	option = {
 		name = "EVTOPTD105044"
 		trigger = {
-			NOT = {
+			nor = {
 				trait = wounded
-			}
-			NOT = {
 				has_character_flag = qadi_merciful
 			}
 		}
@@ -3244,7 +3141,6 @@ character_event = {
 	prisoner = no
 	religion_group = ormazd_gods_group
 	war = no
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -3274,16 +3170,12 @@ character_event = {
 					has_minor_title = title_court_calligrapher
 					religion_group = ormazd_gods_group
 					age = 16
-					NOT = {
+					nor = {
 						has_character_modifier = mosque_calligrapher_timer
-					}
-					NOT = {
 						reverse_has_opinion_modifier = {
 							who = ROOT
 							modifier = opinion_disappointed_calligrapher
 						}
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -3292,16 +3184,12 @@ character_event = {
 					has_minor_title = title_court_calligrapher
 					religion_group = ormazd_gods_group
 					age = 16
-					NOT = {
+					nor = {
 						has_character_modifier = mosque_calligrapher_timer
-					}
-					NOT = {
 						reverse_has_opinion_modifier = {
 							who = ROOT
 							modifier = opinion_disappointed_calligrapher
 						}
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -3309,26 +3197,26 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = paranoid
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = cynical
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = zealous
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = ambitious
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			has_minor_title = title_chief_architect
 		}
 	}
@@ -3439,13 +3327,9 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					learning = 15
-				}
-				NOT = {
 					trait = poet
-				}
-				NOT = {
 					trait = scholar
 				}
 			}
@@ -3812,7 +3696,6 @@ character_event = {
 	prisoner = no
 	only_capable = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -3837,27 +3720,25 @@ character_event = {
 			religion_group = ormazd_gods_group
 			piety = 100
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 
-	weight_multiplier = {
-		factor = 0.24390
+	mean_time_to_happen = {
+		years = 41
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = zealous
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = cynical
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = slothful
 		}
 	}
@@ -3993,7 +3874,6 @@ character_event = {
 	prisoner = no
 	only_capable = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -4013,27 +3893,25 @@ character_event = {
 			}
 			religion_group = ormazd_gods_group
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 
-	weight_multiplier = {
-		factor = 0.24390
+	mean_time_to_happen = {
+		years = 41
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = deceitful
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = honest
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = charitable
 		}
 	}
@@ -4438,7 +4316,6 @@ character_event = {
 	prisoner = no
 	only_capable = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -4460,13 +4337,11 @@ character_event = {
 				tier = emperor
 			}
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 	}
 
 	immediate = {
@@ -4490,10 +4365,8 @@ character_event = {
 					is_female = yes
 					is_alive = yes
 					age = 20
-					NOT = {
+					nor = {
 						age = 30
-					}
-					NOT = {
 						trait = ugly
 					}
 				}
@@ -4728,7 +4601,6 @@ character_event = {
 	prisoner = no
 	only_capable = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -4750,13 +4622,11 @@ character_event = {
 				tier = emperor
 			}
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 	}
 
 	immediate = {
@@ -4779,10 +4649,8 @@ character_event = {
 					is_female = yes
 					is_alive = yes
 					age = 20
-					NOT = {
+					nor = {
 						age = 30
-					}
-					NOT = {
 						trait = ugly
 					}
 				}
@@ -5031,7 +4899,6 @@ character_event = {
 	prisoner = no
 	only_capable = yes
 	war = no
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -5055,27 +4922,25 @@ character_event = {
 				}
 			}
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = envious
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = deceitful
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = honest
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = charitable
 		}
 	}
@@ -5467,15 +5332,12 @@ character_event = {
 	prisoner = no
 	only_capable = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
 		has_minor_title = title_chief_architect
-		NOT = {
+		nor = {
 			has_character_modifier = architect_improvement_timer
-		}
-		NOT = {
 			has_character_modifier = diligent_architect
 		}
 		liege = {
@@ -5487,27 +5349,25 @@ character_event = {
 			}
 			religion_group = ormazd_gods_group
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = envious
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = deceitful
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = honest
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = charitable
 		}
 	}
@@ -5801,7 +5661,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	war = no
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -5825,43 +5684,41 @@ character_event = {
 				}
 			}
 		}
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = cynical
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = envious
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = paranoid
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = deceitful
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = honest
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = charitable
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = trusting
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = zealous
 		}
 	}

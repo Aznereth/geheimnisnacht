@@ -121,10 +121,8 @@ character_event = {
 			limit = {
 				k_cult_of_myrmidia = {
 					holder_scope = {
-						NOT = {
+						nor = {
 							has_landed_title = d_high_temple_of_magritta
-						}
-						NOT = {
 							has_landed_title = d_high_temple_of_remas
 						}
 					}
@@ -226,10 +224,8 @@ character_event = {
 			limit = {
 				k_cult_of_myrmidia = {
 					holder_scope = {
-						NOT = {
+						nor = {
 							has_landed_title = d_high_temple_of_magritta
-						}
-						NOT = {
 							has_landed_title = d_high_temple_of_remas
 						}
 					}
@@ -1082,12 +1078,10 @@ character_event = {
 narrative_event = {
 	id = DR_misc.103
 	picture = GFX_evt_albion_discovered
-	is_triggered_only = yes
 	title = EVTTITLE_DR_misc_mists_of_albion
 	desc = EVTDESC_DR_misc_mists_of_albion
 	major = yes
 	only_playable = yes
-	is_triggered_only = yes
 
 	trigger = {
 		has_global_flag = mists_of_albion
@@ -1100,29 +1094,27 @@ narrative_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 		modifier = {
-			factor = 1000.00
+			factor = 0.001
 			# Be'lakor arrives at Albion, mist barrier starts weakening
-			NOT = {
-				year = 2305
-			}
+			year = 2305
 		}
 		modifier = {
-			factor = 1.25
+			factor = 0.8
 			has_global_flag = doom_low
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			has_global_flag = doom_medium
 		}
 		modifier = {
-			factor = 3.33
+			factor = 0.3
 			has_global_flag = doom_high
 		}
 		modifier = {
-			factor = 10.00
+			factor = 0.1
 			has_global_flag = doom_very_high
 		}
 	}
@@ -1213,10 +1205,8 @@ character_event = {
 		any_independent_ruler = {
 			limit = {
 				# Not already in ROOT's league
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					reverse_has_opinion_modifier = {
 						who = PREV modifier = opinion_cofounder
 					}
@@ -3154,10 +3144,8 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			trait = zealous
-		}
-		NOT = {
 			trait = cynical
 		}
 	}
@@ -3181,16 +3169,10 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			is_strong_trigger = yes
-		}
-		NOT = {
 			trait = weak
-		}
-		NOT = {
 			trait = slothful
-		}
-		NOT = {
 			health_traits = 1
 		}
 	}

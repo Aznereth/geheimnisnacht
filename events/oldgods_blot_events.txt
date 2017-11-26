@@ -24,9 +24,7 @@ character_event = {
 		any_vassal = {
 			limit = {
 				religion = norscan_gods
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				age = 16
 				prisoner = no
 				war = no
@@ -45,10 +43,8 @@ character_event = {
 		}
 		any_vassal = {
 			limit = {
-				NOT = {
+				nor = {
 					religion = norscan_gods
-				}
-				NOT = {
 					is_inaccessible_trigger = yes
 				}
 				age = 16
@@ -79,9 +75,7 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 
 	immediate = {
@@ -2772,10 +2766,8 @@ character_event = {
 						character = ROOT
 					}
 					age = 16
-					NOT = {
+					nor = {
 						character = FROM
-					}
-					NOT = {
 						has_opinion_modifier = {
 							who = ROOT modifier = opinion_spared_at_blot
 						}
@@ -2789,10 +2781,8 @@ character_event = {
 						character = ROOT
 					}
 					age = 16
-					NOT = {
+					nor = {
 						character = FROM
-					}
-					NOT = {
 						has_opinion_modifier = {
 							who = ROOT modifier = opinion_spared_at_blot
 						}
@@ -2812,10 +2802,8 @@ character_event = {
 							character = ROOT
 						}
 						age = 16
-						NOT = {
+						nor = {
 							character = FROM
-						}
-						NOT = {
 							has_opinion_modifier = {
 								who = ROOT modifier = opinion_spared_at_blot
 							}
@@ -2846,10 +2834,8 @@ character_event = {
 						character = ROOT
 					}
 					age = 16
-					NOT = {
+					nor = {
 						character = FROM
-					}
-					NOT = {
 						has_opinion_modifier = {
 							who = ROOT modifier = opinion_spared_at_blot
 						}
@@ -2863,10 +2849,8 @@ character_event = {
 						character = ROOT
 					}
 					age = 16
-					NOT = {
+					nor = {
 						character = FROM
-					}
-					NOT = {
 						has_opinion_modifier = {
 							who = ROOT modifier = opinion_spared_at_blot
 						}
@@ -2886,10 +2870,8 @@ character_event = {
 							character = ROOT
 						}
 						age = 16
-						NOT = {
+						nor = {
 							character = FROM
-						}
-						NOT = {
 							has_opinion_modifier = {
 								who = ROOT modifier = opinion_spared_at_blot
 							}
@@ -2920,10 +2902,8 @@ character_event = {
 						character = ROOT
 					}
 					age = 16
-					NOT = {
+					nor = {
 						character = FROM
-					}
-					NOT = {
 						has_opinion_modifier = {
 							who = ROOT modifier = opinion_spared_at_blot
 						}
@@ -2937,10 +2917,8 @@ character_event = {
 						character = ROOT
 					}
 					age = 16
-					NOT = {
+					nor = {
 						character = FROM
-					}
-					NOT = {
 						has_opinion_modifier = {
 							who = ROOT modifier = opinion_spared_at_blot
 						}
@@ -2960,10 +2938,8 @@ character_event = {
 							character = ROOT
 						}
 						age = 16
-						NOT = {
+						nor = {
 							character = FROM
-						}
-						NOT = {
 							has_opinion_modifier = {
 								who = ROOT modifier = opinion_spared_at_blot
 							}
@@ -3369,10 +3345,8 @@ character_event = {
 				any_vassal = {
 					limit = {
 						has_character_flag = blot_feast_vassal
-						NOT = {
+						nor = {
 							character = ROOT
-						}
-						NOT = {
 							trait = drunkard
 						}
 					}
@@ -3738,10 +3712,8 @@ character_event = {
 				any_vassal = {
 					limit = {
 						has_character_flag = blot_feast_vassal
-						NOT = {
+						nor = {
 							character = ROOT
-						}
-						NOR = {
 							trait = lunatic_1
 							trait = lunatic_2
 							trait = lunatic_3
@@ -3926,10 +3898,8 @@ character_event = {
 				any_vassal = {
 					limit = {
 						has_character_flag = blot_feast_vassal
-						NOT = {
+						nor = {
 							character = ROOT
-						}
-						NOT = {
 							trait = lustful
 						}
 					}
@@ -4006,10 +3976,8 @@ character_event = {
 				any_vassal = {
 					limit = {
 						has_character_flag = blot_feast_vassal
-						NOT = {
+						nor = {
 							character = ROOT
-						}
-						NOT = {
 							trait = lustful
 						}
 					}
@@ -4058,10 +4026,8 @@ character_event = {
 	option = {
 		name = EVTOPTA_TOG_659
 		trigger = {
-			NOT = {
+			nor = {
 				trait = lustful
-			}
-			NOT = {
 				any_spouse = {
 					character = FROM
 				}
@@ -4121,10 +4087,8 @@ character_event = {
 			has_character_flag = blot_feast
 			any_vassal = {
 				has_character_flag = blot_feast_vassal
-				NOT = {
+				nor = {
 					has_character_flag = feast_friendship
-				}
-				NOT = {
 					character = ROOT
 				}
 				opinion = {
@@ -4280,10 +4244,8 @@ character_event = {
 			has_character_flag = blot_feast
 			any_vassal = {
 				has_character_flag = blot_feast_vassal
-				NOT = {
+				nor = {
 					has_character_flag = feast_homosexual
-				}
-				NOT = {
 					character = ROOT
 				}
 				opinion = {
@@ -4460,10 +4422,8 @@ character_event = {
 			has_character_flag = blot_feast
 			any_vassal = {
 				has_character_flag = blot_feast_vassal
-				NOT = {
+				nor = {
 					has_character_flag = feast_homosexual
-				}
-				NOT = {
 					character = ROOT
 				}
 				opinion = {
@@ -4656,10 +4616,8 @@ character_event = {
 				any_vassal = {
 					limit = {
 						has_character_flag = blot_feast_vassal
-						NOT = {
+						nor = {
 							character = ROOT
-						}
-						NOT = {
 							trait = homosexual
 						}
 					}
@@ -5152,10 +5110,8 @@ character_event = {
 			liege = {
 				any_vassal = {
 					has_character_flag = blot_feast_vassal
-					NOT = {
+					nor = {
 						has_character_flag = feast_friendship
-					}
-					NOT = {
 						character = PREVPREV
 					}
 					opinion = {
@@ -5177,10 +5133,8 @@ character_event = {
 				liege = {
 					any_vassal = {
 						has_character_flag = blot_feast_vassal
-						NOT = {
+						nor = {
 							has_character_flag = feast_friendship
-						}
-						NOT = {
 							character = PREVPREV
 						}
 						opinion = {
@@ -5218,10 +5172,8 @@ character_event = {
 			liege = {
 				any_vassal = {
 					has_character_flag = blot_feast_vassal
-					NOT = {
+					nor = {
 						has_character_flag = feast_homosexual
-					}
-					NOT = {
 						character = PREVPREV
 					}
 					opinion = {
@@ -5249,10 +5201,8 @@ character_event = {
 				liege = {
 					any_vassal = {
 						has_character_flag = blot_feast_vassal
-						NOT = {
+						nor = {
 							has_character_flag = feast_homosexual
-						}
-						NOT = {
 							character = PREVPREV
 						}
 						opinion = {
@@ -5293,10 +5243,8 @@ character_event = {
 			liege = {
 				any_vassal = {
 					has_character_flag = blot_feast_vassal
-					NOT = {
+					nor = {
 						has_character_flag = feast_homosexual
-					}
-					NOT = {
 						character = PREVPREV
 					}
 					opinion = {
@@ -5324,10 +5272,8 @@ character_event = {
 				liege = {
 					any_vassal = {
 						has_character_flag = blot_feast_vassal
-						NOT = {
+						nor = {
 							has_character_flag = feast_homosexual
-						}
-						NOT = {
 							character = PREVPREV
 						}
 						opinion = {

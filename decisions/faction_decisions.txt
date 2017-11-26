@@ -24,10 +24,8 @@ plot_decisions = {
 			prisoner = no
 			liege = {
 				in_revolt = no
-				NOT = {
+				nor = {
 					war_with = ROOT
-				}
-				NOT = {
 					reverse_has_truce = ROOT
 				}
 			}
@@ -50,6 +48,7 @@ plot_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision faction_succ_seniority_ultimatum for [Root.GetBestName]"
 			liege = {
 				letter_event = {
 					id = 8005 days = 3 tooltip = "EVTTOOLTIP8005"
@@ -106,19 +105,11 @@ plot_decisions = {
 								defender = {
 									character = PREV
 								}
-								NOT = {
+								nor = {
 									using_cb = depose_liege
-								}
-								NOT = {
 									using_cb = overthrow_ruler
-								}
-								NOT = {
 									using_cb = overthrow_ruler_no_calls
-								}
-								NOT = {
 									using_cb = succession_on_liege
-								}
-								NOT = {
 									using_cb = other_succession_on_liege
 								}
 							}
@@ -163,10 +154,8 @@ plot_decisions = {
 			war = no
 			prisoner = no
 			liege = {
-				NOT = {
+				nor = {
 					war_with = ROOT
-				}
-				NOT = {
 					reverse_has_truce = ROOT
 				}
 			}
@@ -187,6 +176,7 @@ plot_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision faction_succ_primogeniture_ultimatum for [Root.GetBestName]"
 			liege = {
 				letter_event = {
 					id = 8010 days = 3 tooltip = "EVTTOOLTIP8005"
@@ -243,13 +233,9 @@ plot_decisions = {
 								defender = {
 									character = PREV
 								}
-								NOT = {
+								nor = {
 									using_cb = depose_liege
-								}
-								NOT = {
 									using_cb = overthrow_ruler
-								}
-								NOT = {
 									using_cb = overthrow_ruler_no_calls
 								}
 							}
@@ -295,10 +281,8 @@ plot_decisions = {
 			prisoner = no
 			liege = {
 				in_revolt = no
-				NOT = {
+				nor = {
 					war_with = ROOT
-				}
-				NOT = {
 					reverse_has_truce = ROOT
 				}
 			}
@@ -321,6 +305,7 @@ plot_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision faction_succ_feudal_elective_ultimatum for [Root.GetBestName]"
 			liege = {
 				letter_event = {
 					id = 8015 days = 3 tooltip = "EVTTOOLTIP8005"
@@ -377,13 +362,9 @@ plot_decisions = {
 								defender = {
 									character = PREV
 								}
-								NOT = {
+								nor = {
 									using_cb = depose_liege
-								}
-								NOT = {
 									using_cb = overthrow_ruler
-								}
-								NOT = {
 									using_cb = overthrow_ruler_no_calls
 								}
 							}
@@ -429,10 +410,8 @@ plot_decisions = {
 			prisoner = no
 			liege = {
 				in_revolt = no
-				NOT = {
+				nor = {
 					war_with = ROOT
-				}
-				NOT = {
 					reverse_has_truce = ROOT
 				}
 			}
@@ -455,6 +434,7 @@ plot_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision faction_succ_gavelkind_ultimatum for [Root.GetBestName]"
 			liege = {
 				letter_event = {
 					id = 8020 days = 3 tooltip = "EVTTOOLTIP8005"
@@ -511,19 +491,11 @@ plot_decisions = {
 								defender = {
 									character = PREV
 								}
-								NOT = {
+								nor = {
 									using_cb = depose_liege
-								}
-								NOT = {
 									using_cb = overthrow_ruler
-								}
-								NOT = {
 									using_cb = overthrow_ruler_no_calls
-								}
-								NOT = {
 									using_cb = succession_on_liege
-								}
-								NOT = {
 									using_cb = other_succession_on_liege
 								}
 							}
@@ -573,10 +545,8 @@ plot_decisions = {
 			prisoner = no
 			liege = {
 				in_revolt = no
-				NOT = {
+				nor = {
 					war_with = ROOT
-				}
-				NOT = {
 					reverse_has_truce = ROOT
 				}
 			}
@@ -596,6 +566,7 @@ plot_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision faction_lower_crown_authority_ultimatum for [Root.GetBestName]"
 			liege = {
 				if = {
 					limit = {
@@ -665,19 +636,11 @@ plot_decisions = {
 								defender = {
 									character = PREV
 								}
-								NOT = {
+								nor = {
 									using_cb = depose_liege
-								}
-								NOT = {
 									using_cb = overthrow_ruler
-								}
-								NOT = {
 									using_cb = overthrow_ruler_no_calls
-								}
-								NOT = {
 									using_cb = succession_on_liege
-								}
-								NOT = {
 									using_cb = other_succession_on_liege
 								}
 							}
@@ -727,10 +690,8 @@ plot_decisions = {
 			prisoner = no
 			liege = {
 				in_revolt = no
-				NOT = {
+				nor = {
 					war_with = ROOT
-				}
-				NOT = {
 					reverse_has_truce = ROOT
 				}
 			}
@@ -750,6 +711,7 @@ plot_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision faction_lower_tribal_organization_ultimatum for [Root.GetBestName]"
 			liege = {
 				if = {
 					limit = {
@@ -819,19 +781,11 @@ plot_decisions = {
 								defender = {
 									character = PREV
 								}
-								NOT = {
+								nor = {
 									using_cb = depose_liege
-								}
-								NOT = {
 									using_cb = overthrow_ruler
-								}
-								NOT = {
 									using_cb = overthrow_ruler_no_calls
-								}
-								NOT = {
 									using_cb = succession_on_liege
-								}
-								NOT = {
 									using_cb = other_succession_on_liege
 								}
 							}
@@ -884,10 +838,8 @@ plot_decisions = {
 			prisoner = no
 			liege = {
 				in_revolt = no
-				NOT = {
+				nor = {
 					war_with = ROOT
-				}
-				NOT = {
 					reverse_has_truce = ROOT
 				}
 			}
@@ -910,6 +862,7 @@ plot_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision faction_independence_ultimatum for [Root.GetBestName]"
 			liege = {
 				letter_event = {
 					id = 8035 days = 3 tooltip = "EVTTOOLTIP8005"
@@ -1052,10 +1005,8 @@ plot_decisions = {
 			prisoner = no
 			liege = {
 				in_revolt = no
-				NOT = {
+				nor = {
 					war_with = ROOT
-				}
-				NOT = {
 					reverse_has_truce = ROOT
 				}
 			}
@@ -1083,6 +1034,7 @@ plot_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision faction_claimant_ultimatum for [Root.GetBestName]"
 			liege = {
 				letter_event = {
 					id = 8036 days = 3 tooltip = "EVTTOOLTIP8005"
@@ -1095,13 +1047,9 @@ plot_decisions = {
 							character = ROOT
 						}
 						OR = {
-							NOT = {
+							nor = {
 								same_liege = ROOT
-							}
-							NOT = {
 								in_faction = faction_claimant
-							}
-							NOT = {
 								supported_claimant = {
 									character = PREV
 								}
@@ -1222,19 +1170,11 @@ plot_decisions = {
 								defender = {
 									character = PREV
 								}
-								NOT = {
+								nor = {
 									using_cb = depose_liege
-								}
-								NOT = {
 									using_cb = overthrow_ruler
-								}
-								NOT = {
 									using_cb = overthrow_ruler_no_calls
-								}
-								NOT = {
 									using_cb = succession_on_liege
-								}
-								NOT = {
 									using_cb = other_succession_on_liege
 								}
 								thirdparty_title_scope = {
@@ -1404,10 +1344,8 @@ plot_decisions = {
 			prisoner = no
 			liege = {
 				in_revolt = no
-				NOT = {
+				nor = {
 					war_with = ROOT
-				}
-				NOT = {
 					reverse_has_truce = ROOT
 				}
 			}
@@ -1430,6 +1368,7 @@ plot_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision faction_overthrow_ultimatum for [Root.GetBestName]"
 			liege = {
 				letter_event = {
 					id = 8210 days = 3 tooltip = EVTTOOLTIP8005
@@ -1466,19 +1405,11 @@ plot_decisions = {
 								defender = {
 									character = PREV
 								}
-								NOT = {
+								nor = {
 									using_cb = depose_liege
-								}
-								NOT = {
 									using_cb = overthrow_ruler
-								}
-								NOT = {
 									using_cb = overthrow_ruler_no_calls
-								}
-								NOT = {
 									using_cb = succession_on_liege
-								}
-								NOT = {
 									using_cb = other_succession_on_liege
 								}
 							}
@@ -1524,10 +1455,8 @@ plot_decisions = {
 			prisoner = no
 			liege = {
 				in_revolt = no
-				NOT = {
+				nor = {
 					war_with = ROOT
-				}
-				NOT = {
 					reverse_has_truce = ROOT
 				}
 			}
@@ -1548,6 +1477,7 @@ plot_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision faction_increase_council_power_ultimatum for [Root.GetBestName]"
 			liege = {
 				letter_event = {
 					id = 8215 days = 3 tooltip = EVTTOOLTIP8005
@@ -1604,13 +1534,9 @@ plot_decisions = {
 								defender = {
 									character = PREV
 								}
-								NOT = {
+								nor = {
 									using_cb = depose_liege
-								}
-								NOT = {
 									using_cb = overthrow_ruler
-								}
-								NOT = {
 									using_cb = overthrow_ruler_no_calls
 								}
 							}
@@ -1656,10 +1582,8 @@ plot_decisions = {
 			prisoner = no
 			liege = {
 				in_revolt = no
-				NOT = {
+				nor = {
 					war_with = ROOT
-				}
-				NOT = {
 					reverse_has_truce = ROOT
 				}
 			}
@@ -1682,6 +1606,7 @@ plot_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision faction_powerful_vassal_takeover_ultimatum for [Root.GetBestName]"
 			liege = {
 				letter_event = {
 					id = 8220 days = 3 tooltip = EVTTOOLTIP8005
@@ -1738,13 +1663,9 @@ plot_decisions = {
 								defender = {
 									character = PREV
 								}
-								NOT = {
+								nor = {
 									using_cb = depose_liege
-								}
-								NOT = {
 									using_cb = overthrow_ruler
-								}
-								NOT = {
 									using_cb = overthrow_ruler_no_calls
 								}
 							}

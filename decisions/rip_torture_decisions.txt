@@ -24,6 +24,7 @@ targetted_decisions = {
 			prisoner = yes
 		}
 		effect = {
+			log = "work decision prisoner_torture for [Root.GetBestName]"
 			hidden_tooltip = {
 				if = {
 					limit = {
@@ -199,10 +200,8 @@ targetted_decisions = {
 							if = {
 								limit = {
 									FROM = {
-										NOT = {
+										nor = {
 											dynasty = ROOT
-										}
-										NOT = {
 											sibling = ROOT
 										}
 									}
@@ -445,6 +444,7 @@ targetted_decisions = {
 			prisoner = yes
 		}
 		effect = {
+			log = "work decision prisoner_mutilate for [Root.GetBestName]"
 			hidden_tooltip = {
 				if = {
 					limit = {
@@ -637,10 +637,8 @@ targetted_decisions = {
 				if = {
 					limit = {
 						FROM = {
-							NOT = {
+							nor = {
 								dynasty = ROOT
-							}
-							NOT = {
 								sibling = ROOT
 							}
 						}
@@ -738,6 +736,7 @@ targetted_decisions = {
 			prisoner = yes
 		}
 		effect = {
+			log = "work decision prisoner_read_poetry for [Root.GetBestName]"
 			hidden_tooltip = {
 				FROM = {
 					random_list = {
@@ -853,6 +852,7 @@ targetted_decisions = {
 			prisoner = yes
 		}
 		effect = {
+			log = "work decision prisoner_humiliation for [Root.GetBestName]"
 			hidden_tooltip = {
 				FROM = {
 					random_list = {
@@ -1027,10 +1027,8 @@ targetted_decisions = {
 				if = {
 					limit = {
 						FROM = {
-							NOT = {
+							nor = {
 								dynasty = ROOT
-							}
-							NOT = {
 								sibling = ROOT
 							}
 						}
@@ -1128,6 +1126,7 @@ targetted_decisions = {
 			factor = 1
 		}
 		effect = {
+			log = "work decision execute_eat for [Root.GetBestName]"
 			hidden_tooltip = {
 				any_dynasty_member = {
 					limit = {

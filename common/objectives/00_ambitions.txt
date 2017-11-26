@@ -16,13 +16,11 @@ obj_become_chancellor = {
 		is_adult = yes
 		is_councillor = no
 		can_be_chancellor_trigger = yes
-		NOT = {
+		nor = {
 			has_dlc = "Zeus"
-		}
-		NOT = {
 			trait = creature_chaosspawn
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 		NOT = {
@@ -153,16 +151,12 @@ obj_become_marshal = {
 	allow = {
 		is_councillor = no
 		can_be_marshal_trigger = yes
-		NOT = {
+		nor = {
 			has_dlc = "Zeus"
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
@@ -275,16 +269,12 @@ obj_become_treasurer = {
 	allow = {
 		is_councillor = no
 		can_be_treasurer_trigger = yes
-		NOT = {
+		nor = {
 			has_dlc = "Zeus"
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
@@ -405,16 +395,12 @@ obj_become_spymaster = {
 	allow = {
 		is_councillor = no
 		can_be_spymaster_trigger = yes
-		NOT = {
+		nor = {
 			has_dlc = "Zeus"
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
@@ -539,13 +525,11 @@ obj_become_spiritual = {
 		prisoner = no
 		is_adult = yes
 		is_councillor = no
-		NOT = {
+		nor = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 		OR = {
@@ -651,28 +635,18 @@ obj_become_spiritual = {
 			}
 			AND = {
 				is_female = yes
-				NOT = {
+				nor = {
 					liege = {
 						religion_group = cadai_group
 					}
-				}
-				NOT = {
 					liege = {
 						religion_group = cytharai_group
 					}
-				}
-				NOT = {
 					liege = {
 						religion = slaanesh
 					}
-				}
-				NOT = {
 					religion_group = cadai_group
-				}
-				NOT = {
 					religion_group = cytharai_group
-				}
-				NOT = {
 					religion = slaanesh
 				}
 			}
@@ -717,16 +691,12 @@ obj_become_spiritual = {
 obj_amass_wealth = {
 	type = character
 	potential = {
-		NOT = {
+		nor = {
 			has_character_flag = amassed_wealth
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
@@ -739,10 +709,8 @@ obj_amass_wealth = {
 			wealth = 200
 		}
 		is_ruler = yes
-		NOT = {
+		nor = {
 			trait = charitable
-		}
-		NOT = {
 			trait = incapable
 		}
 	}
@@ -796,22 +764,14 @@ obj_become_paragon_of_virtue = {
 			piety = 100
 		}
 		is_ruler = yes
-		NOT = {
+		nor = {
 			trait = cruel
-		}
-		NOT = {
 			trait = impaler
-		}
-		NOT = {
 			trait = incapable
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
@@ -823,10 +783,8 @@ obj_become_paragon_of_virtue = {
 		}
 		modifier = {
 			factor = 0.01
-			NOT = {
+			nor = {
 				tier = king
-			}
-			NOT = {
 				tier = emperor
 			}
 		}
@@ -906,16 +864,12 @@ obj_become_paragon_of_virtue = {
 obj_become_exalted = {
 	type = character
 	potential = {
-		NOT = {
+		nor = {
 			has_character_flag = became_exalted
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
@@ -925,13 +879,9 @@ obj_become_exalted = {
 			prestige = 200
 		}
 		is_ruler = yes
-		NOT = {
+		nor = {
 			trait = content
-		}
-		NOT = {
 			trait = humble
-		}
-		NOT = {
 			trait = incapable
 		}
 	}
@@ -943,10 +893,8 @@ obj_become_exalted = {
 		}
 		modifier = {
 			factor = 0.01
-			NOT = {
+			nor = {
 				tier = king
-			}
-			NOT = {
 				tier = emperor
 			}
 		}
@@ -1010,37 +958,21 @@ obj_get_married = {
 		}
 		prisoner = no
 		is_marriage_adult = yes
-		NOT = {
+		nor = {
 			trait = creature_orc
-		}
-		NOT = {
 			trait = creature_goblin
-		}
-		NOT = {
 			trait = creature_skink
-		}
-		NOT = {
 			trait = creature_nehekharan
-		}
-		NOT = {
 			trait = celibate
-		}
-		NOT = {
 			trait = incapable
-		}
-		NOT = {
 			trait = eunuch
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = skaven_group
 		}
 		OR = {
@@ -1148,25 +1080,19 @@ obj_marry_ruler = {
 		}
 		prisoner = no
 		is_marriage_adult = yes
-		NOT = {
+		nor = {
 			trait = celibate
-		}
-		NOT = {
 			trait = incapable
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = creature_nehekharan
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = skaven_group
 		}
 		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 		OR = {
@@ -1232,16 +1158,14 @@ obj_have_a_daughter = {
 	type = character
 	fertility = 0.25
 	allow = {
-		NOT = {
+		nor = {
 			has_dlc = "Zeus"
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = skaven_group
 		}
 		NOT = {
@@ -1263,19 +1187,13 @@ obj_have_a_daughter = {
 			is_female = yes
 			num_of_children = 2
 		}
-		NOT = {
+		nor = {
 			AND = {
 				age = 45
 				is_female = yes
 			}
-		}
-		NOT = {
 			age = 75
-		}
-		NOT = {
 			trait = celibate
-		}
-		NOT = {
 			trait = incapable
 		}
 	}
@@ -1321,16 +1239,14 @@ obj_have_a_son = {
 	type = character
 	fertility = 0.25
 	allow = {
-		NOT = {
+		nor = {
 			has_dlc = "Zeus"
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = skaven_group
 		}
 		prisoner = no
@@ -1363,19 +1279,13 @@ obj_have_a_son = {
 				}
 			}
 		}
-		NOT = {
+		nor = {
 			AND = {
 				age = 45
 				is_female = yes
 			}
-		}
-		NOT = {
 			age = 75
-		}
-		NOT = {
 			trait = celibate
-		}
-		NOT = {
 			trait = incapable
 		}
 	}
@@ -1429,25 +1339,17 @@ obj_wants_landed_title = {
 		prisoner = no
 		is_adult = yes
 		is_female = no
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
-		NOT = {
+		nor = {
 			trait = eunuch
-		}
-		NOT = {
 			is_ascetic_trigger = yes
-		}
-		NOT = {
 			has_minor_title = title_guru
 		}
 		liege = {
@@ -1459,19 +1361,15 @@ obj_wants_landed_title = {
 			num_of_extra_landed_titles = 1
 			OR = {
 				AND = {
-					NOT = {
+					nor = {
 						is_father = ROOT
-					}
-					NOT = {
 						is_mother = ROOT
 					}
 				}
-				NOT = {
+				nor = {
 					current_heir = {
 						character = ROOT
 					}
-				}
-				NOT = {
 					primary_title = {
 						has_law = succ_gavelkind
 					}
@@ -1527,10 +1425,8 @@ obj_wants_landed_title = {
 	abort = {
 		liege = {
 			OR = {
-				NOT = {
+				nor = {
 					is_close_relative = ROOT
-				}
-				NOT = {
 					num_of_extra_landed_titles = 1
 				}
 			}
@@ -1571,16 +1467,12 @@ obj_become_heir = {
 		prisoner = no
 		is_adult = yes
 		is_primary_heir = no
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 		liege = {
@@ -1673,27 +1565,19 @@ obj_improve_martial = {
 	potential = {
 		age = 16
 		is_playable = yes
-		NOT = {
+		nor = {
 			has_dlc = "Way of Life"
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
 	allow = {
-		NOT = {
+		nor = {
 			martial = 8
-		}
-		NOT = {
 			trait = incapable
-		}
-		NOT = {
 			trait = infirm
 		}
 		prisoner = no
@@ -1751,27 +1635,19 @@ obj_improve_stewardship = {
 	potential = {
 		age = 16
 		is_playable = yes
-		NOT = {
+		nor = {
 			has_dlc = "Way of Life"
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
 	allow = {
-		NOT = {
+		nor = {
 			stewardship = 8
-		}
-		NOT = {
 			trait = incapable
-		}
-		NOT = {
 			trait = infirm
 		}
 		prisoner = no
@@ -1832,27 +1708,19 @@ obj_improve_learning = {
 	potential = {
 		age = 16
 		is_playable = yes
-		NOT = {
+		nor = {
 			has_dlc = "Way of Life"
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
 	allow = {
-		NOT = {
+		nor = {
 			learning = 8
-		}
-		NOT = {
 			trait = incapable
-		}
-		NOT = {
 			trait = infirm
 		}
 		prisoner = no
@@ -1909,27 +1777,19 @@ obj_improve_diplomacy = {
 	potential = {
 		age = 16
 		is_playable = yes
-		NOT = {
+		nor = {
 			has_dlc = "Way of Life"
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
 	allow = {
-		NOT = {
+		nor = {
 			diplomacy = 8
-		}
-		NOT = {
 			trait = incapable
-		}
-		NOT = {
 			trait = infirm
 		}
 		prisoner = no
@@ -1986,27 +1846,19 @@ obj_improve_intrigue = {
 	potential = {
 		age = 16
 		is_playable = yes
-		NOT = {
+		nor = {
 			has_dlc = "Way of Life"
-		}
-		NOT = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
 	allow = {
-		NOT = {
+		nor = {
 			intrigue = 8
-		}
-		NOT = {
 			trait = incapable
-		}
-		NOT = {
 			trait = infirm
 		}
 		prisoner = no
@@ -2064,13 +1916,11 @@ obj_lower_decadence = {
 		is_adult = yes
 		is_ruler = yes
 		uses_decadence = yes
-		NOT = {
+		nor = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
 		}
-	  	NOT = {
+		NOT = {
 			culture_group = daemonic_group
 		}
 	}
@@ -2136,13 +1986,9 @@ obj_become_king = {
 		is_playable = yes
 		is_landed = yes
 		lower_tier_than = KING
-		NOT = {
+		nor = {
 			trait = creature_chaosspawn
-		}
-		NOT = {
 			trait = khemri_soldier
-		}
-		NOT = {
 			culture_group = daemonic_group
 		}
 		OR = {
@@ -2166,13 +2012,9 @@ obj_become_king = {
 		factor = 100
 		modifier = {
 			factor = 0
-			NOT = {
+			nor = {
 				religion_group = old_gods_group
-			}
-			NOT = {
 				religion_group = chaos_gods_group
-			}
-			NOT = {
 				trait = ambitious
 			}
 		}

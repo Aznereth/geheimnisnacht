@@ -87,6 +87,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision demand_courtier_religious_conversion for [Root.GetBestName]"
 			# Fire any event that would normally be fired by the on_action on_vassal_accepts_religious_conversion
 			hidden_tooltip = {
 				FROM = {
@@ -124,16 +125,10 @@ targetted_decisions = {
 			FROM = {
 				war = no
 			}
-			NOT = {
+			nor = {
 				trait = witch_hunter
-			}
-			NOT = {
 				religion_group = horned_rat_god_group
-			}
-			NOT = {
 				religion_group = necromantic_group
-			}
-			NOT = {
 				religion_group = chaos_gods_group
 			}
 			opinion = {
@@ -202,6 +197,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision demand_vassal_religious_conversion for [Root.GetBestName]"
 			# Fire any event that would normally be fired by the on_action on_vassal_accepts_religious_conversion
 			hidden_tooltip = {
 				FROM = {
@@ -228,10 +224,8 @@ targetted_decisions = {
 			is_incapacitated_trigger = no
 		}
 		potential = {
-			NOT = {
+			nor = {
 				religion = FROM
-			}
-			NOT = {
 				has_character_flag = ai_flag_refuse_conversion
 			}
 			vassal_of = FROM
@@ -242,16 +236,10 @@ targetted_decisions = {
 			FROM = {
 				war = no
 			}
-			NOT = {
+			nor = {
 				trait = witch_hunter
-			}
-			NOT = {
 				religion_group = horned_rat_god_group
-			}
-			NOT = {
 				religion_group = necromantic_group
-			}
-			NOT = {
 				religion_group = chaos_gods_group
 			}
 			OR = {
@@ -301,6 +289,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision demand_courtier_religious_conversion_b for [Root.GetBestName]"
 			# Fire any event that would normally be fired by the on_action on_vassal_accepts_religious_conversion
 			hidden_tooltip = {
 				FROM = {
@@ -326,10 +315,8 @@ targetted_decisions = {
 			is_incapacitated_trigger = no
 		}
 		potential = {
-			NOT = {
+			nor = {
 				religion = FROM
-			}
-			NOT = {
 				has_character_flag = ai_flag_refuse_conversion
 			}
 			vassal_of = FROM
@@ -340,16 +327,10 @@ targetted_decisions = {
 			FROM = {
 				war = no
 			}
-			NOT = {
+			nor = {
 				trait = witch_hunter
-			}
-			NOT = {
 				religion_group = horned_rat_god_group
-			}
-			NOT = {
 				religion_group = necromantic_group
-			}
-			NOT = {
 				religion_group = chaos_gods_group
 			}
 			opinion = {
@@ -399,6 +380,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision demand_vassal_religious_conversion_b for [Root.GetBestName]"
 			# Fire any event that would normally be fired by the on_action on_vassal_accepts_religious_conversion
 			hidden_tooltip = {
 				FROM = {
@@ -439,6 +421,7 @@ targetted_decisions = {
 			prisoner = yes
 		}
 		effect = {
+			log = "work decision execute_prisoner for [Root.GetBestName]"
 			prisoner = no
 			if = {
 				limit = {

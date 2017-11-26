@@ -12,7 +12,6 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	only_playable = yes
 	only_independent = yes
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -28,22 +27,22 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.33333
+	mean_time_to_happen = {
+		years = 30
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			decadence = 80
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			decadence = 85
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			decadence = 90
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			decadence = 95
 		}
 	}
@@ -268,7 +267,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -278,8 +276,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -304,7 +302,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -314,8 +311,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -340,7 +337,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -350,8 +346,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -376,7 +372,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -386,8 +381,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -412,21 +407,18 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = lustful
-		NOT = {
+		nor = {
 			trait = homosexual
-		}
-		NOT = {
 			has_character_flag = decadence_lustful
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -451,7 +443,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -461,8 +452,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -487,7 +478,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -497,8 +487,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -523,7 +513,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -533,8 +522,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -559,7 +548,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -569,8 +557,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -595,7 +583,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -605,8 +592,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -631,7 +618,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -641,8 +627,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -667,7 +653,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -677,8 +662,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -703,7 +688,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -713,8 +697,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -739,7 +723,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -749,8 +732,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -775,7 +758,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -785,8 +767,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -811,7 +793,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -821,8 +802,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -847,7 +828,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -857,8 +837,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -883,7 +863,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -893,8 +872,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -920,7 +899,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -930,8 +908,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -956,7 +934,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -966,8 +943,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -992,7 +969,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1002,8 +978,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1028,7 +1004,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1038,8 +1013,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1064,7 +1039,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1074,8 +1048,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1100,7 +1074,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1110,8 +1083,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1136,7 +1109,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1146,8 +1118,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1172,7 +1144,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1182,8 +1153,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1208,7 +1179,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1218,8 +1188,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1244,7 +1214,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1254,8 +1223,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1280,7 +1249,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1290,8 +1258,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1316,7 +1284,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1326,8 +1293,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1352,7 +1319,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1362,8 +1328,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1388,7 +1354,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1398,8 +1363,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1424,7 +1389,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1434,8 +1398,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1460,7 +1424,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1470,8 +1433,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1496,7 +1459,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1506,8 +1468,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1532,7 +1494,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1542,8 +1503,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -1683,18 +1644,13 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	religion_group = ormazd_gods_group
-	is_triggered_only = yes
 
 	trigger = {
 		num_of_dynasty_members = 3 # Does not trigger for tiny dynasties
 		uses_decadence = yes
-		NOT = {
+		nor = {
 			trait = decadent
-		}
-		NOT = {
 			trait = zealous
-		}
-		NOT = {
 			trait = mujahid
 		}
 		lower_tier_than = KING
@@ -1709,128 +1665,128 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 5
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = indulgent_wastrel
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = naive_appeaser
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = amateurish_plotter
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = hedonist
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = homosexual
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = gluttonous
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = slothful
 		}
+		# modifier = {
+		# 	factor = 0.5
+		# 	trait = bad_priest_muslim
+		# }
 		modifier = {
-			factor = 2.00
-			trait = bad_priest_muslim
-		}
-		modifier = {
-			factor = 1.33
+			factor = 0.75ye
 			trait = cynical
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = lustful
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = chaste
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = just
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10.0
 			trait = diligent
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10.0
 			trait = temperate
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = faqih
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			trait = hafiz
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10.0
 			trait = ashari
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = detached_priest
 		}
 		modifier = {
-			factor = 0.25
+			factor = 4.0
 			trait = martial_cleric
 		}
 		modifier = {
-			factor = 0.12
+			factor = 8.0
 			trait = scholarly_theologian
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10.0
 			trait = mastermind_theologian
 		}
 		modifier = {
-			factor = 0.40
+			factor = 2.5
 			tier = BARON
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10.0
 			tier = COUNT
 		}
 		modifier = {
-			factor = 0.05
+			factor = 20.0
 			tier = DUKE
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			highest_ranked_relative = {
 				tier = KING
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			highest_ranked_relative = {
 				tier = EMPEROR
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			biggest_realm_size_relative = {
 				realm_size = 150
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			biggest_realm_size_relative = {
 				realm_size = 250
 			}
@@ -2014,10 +1970,8 @@ character_event = {
 			any_dynasty_member = {
 				limit = {
 					is_playable = yes
-					NOT = {
+					nor = {
 						trait = decadent
-					}
-					NOT = {
 						character = FROM
 					}
 				}
@@ -2253,10 +2207,8 @@ character_event = {
 			any_dynasty_member = {
 				limit = {
 					is_playable = yes
-					NOT = {
+					nor = {
 						trait = decadent
-					}
-					NOT = {
 						character = FROM
 					}
 				}
@@ -2767,10 +2719,8 @@ character_event = {
 			any_dynasty_member = {
 				limit = {
 					is_playable = yes
-					NOT = {
+					nor = {
 						trait = decadent
-					}
-					NOT = {
 						character = FROM
 					}
 				}
@@ -2907,10 +2857,8 @@ character_event = {
 			any_dynasty_member = {
 				limit = {
 					is_playable = yes
-					NOT = {
+					nor = {
 						trait = decadent
-					}
-					NOT = {
 						character = ROOT
 					}
 				}
@@ -2936,10 +2884,8 @@ character_event = {
 			any_dynasty_member = {
 				limit = {
 					is_playable = yes
-					NOT = {
+					nor = {
 						trait = decadent
-					}
-					NOT = {
 						character = ROOT
 					}
 				}
@@ -2973,10 +2919,8 @@ character_event = {
 			any_dynasty_member = {
 				limit = {
 					is_playable = yes
-					NOT = {
+					nor = {
 						trait = decadent
-					}
-					NOT = {
 						character = ROOT
 					}
 				}
@@ -3002,10 +2946,8 @@ character_event = {
 			any_dynasty_member = {
 				limit = {
 					is_playable = yes
-					NOT = {
+					nor = {
 						trait = decadent
-					}
-					NOT = {
 						character = ROOT
 					}
 				}
@@ -3105,10 +3047,8 @@ character_event = {
 			any_dynasty_member = {
 				limit = {
 					is_playable = yes
-					NOT = {
+					nor = {
 						trait = decadent
-					}
-					NOT = {
 						character = ROOT
 					}
 				}
@@ -3139,10 +3079,8 @@ character_event = {
 			any_dynasty_member = {
 				limit = {
 					is_playable = yes
-					NOT = {
+					nor = {
 						trait = decadent
-					}
-					NOT = {
 						character = ROOT
 					}
 				}
@@ -3185,10 +3123,8 @@ character_event = {
 			any_dynasty_member = {
 				limit = {
 					is_playable = yes
-					NOT = {
+					nor = {
 						trait = decadent
-					}
-					NOT = {
 						character = ROOT
 					}
 				}

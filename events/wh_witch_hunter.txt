@@ -337,22 +337,12 @@ character_event = {
 			limit = {
 				age = 16
 				prisoner = no
-				NOT = {
+				nor = {
 					has_character_modifier = wh_accused
-				}
-				NOT = {
 					trait = khorne_demon
-				}
-				NOT = {
 					trait = nurgle_demon
-				}
-				NOT = {
 					trait = slaanesh_demon
-				}
-				NOT = {
 					trait = tzeentch_demon
-				}
-				NOT = {
 					trait = hashut_kdaai
 				}
 				OR = {
@@ -368,10 +358,8 @@ character_event = {
 					trait = ugly
 					trait = dwarf
 					trait = imbecile
-					NOT = {
+					nor = {
 						religion = ROOT
-					}
-					NOT = {
 						culture_group = ROOT
 					}
 				}
@@ -905,15 +893,15 @@ character_event = {
 		add_trait = staked
 		if = {
 			limit = {
-				OR = ´{
+				OR = {
 					society_member_of = cult_of_khorne
 					society_member_of = cult_of_nurgle
 					society_member_of = cult_of_slaanesh
 					society_member_of = cult_of_tzeentch
 					society_member_of = cult_of_undivided
 				}
-					  set_discovered_society = yes
 			}
+			set_discovered_society = yes
 		}
 		death = {
 			death_reason = death_execution_burning
@@ -926,7 +914,7 @@ character_event = {
 	id = witchhunter.15
 	title = WITCH_HUNT # Witch Hunt
 	desc = EVTDESC_WITCHHUNTER_15 # "Your liege sides with the Witch Hunter. Guards seize you, and drag you to the dungeons. At least your liege was merciful, and did not condemn you to death by fire."
-	picture = "GFX_evt_dungeon"
+	picture = "GFX_evt_into_the_dungeon"
 	is_triggered_only = yes
 
 	immediate = {
@@ -943,7 +931,7 @@ character_event = {
 	id = witchhunter.16
 	title = WITCH_HUNT # Witch Hunt
 	desc = EVTDESC_WITCHHUNTER_16 # "Your liege intervenes, and the Witch Hunter - grudgingly - backs off. You will not suffer death by fire."
-	picture = "GFX_evt_dungeon"
+	picture = "GFX_evt_into_the_dungeon"
 	is_triggered_only = yes
 
 	immediate = {
@@ -963,7 +951,6 @@ character_event = {
 	title = WITCH_HUNT # Witch Hunt
 	desc = EVTDESC_WITCHHUNTER_17 # "You have managed to remove the taint of chaos from the province. But there may still be cultists and heretics lurking about..."
 	picture = "GFX_evt_witch_hunters"
-	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
@@ -983,22 +970,22 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 2
 		modifier = {
-			factor = 1.11
+			factor = 0.9
 			learning = 5
 		}
 		modifier = {
-			factor = 1.11
+			factor = 0.9
 			learning = 10
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			learning = 15
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			learning = 20
 		}
 	}
@@ -1672,15 +1659,15 @@ character_event = {
 		add_trait = staked
 		if = {
 			limit = {
-				OR = ´{
+				OR = {
 					society_member_of = cult_of_khorne
 					society_member_of = cult_of_nurgle
 					society_member_of = cult_of_slaanesh
 					society_member_of = cult_of_tzeentch
 					society_member_of = cult_of_undivided
 				}
-					  set_discovered_society = yes
 			}
+			set_discovered_society = yes
 		}
 		death = {
 			death_reason = death_execution_burning
@@ -1693,7 +1680,7 @@ character_event = {
 	id = witchhunter.26
 	title = WITCH_HUNT # Witch Hunt
 	desc = EVTDESC_WITCHHUNTER_26 # "Your liege sides with the Witch Hunter. Guards seize you, and drag you to the dungeons. At least your liege was merciful, and did not condemn you to death by fire."
-	picture = "GFX_evt_dungeon"
+	picture = "GFX_evt_into_the_dungeon"
 	is_triggered_only = yes
 
 	immediate = {
@@ -1888,25 +1875,13 @@ character_event = {
 	option = {
 		name = EVTOPT_WITCHHUNTER_31A # "Yes, of course - get to work at once."
 		trigger = {
-			NOT = {
+			nor = {
 				trait = vampire_lahmian_visible
-			}
-			NOT = {
 				trait = vampire_carstein_visible
-			}
-			NOT = {
 				trait = vampire_blood_visible
-			}
-			NOT = {
 				trait = vampire_strigoi_visible
-			}
-			NOT = {
 				trait = vampire_necrarch_visible
-			}
-			NOT = {
 				trait = vampire_jade_visible
-			}
-			NOT = {
 				trait = vampire_mahtmasi_visible
 			}
 		}
@@ -1966,10 +1941,8 @@ character_event = {
 		# vampires with less get destroyed
 		any_realm_character = {
 			limit = {
-				NOT = {
+				nor = {
 					martial = 15
-				}
-				NOT = {
 					intrigue = 15
 				}
 				OR = {
@@ -1997,10 +1970,8 @@ character_event = {
 		}
 		any_realm_lord = {
 			limit = {
-				NOT = {
+				nor = {
 					martial = 15
-				}
-				NOT = {
 					intrigue = 15
 				}
 				OR = {
@@ -2063,25 +2034,13 @@ character_event = {
 		name = EVTOPT_WITCHHUNTER_32B # "No, leave them alone..."
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				trait = vampire_lahmian_visible
-			}
-			NOT = {
 				trait = vampire_carstein_visible
-			}
-			NOT = {
 				trait = vampire_blood_visible
-			}
-			NOT = {
 				trait = vampire_strigoi_visible
-			}
-			NOT = {
 				trait = vampire_necrarch_visible
-			}
-			NOT = {
 				trait = vampire_jade_visible
-			}
-			NOT = {
 				trait = vampire_mahtmasi_visible
 			}
 		}
@@ -2137,38 +2096,29 @@ character_event = {
 	}
 }
 
-# Pick up event - if there are no witch hunters in the realm, the top liege spawns several himself
+# Pick up event - if there are no witch hunters in the realm, the top liege spawns several himself on_yearly_pulse
 character_event = {
 	id = witchhunter.34
-	min_age = 1
-	religion_group = old_world_group
 	title = WITCH_HUNTERS # Witch Hunters
 	desc = EVTDESC_WITCHHUNTER_35 # "Witch Hunters are a necessary evil - though their methods can be cruel, they are the first line of defense against the spread of Chaos. Since there are no witch hunters in your realm, do you want to invite some?"
 	picture = "GFX_evt_witch_hunters"
+	is_triggered_only = yes
 	only_playable = yes
 	religion_group = old_world_group
 
 	trigger = {
 		higher_tier_than = COUNT
-		top_liege = {
-			NOT = {
+		nor = {
+			top_liege = {
 				has_character_modifier = expelled_k_witch_hunters_order
 			}
-		}
-		NOT = {
 			any_realm_character = {
 				trait = witch_hunter
 			}
-		}
-		NOT = {
 			has_character_flag = witchhunter34
 		}
 		is_nomadic = no
 		is_tribal = no
-	}
-
-	mean_time_to_happen = {
-		months = 1
 	}
 
 	immediate = {
@@ -2224,10 +2174,8 @@ character_event = {
 
 	trigger = {
 		trait = witch_hunter
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			trait = on_witch_hunt
 		}
 		top_liege = {
@@ -2237,19 +2185,11 @@ character_event = {
 		}
 		OR = {
 			any_realm_character = {
-				NOT = {
+				nor = {
 					trait = khorne_demon
-				}
-				NOT = {
 					trait = nurgle_demon
-				}
-				NOT = {
 					trait = slaanesh_demon
-				}
-				NOT = {
 					trait = tzeentch_demon
-				}
-				NOT = {
 					trait = hashut_kdaai
 				}
 				OR = {
@@ -2261,19 +2201,11 @@ character_event = {
 				}
 			}
 			any_realm_lord = {
-				NOT = {
+				nor = {
 					trait = khorne_demon
-				}
-				NOT = {
 					trait = nurgle_demon
-				}
-				NOT = {
 					trait = slaanesh_demon
-				}
-				NOT = {
 					trait = tzeentch_demon
-				}
-				NOT = {
 					trait = hashut_kdaai
 				}
 				OR = {
@@ -2324,19 +2256,11 @@ character_event = {
 		# vampires with either martial or intrigue of 15+ manage to escape and are banished
 		any_realm_character = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = khorne_demon
-				}
-				NOT = {
 					trait = nurgle_demon
-				}
-				NOT = {
 					trait = slaanesh_demon
-				}
-				NOT = {
 					trait = tzeentch_demon
-				}
-				NOT = {
 					trait = hashut_kdaai
 				}
 				OR = {
@@ -2366,19 +2290,11 @@ character_event = {
 		}
 		any_realm_lord = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = khorne_demon
-				}
-				NOT = {
 					trait = nurgle_demon
-				}
-				NOT = {
 					trait = slaanesh_demon
-				}
-				NOT = {
 					trait = tzeentch_demon
-				}
-				NOT = {
 					trait = hashut_kdaai
 				}
 				OR = {
@@ -2409,25 +2325,13 @@ character_event = {
 		# chaos guys with less get destroyed
 		any_realm_character = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = khorne_demon
-				}
-				NOT = {
 					trait = nurgle_demon
-				}
-				NOT = {
 					trait = slaanesh_demon
-				}
-				NOT = {
 					trait = tzeentch_demon
-				}
-				NOT = {
 					trait = hashut_kdaai
-				}
-				NOT = {
 					martial = 15
-				}
-				NOT = {
 					intrigue = 15
 				}
 				OR = {
@@ -2448,25 +2352,13 @@ character_event = {
 		}
 		any_realm_lord = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = khorne_demon
-				}
-				NOT = {
 					trait = nurgle_demon
-				}
-				NOT = {
 					trait = slaanesh_demon
-				}
-				NOT = {
 					trait = tzeentch_demon
-				}
-				NOT = {
 					trait = hashut_kdaai
-				}
-				NOT = {
 					martial = 15
-				}
-				NOT = {
 					intrigue = 15
 				}
 				OR = {
@@ -2579,16 +2471,10 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			trait = khorne_demon
-		}
-		NOT = {
 			trait = nurgle_demon
-		}
-		NOT = {
 			trait = slaanesh_demon
-		}
-		NOT = {
 			trait = tzeentch_demon
 		}
 		OR = {

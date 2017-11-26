@@ -346,13 +346,9 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			religion_group = ormazd_gods_group
-		}
-		NOT = {
 			religion = buddhist
-		}
-		NOT = {
 			religion = jain
 		}
 		trait = stressed
@@ -606,15 +602,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTA65020 # Try to beat some sense in the child
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		random_child = {
 			limit = {
 				guardian = {
@@ -644,15 +631,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTB65020 # Put the child out with the wolves
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		random_child = {
 			limit = {
 				guardian = {
@@ -724,15 +702,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTA65021 # Reduce food rations
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		random_courtier = {
 			limit = {
 				prisoner = yes
@@ -762,15 +731,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTB65021 # Release some rats in cell
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		random_courtier = {
 			limit = {
 				prisoner = yes
@@ -822,15 +782,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTA65022 # Aim low
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		random_courtier = {
 			limit = {
 				prisoner = no
@@ -855,15 +806,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTB65022 # Aim high
-		if = {
-			limit = {
-				religion = jain
-			}
-			piety = -20
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		random_courtier = {
 			limit = {
 				age = 20
@@ -1792,10 +1734,8 @@ character_event = {
 			is_abroad = no
 			prisoner = no
 			is_alive = yes
-			NOT = {
+			nor = {
 				trait = drunkard
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = ROOT modifier = despise_drunkard
 				}
@@ -1921,10 +1861,8 @@ character_event = {
 			any_vassal = {
 				in_command = yes
 				at_location = root
-				NOT = {
+				nor = {
 					trait = drunkard
-				}
-				NOT = {
 					has_opinion_modifier = {
 						who = ROOT modifier = despise_drunkard
 					}
@@ -1935,10 +1873,8 @@ character_event = {
 			limit = {
 				in_command = yes
 				at_location = root
-				NOT = {
+				nor = {
 					trait = drunkard
-				}
-				NOT = {
 					has_opinion_modifier = {
 						who = ROOT modifier = despise_drunkard
 					}
@@ -1972,10 +1908,8 @@ character_event = {
 
 	trigger = {
 		trait = drunkard
-		NOT = {
+		nor = {
 			trait = content
-		}
-		NOT = {
 			trait = stressed
 		}
 	}
@@ -2028,10 +1962,8 @@ character_event = {
 	option = {
 		name = EVTOPTC65049	# God cures me!
 		trigger = {
-			NOT = {
+			nor = {
 				religion = buddhist
-			}
-			NOT = {
 				religion = jain
 			}
 		}
@@ -2085,13 +2017,9 @@ character_event = {
 	option = {
 		name = EVTOPTB65050	# ask priests for advice.
 		trigger = {
-			NOT = {
+			nor = {
 				religion_group = ormazd_gods_group
-			}
-			NOT = {
 				religion = buddhist
-			}
-			NOT = {
 				religion = jain
 			}
 		}
@@ -2123,10 +2051,8 @@ character_event = {
 	trigger = {
 		trait = drunkard
 		in_command = no
-		NOT = {
+		nor = {
 			health = 3
-		}
-		NOT = {
 			trait = incapable
 		}
 		immortal = no
@@ -2345,25 +2271,13 @@ character_event = {
 		if = {
 			limit = {
 				FROM = {
-					NOT = {
+					nor = {
 						trait = lustful
-					}
-					NOT = {
 						trait = gluttonous
-					}
-					NOT = {
 						trait = greedy
-					}
-					NOT = {
 						trait = slothful
-					}
-					NOT = {
 						trait = envious
-					}
-					NOT = {
 						trait = wroth
-					}
-					NOT = {
 						trait = proud
 					}
 				}
@@ -2749,16 +2663,10 @@ character_event = {
 	trigger = {
 		in_command = no
 		is_strong_trigger = yes
-		NOT = {
+		nor = {
 			trait = dwarf
-		}
-		NOT = {
 			trait = kind
-		}
-		NOT = {
 			trait = charitable
-		}
-		NOT = {
 			trait = gregarious
 		}
 		any_courtier = {
@@ -2766,10 +2674,8 @@ character_event = {
 			in_command = no
 			prisoner = no
 			age = 12
-			NOT = {
+			nor = {
 				age = 60
-			}
-			NOT = {
 				spouse = {
 					character = ROOT
 				}
@@ -3060,16 +2966,10 @@ character_event = {
 		}
 		any_courtier = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = clubfooted
-				}
-				NOT = {
 					trait = kind
-				}
-				NOT = {
 					trait = charitable
-				}
-				NOT = {
 					trait = dwarf
 				}
 			}
@@ -3260,23 +3160,17 @@ character_event = {
 	trigger = {
 		in_command = no
 		trait = harelip
-		NOT = {
+		nor = {
 			trait = stutter
-		}
-		NOT = {
 			trait = lisp
 		}
 		any_vassal = {
 			war = no
 			in_command = no
 			prisoner = no
-			NOT = {
+			nor = {
 				trait = harelip
-			}
-			NOT = {
 				trait = stutter
-			}
-			NOT = {
 				trait = lisp
 			}
 		}
@@ -3294,13 +3188,9 @@ character_event = {
 		prestige = 5
 		random_vassal = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = harelip
-				}
-				NOT = {
 					trait = stutter
-				}
-				NOT = {
 					trait = lisp
 				}
 			}
@@ -3317,13 +3207,9 @@ character_event = {
 		prestige = -5
 		random_vassal = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = harelip
-				}
-				NOT = {
 					trait = stutter
-				}
-				NOT = {
 					trait = lisp
 				}
 			}
@@ -3467,19 +3353,11 @@ character_event = {
 			is_priest = yes
 			can_marry = yes
 		}
-		NOT = {
+		nor = {
 			trait = homosexual
-		}
-		NOT = {
 			trait = celibate
-		}
-		NOT = {
 			trait = gregarious
-		}
-		NOT = {
 			trait = trusting
-		}
-		NOT = {
 			trait = cynical
 		}
 	}
@@ -3561,10 +3439,8 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = gregarious
-				}
-				NOT = {
 					trait = shy
 				}
 			}
@@ -3739,13 +3615,9 @@ character_event = {
 			30 = {
 				any_courtier = {
 					limit = {
-						NOT = {
+						nor = {
 							character = ROOT
-						}
-						NOT = {
 							trait = wroth
-						}
-						NOT = {
 							trait = cruel
 						}
 					}
@@ -3908,23 +3780,17 @@ character_event = {
 	trigger = {
 		in_command = no
 		trait = lisp
-		NOT = {
+		nor = {
 			trait = stutter
-		}
-		NOT = {
 			trait = harelip
 		}
 		any_vassal = {
 			war = no
 			in_command = no
 			prisoner = no
-			NOT = {
+			nor = {
 				trait = harelip
-			}
-			NOT = {
 				trait = stutter
-			}
-			NOT = {
 				trait = lisp
 			}
 		}
@@ -3942,13 +3808,9 @@ character_event = {
 		prestige = 5
 		random_vassal = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = harelip
-				}
-				NOT = {
 					trait = stutter
-				}
-				NOT = {
 					trait = lisp
 				}
 			}
@@ -3965,13 +3827,9 @@ character_event = {
 		prestige = -5
 		random_vassal = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = harelip
-				}
-				NOT = {
 					trait = stutter
-				}
-				NOT = {
 					trait = lisp
 				}
 			}
@@ -4028,13 +3886,9 @@ character_event = {
 	trigger = {
 		in_command = no
 		trait = lisp
-		NOT = {
+		nor = {
 			trait = shy
-		}
-		NOT = {
 			trait = gregarious
-		}
-		NOT = {
 			trait = stutter
 		}
 	}
@@ -4203,13 +4057,9 @@ character_event = {
 	trigger = {
 		in_command = no
 		trait = stutter
-		NOT = {
+		nor = {
 			trait = shy
-		}
-		NOT = {
 			trait = gregarious
-		}
-		NOT = {
 			trait = lisp
 		}
 	}
@@ -4302,10 +4152,8 @@ character_event = {
 	trigger = {
 		in_command = no
 		trait = stutter
-		NOT = {
+		nor = {
 			trait = harelip
-		}
-		NOT = {
 			trait = lisp
 		}
 		any_vassal = {
@@ -4313,13 +4161,9 @@ character_event = {
 			is_female = no
 			in_command = no
 			prisoner = no
-			NOT = {
+			nor = {
 				trait = harelip
-			}
-			NOT = {
 				trait = stutter
-			}
-			NOT = {
 				trait = lisp
 			}
 		}
@@ -4341,13 +4185,9 @@ character_event = {
 				is_female = no
 				in_command = no
 				prisoner = no
-				NOT = {
+				nor = {
 					trait = harelip
-				}
-				NOT = {
 					trait = stutter
-				}
-				NOT = {
 					trait = lisp
 				}
 			}
@@ -4368,13 +4208,9 @@ character_event = {
 				is_female = no
 				in_command = no
 				prisoner = no
-				NOT = {
+				nor = {
 					trait = harelip
-				}
-				NOT = {
 					trait = stutter
-				}
-				NOT = {
 					trait = lisp
 				}
 			}
@@ -5058,13 +4894,9 @@ character_event = {
 	option = {
 		name = EVTOPTA65155 # No more food.
 		trigger = {
-			NOT = {
+			nor = {
 				religion_group = ormazd_gods_group
-			}
-			NOT = {
 				religion_group = jewish_group
-			}
-			NOT = {
 				has_ambition = obj_buddhist_temperance_food
 			}
 		}

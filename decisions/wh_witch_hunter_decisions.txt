@@ -15,15 +15,15 @@ targetted_decisions = {
 				has_landed_title = d_witch_hunter_seat_1
 				has_landed_title = d_witch_hunter_seat_2
 				has_landed_title = d_witch_hunter_seat_3
-	 			has_landed_title = d_witch_hunter_seat_4
-	 			has_landed_title = d_witch_hunter_seat_5
-	 			has_landed_title = d_witch_hunter_seat_6
-	 			has_landed_title = d_witch_hunter_seat_7
-	 			has_landed_title = d_witch_hunter_seat_8
-	 			has_landed_title = d_witch_hunter_seat_9
-	 			has_landed_title = d_witch_hunter_seat_10
-	 			has_landed_title = d_witch_hunter_seat_11
-	 			has_landed_title = d_witch_hunter_seat_12
+				has_landed_title = d_witch_hunter_seat_4
+				has_landed_title = d_witch_hunter_seat_5
+				has_landed_title = d_witch_hunter_seat_6
+				has_landed_title = d_witch_hunter_seat_7
+				has_landed_title = d_witch_hunter_seat_8
+				has_landed_title = d_witch_hunter_seat_9
+				has_landed_title = d_witch_hunter_seat_10
+				has_landed_title = d_witch_hunter_seat_11
+				has_landed_title = d_witch_hunter_seat_12
 				has_landed_title = k_witch_hunters_order
 			}
 		}
@@ -35,21 +35,19 @@ targetted_decisions = {
 				has_landed_title = d_witch_hunter_seat_1
 				has_landed_title = d_witch_hunter_seat_2
 				has_landed_title = d_witch_hunter_seat_3
-	 			has_landed_title = d_witch_hunter_seat_4
-	 			has_landed_title = d_witch_hunter_seat_5
-	 			has_landed_title = d_witch_hunter_seat_6
-	 			has_landed_title = d_witch_hunter_seat_7
-	 			has_landed_title = d_witch_hunter_seat_8
-	 			has_landed_title = d_witch_hunter_seat_9
-	 			has_landed_title = d_witch_hunter_seat_10
-	 			has_landed_title = d_witch_hunter_seat_11
-	 			has_landed_title = d_witch_hunter_seat_12
+				has_landed_title = d_witch_hunter_seat_4
+				has_landed_title = d_witch_hunter_seat_5
+				has_landed_title = d_witch_hunter_seat_6
+				has_landed_title = d_witch_hunter_seat_7
+				has_landed_title = d_witch_hunter_seat_8
+				has_landed_title = d_witch_hunter_seat_9
+				has_landed_title = d_witch_hunter_seat_10
+				has_landed_title = d_witch_hunter_seat_11
+				has_landed_title = d_witch_hunter_seat_12
 				has_landed_title = k_witch_hunters_order
 			}
-			NOT = {
+			nor = {
 				has_character_modifier = accused_recently
-			}
-			NOT = {
 				character = FROM
 			}
 		}
@@ -60,6 +58,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision denounce_master for [Root.GetBestName]"
 			FROM = {
 				piety = -5
 			}
@@ -548,15 +547,15 @@ targetted_decisions = {
 				has_landed_title = d_witch_hunter_seat_1
 				has_landed_title = d_witch_hunter_seat_2
 				has_landed_title = d_witch_hunter_seat_3
-	 			has_landed_title = d_witch_hunter_seat_4
-	 			has_landed_title = d_witch_hunter_seat_5
-	 			has_landed_title = d_witch_hunter_seat_6
-	 			has_landed_title = d_witch_hunter_seat_7
-	 			has_landed_title = d_witch_hunter_seat_8
-	 			has_landed_title = d_witch_hunter_seat_9
-	 			has_landed_title = d_witch_hunter_seat_10
-	 			has_landed_title = d_witch_hunter_seat_11
-	 			has_landed_title = d_witch_hunter_seat_12
+				has_landed_title = d_witch_hunter_seat_4
+				has_landed_title = d_witch_hunter_seat_5
+				has_landed_title = d_witch_hunter_seat_6
+				has_landed_title = d_witch_hunter_seat_7
+				has_landed_title = d_witch_hunter_seat_8
+				has_landed_title = d_witch_hunter_seat_9
+				has_landed_title = d_witch_hunter_seat_10
+				has_landed_title = d_witch_hunter_seat_11
+				has_landed_title = d_witch_hunter_seat_12
 				has_landed_title = k_witch_hunters_order
 				AND = {
 					is_landed = yes
@@ -572,7 +571,7 @@ targetted_decisions = {
 			host = {
 				character = FROM
 			}
-			NOR = {
+			nor = {
 				trait = pregnant
 				trait = incapable
 				trait = maimed
@@ -587,8 +586,6 @@ targetted_decisions = {
 				trait = mutation_massive
 				wh_is_mage_trigger = yes
 				wh_has_any_magic_potential_reveal_trigger = yes
-			}
-			NOT = {
 				trait = witch_hunter
 			}
 			age = 14
@@ -603,6 +600,7 @@ targetted_decisions = {
 			piety = 0
 		}
 		effect = {
+			log = "work decision enlist_courtier for [Root.GetBestName]"
 			FROM = {
 				piety = -5
 			}
@@ -970,15 +968,15 @@ targetted_decisions = {
 				has_landed_title = d_witch_hunter_seat_1
 				has_landed_title = d_witch_hunter_seat_2
 				has_landed_title = d_witch_hunter_seat_3
-	 			has_landed_title = d_witch_hunter_seat_4
-	 			has_landed_title = d_witch_hunter_seat_5
-	 			has_landed_title = d_witch_hunter_seat_6
-	 			has_landed_title = d_witch_hunter_seat_7
-	 			has_landed_title = d_witch_hunter_seat_8
-	 			has_landed_title = d_witch_hunter_seat_9
-	 			has_landed_title = d_witch_hunter_seat_10
-	 			has_landed_title = d_witch_hunter_seat_11
-	 			has_landed_title = d_witch_hunter_seat_12
+				has_landed_title = d_witch_hunter_seat_4
+				has_landed_title = d_witch_hunter_seat_5
+				has_landed_title = d_witch_hunter_seat_6
+				has_landed_title = d_witch_hunter_seat_7
+				has_landed_title = d_witch_hunter_seat_8
+				has_landed_title = d_witch_hunter_seat_9
+				has_landed_title = d_witch_hunter_seat_10
+				has_landed_title = d_witch_hunter_seat_11
+				has_landed_title = d_witch_hunter_seat_12
 				has_landed_title = k_witch_hunters_order
 				AND = {
 					is_landed = yes
@@ -1012,6 +1010,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision exile_whunter for [Root.GetBestName]"
 			FROM = {
 				piety = -5
 			}
@@ -1069,13 +1068,9 @@ targetted_decisions = {
 					}
 					any_child = {
 						limit = {
-							NOT = {
+							nor = {
 								trait = witch_hunter
-							}
-							NOT = {
 								character = FROM
-							}
-							NOT = {
 								has_character_flag = evil_murderer
 							}
 						}
@@ -1086,10 +1081,8 @@ targetted_decisions = {
 					}
 					any_spouse = {
 						limit = {
-							NOT = {
+							nor = {
 								trait = witch_hunter
-							}
-							NOT = {
 								character = FROM
 							}
 							opinion = {
@@ -1104,10 +1097,8 @@ targetted_decisions = {
 					}
 					any_lover = {
 						limit = {
-							NOT = {
+							nor = {
 								trait = witch_hunter
-							}
-							NOT = {
 								character = FROM
 							}
 						}
@@ -1118,10 +1109,8 @@ targetted_decisions = {
 					}
 					any_friend = {
 						limit = {
-							NOT = {
+							nor = {
 								trait = witch_hunter
-							}
-							NOT = {
 								character = FROM
 							}
 						}
@@ -1183,15 +1172,15 @@ targetted_decisions = {
 				has_landed_title = d_witch_hunter_seat_1
 				has_landed_title = d_witch_hunter_seat_2
 				has_landed_title = d_witch_hunter_seat_3
-	 			has_landed_title = d_witch_hunter_seat_4
-	 			has_landed_title = d_witch_hunter_seat_5
-	 			has_landed_title = d_witch_hunter_seat_6
-	 			has_landed_title = d_witch_hunter_seat_7
-	 			has_landed_title = d_witch_hunter_seat_8
-	 			has_landed_title = d_witch_hunter_seat_9
-	 			has_landed_title = d_witch_hunter_seat_10
-	 			has_landed_title = d_witch_hunter_seat_11
-	 			has_landed_title = d_witch_hunter_seat_12
+				has_landed_title = d_witch_hunter_seat_4
+				has_landed_title = d_witch_hunter_seat_5
+				has_landed_title = d_witch_hunter_seat_6
+				has_landed_title = d_witch_hunter_seat_7
+				has_landed_title = d_witch_hunter_seat_8
+				has_landed_title = d_witch_hunter_seat_9
+				has_landed_title = d_witch_hunter_seat_10
+				has_landed_title = d_witch_hunter_seat_11
+				has_landed_title = d_witch_hunter_seat_12
 				has_landed_title = k_witch_hunters_order
 				AND = {
 					is_landed = yes
@@ -1225,7 +1214,7 @@ targetted_decisions = {
 				}
 			}
 			is_ruler = no
-			NOR = {
+			nor = {
 				trait = pregnant
 				trait = incapable
 				trait = has_nurgles_rot
@@ -1236,11 +1225,7 @@ targetted_decisions = {
 				trait = mutation_massive
 				wh_is_mage_trigger = yes
 				wh_has_any_magic_potential_reveal_trigger = yes
-			}
-			NOT = {
 				trait = witch_hunter
-			}
-			NOT = {
 				host = {
 					character = FROM
 				}
@@ -1255,6 +1240,7 @@ targetted_decisions = {
 			piety = 0
 		}
 		effect = {
+			log = "work decision request_recruit for [Root.GetBestName]"
 			FROM = {
 				piety = -5
 			}
@@ -1370,6 +1356,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision  using_cb = peasant_revolt for [Root.GetBestName]"
 			ROOT = {
 				letter_event = {
 					id = swhunters.24
@@ -1431,10 +1418,8 @@ targetted_decisions = {
 				factor = 0
 				ROOT = {
 					any_war = {
-						NOT = {
+						nor = {
 							is_primary_war_attacker = yes
-						}
-						NOT = {
 							is_primary_war_defender = yes
 						}
 					}
@@ -1601,6 +1586,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision create_whunter_company for [Root.GetBestName]"
 			# set_character_flag = is_mercenary_leader
 			add_character_modifier = {
 				modifier = started_mercenary_company months = 30
@@ -2059,6 +2045,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision dissolve_whunter_company for [Root.GetBestName]"
 			primary_title = {
 				activate_title = {
 					title = THIS status = no
@@ -2159,22 +2146,12 @@ decisions = {
 			trait = creature_human
 			is_heretic = no
 			is_title_active = k_witch_hunters_order
-			NOT = {
+			nor = {
 				has_character_modifier = borrowed_from_k_witch_hunters_order
-			}
-			NOT = {
 				has_character_modifier = expelled_k_witch_hunters_order
-			}
-			NOT = {
 				is_nomadic = yes
-			}
-			NOT = {
 				trait = witch_hunter
-			}
-			NOT = {
 				government = congregation_government
-			}
-			NOT = {
 				has_any_opinion_modifier = opinion_refused_loan
 			}
 			location = {
@@ -2202,6 +2179,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision borrow_money_witch_hunters for [Root.GetBestName]"
 			hidden_tooltip = {
 				k_witch_hunters_order = {
 					holder_scope = {
@@ -2285,6 +2263,7 @@ decisions = {
 			wealth = 500
 		}
 		effect = {
+			log = "work decision donate_money_to_witch_hunters for [Root.GetBestName]"
 			if = {
 				limit = {
 					NOT = {
@@ -2318,10 +2297,8 @@ decisions = {
 				factor = 0
 				OR = {
 					piety = 1000
-					NOT = {
+					nor = {
 						wealth = 1000
-					}
-					NOT = {
 						controls_religion = sigmarite
 					}
 				}
@@ -2361,10 +2338,8 @@ decisions = {
 			higher_tier_than = DUKE
 			independent = yes
 			trait = creature_human
-			NOT = {
+			nor = {
 				has_character_modifier = expelled_k_witch_hunters_order
-			}
-			NOT = {
 				trait = witch_hunter
 			}
 			OR = {
@@ -2394,6 +2369,7 @@ decisions = {
 			piety = 50
 		}
 		effect = {
+			log = "work decision expel_the_witch_hunters for [Root.GetBestName]"
 			if = {
 				limit = {
 					religion = sigmarite
@@ -2411,10 +2387,8 @@ decisions = {
 			}
 			if = {
 				limit = {
-					NOT = {
+					nor = {
 						religion_group = old_world_group
-					}
-					NOT = {
 						religion_group = chaos_gods_group
 					}
 				}
@@ -2552,6 +2526,7 @@ decisions = {
 			wealth = 150
 		}
 		effect = {
+			log = "work decision welcome_the_witch_hunters for [Root.GetBestName]"
 			wealth = -150
 			if = {
 				limit = {
@@ -2570,10 +2545,8 @@ decisions = {
 			}
 			if = {
 				limit = {
-					NOT = {
+					nor = {
 						religion_group = old_world_group
-					}
-					NOT = {
 						religion_group = chaos_gods_group
 					}
 				}
@@ -2731,6 +2704,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision  any_attacker for [Root.GetBestName]"
 			piety = -150
 			wealth = -50
 			set_character_flag = asked_templars_assistance
@@ -2852,15 +2826,15 @@ settlement_decisions = {
 				has_landed_title = d_witch_hunter_seat_1
 				has_landed_title = d_witch_hunter_seat_2
 				has_landed_title = d_witch_hunter_seat_3
-	 			has_landed_title = d_witch_hunter_seat_4
-	 			has_landed_title = d_witch_hunter_seat_5
-	 			has_landed_title = d_witch_hunter_seat_6
-	 			has_landed_title = d_witch_hunter_seat_7
-	 			has_landed_title = d_witch_hunter_seat_8
-	 			has_landed_title = d_witch_hunter_seat_9
-	 			has_landed_title = d_witch_hunter_seat_10
-	 			has_landed_title = d_witch_hunter_seat_11
-	 			has_landed_title = d_witch_hunter_seat_12
+				has_landed_title = d_witch_hunter_seat_4
+				has_landed_title = d_witch_hunter_seat_5
+				has_landed_title = d_witch_hunter_seat_6
+				has_landed_title = d_witch_hunter_seat_7
+				has_landed_title = d_witch_hunter_seat_8
+				has_landed_title = d_witch_hunter_seat_9
+				has_landed_title = d_witch_hunter_seat_10
+				has_landed_title = d_witch_hunter_seat_11
+				has_landed_title = d_witch_hunter_seat_12
 				has_landed_title = k_witch_hunters_order
 				AND = {
 					is_landed = yes
@@ -2896,6 +2870,7 @@ settlement_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision request_barony for [Root.GetBestName]"
 			owner = {
 				add_character_modifier = {
 					name = recent_whunter_request
@@ -2932,15 +2907,15 @@ settlement_decisions = {
 				has_landed_title = d_witch_hunter_seat_1
 				has_landed_title = d_witch_hunter_seat_2
 				has_landed_title = d_witch_hunter_seat_3
-	 			has_landed_title = d_witch_hunter_seat_4
-	 			has_landed_title = d_witch_hunter_seat_5
-	 			has_landed_title = d_witch_hunter_seat_6
-	 			has_landed_title = d_witch_hunter_seat_7
-	 			has_landed_title = d_witch_hunter_seat_8
-	 			has_landed_title = d_witch_hunter_seat_9
-	 			has_landed_title = d_witch_hunter_seat_10
-	 			has_landed_title = d_witch_hunter_seat_11
-	 			has_landed_title = d_witch_hunter_seat_12
+				has_landed_title = d_witch_hunter_seat_4
+				has_landed_title = d_witch_hunter_seat_5
+				has_landed_title = d_witch_hunter_seat_6
+				has_landed_title = d_witch_hunter_seat_7
+				has_landed_title = d_witch_hunter_seat_8
+				has_landed_title = d_witch_hunter_seat_9
+				has_landed_title = d_witch_hunter_seat_10
+				has_landed_title = d_witch_hunter_seat_11
+				has_landed_title = d_witch_hunter_seat_12
 				has_landed_title = k_witch_hunters_order
 				AND = {
 					is_landed = yes
@@ -2974,6 +2949,7 @@ settlement_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision scour_barony for [Root.GetBestName]"
 			owner = {
 				add_character_modifier = {
 					name = recent_whunter_request

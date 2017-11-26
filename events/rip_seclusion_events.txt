@@ -820,20 +820,14 @@ character_event = {
 		any_courtier = {
 			ai = yes
 			at_location = ROOT
-			NOT = {
+			nor = {
 				father = {
 					character = ROOT
 				}
-			}
-			NOT = {
 				mother = {
 					character = ROOT
 				}
-			}
-			NOT = {
 				is_married = ROOT
-			}
-			NOT = {
 				is_child_of = ROOT
 			}
 			has_character_modifier = in_seclusion
@@ -868,20 +862,14 @@ character_event = {
 			limit = {
 				ai = yes
 				at_location = ROOT
-				NOT = {
+				nor = {
 					father = {
 						character = ROOT
 					}
-				}
-				NOT = {
 					mother = {
 						character = ROOT
 					}
-				}
-				NOT = {
 					is_married = ROOT
-				}
-				NOT = {
 					is_child_of = ROOT
 				}
 				has_character_modifier = in_seclusion
@@ -948,10 +936,8 @@ character_event = {
 
 	trigger = {
 		has_character_modifier = in_seclusion
-		NOT = {
+		nor = {
 			has_character_flag = seclusion_starving
-		}
-		NOT = {
 			check_variable = {
 				which = remaining_food value = 1
 			}
@@ -1876,13 +1862,9 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = craven
-				}
-				NOT = {
 					trait = brave
-				}
-				NOT = {
 					trait = berserker
 				}
 			}
@@ -1937,10 +1919,8 @@ character_event = {
 			limit = {
 				at_location = ROOT
 				has_character_modifier = in_seclusion
-				NOT = {
+				nor = {
 					is_friend = ROOT
-				}
-				NOT = {
 					is_rival = ROOT
 				}
 				opinion = {
@@ -2170,10 +2150,8 @@ character_event = {
 		random_child = {
 			limit = {
 				age = 16
-				NOT = {
+				nor = {
 					trait = craven
-				}
-				NOT = {
 					trait = celibate
 				}
 				at_location = ROOT
@@ -2499,12 +2477,12 @@ character_event = {
 	# Stay but don't get married
 	option = {
 		trigger = {
-		 	FROM = {
+			FROM = {
 				NOT = {
 					has_character_flag = escaping_seclusion
 				}
 			}
-		 	NOT = {
+			NOT = {
 				trait = paranoid
 			}
 
@@ -4208,10 +4186,8 @@ narrative_event = {
 				is_benevolent_trigger = yes
 				is_pious_trigger = yes
 			}
-			NOT = {
+			nor = {
 				trait = lunatic
-			}
-			NOT = {
 				trait = depressed
 			}
 		}
@@ -4709,10 +4685,8 @@ character_event = {
 		}
 		trigger = {
 			intrigue = 15
-			NOT = {
+			nor = {
 				trait = immortal
-			}
-			NOT = {
 				trait = lunatic
 			}
 		}
@@ -5079,10 +5053,8 @@ character_event = {
 		text = EVTDESC_RIP_12079_B
 		trigger = {
 			intrigue = 15
-			NOT = {
+			nor = {
 				trait = immortal
-			}
-			NOT = {
 				has_character_flag = picked_lunatic_opt
 			}
 		}
@@ -5284,10 +5256,8 @@ character_event = {
 		}
 		trigger = {
 			intrigue = 15
-			NOT = {
+			nor = {
 				trait = immortal
-			}
-			NOT = {
 				has_character_flag = picked_lunatic_opt
 			}
 		}
@@ -5447,10 +5417,8 @@ narrative_event = {
 						limit = {
 							ROOT = {
 								any_child = {
-									NOT = {
+									nor = {
 										character = PREVPREV
-									}
-									NOT = {
 										has_character_flag = dies_at_the_ball_flag
 									}
 								}
@@ -5472,10 +5440,8 @@ narrative_event = {
 						limit = {
 							ROOT = {
 								any_child = {
-									NOT = {
+									nor = {
 										character = PREVPREV
-									}
-									NOT = {
 										has_character_flag = dies_at_the_ball_flag
 									}
 								}
@@ -5494,10 +5460,8 @@ narrative_event = {
 						limit = {
 							ROOT = {
 								any_child = {
-									NOT = {
+									nor = {
 										character = PREVPREV
-									}
-									NOT = {
 										has_character_flag = dies_at_the_ball_flag
 									}
 								}
@@ -5519,10 +5483,8 @@ narrative_event = {
 						limit = {
 							ROOT = {
 								any_child = {
-									NOT = {
+									nor = {
 										character = PREVPREV
-									}
-									NOT = {
 										has_character_flag = dies_at_the_ball_flag
 									}
 								}
@@ -5541,10 +5503,8 @@ narrative_event = {
 						limit = {
 							ROOT = {
 								any_child = {
-									NOT = {
+									nor = {
 										character = PREVPREV
-									}
-									NOT = {
 										has_character_flag = dies_at_the_ball_flag
 									}
 								}
@@ -5563,10 +5523,8 @@ narrative_event = {
 						limit = {
 							ROOT = {
 								any_child = {
-									NOT = {
+									nor = {
 										character = PREVPREV
-									}
-									NOT = {
 										has_character_flag = dies_at_the_ball_flag
 									}
 								}
@@ -6438,10 +6396,8 @@ character_event = {
 				modifier = {
 					factor = 0
 					NAND = {
-						NOT = {
+						nor = {
 							has_character_flag = seclusion_lazy_seduction
-						}
-						NOT = {
 							trait = celibate
 						}
 						can_marry = yes
@@ -6498,10 +6454,8 @@ character_event = {
 					any_courtier = {
 						at_location = ROOT
 						has_character_modifier = in_seclusion
-						NOT = {
+						nor = {
 							is_friend = ROOT
-						}
-						NOT = {
 							is_rival = ROOT
 						}
 						opinion = {
@@ -6568,10 +6522,8 @@ character_event = {
 						}
 						any_child = {
 							age = 16
-							NOT = {
+							nor = {
 								trait = craven
-							}
-							NOT = {
 								trait = celibate
 							}
 							at_location = ROOT
@@ -6591,10 +6543,8 @@ character_event = {
 						host = {
 							character = ROOT
 						}
-						NOT = {
+						nor = {
 							has_character_flag = seclusion_food_events
-						}
-						NOT = {
 							has_character_flag = seclusion_events_on
 						}
 						is_adult = yes
@@ -6620,10 +6570,8 @@ character_event = {
 						capital_holding = {
 							holding_type = castle
 						}
-						NOT = {
+						nor = {
 							has_character_flag = seclusion_tunnel
-						}
-						NOT = {
 							has_character_flag = seclusion_events_on
 						}
 					}
@@ -6655,12 +6603,10 @@ character_event = {
 						has_character_modifier = secluded_revelry
 						prisoner = yes
 						is_adult = no
-						NOT = {
+						nor = {
 							current_heir = {
 								dynasty = ROOT
 							}
-						}
-						NOR = {
 							any_courtier = {
 								is_adult = yes
 								is_incapable = no

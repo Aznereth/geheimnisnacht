@@ -8,13 +8,9 @@ decisions = {
 			higher_tier_than = BARON
 			religion = grail
 			is_theocracy = no
-			NOT = {
+			nor = {
 				has_character_flag = no_kingship
-			}
-			NOT = {
 				has_character_flag = inherit_war
-			}
-			NOT = {
 				has_character_flag = danys_eastern_quest
 			}
 		}
@@ -158,6 +154,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision hold_a_epic_tournament  for [Root.GetBestName]"
 			clr_character_flag = epic_tournament
 			set_character_flag = epic_tournament
 			set_character_flag = tourny_in_progress
@@ -236,7 +233,7 @@ decisions = {
 	# only_playable = yes
 	# potential = {
 	# is_playable = yes
-	# religion = catholic
+	# religion_group = old_world_group
 	# age = 16
 	# demesne_size = 1
 	# NOT = { has_character_flag = ask_for_indulgence }
@@ -267,7 +264,7 @@ decisions = {
 	# only_playable = yes
 	# potential = {
 	# is_playable = yes
-	# religion = catholic
+	# religion_group = old_world_group
 	# age = 16
 	# demesne_size = 1
 	# NOT = { has_character_flag = ask_for_repentance }
@@ -338,6 +335,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision demand_liege_title for [Root.GetBestName]"
 			prestige = -60
 			liege = {
 				opinion = {
@@ -389,10 +387,8 @@ decisions = {
 				has_character_flag = voluntary_charity
 			}
 			rightful_religious_head_scope = {
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					has_opinion_modifier = {
 						who = ROOT modifier = opinion_sadaqah
 					}
@@ -404,6 +400,7 @@ decisions = {
 			is_heretic = no
 		}
 		effect = {
+			log = "work decision sadaqah_saddka  for [Root.GetBestName]"
 			set_character_flag = voluntary_charity
 			scaled_wealth = -0.25
 			piety = 25
@@ -475,6 +472,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision hold_a_furusiyya  for [Root.GetBestName]"
 			set_character_flag = do_not_disturb
 			add_character_modifier = {
 				name = epic_tournament_furusiyya
@@ -553,6 +551,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision petition_doge_for_tp for [Root.GetBestName]"
 			set_character_flag = petition_doge_for_tp_taken
 			liege = {
 				letter_event = {
@@ -602,6 +601,7 @@ decisions = {
 			is_merchant_republic = yes
 		}
 		effect = {
+			log = "work decision usurp_tp for [Root.GetBestName]"
 			set_character_flag = usurp_tp_taken
 			if = {
 				limit = {
@@ -718,6 +718,7 @@ decisions = {
 			wealth = 300
 		}
 		effect = {
+			log = "work decision form_new_kingdom for [Root.GetBestName]"
 			primary_title = {
 				create_title = {
 					tier = KING
@@ -851,6 +852,7 @@ decisions = {
 			wealth = 1000
 		}
 		effect = {
+			log = "work decision form_new_empire for [Root.GetBestName]"
 			primary_title = {
 				create_title = {
 					tier = EMPEROR
@@ -926,19 +928,11 @@ decisions = {
 		potential = {
 			is_playable = yes
 			is_nomadic = yes
-			NOT = {
+			nor = {
 				has_character_modifier = holding_nomad_wargames
-			}
-			NOT = {
 				has_character_modifier = held_nomad_wargames
-			}
-			NOT = {
 				religion_group = greenskin_gods_group
-			} #Greenskins shouldn't get out of Tribal
-			NOT = {
 				religion = asrai_cadai
-			} #Neither Asrai
-			NOT = {
 				trait = creature_beastman
 			} #Nor Beastmen
 		}
@@ -949,19 +943,11 @@ decisions = {
 			}
 			is_adult = yes
 			prisoner = no
-			NOT = {
+			nor = {
 				trait = incapable
-			}
-			NOT = {
 				is_inaccessible_trigger = yes
-			}
-			NOT = {
 				religion_group = greenskin_gods_group
-			} #Greenskins shouldn't get out of Tribal
-			NOT = {
 				religion = asrai_cadai
-			} #Neither Asrai
-			NOT = {
 				trait = creature_beastman
 			} #Nor Beastmen
 			war = no
@@ -983,6 +969,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision hold_nomad_wargames for [Root.GetBestName]"
 			wealth = -30
 			add_character_modifier = {
 				name = holding_nomad_wargames
@@ -1075,6 +1062,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision convert_to_feudalism_indep  for [Root.GetBestName]"
 			hidden_tooltip = {
 				any_demesne_title = {
 					limit = {
@@ -1270,6 +1258,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision convert_to_feudalism_vassal for [Root.GetBestName]"
 			hidden_tooltip = {
 				any_demesne_title = {
 					limit = {
@@ -1460,10 +1449,8 @@ decisions = {
 				factor = 0.01
 				liege = {
 					religion_group = ROOT
-					NOT = {
+					nor = {
 						religion_group = old_gods_group
-					}
-					NOT = {
 						religion = ROOT
 					}
 				}
@@ -1526,6 +1513,7 @@ decisions = {
 			}
 		}
 		effect = {
+			log = "work decision convert_to_republic_indep  for [Root.GetBestName]"
 			hidden_tooltip = {
 				create_family_palace = yes
 				set_government_type = merchant_republic_government
@@ -1709,6 +1697,7 @@ targetted_decisions = {
 			piety = 50
 		}
 		effect = {
+			log = "work decision embrace_mutazila for [Root.GetBestName]"
 			add_trait = mutazilite
 			character_event = {
 				id = SoA.600 tooltip = EVTTOOLTIP_SoA_600
@@ -1760,6 +1749,7 @@ targetted_decisions = {
 			piety = 50
 		}
 		effect = {
+			log = "work decision embrace_ashari for [Root.GetBestName]"
 			add_trait = ashari
 			character_event = {
 				id = SoA.601 tooltip = EVTTOOLTIP_SoA_601

@@ -671,9 +671,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		job_spymaster = {
 			NOR = {
 				trait = honest
@@ -721,13 +719,9 @@ character_event = {
 						any_courtier = {
 							ai = yes
 							prisoner = no
-							NOT = {
+							nor = {
 								trait = incapable
-							}
-							NOT = {
 								is_inaccessible_trigger = yes
-							}
-							NOT = {
 								ROOT = {
 									job_spymaster = {
 										character = PREVPREV
@@ -742,13 +736,9 @@ character_event = {
 					limit = {
 						ai = yes
 						prisoner = no
-						NOT = {
+						nor = {
 							trait = incapable
-						}
-						NOT = {
 							is_inaccessible_trigger = yes
-						}
-						NOT = {
 							ROOT = {
 								job_spymaster = {
 									character = PREVPREV
@@ -765,13 +755,9 @@ character_event = {
 						any_vassal = {
 							ai = yes
 							prisoner = no
-							NOT = {
+							nor = {
 								trait = incapable
-							}
-							NOT = {
 								is_inaccessible_trigger = yes
-							}
-							NOT = {
 								ROOT = {
 									job_spymaster = {
 										character = PREVPREV
@@ -786,13 +772,9 @@ character_event = {
 					limit = {
 						ai = yes
 						prisoner = no
-						NOT = {
+						nor = {
 							trait = incapable
-						}
-						NOT = {
 							is_inaccessible_trigger = yes
-						}
-						NOT = {
 							ROOT = {
 								job_spymaster = {
 									character = PREVPREV
@@ -933,9 +915,7 @@ character_event = {
 			trait = blinded
 		}
 		job_spymaster = {
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				trait = diligent
 				trait = lunatic

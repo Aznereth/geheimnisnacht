@@ -13,7 +13,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	capable_only = yes
-	is_triggered_only = yes
 
 	trigger = {
 		has_minor_title = title_regent
@@ -21,38 +20,36 @@ character_event = {
 		liege = {
 			wealth = 20
 		}
-		NOT = {
+		nor = {
 			trait = charitable
-		}
-		NOT = {
 			trait = honest
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.43478
+	mean_time_to_happen = {
+		years = 23
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = greedy
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = deceitful
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = envious
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = kind
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = just
 		}
 	}
@@ -213,7 +210,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	capable_only = yes
-	is_triggered_only = yes
 
 	trigger = {
 		has_minor_title = title_regent
@@ -229,30 +225,30 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.32258
+	mean_time_to_happen = {
+		years = 31
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = greedy
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = deceitful
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = envious
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = kind
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = just
 		}
 	}
@@ -299,16 +295,10 @@ character_event = {
 		name = EVTOPTA61101
 		random_demesne_title = {
 			limit = {
-				NOT = {
+				nor = {
 					tier = duke
-				}
-				NOT = {
 					tier = king
-				}
-				NOT = {
 					tier = emperor
-				}
-				NOT = {
 					location = {
 						is_capital = yes
 					}
@@ -322,16 +312,10 @@ character_event = {
 		name = EVTOPTB61101
 		random_demesne_title = {
 			limit = {
-				NOT = {
+				nor = {
 					tier = duke
-				}
-				NOT = {
 					tier = king
-				}
-				NOT = {
 					tier = emperor
-				}
-				NOT = {
 					location = {
 						is_capital = yes
 					}
@@ -351,7 +335,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	capable_only = yes
-	is_triggered_only = yes
 
 	trigger = {
 		has_minor_title = title_regent
@@ -363,26 +346,26 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.43478
+	mean_time_to_happen = {
+		years = 23
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = charitable
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = kind
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = just
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = cruel
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = greedy
 		}
 	}
@@ -449,7 +432,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	only_rulers = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_courtier = {
@@ -462,14 +444,14 @@ character_event = {
 		trait = incapable
 	}
 
-	weight_multiplier = {
-		factor = 0.66667
+	mean_time_to_happen = {
+		years = 15
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = diligent
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = greedy
 		}
 	}
@@ -493,7 +475,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	capable_only = yes
-	is_triggered_only = yes
 
 	trigger = {
 		has_minor_title = title_regent
@@ -507,36 +488,34 @@ character_event = {
 		liege = {
 			age = 16
 			trait = incapable
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.43478
+	mean_time_to_happen = {
+		years = 23
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = cruel
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = envious
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.50
 			trait = deceitful
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.50
 			trait = greedy
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = kind
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = just
 		}
 	}
@@ -998,7 +977,6 @@ character_event = {
 	only_rulers = yes
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
@@ -1007,26 +985,26 @@ character_event = {
 		is_nomadic = no
 	}
 
-	weight_multiplier = {
-		factor = 0.43478
+	mean_time_to_happen = {
+		years = 23
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = cruel
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.50
 			trait = wroth
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = kind
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = just
 		}
 	}
@@ -1095,7 +1073,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	capable_only = yes
-	is_triggered_only = yes
 
 	trigger = {
 		has_minor_title = title_regent
@@ -1119,30 +1096,30 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.35714
+	mean_time_to_happen = {
+		years = 28
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = envious
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = deceitful
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.50
 			trait = ambitious
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = greedy
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = kind
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = just
 		}
 	}
@@ -1203,7 +1180,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	capable_only = yes
-	is_triggered_only = yes
 
 	trigger = {
 		has_minor_title = title_regent
@@ -1221,26 +1197,26 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = just
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = diligent
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = honest
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = slothful
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = shy
 		}
 	}
@@ -1658,48 +1634,47 @@ character_event = {
 # Regency: Ruler escapes from tower.
 character_event = {
 	id = 61165
-	is_triggered_only = yes
 	desc = EVTDESC61165
 	picture = GFX_evt_emissary
 	min_age = 16
 	capable_only = no
 	has_character_flag = imprisoned_by_regent
 
-	weight_multiplier = {
-		factor = 0.66667
+	mean_time_to_happen = {
+		years = 15
 		modifier = {
-			factor = 6.67
+			factor = 0.15
 			is_smart_trigger = yes
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = brave
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.50
 			trait = diligent
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.50
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = slothful
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = craven
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			OR = {
 				trait = slow
 				trait = dull
 			}
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			trait = imbecile
 		}
 	}
@@ -1787,7 +1762,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	capable_only = yes
-	is_triggered_only = yes
 
 	trigger = {
 		has_minor_title = title_regent
@@ -1813,26 +1787,26 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.76923
+	mean_time_to_happen = {
+		years = 13
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = envious
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = deceitful
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.50
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = slothful
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = kind
 		}
 	}
@@ -2391,7 +2365,6 @@ character_event = {
 	capable_only = yes
 	only_men = yes
 	war = no
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -2415,30 +2388,30 @@ character_event = {
 		is_ill = no
 	}
 
-	weight_multiplier = {
-		factor = 0.25000
+	mean_time_to_happen = {
+		years = 40
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = ambitious
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = duelist
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = envious
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = shy
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = slothful
 		}
 		modifier = {
-			factor = 0.25
+			factor = 4.0
 			trait = content
 		}
 	}
@@ -2800,8 +2773,8 @@ character_event = {
 		}
 		if = {
 			# HAS 15+ MARTIAL, OPPONENT HAS 1 - 6
-		 	limit = {
-		 		martial = 15
+			limit = {
+				martial = 15
 				FROM = {
 					NOT = {
 						martial = 7
@@ -2838,8 +2811,8 @@ character_event = {
 		}
 		if = {
 			# HAS 15+ MARTIAL, OPPONENT HAS 7 - 14
-		 	limit = {
-		 		martial = 15
+			limit = {
+				martial = 15
 				FROM = {
 					martial = 7
 					NOT = {
@@ -2877,8 +2850,8 @@ character_event = {
 		}
 		if = {
 			# HAS 15+ MARTIAL, OPPONENT HAS 15+
-		 	limit = {
-		 		martial = 15
+			limit = {
+				martial = 15
 				FROM = {
 					martial = 15
 				}
@@ -2913,11 +2886,11 @@ character_event = {
 		}
 		if = {
 			# HAS 7 - 14 MARTIAL, OPPONENT HAS 1 - 6
-		 	limit = {
+			limit = {
 				NOT = {
 					martial = 15
 				}
-		 		martial = 7
+				martial = 7
 				FROM = {
 					NOT = {
 						martial = 7
@@ -2957,7 +2930,7 @@ character_event = {
 				NOT = {
 					martial = 15
 				}
-		 		martial = 7
+				martial = 7
 				FROM = {
 					martial = 7
 					NOT = {
@@ -2995,11 +2968,11 @@ character_event = {
 		}
 		if = {
 			# HAS 7 - 14 MARTIAL, OPPONENT HAS 15+
-		 	limit = {
+			limit = {
 				NOT = {
 					martial = 15
 				}
-		 		martial = 7
+				martial = 7
 				FROM = {
 					martial = 15
 				}
@@ -3034,7 +3007,7 @@ character_event = {
 		}
 		if = {
 			# HAS 1 - 6 MARTIAL, OPPONENT HAS 1 - 6
-		 	limit = {
+			limit = {
 				NOT = {
 					martial = 7
 				}
@@ -3074,7 +3047,7 @@ character_event = {
 		}
 		if = {
 			# HAS 1 - 6 MARTIAL, OPPONENT HAS 7 - 14
-		 	limit = {
+			limit = {
 				NOT = {
 					martial = 7
 				}
@@ -3115,7 +3088,7 @@ character_event = {
 		}
 		if = {
 			# HAS 1 - 6 MARTIAL, OPPONENT HAS 15+
-		 	limit = {
+			limit = {
 				NOT = {
 					martial = 7
 				}
@@ -3184,8 +3157,8 @@ character_event = {
 		}
 		if = {
 			# HAS 15+ MARTIAL, OPPONENT HAS 1 - 6
-		 	limit = {
-		 		martial = 15
+			limit = {
+				martial = 15
 				FROM = {
 					NOT = {
 						martial = 7
@@ -3222,8 +3195,8 @@ character_event = {
 		}
 		if = {
 			# HAS 15+ MARTIAL, OPPONENT HAS 7 - 14
-		 	limit = {
-		 		martial = 15
+			limit = {
+				martial = 15
 				FROM = {
 					martial = 7
 					NOT = {
@@ -3261,8 +3234,8 @@ character_event = {
 		}
 		if = {
 			# HAS 15+ MARTIAL, OPPONENT HAS 15+
-		 	limit = {
-		 		martial = 15
+			limit = {
+				martial = 15
 				FROM = {
 					martial = 15
 				}
@@ -3297,11 +3270,11 @@ character_event = {
 		}
 		if = {
 			# HAS 7 - 14 MARTIAL, OPPONENT HAS 1 - 6
-		 	limit = {
+			limit = {
 				NOT = {
 					martial = 15
 				}
-		 		martial = 7
+				martial = 7
 				FROM = {
 					NOT = {
 						martial = 7
@@ -3341,7 +3314,7 @@ character_event = {
 				NOT = {
 					martial = 15
 				}
-		 		martial = 7
+				martial = 7
 				FROM = {
 					martial = 7
 					NOT = {
@@ -3379,11 +3352,11 @@ character_event = {
 		}
 		if = {
 			# HAS 7 - 14 MARTIAL, OPPONENT HAS 15+
-		 	limit = {
+			limit = {
 				NOT = {
 					martial = 15
 				}
-		 		martial = 7
+				martial = 7
 				FROM = {
 					martial = 15
 				}
@@ -3418,7 +3391,7 @@ character_event = {
 		}
 		if = {
 			# HAS 1 - 6 MARTIAL, OPPONENT HAS 1 - 6
-		 	limit = {
+			limit = {
 				NOT = {
 					martial = 7
 				}
@@ -3458,7 +3431,7 @@ character_event = {
 		}
 		if = {
 			# HAS 1 - 6 MARTIAL, OPPONENT HAS 7 - 14
-		 	limit = {
+			limit = {
 				NOT = {
 					martial = 7
 				}
@@ -3499,7 +3472,7 @@ character_event = {
 		}
 		if = {
 			# HAS 1 - 6 MARTIAL, OPPONENT HAS 15+
-		 	limit = {
+			limit = {
 				NOT = {
 					martial = 7
 				}
@@ -3887,7 +3860,6 @@ character_event = {
 	capable_only = yes
 	only_women = yes
 	is_married = yes
-	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
@@ -3910,22 +3882,22 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = ambitious
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = diligent
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = slothful
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			trait = content
 		}
 	}
@@ -3956,7 +3928,6 @@ character_event = {
 	prisoner = no
 	capable_only = yes
 	only_women = yes
-	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
@@ -3973,22 +3944,22 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = ambitious
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = diligent
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = slothful
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			trait = content
 		}
 	}
@@ -4052,7 +4023,6 @@ character_event = {
 	capable_only = yes
 	only_playable = yes # Only titled Regents do this
 	lacks_dlc = "Zeus"
-	is_triggered_only = yes
 
 	trigger = {
 		is_landed = yes
@@ -4084,26 +4054,26 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 10
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = ambitious
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = charitable
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = just
 		}
 	}
@@ -4207,7 +4177,6 @@ character_event = {
 	capable_only = yes
 	only_playable = yes # Only titled Regents do this
 	lacks_dlc = "Zeus"
-	is_triggered_only = yes
 
 	trigger = {
 		is_landed = yes
@@ -4239,26 +4208,26 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 10
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = ambitious
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = charitable
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = just
 		}
 	}

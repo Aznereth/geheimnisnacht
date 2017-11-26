@@ -6,7 +6,6 @@ character_event = {
 	culture = lizardman
 	desc = EVTDESCslizardmens1
 	picture = GFX_evt_lustria_jungle
-	is_triggered_only = yes
 
 	trigger = {
 		or = {
@@ -25,18 +24,18 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.25000
+	mean_time_to_happen = {
+		years = 40
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			lower_tier_than = KING
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			higher_tier_than = KING
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOR = {
 				AND = {
 					trait = lore_heavens
@@ -49,42 +48,42 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			any_courtier = {
 				trait = skink_priest
 				count = 0
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			any_courtier = {
 				trait = skink_priest
 				count = 2
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			any_courtier = {
 				trait = skink_priest
 				count = 3
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			any_courtier = {
 				trait = skink_priest
 				count = 4
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			any_courtier = {
 				trait = skink_priest
 				count = 5
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			any_realm_province = {
 				any_province_holding = {
 					ROOT = {
@@ -99,7 +98,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			any_realm_province = {
 				any_province_holding = {
 					ROOT = {
@@ -114,7 +113,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			any_realm_province = {
 				any_province_holding = {
 					ROOT = {
@@ -129,7 +128,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			any_realm_province = {
 				any_province_holding = {
 					ROOT = {
@@ -144,7 +143,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			any_realm_province = {
 				any_province_holding = {
 					ROOT = {
@@ -159,7 +158,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			any_realm_province = {
 				any_province_holding = {
 					ROOT = {
@@ -174,7 +173,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			any_realm_province = {
 				any_province_holding = {
 					or = {
@@ -186,7 +185,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			any_realm_province = {
 				any_province_holding = {
 					ROOT = {
@@ -201,7 +200,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			any_realm_province = {
 				any_province_holding = {
 					ROOT = {
@@ -402,13 +401,11 @@ character_event = {
 						OR = {
 							wh_is_mage_trigger = yes
 							ROOT = {
-								NOT = {
+								nor = {
 									any_courtier = {
 										trait = creature_skink
 										wh_is_mage_trigger = yes
 									}
-								}
-								NOT = {
 									any_vassal = {
 										trait = creature_skink
 										wh_is_mage_trigger = yes
@@ -422,13 +419,11 @@ character_event = {
 						OR = {
 							wh_is_mage_trigger = yes
 							ROOT = {
-								NOT = {
+								nor = {
 									any_courtier = {
 										trait = creature_skink
 										wh_is_mage_trigger = yes
 									}
-								}
-								NOT = {
 									any_vassal = {
 										trait = creature_skink
 										wh_is_mage_trigger = yes
@@ -871,13 +866,12 @@ character_event = {
 # SKINK JOB ACTION EVENTS: EXPLORE JUNGLE
 # slizardmen.8: Chancellor attacked by Naggaronts
 character_event = {
-	id = 122000 # USED TO BE slizardmen.8
+	id = slizardmen.8
 	title = EVTNAMEslizardmen8
 	desc = EVTDESCslizardmen8
 	picture = GFX_evt_lustria_dinosaur
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 
 	trigger = {
 		has_job_action = action_explore_ruins
@@ -887,46 +881,46 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			NOT = {
 				martial = 2
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			NOT = {
 				martial = 3
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			NOT = {
 				martial = 4
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			NOT = {
 				martial = 5
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			martial = 10
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			martial = 11
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			martial = 12
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			martial = 13
 		}
 	}
@@ -1016,23 +1010,22 @@ letter_event = {
 
 # Found fragment of ancient tablet.
 character_event = {
-	id = 122001 # USED TO BE slizardmen.11
+	id = slizardmen.11
 	culture_group = lizardman_group
 	title = EVTNAMEslizardmen11
 	desc = EVTDESCslizardmen11
 	picture = GFX_evt_lizardmen_temples
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 
 	trigger = {
 		has_job_action = action_explore_ruins
 	}
 
-	weight_multiplier = {
-		factor = 0.02404
+	mean_time_to_happen = {
+		years = 416
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			OR = {
 				has_focus = focus_scholarship
 				liege = {
@@ -1041,43 +1034,43 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				diplomacy = 2
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				diplomacy = 3
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				diplomacy = 4
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				diplomacy = 5
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			diplomacy = 10
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			diplomacy = 11
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			diplomacy = 12
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			diplomacy = 13
 		}
 	}
@@ -1953,7 +1946,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -1964,86 +1956,86 @@ character_event = {
 		decadence = 90
 	}
 
-	weight_multiplier = {
-		factor = 0.5
+	mean_time_to_happen = {
+		years = 3
 		modifier = {
-			factor = 1.18
+			factor = 0.85
 			trait = indulgent_wastrel
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			trait = naive_appeaser
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			trait = amateurish_plotter
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = hedonist
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			trait = drunkard
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = addict
 		}
 		modifier = {
-			factor = 1.18
+			factor = 0.85
 			trait = gluttonous
 		}
 		modifier = {
-			factor = 20.00
+			factor = 0.05
 			trait = slothful
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = cynical
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = just
 		}
 		modifier = {
-			factor = 0.07
+			factor = 15.0
 			trait = diligent
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = temperate
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = detached_priest
 		}
 		modifier = {
-			factor = 0.74
+			factor = 1.35
 			trait = martial_cleric
 		}
 		modifier = {
-			factor = 0.69
+			factor = 1.45
 			trait = scholarly_theologian
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			trait = mastermind_theologian
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = skink_priest
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			decadence = 95
 		}
 		modifier = {
-			factor = 100.00
+			factor = 0.01
 			decadence = 100
 		}
 	}
@@ -2072,15 +2064,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = ambitious
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -2105,15 +2096,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = content
 	}
 
-	weight_multiplier = {
-		factor = 0.08000
+	mean_time_to_happen = {
+		years = 125
 	}
 
 	immediate = {
@@ -2138,15 +2128,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = slothful
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -2171,15 +2160,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = diligent
 	}
 
-	weight_multiplier = {
-		factor = 0.06667
+	mean_time_to_happen = {
+		years = 150
 	}
 
 	immediate = {
@@ -2204,15 +2192,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = wroth
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 	}
 
 	immediate = {
@@ -2237,15 +2224,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = patient
 	}
 
-	weight_multiplier = {
-		factor = 0.08000
+	mean_time_to_happen = {
+		years = 125
 	}
 
 	immediate = {
@@ -2270,15 +2256,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = honest
 	}
 
-	weight_multiplier = {
-		factor = 0.06667
+	mean_time_to_happen = {
+		years = 150
 	}
 
 	immediate = {
@@ -2303,15 +2288,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = deceitful
 	}
 
-	weight_multiplier = {
-		factor = 0.06667
+	mean_time_to_happen = {
+		years = 150
 	}
 
 	immediate = {
@@ -2336,15 +2320,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = greedy
 	}
 
-	weight_multiplier = {
-		factor = 0.08000
+	mean_time_to_happen = {
+		years = 125
 	}
 
 	immediate = {
@@ -2369,15 +2352,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = charitable
 	}
 
-	weight_multiplier = {
-		factor = 0.08000
+	mean_time_to_happen = {
+		years = 125
 	}
 
 	immediate = {
@@ -2402,15 +2384,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = brave
 	}
 
-	weight_multiplier = {
-		factor = 0.08000
+	mean_time_to_happen = {
+		years = 125
 	}
 
 	immediate = {
@@ -2435,15 +2416,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = zealous
 	}
 
-	weight_multiplier = {
-		factor = 0.08000
+	mean_time_to_happen = {
+		years = 125
 	}
 
 	immediate = {
@@ -2468,15 +2448,14 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = old_ones
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
 		trait = cynical
 	}
 
-	weight_multiplier = {
-		factor = 0.08000
+	mean_time_to_happen = {
+		years = 125
 	}
 
 	immediate = {
@@ -5588,7 +5567,6 @@ character_event = {
 	min_age = 2000
 	religion = old_ones
 	ai = yes
-	is_triggered_only = yes
 
 	trigger = {
 		religion_authority = 0.05
@@ -5607,8 +5585,8 @@ character_event = {
 		independent = no
 	}
 
-	weight_multiplier = {
-		factor = 0.12048
+	mean_time_to_happen = {
+		years = 83
 	}
 
 	immediate = {
@@ -5698,13 +5676,9 @@ long_character_event = {
 		set_character_flag = sanctioned_by_slann
 		random_independent_ruler = {
 			limit = {
-				NOT = {
+				nor = {
 					religion_group = old_ones_group
-				}
-				NOT = {
 					character = ROOT
-				}
-				NOT = {
 					capital_scope = {
 						region = world_dragon_isles
 					}
@@ -6291,14 +6265,12 @@ character_event = {
 			}
 			if = {
 				limit = {
-					NOT = {
+					nor = {
 						s_target_trait = {
 							any_friend = {
 								character = ROOT
 							}
 						}
-					}
-					NOT = {
 						any_courtier = {
 							trait = creature_skink
 						}
@@ -6537,7 +6509,6 @@ character_event = {
 	prisoner = no
 	is_part_of_plot = yes
 	religion_group = old_ones_group
-	is_triggered_only = yes
 
 	trigger = {
 		plot_target_char = {
@@ -6550,10 +6521,8 @@ character_event = {
 				age = 16
 				prisoner = no
 				trait = creature_skink
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					trait = in_hiding
 				}
 			}
@@ -6567,10 +6536,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01848
+	mean_time_to_happen = {
+		years = 541
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6583,7 +6552,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6596,7 +6565,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6609,7 +6578,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6622,7 +6591,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6635,7 +6604,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6648,7 +6617,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6661,7 +6630,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6674,7 +6643,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6687,21 +6656,21 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 2.0
@@ -6767,7 +6736,6 @@ character_event = {
 	prisoner = no
 	religion_group = old_ones_group
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		plot_target_char = {
@@ -6780,10 +6748,8 @@ character_event = {
 				age = 16
 				prisoner = no
 				trait = creature_skink
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					trait = in_hiding
 				}
 			}
@@ -6797,10 +6763,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01848
+	mean_time_to_happen = {
+		years = 541
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6813,7 +6779,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6826,7 +6792,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6839,7 +6805,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6852,7 +6818,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6865,7 +6831,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6878,7 +6844,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6891,7 +6857,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6904,7 +6870,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -6917,21 +6883,21 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 2.0
@@ -6997,7 +6963,6 @@ character_event = {
 	prisoner = no
 	religion_group = old_ones_group
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		plot_target_char = {
@@ -7010,10 +6975,8 @@ character_event = {
 				age = 16
 				prisoner = no
 				trait = creature_skink
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					trait = in_hiding
 				}
 			}
@@ -7027,10 +6990,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01848
+	mean_time_to_happen = {
+		years = 541
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7043,7 +7006,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7056,7 +7019,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7069,7 +7032,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7082,7 +7045,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7095,7 +7058,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7108,7 +7071,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7121,7 +7084,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7134,7 +7097,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7147,21 +7110,21 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 2.0
@@ -7227,7 +7190,6 @@ character_event = {
 	prisoner = no
 	religion_group = old_ones_group
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		plot_target_char = {
@@ -7248,10 +7210,8 @@ character_event = {
 				age = 16
 				prisoner = no
 				trait = creature_skink
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					trait = in_hiding
 				}
 			}
@@ -7265,10 +7225,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01848
+	mean_time_to_happen = {
+		years = 541
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7281,7 +7241,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7294,7 +7254,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7307,7 +7267,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7320,7 +7280,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7333,7 +7293,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7346,7 +7306,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7359,7 +7319,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7372,7 +7332,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7385,21 +7345,21 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 2.0
@@ -7465,7 +7425,6 @@ character_event = {
 	prisoner = no
 	religion_group = old_ones_group
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		plot_target_char = {
@@ -7478,10 +7437,8 @@ character_event = {
 				age = 16
 				prisoner = no
 				trait = creature_skink
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					trait = in_hiding
 				}
 			}
@@ -7495,10 +7452,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01739
+	mean_time_to_happen = {
+		years = 575
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7511,7 +7468,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7524,7 +7481,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7537,7 +7494,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7550,7 +7507,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7563,7 +7520,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7576,7 +7533,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7589,7 +7546,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7602,7 +7559,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7615,21 +7572,21 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 2.0
@@ -7695,7 +7652,6 @@ character_event = {
 	prisoner = no
 	religion_group = old_ones_group
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		plot_target_char = {
@@ -7712,10 +7668,8 @@ character_event = {
 				age = 16
 				prisoner = no
 				trait = creature_skink
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					trait = in_hiding
 				}
 			}
@@ -7729,10 +7683,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01739
+	mean_time_to_happen = {
+		years = 575
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7745,7 +7699,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7758,7 +7712,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7771,7 +7725,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7784,7 +7738,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7797,7 +7751,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7810,7 +7764,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7823,7 +7777,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7836,7 +7790,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7849,21 +7803,21 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 2.0
@@ -7929,7 +7883,6 @@ character_event = {
 	prisoner = no
 	religion_group = old_ones_group
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		plot_target_char = {
@@ -7947,10 +7900,8 @@ character_event = {
 				age = 16
 				prisoner = no
 				trait = creature_skink
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					trait = in_hiding
 				}
 			}
@@ -7964,10 +7915,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01938
+	mean_time_to_happen = {
+		years = 516
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7980,7 +7931,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -7993,7 +7944,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8006,7 +7957,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8019,7 +7970,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8032,7 +7983,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8045,7 +7996,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8058,7 +8009,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8071,7 +8022,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8084,21 +8035,21 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 2.0
@@ -8164,7 +8115,6 @@ character_event = {
 	prisoner = no
 	religion_group = old_ones_group
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		plot_target_char = {
@@ -8183,10 +8133,8 @@ character_event = {
 				age = 16
 				prisoner = no
 				trait = creature_skink
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					trait = in_hiding
 				}
 			}
@@ -8200,10 +8148,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01938
+	mean_time_to_happen = {
+		years = 516
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8216,7 +8164,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8229,7 +8177,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8242,7 +8190,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8255,7 +8203,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8268,7 +8216,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8281,7 +8229,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8294,7 +8242,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8307,7 +8255,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				ROOT = {
@@ -8320,21 +8268,21 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_investigate_alignment
 				plot_power = 2.0
@@ -9200,7 +9148,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		num_of_dynasty_members = 3 # Does not trigger for tiny dynasties
@@ -9230,130 +9177,130 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 5
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = indulgent_wastrel
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = naive_appeaser
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = amateurish_plotter
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = hedonist
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5
 			trait = homosexual
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = gluttonous
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = slothful
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = content
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = fat
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = kind
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			NOT = {
 				trait = homosexual
 			}
 			trait = lustful
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = wroth
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = just
 		}
 		modifier = {
-			factor = 0.05
+			factor = 20.0
 			trait = brave
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10.0
 			trait = temperate
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = misguided_warrior
 		}
 		modifier = {
-			factor = 0.25
+			factor = 4.0
 			trait = tough_soldier
 		}
 		modifier = {
-			factor = 0.12
+			factor = 8.0
 			trait = skilled_tactician
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10.0
 			trait = brilliant_strategist
 		}
 		modifier = {
-			factor = 0.01
+			factor = 100
 			trait = questing
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			tier = BARON
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			tier = COUNT
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			tier = DUKE
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			any_lover = {
 				trait = pet_consort
 				count = 1
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			any_lover = {
 				trait = pet_consort
 				count = 2
 			}
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			any_lover = {
 				trait = pet_consort
 				count = 3
 			}
 		}
 		modifier = {
-			factor = 6.67
+			factor = 0.15
 			any_lover = {
 				NOT = {
 					trait = pet_consort
@@ -9362,25 +9309,25 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			highest_ranked_relative = {
 				tier = KING
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			highest_ranked_relative = {
 				tier = EMPEROR
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			biggest_realm_size_relative = {
 				realm_size = 150
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			biggest_realm_size_relative = {
 				realm_size = 250
 			}
@@ -9459,7 +9406,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9467,8 +9413,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9494,7 +9440,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9502,8 +9447,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9529,7 +9474,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9540,8 +9484,8 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9567,7 +9511,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9579,8 +9522,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9611,7 +9554,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9619,8 +9561,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9646,7 +9588,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9654,8 +9595,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9681,7 +9622,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9689,8 +9629,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.16129
+	mean_time_to_happen = {
+		years = 62
 	}
 
 	immediate = {
@@ -9716,7 +9656,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9729,8 +9668,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9756,7 +9695,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9768,8 +9706,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9795,7 +9733,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9808,8 +9745,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9835,7 +9772,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9848,8 +9784,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9875,7 +9811,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9883,8 +9818,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9910,7 +9845,6 @@ character_event = {
 	prisoner = no
 	only_playable = yes
 	religion = amazon
-	is_triggered_only = yes
 
 	trigger = {
 		uses_decadence = yes
@@ -9925,8 +9859,8 @@ character_event = {
 		trait = creature_amazon
 	}
 
-	weight_multiplier = {
-		factor = 0.18519
+	mean_time_to_happen = {
+		years = 54
 	}
 
 	immediate = {
@@ -9944,12 +9878,12 @@ character_event = {
 character_event = {
 	id = slizardmen.53
 	hide_window = yes
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.53 for [Root.GetBestName]"
@@ -10039,13 +9973,11 @@ character_event = {
 			5 = {
 				modifier = {
 					factor = 0
-					NOT = {
+					nor = {
 						check_variable = {
 							which = "drinking_count"
 							value = 1
 						}
-					}
-					NOT = {
 						check_variable = {
 							which = "eating_count"
 							value = 1
@@ -10056,7 +9988,6 @@ character_event = {
 					id = slizardmen.53007
 				}
 			} # Passing the Snake
-
 		}
 	}
 }
@@ -10066,12 +9997,12 @@ character_event = {
 	id = slizardmen.53001
 	desc = EVTDESCslizardmen53001
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.53001 for [Root.GetBestName]"
@@ -10092,12 +10023,12 @@ character_event = {
 	id = slizardmen.53002
 	desc = EVTDESCslizardmen53002
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.53002 for [Root.GetBestName]"
@@ -10118,12 +10049,12 @@ character_event = {
 	id = slizardmen.53003
 	desc = EVTDESCslizardmen53003
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.53003 for [Root.GetBestName]"
@@ -10144,12 +10075,12 @@ character_event = {
 	id = slizardmen.53004
 	desc = EVTDESCslizardmen53004
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.53004 for [Root.GetBestName]"
@@ -10170,12 +10101,12 @@ character_event = {
 	id = slizardmen.53005
 	desc = EVTDESCslizardmen53005
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.53005 for [Root.GetBestName]"
@@ -10193,12 +10124,12 @@ character_event = {
 	id = slizardmen.53006
 	desc = EVTDESCslizardmen53006
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.53006 for [Root.GetBestName]"
@@ -10215,12 +10146,12 @@ long_character_event = {
 	id = slizardmen.53007
 	desc = EVTDESCslizardmen53007
 	picture = GFX_evt_amazon_snake
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.53007 for [Root.GetBestName]"
@@ -10237,12 +10168,12 @@ long_character_event = {
 character_event = {
 	id = slizardmen.54
 	hide_window = yes
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.54 for [Root.GetBestName]"
@@ -10271,12 +10202,12 @@ character_event = {
 	id = slizardmen.54001
 	desc = EVTDESCslizardmen54001
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.54001 for [Root.GetBestName]"
@@ -10318,14 +10249,11 @@ character_event = {
 	id = slizardmen.54002
 	desc = EVTDESCslizardmen54002
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
-	}
-	is_triggered_only = yes
-
-	immediate = {
-		log = "work event id = slizardmen.54002 for [Root.GetBestName]"
+		has_character_flag = holding_amazon_ritual
 	}
 
 	option = {
@@ -10346,12 +10274,12 @@ character_event = {
 	id = slizardmen.54003
 	desc = EVTDESCslizardmen54003
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.54003 for [Root.GetBestName]"
@@ -10366,77 +10294,62 @@ character_event = {
 					modifier = {
 						factor = 0.65
 						trait = fragile
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = weak
-
 					}
 					modifier = {
 						factor = 0.85
 						trait = soft
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = hardy
-
 					}
 					modifier = {
 						factor = 1.65
 						trait = tough
-
 					}
 					modifier = {
 						factor = 1.85
 						trait = strong
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = temperate
-
 					}
 					modifier = {
 						factor = 1.15
 						trait = diligent
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = drunkard
-
 					}
 					modifier = {
 						factor = 1.25
 						trait = addict
-
 					}
 					modifier = {
 						factor = 1.15
 						trait = gluttonous
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = fat
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = undernourished
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = ambitious
-
 					}
 					modifier = {
 						factor = 0.85
 						trait = content
-
 					}
 					modifier = {
 						factor = 0.85
@@ -10590,11 +10503,11 @@ character_event = {
 	id = slizardmen.54004
 	desc = EVTDESCslizardmen54004
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.54004 for [Root.GetBestName]"
@@ -10621,11 +10534,11 @@ character_event = {
 	id = slizardmen.54005
 	desc = EVTDESCslizardmen54005
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.54005 for [Root.GetBestName]"
@@ -10750,12 +10663,12 @@ character_event = {
 		}
 	}
 	picture = GFX_evt_amazon_feast
+	is_triggered_only = yes
 
 	trigger = {
 		trait = creature_amazon
 		has_character_flag = holding_amazon_ritual
 	}
-	is_triggered_only = yes
 
 	immediate = {
 		log = "work event id = slizardmen.54006 for [Root.GetBestName]"
@@ -10770,77 +10683,62 @@ character_event = {
 					modifier = {
 						factor = 0.65
 						trait = fragile
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = weak
-
 					}
 					modifier = {
 						factor = 0.85
 						trait = soft
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = hardy
-
 					}
 					modifier = {
 						factor = 1.65
 						trait = tough
-
 					}
 					modifier = {
 						factor = 1.85
 						trait = strong
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = temperate
-
 					}
 					modifier = {
 						factor = 1.15
 						trait = diligent
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = drunkard
-
 					}
 					modifier = {
 						factor = 1.25
 						trait = addict
-
 					}
 					modifier = {
 						factor = 1.15
 						trait = gluttonous
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = fat
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = undernourished
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = ambitious
-
 					}
 					modifier = {
 						factor = 0.85
 						trait = content
-
 					}
 					modifier = {
 						factor = 0.85
@@ -11247,77 +11145,62 @@ character_event = {
 					modifier = {
 						factor = 0.65
 						trait = fragile
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = weak
-
 					}
 					modifier = {
 						factor = 0.85
 						trait = soft
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = hardy
-
 					}
 					modifier = {
 						factor = 1.65
 						trait = tough
-
 					}
 					modifier = {
 						factor = 1.85
 						trait = strong
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = temperate
-
 					}
 					modifier = {
 						factor = 1.15
 						trait = diligent
-
 					}
 					modifier = {
 						factor = 1.15
 						trait = drunkard
-
 					}
 					modifier = {
 						factor = 1.25
 						trait = addict
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = gluttonous
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = fat
-
 					}
 					modifier = {
 						factor = 1.75
 						trait = undernourished
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = ambitious
-
 					}
 					modifier = {
 						factor = 0.85
 						trait = content
-
 					}
 					modifier = {
 						factor = 0.85
@@ -11651,77 +11534,62 @@ character_event = {
 					modifier = {
 						factor = 0.65
 						trait = fragile
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = weak
-
 					}
 					modifier = {
 						factor = 0.85
 						trait = soft
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = hardy
-
 					}
 					modifier = {
 						factor = 1.65
 						trait = tough
-
 					}
 					modifier = {
 						factor = 1.85
 						trait = strong
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = temperate
-
 					}
 					modifier = {
 						factor = 1.15
 						trait = diligent
-
 					}
 					modifier = {
 						factor = 1.15
 						trait = drunkard
-
 					}
 					modifier = {
 						factor = 1.25
 						trait = addict
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = gluttonous
-
 					}
 					modifier = {
 						factor = 0.75
 						trait = fat
-
 					}
 					modifier = {
 						factor = 1.75
 						trait = undernourished
-
 					}
 					modifier = {
 						factor = 1.5
 						trait = ambitious
-
 					}
 					modifier = {
 						factor = 0.85
 						trait = content
-
 					}
 					modifier = {
 						factor = 0.85
@@ -12691,17 +12559,13 @@ character_event = {
 	# only_playable = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			location = {
 				has_province_modifier = province_slave_raid
 			}
-		}
-		NOT = {
 			location = {
 				has_province_modifier = province_scourged
 			}
-		}
-		NOT = {
 			location = {
 				has_province_modifier = province_slave_raid_chaos_dwarf
 			}
@@ -13055,7 +12919,7 @@ long_character_event = {
 		} # Make sure there's a bare minimum of challengers to start
 
 	}
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -13143,7 +13007,7 @@ long_character_event = {
 long_character_event = {
 	id = slizardmen.62001
 	desc = EVTDESCslizardmen62001
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -13167,7 +13031,7 @@ long_character_event = {
 character_event = {
 	id = slizardmen.62002
 	desc = EVTDESCslizardmen62002
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -13203,7 +13067,7 @@ character_event = {
 character_event = {
 	id = slizardmen.62003
 	desc = EVTDESCslizardmen62003
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -13233,7 +13097,7 @@ character_event = {
 character_event = {
 	id = slizardmen.62004
 	desc = EVTDESCslizardmen62004
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -13263,7 +13127,7 @@ character_event = {
 character_event = {
 	id = slizardmen.62005
 	desc = EVTDESCslizardmen62005
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -14557,7 +14421,7 @@ long_character_event = {
 		} # Opponent is FROMFROM
 
 	}
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -14699,7 +14563,7 @@ long_character_event = {
 			}
 		}
 	}
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -14779,10 +14643,8 @@ long_character_event = {
 								has_character_flag = brawling_loser
 							}
 							has_character_flag = brawling_participant
-							NOT = {
+							nor = {
 								character = FROM
-							}
-							NOT = {
 								character = ROOT
 							}
 						}
@@ -14812,7 +14674,7 @@ long_character_event = {
 character_event = {
 	id = slizardmen.63003
 	desc = EVTDESCslizardmen63003
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -14830,10 +14692,8 @@ character_event = {
  			random_realm_character = {
 				limit = {
 					has_character_flag = brawling_participant
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						has_character_flag = brawling_loser
 					}
 				}
@@ -14868,7 +14728,7 @@ long_character_event = {
 		} # Winner is the Queen
 
 	}
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -14914,10 +14774,8 @@ long_character_event = {
 			any_realm_character = {
 				limit = {
 					has_character_flag = brawling_loser
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						has_character_flag = brawling_host
 					}
 				}
@@ -14961,7 +14819,7 @@ long_character_event = {
 long_character_event = {
 	id = slizardmen.64001
 	desc = EVTDESCAslizardmen64001
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -15018,7 +14876,7 @@ long_character_event = {
 		} # Winner is the Queen
 
 	}
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -15041,7 +14899,7 @@ long_character_event = {
 character_event = {
 	id = slizardmen.65001
 	desc = EVTDESCAslizardmen65001
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -15078,7 +14936,7 @@ character_event = {
 character_event = {
 	id = slizardmen.65002
 	desc = EVTDESCAslizardmen65002
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -15133,22 +14991,12 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = fragile
-				}
-				NOT = {
 					trait = soft
-				}
-				NOT = {
 					trait = weak
-				}
-				NOT = {
 					trait = hardy
-				}
-				NOT = {
 					trait = tough
-				}
-				NOT = {
 					trait = strong
 				}
 			}
@@ -15164,7 +15012,7 @@ character_event = {
 character_event = {
 	id = slizardmen.65003
 	desc = EVTDESCAslizardmen65003
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -15201,7 +15049,7 @@ character_event = {
 character_event = {
 	id = slizardmen.65004
 	desc = EVTDESCAslizardmen65004
-	picture = GFX_evt_amazon_fight
+	picture = GFX_evt_amazon_brawling
 
 	trigger = {
 		trait = creature_amazon
@@ -19850,10 +19698,8 @@ character_event = {
 				if = {
 					limit = {
 						trait = stressed
-						NOT = {
+						nor = {
 							trait = depressed
-						}
-						NOT = {
 							trait = lunatic_3
 						}
 					}
@@ -19861,13 +19707,9 @@ character_event = {
 				}
 				if = {
 					limit = {
-						NOT = {
+						nor = {
 							trait = stressed
-						}
-						NOT = {
 							trait = depressed
-						}
-						NOT = {
 							trait = lunatic_3
 						}
 					}
@@ -19963,23 +19805,17 @@ character_event = {
 				}
 				modifier = {
 					factor = 0
-					NOT = {
+					nor = {
 						trait = stressed
-					}
-					NOT = {
 						trait = depressed
-					}
-					NOT = {
 						trait = lunatic_3
 					}
 				}
 				if = {
 					limit = {
 						trait = stressed
-						NOT = {
+						nor = {
 							trait = depressed
-						}
-						NOT = {
 							trait = lunatic_3
 						}
 					}
@@ -20076,14 +19912,13 @@ character_event = {
 # 201: The Lustrian jungle is growing
 province_event = {
 	id = slizardmen.201
-	is_triggered_only = yes
 	desc = lizardman201desc
 	picture = "GFX_evt_lustria_jungle"
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 5
 		modifier = {
-			factor = 0.33
+			factor = 3
 			OR = {
  				# Jungle grows slower for natives
 				culture_group = lizardman_group
@@ -20093,14 +19928,14 @@ province_event = {
 		}
 		# Jungle grows slower next to rivers and coast (inland should be wilder and less useful)
 		modifier = {
-			factor = 0.50
+			factor = 2
 			OR = {
 				borders_major_river = yes
 				port = yes
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			any_neighbor_province = {
 				OR = {
 					borders_major_river = yes
@@ -20109,107 +19944,107 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			any_neighbor_province = {
-				is_tribal = no
-				is_nomadic = no
+				any_province_holding = {
+					is_tribal = no
+					is_nomadic = no
+				}
 			}
 		}
 		modifier = {
-			factor = 0.87
+			factor = 1.15
 			holder_scope = {
 				realm_stewardship = 10
 			}
 		}
 		modifier = {
-			factor = 0.87
+			factor = 1.15
 			holder_scope = {
 				realm_stewardship = 15
 			}
 		}
 		modifier = {
-			factor = 0.87
+			factor = 1.15
 			holder_scope = {
 				realm_stewardship = 20
 			}
 		}
 		modifier = {
-			factor = 0.87
+			factor = 1.15
 			holder_scope = {
 				realm_stewardship = 25
 			}
 		}
 		modifier = {
-			factor = 0.50
-			is_tribal = no
-			is_nomadic = no
+			factor = 2
+			any_province_holding = {
+				is_tribal = no
+				is_nomadic = no
+			}
 		}
 		modifier = {
-			factor = 2.00
-			is_nomadic = yes
+			factor = 0.5
+			any_province_holding = {
+				is_nomadic = yes
+			}
 		}
 		modifier = {
-			factor = 0.87
+			factor = 1.15
 			capital_holding = {
 				has_building = tb_hillfort_2
 			}
 		}
 		modifier = {
-			factor = 0.83
+			factor = 1.2
 			capital_holding = {
 				has_building = tb_hillfort_3
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			capital_holding = {
 				has_building = tb_hillfort_4
 			}
 		}
 		modifier = {
-			factor = 0.87
+			factor = 1.15
 			capital_holding = {
 				has_building = ca_keep_2
 			}
 		}
 		modifier = {
-			factor = 0.83
+			factor = 1.2
 			capital_holding = {
 				has_building = ca_keep_3
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			capital_holding = {
 				has_building = ca_keep_4
 			}
 		}
 		modifier = {
-			factor = 0.77
+			factor = 1.3
 			capital_holding = {
 				has_building = ca_keep_5
 			}
 		}
 		modifier = {
-			factor = 0.74
+			factor = 1.35
 			capital_holding = {
 				has_building = ca_keep_6
 			}
 		}
 		modifier = {
 			# Jungle grows faster if more controlled
-			factor = 1.11
-			holder_scope = {
-				ai = no
-			}
+			factor = 0.9
 			has_province_modifier = lustria_light_jungle
 		}
 		modifier = {
 			# Jungle grows a little slower once it's dense
-			factor = 0.67
-			holder_scope = {
-				ai = no
-			}
+			factor = 1.5
 			has_province_modifier = lustria_dense_jungle
 		}
 	}
@@ -20377,6 +20212,8 @@ province_event = {
 					factor = 1.5
 					any_neighbor_province = {
 						is_tribal = no
+					}
+					owner = {
 						is_nomadic = no
 					}
 				}
@@ -20964,7 +20801,7 @@ province_event = {
 					has_province_modifier = lustria_light_jungle
 					has_province_modifier = lustria_medium_jungle
 					has_province_modifier = lustria_dense_jungle
-					has_province_modifier = lustria_oppressive_jungle				
+					has_province_modifier = lustria_oppressive_jungle
 				}
 			}
 			# Make it so the initial jungle level is random
@@ -21036,38 +20873,6 @@ province_event = {
 	}
 }
 
-# 251: Trigger 250 for held provinces
-character_event = {
-	id = slizardmen.251
-	hide_window = yes
-	only_playable = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		any_demesne_province = {
-			region = world_new_world_lustria
-			NOT = {
-				has_province_modifier = lustria_jungle
-			}
-		}
-	}
-
-	immediate = {
-		log = "work event id = slizardmen.251 for [Root.GetBestName]"
-		any_demesne_province = {
-			limit = {
-				region = world_new_world_lustria
-				NOT = {
-					has_province_modifier = lustria_jungle
-				}
-			}
-			province_event = {
-				id = slizardmen.250
-			}
-		}		
-	}
-}
-
 # 261: Choose whom you want to cut back your jungle
 character_event = {
 	id = slizardmen.261
@@ -21085,19 +20890,11 @@ character_event = {
 		trigger = {
 			ROOT = {
 				in_command = no
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					trait = incapacitated
-				}
-				NOT = {
 					trait = resting
-				}
-				NOT = {
 					trait = studying_magic
-				}
-				NOT = {
 					trait = in_hiding
 				}
 			}
@@ -21129,19 +20926,11 @@ character_event = {
 					character = yes
 					in_command = no
 					age = 16
-					NOT = {
+					nor = {
 						trait = incapable
-					}
-					NOT = {
 						trait = incapacitated
-					}
-					NOT = {
 						trait = resting
-					}
-					NOT = {
 						trait = studying_magic
-					}
-					NOT = {
 						trait = in_hiding
 					}
 				}
@@ -22043,22 +21832,23 @@ character_event = {
 
 	option = {
 		name = GodsBePraised
-		location = {
-			ROOT = {
-				spawn_unit = {
-					owner = ROOT
-					province = PREV
-					home = ROOT
-					troops = {
-						light_cavalry = {
-							150 150
-						}
-					}
-					attrition = 1.0
-					maintenance_multiplier = 0.075
-				}
-			}
-		}
+		# error in log
+		# location = {
+		# 	root = {
+		# 		spawn_unit = {
+		# 			owner = ROOT
+		# 			province = prev
+		# 			home = prev
+		# 			troops = {
+		# 				light_cavalry = {
+		# 					150 150
+		# 				}
+		# 			}
+		# 			attrition = 1.0
+		# 			maintenance_multiplier = 0.075
+		# 		}
+		# 	}
+		# }
 	}
 }
 

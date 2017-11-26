@@ -65,10 +65,8 @@ character_event = {
 
 	trigger = {
 		has_character_modifier = nomad_warhorse
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
 		}
 		OR = {
@@ -78,7 +76,7 @@ character_event = {
 				NOT = {
 					trait = incapable
 				}
-		 		ai = yes
+				ai = yes
 			}
 			any_courtier = {
 				is_adult = yes
@@ -104,7 +102,7 @@ character_event = {
 					NOT = {
 						trait = incapable
 					}
-			 		ai = yes
+					ai = yes
 				}
 			}
 			random_vassal = {
@@ -114,7 +112,7 @@ character_event = {
 					NOT = {
 						trait = incapable
 					}
-			 		ai = yes
+					ai = yes
 				}
 				character_event = {
 					id = HL.6511
@@ -213,13 +211,9 @@ character_event = {
 	trigger = {
 		prestige = 1500
 		has_character_modifier = nomad_warhorse
-		NOT = {
+		nor = {
 			trait = incapable
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
-		}
-		NOT = {
 			has_character_flag = nomad_painter
 		}
 	}

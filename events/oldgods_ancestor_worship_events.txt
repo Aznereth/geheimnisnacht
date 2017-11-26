@@ -16,18 +16,14 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		OR = {
-			religion = northern_gods
-			religion = old_faith
-			religion = akghan
-		}
+		religion_group = old_gods_group
 	}
 
-	# Health
 	immediate = {
 		log = "work event id = TOG.7000 for [Root.GetBestName]"
 	}
 
+	# Health
 	option = {
 		name = EVTOPTA_TOG_7000
 		ai_chance = {
@@ -56,7 +52,8 @@ character_event = {
 		set_character_flag = ancestors_health
 		hidden_tooltip = {
 			character_event = {
-				id = TOG.7001 days = 3
+				id = TOG.7001
+				days = 3
 			}
 		}
 	}
@@ -370,10 +367,8 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					has_dlc = "Reapers"
-				}
-				NOT = {
 					trait = maimed
 				}
 			}
@@ -640,7 +635,7 @@ character_event = {
 							modifier = {
 								factor = 0 is_strong_trigger = yes
 							} # Robust
-						 	character_event = {
+							character_event = {
 								id = TOG.7011 days = 300
 							}
 						}
@@ -675,7 +670,7 @@ character_event = {
 							modifier = {
 								factor = 0 is_strong_trigger = yes
 							} # Robust
-						 	character_event = {
+							character_event = {
 								id = TOG.7011 days = 300
 							}
 						}
@@ -710,7 +705,7 @@ character_event = {
 							modifier = {
 								factor = 0 is_strong_trigger = yes
 							} # Robust
-						 	character_event = {
+							character_event = {
 								id = TOG.7011 days = 300
 							}
 						}
@@ -745,7 +740,7 @@ character_event = {
 							modifier = {
 								factor = 0 is_strong_trigger = yes
 							} # Robust
-						 	character_event = {
+							character_event = {
 								id = TOG.7011 days = 300
 							}
 						}
@@ -1782,10 +1777,8 @@ character_event = {
 					any_courtier = {
 						is_adult = yes
 						is_female = no
-						NOT = {
+						nor = {
 							is_lover = ROOT
-						}
-						NOT = {
 							is_close_relative = ROOT
 						}
 						ai = yes
@@ -1799,10 +1792,8 @@ character_event = {
 					limit = {
 						is_adult = yes
 						is_female = no
-						NOT = {
+						nor = {
 							is_lover = ROOT
-						}
-						NOT = {
 							is_close_relative = ROOT
 						}
 						ai = yes
@@ -1846,10 +1837,8 @@ character_event = {
 					any_courtier = {
 						is_adult = yes
 						is_female = yes
-						NOT = {
+						nor = {
 							is_lover = ROOT
-						}
-						NOT = {
 							is_close_relative = ROOT
 						}
 						ai = yes
@@ -1863,10 +1852,8 @@ character_event = {
 					limit = {
 						is_adult = yes
 						is_female = yes
-						NOT = {
+						nor = {
 							is_lover = ROOT
-						}
-						NOT = {
 							is_close_relative = ROOT
 						}
 						ai = yes
@@ -1885,10 +1872,8 @@ character_event = {
 						any_courtier = {
 							is_adult = yes
 							is_female = yes
-							NOT = {
+							nor = {
 								is_lover = ROOT
-							}
-							NOT = {
 								is_close_relative = ROOT
 							}
 							ai = yes
@@ -2972,13 +2957,9 @@ character_event = {
 					}
 					random_ward = {
 						limit = {
-							NOT = {
+							nor = {
 								trait = brave
-							}
-							NOT = {
 								trait = willful
-							}
-							NOT = {
 								has_character_flag = scared_of_thunder
 							}
 						}
@@ -2987,13 +2968,9 @@ character_event = {
 					random_child = {
 						limit = {
 							is_adult = no
-							NOT = {
+							nor = {
 								trait = willful
-							}
-							NOT = {
 								trait = brave
-							}
-							NOT = {
 								has_character_flag = scared_of_thunder
 							}
 						}
@@ -3003,13 +2980,9 @@ character_event = {
 						if = {
 							limit = {
 								is_adult = no
-								NOT = {
+								nor = {
 									trait = willful
-								}
-								NOT = {
 									trait = brave
-								}
-								NOT = {
 									has_character_flag = scared_of_thunder
 								}
 							}
@@ -3100,7 +3073,7 @@ character_event = {
 								trait = eunuch
 							}
 						}
-					 	character_event = {
+						character_event = {
 							id = TOG.7511
 						}
 					}
@@ -4542,10 +4515,10 @@ character_event = {
 					if = {
 						limit = {
 							OR = {
-							 	NOT = {
+								NOT = {
 									has_dlc = "Zeus"
 								}
-							 	age = 16
+								age = 16
 							}
 						}
 						remove_trait_craven_effect = yes
@@ -4605,10 +4578,10 @@ character_event = {
 					if = {
 						limit = {
 							OR = {
-							 	NOT = {
+								NOT = {
 									has_dlc = "Zeus"
 								}
-							 	age = 16
+								age = 16
 							}
 						}
 						remove_trait_craven_effect = yes
@@ -4619,10 +4592,8 @@ character_event = {
 					if = {
 						limit = {
 							has_dlc = "Zeus"
-							NOT = {
+							nor = {
 								age = 16
-							}
-							NOT = {
 								trait = timid
 							}
 						}
@@ -4631,10 +4602,10 @@ character_event = {
 					if = {
 						limit = {
 							OR = {
-							 	NOT = {
+								NOT = {
 									has_dlc = "Zeus"
 								}
-							 	age = 16
+								age = 16
 							}
 						}
 						add_trait_craven_effect = yes
@@ -4706,7 +4677,7 @@ character_event = {
 	# Become lovers
 	option = {
 		trigger = {
-			from = {				
+			from = {
 				wh_this_and_root_can_love_trigger = yes
 			}
 		}
@@ -4796,7 +4767,7 @@ character_event = {
 		# Removes rivalry or become lover
 		if = {
 			limit = {
-				from = {					
+				from = {
 					wh_this_and_root_can_love_trigger = yes
 				}
 				not = {
@@ -4973,10 +4944,8 @@ character_event = {
 						}
 						if = {
 							limit = {
-								NOT = {
+								nor = {
 									has_dlc = "Zeus"
-								}
-								NOT = {
 									trait = erudite
 								}
 							}
@@ -4999,13 +4968,9 @@ character_event = {
 						}
 						if = {
 							limit = {
-								NOT = {
+								nor = {
 									has_dlc = "Zeus"
-								}
-								NOT = {
 									trait = slothful
-								}
-								NOT = {
 									trait = diligent
 								}
 							}
@@ -5068,13 +5033,9 @@ character_event = {
 						}
 						if = {
 							limit = {
-								NOT = {
+								nor = {
 									has_dlc = "Zeus"
-								}
-								NOT = {
 									trait = brave
-								}
-								NOT = {
 									trait = craven
 								}
 							}
@@ -5089,10 +5050,8 @@ character_event = {
 						if = {
 							limit = {
 								has_dlc = "Zeus"
-								NOT = {
+								nor = {
 									trait = timid
-								}
-								NOT = {
 									trait = rowdy
 								}
 							}
@@ -5100,13 +5059,9 @@ character_event = {
 						}
 						if = {
 							limit = {
-								NOT = {
+								nor = {
 									has_dlc = "Zeus"
-								}
-								NOT = {
 									trait = brave
-								}
-								NOT = {
 									trait = craven
 								}
 							}
@@ -5212,10 +5167,8 @@ character_event = {
 			}
 			if = {
 				limit = {
-					NOT = {
+					nor = {
 						has_dlc = "Zeus"
-					}
-					NOT = {
 						trait = erudite
 					}
 				}
@@ -5258,13 +5211,9 @@ character_event = {
 			}
 			if = {
 				limit = {
-					NOT = {
+					nor = {
 						has_dlc = "Zeus"
-					}
-					NOT = {
 						trait = slothful
-					}
-					NOT = {
 						trait = diligent
 					}
 				}
@@ -5307,13 +5256,9 @@ character_event = {
 			}
 			if = {
 				limit = {
-					NOT = {
+					nor = {
 						has_dlc = "Zeus"
-					}
-					NOT = {
 						trait = brave
-					}
-					NOT = {
 						trait = craven
 					}
 				}
@@ -5352,10 +5297,8 @@ character_event = {
 			if = {
 				limit = {
 					has_dlc = "Zeus"
-					NOT = {
+					nor = {
 						trait = timid
-					}
-					NOT = {
 						trait = rowdy
 					}
 				}
@@ -5363,13 +5306,9 @@ character_event = {
 			}
 			if = {
 				limit = {
-					NOT = {
+					nor = {
 						has_dlc = "Zeus"
-					}
-					NOT = {
 						trait = brave
-					}
-					NOT = {
 						trait = craven
 					}
 				}
@@ -5863,26 +5802,7 @@ character_event = {
 	id = TOG.7526
 	border = GFX_event_normal_frame_economy
 	picture = GFX_evt_irminsul_shrine
-	desc = {
-		trigger = {
-			OR = {
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
-			}
-		}
-		text = EVTDESC_TOG_7526
-		picture = GFX_evt_sun_temple
-	}
-	desc = {
-		trigger = {
-			NOR = {
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
-			}
-		}
-		text = EVTDESC_TOG_7526
-		picture = GFX_evt_irminsul_shrine
-	}
+	desc = EVTDESC_TOG_7526
 	is_triggered_only = yes
 
 	immediate = {
@@ -6040,146 +5960,116 @@ character_event = {
 	border = GFX_event_normal_frame_economy
 	desc = EVTDESC_TOG_7527_ORUNMILA
 	picture = GFX_evt_irminsul_shrine
-	desc = {
-		trigger = {
-			has_character_flag = monument_for_ancestors
-			NOR = {
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
-			}
-		}
-		text = EVTDESC_TOG_7527_ANCESTORS
-	}
-	desc = {
-		trigger = {
-			has_character_flag = monument_for_ancestors
-			OR = {
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
-			}
-		}
-		text = EVTDESC_TOG_7527_ANCESTORS
-		picture = GFX_evt_sun_temple
-	}
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_ancestors
-			}
-			has_character_modifier = follower_of_grungni
-		}
-		text = EVTDESC_TOG_7527_GRUNGNI
-		picture = GFX_evt_sun_temple
-	}
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_ancestors
-			}
-			has_character_modifier = follower_of_grimnir
-		}
-		text = EVTDESC_TOG_7527_GRIMNIR
-	}
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_ancestors
-			}
-			has_character_modifier = follower_of_valaya
-		}
-		text = EVTDESC_TOG_7527_VALAYA
-	}
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_ancestors
-			}
-			has_character_modifier = follower_of_thungni
-		}
-		text = EVTDESC_TOG_7527_THUNGNI
-	}
+	desc = EVTDESC_TOG_7527_ANCESTORS
 	# desc = {
-	# trigger = {
-	# NOT = { has_character_flag = monument_for_ancestors }
-	# has_character_modifier = follower_of_taipo_and_mielikki
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_character_flag = monument_for_ancestors
+	# 		}
+	# 		has_character_modifier = follower_of_grimnir
+	# 	}
+	# 	text = EVTDESC_TOG_7527_GRIMNIR
 	# }
-	# text = EVTDESC_TOG_7527_TM
+	# desc = {
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_character_flag = monument_for_ancestors
+	# 		}
+	# 		has_character_modifier = follower_of_valaya
+	# 	}
+	# 	text = EVTDESC_TOG_7527_VALAYA
 	# }
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_ancestors
-			}
-			has_character_modifier = follower_of_ursun
-		}
-		text = EVTDESC_TOG_7527_URSUN
-		picture = GFX_evt_sun_temple
-	}
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_ancestors
-			}
-			has_character_modifier = follower_of_dazh
-		}
-		text = EVTDESC_TOG_7527_DAZH
-	}
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_ancestors
-			}
-			has_character_modifier = follower_of_tor
-		}
-		text = EVTDESC_TOG_7527_TOR
-	}
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_kalita
-			}
-			has_character_modifier = follower_of_jarilo
-		}
-		text = EVTDESC_TOG_7527_KALITA
-	}
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_ancestors
-			}
-			has_character_modifier = follower_of_ptra
-		}
-		text = EVTDESC_TOG_7527_PTRA
-		picture = GFX_evt_sun_temple
-	}
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_ancestors
-			}
-			has_character_modifier = follower_of_asaph
-		}
-		text = EVTDESC_TOG_7527_ASAPH
-		picture = GFX_evt_sun_temple
-	}
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_ancestors
-			}
-			has_character_modifier = follower_of_phakth
-		}
-		text = EVTDESC_TOG_7527_PHAKTH
-	}
-	desc = {
-		trigger = {
-			NOT = {
-				has_character_flag = monument_for_ancestors
-			}
-			has_character_modifier = follower_of_usirian
-		}
-		text = EVTDESC_TOG_7527_USIRIAN
-	}
+	# desc = {
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_character_flag = monument_for_ancestors
+	# 		}
+	# 		has_character_modifier = follower_of_thungni
+	# 	}
+	# 	text = EVTDESC_TOG_7527_THUNGNI
+	# }
+	# # desc = {
+	# # trigger = {
+	# # NOT = { has_character_flag = monument_for_ancestors }
+	# # has_character_modifier = follower_of_taipo_and_mielikki
+	# # }
+	# # text = EVTDESC_TOG_7527_TM
+	# # }
+	# desc = {
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_character_flag = monument_for_ancestors
+	# 		}
+	# 		has_character_modifier = follower_of_ursun
+	# 	}
+	# 	text = EVTDESC_TOG_7527_URSUN
+	# 	picture = GFX_evt_sun_temple
+	# }
+	# desc = {
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_character_flag = monument_for_ancestors
+	# 		}
+	# 		has_character_modifier = follower_of_dazh
+	# 	}
+	# 	text = EVTDESC_TOG_7527_DAZH
+	# }
+	# desc = {
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_character_flag = monument_for_ancestors
+	# 		}
+	# 		has_character_modifier = follower_of_tor
+	# 	}
+	# 	text = EVTDESC_TOG_7527_TOR
+	# }
+	# desc = {
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_character_flag = monument_for_kalita
+	# 		}
+	# 		has_character_modifier = follower_of_jarilo
+	# 	}
+	# 	text = EVTDESC_TOG_7527_KALITA
+	# }
+	# desc = {
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_character_flag = monument_for_ancestors
+	# 		}
+	# 		has_character_modifier = follower_of_ptra
+	# 	}
+	# 	text = EVTDESC_TOG_7527_PTRA
+	# 	picture = GFX_evt_sun_temple
+	# }
+	# desc = {
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_character_flag = monument_for_ancestors
+	# 		}
+	# 		has_character_modifier = follower_of_asaph
+	# 	}
+	# 	text = EVTDESC_TOG_7527_ASAPH
+	# 	picture = GFX_evt_sun_temple
+	# }
+	# desc = {
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_character_flag = monument_for_ancestors
+	# 		}
+	# 		has_character_modifier = follower_of_phakth
+	# 	}
+	# 	text = EVTDESC_TOG_7527_PHAKTH
+	# }
+	# desc = {
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_character_flag = monument_for_ancestors
+	# 		}
+	# 		has_character_modifier = follower_of_usirian
+	# 	}
+	# 	text = EVTDESC_TOG_7527_USIRIAN
+	# }
 	# desc = {
 	# trigger = {
 	# NOT = { has_character_flag = monument_for_ancestors }

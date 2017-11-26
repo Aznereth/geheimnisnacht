@@ -26,7 +26,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -50,13 +49,9 @@ character_event = {
 				primary_title = {
 					higher_tier_than = BARON
 				}
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					is_liege_of = ROOT
-				}
-				NOT = {
 					is_plot_target_of = ROOT
 				}
 				any_backed_character = {
@@ -78,10 +73,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			liege = {
 				any_plot_backer = {
 					trait = imbecile
@@ -89,7 +84,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			liege = {
 				any_plot_backer = {
 					trait = lunatic
@@ -97,25 +92,25 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			liege = {
 				num_of_plot_backers = 2
 			}
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			liege = {
 				num_of_plot_backers = 4
 			}
 		}
 		modifier = {
-			factor = 1.18
+			factor = 0.85
 			liege = {
 				num_of_plot_backers = 6
 			}
 		}
 		modifier = {
-			factor = 1.18
+			factor = 0.85
 			liege = {
 				num_of_plot_backers = 8
 			}
@@ -134,13 +129,9 @@ character_event = {
 					primary_title = {
 						higher_tier_than = BARON
 					}
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						is_liege_of = ROOT
-					}
-					NOT = {
 						is_plot_target_of = ROOT
 					}
 					any_backed_character = {
@@ -319,7 +310,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -337,10 +327,8 @@ character_event = {
 				trait = hedonist
 				trait = drunkard
 			}
-			NOT = {
+			nor = {
 				has_character_flag = event7040
-			}
-			NOT = {
 				plot_target_char = {
 					any_known_plotter = {
 						character = PREVPREV
@@ -350,33 +338,33 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = drunkard
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = imbecile
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			OR = {
 				trait = slow
 				trait = dull
 			}
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10.0
 			trait = temperate
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = genius
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			OR = {
 				trait = quick
 				trait = shrewd
@@ -398,10 +386,8 @@ character_event = {
 					has_plot = plot_gain_liege_title
 					has_plot = plot_gain_fellow_vassal_title
 				}
-				NOT = {
+				nor = {
 					has_character_flag = event7040
-				}
-				NOT = {
 					plot_target_char = {
 						any_known_plotter = {
 							character = PREVPREV
@@ -501,7 +487,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -517,10 +502,8 @@ character_event = {
 				trait = hedonist
 				trait = drunkard
 			}
-			NOT = {
+			nor = {
 				has_character_flag = event7041
-			}
-			NOT = {
 				plot_target_char = {
 					any_known_plotter = {
 						character = PREVPREV
@@ -530,33 +513,33 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = drunkard
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = imbecile
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			OR = {
 				trait = slow
 				trait = dull
 			}
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10.0
 			trait = temperate
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = genius
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			OR = {
 				trait = quick
 				trait = shrewd
@@ -576,10 +559,8 @@ character_event = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
-				NOT = {
+				nor = {
 					has_character_flag = event7041
-				}
-				NOT = {
 					plot_target_char = {
 						any_known_plotter = {
 							character = PREVPREV
@@ -3562,10 +3543,8 @@ letter_event = {
 				FROM = {
 					OR = {
 						# If the old liege can use the subjugation CB, give no claims
-						NOT = {
+						nor = {
 							religion_group = old_gods_group
-						}
-						NOT = {
 							culture_group = ROOT
 						}
 					}
@@ -3875,10 +3854,8 @@ letter_event = {
 				FROM = {
 					OR = {
 						# If the old liege can use the subjugation CB, give no claims
-						NOT = {
+						nor = {
 							religion_group = old_gods_group
-						}
-						NOT = {
 							culture_group = ROOT
 						}
 					}
@@ -4335,7 +4312,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -4349,17 +4325,13 @@ character_event = {
 			age = 16
 			prisoner = no
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
-			NOT = {
+			nor = {
 				trait = incapable
-			}
-			NOT = {
 				is_inaccessible_trigger = yes
 			}
 			OR = {
-				NOT = {
+				nor = {
 					religion = ormazd
-				}
-				NOT = {
 					religion = kitabid
 				}
 				trait = decadent
@@ -4376,80 +4348,80 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.10
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.20
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.30
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.40
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.50
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.60
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.70
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.80
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.90
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4459,7 +4431,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4469,7 +4441,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4479,13 +4451,13 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.36
+			factor = 2.75
 			plot_target_char = {
 				trait = vampire_strigoi_visible
 			}
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5
 			plot_target_char = {
 				trait = vampire_necrarch_visible
 			}
@@ -4522,10 +4494,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB8150" # Buy the poison
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				learning = 10
 			}
 		}
@@ -4549,10 +4519,8 @@ character_event = {
 		name = "EVTOPTB8150" # Buy the poison
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				learning = 10
 			}
 		}
@@ -4598,10 +4566,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -4617,7 +4583,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -4632,10 +4597,8 @@ character_event = {
 				}
 				age = 16
 				prisoner = no
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					is_inaccessible_trigger = yes
 				}
 			}
@@ -4652,10 +4615,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.02857
+	mean_time_to_happen = {
+		years = 350
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4671,7 +4634,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4687,7 +4650,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4703,7 +4666,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4719,7 +4682,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4735,7 +4698,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4751,7 +4714,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4767,7 +4730,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4783,7 +4746,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4799,7 +4762,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4809,7 +4772,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4819,7 +4782,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -4845,10 +4808,8 @@ character_event = {
 					}
 					age = 16
 					prisoner = no
-					NOT = {
+					nor = {
 						trait = incapable
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -4885,10 +4846,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 		trigger = {
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -4905,10 +4864,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB8150" # Buy the poison
 		trigger = {
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -4941,10 +4898,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -5100,13 +5055,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = temperate
-						}
-						NOT = {
 							trait = gluttonous
-						}
-						NOT = {
 							trait = paranoid
 						}
 						random = 75
@@ -5178,13 +5129,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = temperate
-					}
-					NOT = {
 						trait = gluttonous
-					}
-					NOT = {
 						trait = paranoid
 					}
 					random = 75
@@ -5592,7 +5539,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -5608,10 +5554,8 @@ character_event = {
 				age = 16
 			}
 			prisoner = no
-			NOT = {
+			nor = {
 				trait = incapable
-			}
-			NOT = {
 				is_inaccessible_trigger = yes
 			}
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
@@ -5625,80 +5569,80 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.03333
+	mean_time_to_happen = {
+		years = 300
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.10
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.20
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.30
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.40
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.50
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.60
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.70
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.80
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.90
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -5708,7 +5652,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -5718,7 +5662,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -5759,10 +5703,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB8170" # Bribe a Guard
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -5786,10 +5728,8 @@ character_event = {
 		name = "EVTOPTB8170" # Bribe a Guard
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -5835,10 +5775,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -5854,7 +5792,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -5872,10 +5809,8 @@ character_event = {
 					age = 16
 				}
 				prisoner = no
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					is_inaccessible_trigger = yes
 				}
 			}
@@ -5892,10 +5827,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.03333
+	mean_time_to_happen = {
+		years = 300
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -5911,7 +5846,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -5927,7 +5862,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -5943,7 +5878,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -5959,7 +5894,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -5975,7 +5910,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -5991,7 +5926,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -6007,7 +5942,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -6023,7 +5958,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -6039,7 +5974,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -6049,7 +5984,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -6059,7 +5994,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -6088,10 +6023,8 @@ character_event = {
 						age = 16
 					}
 					prisoner = no
-					NOT = {
+					nor = {
 						trait = incapable
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -6128,10 +6061,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB8171" # Ask the Plotter for funds
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -6148,10 +6079,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB8170" # Bribe a Guard
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -6184,10 +6113,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -6339,10 +6266,8 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = paranoid
-						}
-						NOT = {
 							trait = trusting
 						}
 						random = 75
@@ -6404,10 +6329,8 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = trusting
-					}
-					NOT = {
 						trait = paranoid
 					}
 					random = 75
@@ -6607,10 +6530,8 @@ character_event = {
 		name = "EVTOPTA8179"
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = paranoid
-				}
-				NOT = {
 					trait = trusting
 				}
 			}
@@ -7420,7 +7341,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -7434,10 +7354,8 @@ character_event = {
 			age = 16
 			is_ruler = yes
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
-			NOT = {
+			nor = {
 				trait = incapable
-			}
-			NOT = {
 				is_inaccessible_trigger = yes
 			}
 			prisoner = no
@@ -7451,80 +7369,80 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.10
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.20
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.30
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.40
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.50
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.60
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.70
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.80
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.90
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7534,7 +7452,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7544,7 +7462,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7585,10 +7503,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB7700" # Hire archers
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				martial = 10
 			}
 		}
@@ -7612,10 +7528,8 @@ character_event = {
 		name = "EVTOPTB7700" # Hire archers
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				martial = 10
 			}
 		}
@@ -7661,10 +7575,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				martial = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -7680,7 +7592,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -7695,10 +7606,8 @@ character_event = {
 				}
 				age = 16
 				is_ruler = yes
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					is_inaccessible_trigger = yes
 				}
 				prisoner = no
@@ -7716,10 +7625,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7735,7 +7644,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7751,7 +7660,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7767,7 +7676,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7783,7 +7692,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7799,7 +7708,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7815,7 +7724,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7831,7 +7740,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7847,7 +7756,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7863,7 +7772,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7873,7 +7782,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7883,7 +7792,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -7893,13 +7802,13 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.36
+			factor = 2.75
 			plot_target_char = {
 				trait = vampire_strigoi_visible
 			}
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5
 			plot_target_char = {
 				trait = vampire_necrarch_visible
 			}
@@ -7921,10 +7830,8 @@ character_event = {
 					}
 					age = 16
 					is_ruler = yes
-					NOT = {
+					nor = {
 						trait = incapable
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 					prisoner = no
@@ -7962,10 +7869,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 		trigger = {
-			NOT = {
+			nor = {
 				martial = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -7982,10 +7887,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB7700" # Hire archers
 		trigger = {
-			NOT = {
+			nor = {
 				martial = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -8018,10 +7921,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				martial = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -8176,13 +8077,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = craven
-						}
-						NOT = {
 							trait = trusting
-						}
-						NOT = {
 							trait = paranoid
 						}
 						random = 75
@@ -8248,13 +8145,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = craven
-					}
-					NOT = {
 						trait = trusting
-					}
-					NOT = {
 						trait = paranoid
 					}
 					random = 75
@@ -8656,7 +8549,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -8669,10 +8561,8 @@ character_event = {
 			}
 			age = 16
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
-			NOT = {
+			nor = {
 				trait = incapable
-			}
-			NOT = {
 				is_inaccessible_trigger = yes
 			}
 			prisoner = no
@@ -8686,80 +8576,80 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.10
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.20
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.30
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.40
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.50
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.60
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.70
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.80
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.90
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -8769,7 +8659,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -8779,7 +8669,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -8789,13 +8679,13 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.36
+			factor = 2.75
 			plot_target_char = {
 				trait = vampire_strigoi_visible
 			}
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5
 			plot_target_char = {
 				trait = vampire_necrarch_visible
 			}
@@ -8832,10 +8722,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB7720" # Buy the manure
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				stewardship = 10
 			}
 		}
@@ -8859,10 +8747,8 @@ character_event = {
 		name = "EVTOPTB7720" # Buy the manure
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				stewardship = 10
 			}
 		}
@@ -8908,10 +8794,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				stewardship = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -8927,7 +8811,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -8942,10 +8825,8 @@ character_event = {
 				}
 				age = 16
 				prisoner = no
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					is_inaccessible_trigger = yes
 				}
 			}
@@ -8962,10 +8843,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -8981,7 +8862,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -8997,7 +8878,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -9013,7 +8894,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -9029,7 +8910,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -9045,7 +8926,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -9061,7 +8942,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -9077,7 +8958,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -9093,7 +8974,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -9109,7 +8990,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -9119,7 +9000,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -9129,7 +9010,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -9155,10 +9036,8 @@ character_event = {
 					}
 					age = 16
 					prisoner = no
-					NOT = {
+					nor = {
 						trait = incapable
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -9195,10 +9074,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 		trigger = {
-			NOT = {
+			nor = {
 				stewardship = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -9215,10 +9092,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB7720" # Buy the manure
 		trigger = {
-			NOT = {
+			nor = {
 				stewardship = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -9251,10 +9126,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				stewardship = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -9409,13 +9282,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = diligent
-						}
-						NOT = {
 							trait = trusting
-						}
-						NOT = {
 							trait = paranoid
 						}
 						random = 75
@@ -9481,13 +9350,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = diligent
-					}
-					NOT = {
 						trait = trusting
-					}
-					NOT = {
 						trait = paranoid
 					}
 					random = 75
@@ -9890,7 +9755,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -9902,10 +9766,8 @@ character_event = {
 				is_murder_quest_target_of_prev_trigger = yes
 			}
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
-			NOT = {
+			nor = {
 				age = 5
-			}
-			NOT = {
 				is_inaccessible_trigger = yes
 			}
 		}
@@ -9918,80 +9780,80 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.10
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.20
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.30
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.40
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.50
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.60
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.70
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.80
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.90
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -10001,7 +9863,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -10011,7 +9873,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -10052,10 +9914,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB7740" # Bribe maid
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -10079,10 +9939,8 @@ character_event = {
 		name = "EVTOPTB7740" # Bribe maid
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -10128,10 +9986,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -10147,7 +10003,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -10157,13 +10012,9 @@ character_event = {
 			}
 			plot_power = 0.5
 			plot_target_char = {
-				NOT = {
+				nor = {
 					is_murder_quest_target_of_prev_trigger = yes
-				}
-				NOT = {
 					age = 5
-				}
-				NOT = {
 					is_inaccessible_trigger = yes
 				}
 			}
@@ -10180,20 +10031,18 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10207,17 +10056,15 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10231,17 +10078,15 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10255,17 +10100,15 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10279,17 +10122,15 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10303,17 +10144,15 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10327,17 +10166,15 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10351,17 +10188,15 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10375,17 +10210,15 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10399,17 +10232,15 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10417,17 +10248,15 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10435,17 +10264,15 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
 					has_plot = plot_kill_spouse
 				}
 				plot_target_char = {
-					NOT = {
+					nor = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10464,13 +10291,9 @@ character_event = {
 				}
 				plot_power = 0.5
 				plot_target_char = {
-					NOT = {
+					nor = {
 						is_murder_quest_target_of_prev_trigger = yes
-					}
-					NOT = {
 						age = 5
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 				}
@@ -10507,10 +10330,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -10527,10 +10348,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB7740" # Bribe maid
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -10563,10 +10382,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -10721,13 +10538,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = brave
-						}
-						NOT = {
 							trait = trusting
-						}
-						NOT = {
 							trait = gregarious
 						}
 						random = 75
@@ -10793,13 +10606,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = gregarious
-					}
-					NOT = {
 						trait = trusting
-					}
-					NOT = {
 						trait = brave
 					}
 					random = 75
@@ -11202,7 +11011,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -11226,80 +11034,80 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.10
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.20
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.30
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.40
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.50
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.60
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.70
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.80
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.90
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11309,7 +11117,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11319,7 +11127,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11357,10 +11165,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB7760" # Hire killer
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -11384,10 +11190,8 @@ character_event = {
 		name = "EVTOPTB7760" # Hire killer
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -11433,10 +11237,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -11452,7 +11254,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -11481,10 +11282,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11500,7 +11301,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11516,7 +11317,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11532,7 +11333,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11548,7 +11349,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11564,7 +11365,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11580,7 +11381,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11596,7 +11397,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11612,7 +11413,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11628,7 +11429,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11638,7 +11439,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11648,7 +11449,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -11708,10 +11509,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -11728,10 +11527,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB7760" # Hire killer
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -11764,10 +11561,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -11922,13 +11717,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = craven
-						}
-						NOT = {
 							trait = trusting
-						}
-						NOT = {
 							trait = paranoid
 						}
 						random = 75
@@ -11994,13 +11785,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = craven
-					}
-					NOT = {
 						trait = trusting
-					}
-					NOT = {
 						trait = paranoid
 					}
 					random = 75
@@ -12403,7 +12190,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -12416,9 +12202,7 @@ character_event = {
 			}
 			age = 5
 			trait = incapable
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			prisoner = no
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
 		}
@@ -12431,80 +12215,80 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.10
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.20
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.30
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.40
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.50
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.60
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.70
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.80
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 0.90
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution = {
 				plotter = ROOT
 				power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12514,7 +12298,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12524,7 +12308,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12565,10 +12349,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB7780" # Bribe servants
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -12592,10 +12374,8 @@ character_event = {
 		name = "EVTOPTB7780" # Bribe servants
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -12641,10 +12421,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -12660,7 +12438,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -12675,9 +12452,7 @@ character_event = {
 				}
 				age = 5
 				trait = incapable
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				prisoner = no
 			}
 			NOT = {
@@ -12693,10 +12468,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.10000
+	mean_time_to_happen = {
+		years = 100
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12712,7 +12487,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12728,7 +12503,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12744,7 +12519,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12760,7 +12535,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12776,7 +12551,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12792,7 +12567,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12808,7 +12583,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12824,7 +12599,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12840,7 +12615,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12850,7 +12625,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12860,7 +12635,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				OR = {
 					has_plot = plot_kill_character
@@ -12886,9 +12661,7 @@ character_event = {
 					}
 					age = 5
 					trait = incapable
-					NOT = {
-						is_inaccessible_trigger = yes
-					}
+					is_inaccessible_trigger = no
 					prisoner = no
 				}
 				NOT = {
@@ -12924,10 +12697,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -12944,10 +12715,8 @@ character_event = {
 	option = {
 		name = "EVTOPTB7780" # Bribe servants
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -12980,10 +12749,8 @@ character_event = {
 		name = "EVTOPTD8150" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -13602,7 +13369,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		OR = {
@@ -13614,13 +13380,9 @@ character_event = {
 				is_murder_quest_target_of_prev_trigger = yes
 			}
 			age = 5
-			NOT = {
+			nor = {
 				age = 16
-			}
-			NOT = {
 				trait = incapable
-			}
-			NOT = {
 				is_inaccessible_trigger = yes
 			}
 			prisoner = no
@@ -13634,8 +13396,8 @@ character_event = {
 			power = 0.025
 		}
 	}
-	weight_multiplier = {
-		factor = 0.03333
+	mean_time_to_happen = {
+		years = 300
 		modifier = {
 			factor = 0.7
 			plot_power_contribution = {
@@ -13767,10 +13529,8 @@ character_event = {
 		name = "EVTOPTB7800" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				learning = 10
 			}
 		}
@@ -13794,10 +13554,8 @@ character_event = {
 
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				learning = 10
 			}
 		}
@@ -13843,10 +13601,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -13861,7 +13617,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		any_backed_character = {
@@ -13875,13 +13630,9 @@ character_event = {
 					is_murder_quest_target_of_prev_trigger = yes
 				}
 				age = 5
-				NOT = {
+				nor = {
 					age = 16
-				}
-				NOT = {
 					trait = incapable
-				}
-				NOT = {
 					is_inaccessible_trigger = yes
 				}
 				prisoner = no
@@ -13898,8 +13649,8 @@ character_event = {
 			}
 		}
 	}
-	weight_multiplier = {
-		factor = 0.03333
+	mean_time_to_happen = {
+		years = 300
 		modifier = {
 			factor = 0.6
 			any_backed_character = {
@@ -14059,13 +13810,9 @@ character_event = {
 						is_murder_quest_target_of_prev_trigger = yes
 					}
 					age = 5
-					NOT = {
+					nor = {
 						age = 16
-					}
-					NOT = {
 						trait = incapable
-					}
-					NOT = {
 						is_inaccessible_trigger = yes
 					}
 					prisoner = no
@@ -14103,10 +13850,8 @@ character_event = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 
 		trigger = {
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -14123,10 +13868,8 @@ character_event = {
 		name = "EVTOPTB7800" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -14159,10 +13902,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -14309,13 +14050,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = diligent
-						}
-						NOT = {
 							trait = trusting
-						}
-						NOT = {
 							trait = paranoid
 						}
 						random = 75
@@ -14773,7 +14510,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		OR = {
@@ -14790,9 +14526,7 @@ character_event = {
 			}
 			prisoner = no
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 		}
 		NOT = {
 			has_character_flag = murder_in_motion
@@ -14802,8 +14536,8 @@ character_event = {
 			power = 0.025
 		}
 	}
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
 			factor = 0.7
 			plot_power_contribution = {
@@ -14935,10 +14669,8 @@ character_event = {
 		name = "EVTOPTB7820" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				learning = 10
 			}
 		}
@@ -14962,10 +14694,8 @@ character_event = {
 
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				learning = 10
 			}
 		}
@@ -15011,10 +14741,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -15029,7 +14757,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		any_backed_character = {
@@ -15047,9 +14774,7 @@ character_event = {
 					trait = incapable
 				}
 				prisoner = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 			}
 			NOT = {
 				has_character_flag = murder_in_motion
@@ -15063,8 +14788,8 @@ character_event = {
 			}
 		}
 	}
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
 			factor = 0.6
 			any_backed_character = {
@@ -15270,9 +14995,7 @@ character_event = {
 						trait = incapable
 					}
 					prisoner = no
-					NOT = {
-						is_inaccessible_trigger = yes
-					}
+					is_inaccessible_trigger = no
 				}
 				NOT = {
 					has_character_flag = murder_in_motion
@@ -15307,10 +15030,8 @@ character_event = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 
 		trigger = {
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -15327,10 +15048,8 @@ character_event = {
 		name = "EVTOPTB7820" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -15363,10 +15082,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -15513,13 +15230,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = craven
-						}
-						NOT = {
 							trait = paranoid
-						}
-						NOT = {
 							trait = slothful
 						}
 						random = 75
@@ -15584,13 +15297,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = craven
-					}
-					NOT = {
 						trait = paranoid
-					}
-					NOT = {
 						trait = slothful
 					}
 					random = 75
@@ -16027,7 +15736,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		OR = {
@@ -16044,9 +15752,7 @@ character_event = {
 			}
 			prisoner = no
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 		}
 		NOT = {
 			has_character_flag = murder_in_motion
@@ -16056,8 +15762,8 @@ character_event = {
 			power = 0.025
 		}
 	}
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
 			factor = 0.7
 			plot_power_contribution = {
@@ -16189,10 +15895,8 @@ character_event = {
 		name = "EVTOPTB7840" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -16216,10 +15920,8 @@ character_event = {
 
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -16265,10 +15967,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -16283,7 +15983,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		any_backed_character = {
@@ -16301,9 +16000,7 @@ character_event = {
 					trait = incapable
 				}
 				prisoner = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 			}
 			NOT = {
 				has_character_flag = murder_in_motion
@@ -16317,8 +16014,8 @@ character_event = {
 			}
 		}
 	}
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
 			factor = 0.6
 			any_backed_character = {
@@ -16524,9 +16221,7 @@ character_event = {
 						trait = incapable
 					}
 					prisoner = no
-					NOT = {
-						is_inaccessible_trigger = yes
-					}
+					is_inaccessible_trigger = no
 				}
 				NOT = {
 					has_character_flag = murder_in_motion
@@ -16561,10 +16256,8 @@ character_event = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -16581,10 +16274,8 @@ character_event = {
 		name = "EVTOPTB7840" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -16617,10 +16308,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -16767,13 +16456,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = paranoid
-						}
-						NOT = {
 							trait = diligent
-						}
-						NOT = {
 							trait = trusting
 						}
 						random = 75
@@ -16838,13 +16523,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = diligent
-					}
-					NOT = {
 						trait = paranoid
-					}
-					NOT = {
 						trait = trusting
 					}
 					random = 75
@@ -17235,7 +16916,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		OR = {
@@ -17247,17 +16927,13 @@ character_event = {
 				is_murder_quest_target_of_prev_trigger = yes
 			}
 			age = 5
-			NOT = {
+			nor = {
 				age = 16
-			}
-			NOT = {
 				trait = incapable
 			}
 			prisoner = no
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 		}
 		NOT = {
 			has_character_flag = murder_in_motion
@@ -17267,8 +16943,8 @@ character_event = {
 			power = 0.025
 		}
 	}
-	weight_multiplier = {
-		factor = 0.03333
+	mean_time_to_happen = {
+		years = 300
 		modifier = {
 			factor = 0.7
 			plot_power_contribution = {
@@ -17400,10 +17076,8 @@ character_event = {
 		name = "EVTOPTB7860" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -17427,10 +17101,8 @@ character_event = {
 
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -17476,10 +17148,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -17494,7 +17164,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		any_backed_character = {
@@ -17508,16 +17177,12 @@ character_event = {
 					is_murder_quest_target_of_prev_trigger = yes
 				}
 				age = 5
-				NOT = {
+				nor = {
 					age = 16
-				}
-				NOT = {
 					trait = incapable
 				}
 				prisoner = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 			}
 			NOT = {
 				has_character_flag = murder_in_motion
@@ -17531,8 +17196,8 @@ character_event = {
 			}
 		}
 	}
-	weight_multiplier = {
-		factor = 0.03333
+	mean_time_to_happen = {
+		years = 300
 		modifier = {
 			factor = 0.6
 			any_backed_character = {
@@ -17722,16 +17387,12 @@ character_event = {
 						is_murder_quest_target_of_prev_trigger = yes
 					}
 					age = 5
-					NOT = {
+					nor = {
 						age = 16
-					}
-					NOT = {
 						trait = incapable
 					}
 					prisoner = no
-					NOT = {
-						is_inaccessible_trigger = yes
-					}
+					is_inaccessible_trigger = no
 				}
 				NOT = {
 					has_character_flag = murder_in_motion
@@ -17766,10 +17427,8 @@ character_event = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -17786,10 +17445,8 @@ character_event = {
 		name = "EVTOPTB7860" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -17822,10 +17479,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -17972,13 +17627,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = paranoid
-						}
-						NOT = {
 							trait = gregarious
-						}
-						NOT = {
 							trait = trusting
 						}
 						random = 75
@@ -18043,13 +17694,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = paranoid
-					}
-					NOT = {
 						trait = gregarious
-					}
-					NOT = {
 						trait = trusting
 					}
 					random = 75
@@ -18440,7 +18087,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		OR = {
@@ -18457,9 +18103,7 @@ character_event = {
 			}
 			prisoner = no
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 		}
 		NOT = {
 			has_character_flag = murder_in_motion
@@ -18470,8 +18114,8 @@ character_event = {
 			power = 0.025
 		}
 	}
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
 			factor = 0.7
 			plot_power_contribution = {
@@ -18603,10 +18247,8 @@ character_event = {
 		name = "EVTOPTB7880" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -18630,10 +18272,8 @@ character_event = {
 
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -18679,10 +18319,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -18697,7 +18335,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		any_backed_character = {
@@ -18715,9 +18352,7 @@ character_event = {
 					trait = incapable
 				}
 				prisoner = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 			}
 			NOT = {
 				has_character_flag = murder_in_motion
@@ -18730,8 +18365,8 @@ character_event = {
 			}
 		}
 	}
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
 			factor = 0.6
 			any_backed_character = {
@@ -18937,9 +18572,7 @@ character_event = {
 						trait = incapable
 					}
 					prisoner = no
-					NOT = {
-						is_inaccessible_trigger = yes
-					}
+					is_inaccessible_trigger = no
 				}
 				NOT = {
 					has_character_flag = murder_in_motion
@@ -18974,10 +18607,8 @@ character_event = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -18994,10 +18625,8 @@ character_event = {
 		name = "EVTOPTB7880" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -19030,10 +18659,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -19180,13 +18807,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = paranoid
-						}
-						NOT = {
 							trait = diligent
-						}
-						NOT = {
 							trait = trusting
 						}
 						random = 75
@@ -19251,13 +18874,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = diligent
-					}
-					NOT = {
 						trait = paranoid
-					}
-					NOT = {
 						trait = trusting
 					}
 					random = 75
@@ -19648,7 +19267,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		OR = {
@@ -19665,9 +19283,7 @@ character_event = {
 			}
 			prisoner = no
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 		}
 		NOT = {
 			has_character_flag = murder_in_motion
@@ -19677,8 +19293,8 @@ character_event = {
 			power = 0.025
 		}
 	}
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
 			factor = 0.7
 			plot_power_contribution = {
@@ -19810,10 +19426,8 @@ character_event = {
 		name = "EVTOPTB7900" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -19837,10 +19451,8 @@ character_event = {
 
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -19886,10 +19498,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -19904,7 +19514,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		any_backed_character = {
@@ -19922,9 +19531,7 @@ character_event = {
 					trait = incapable
 				}
 				prisoner = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 			}
 			NOT = {
 				has_character_flag = murder_in_motion
@@ -19937,8 +19544,8 @@ character_event = {
 			}
 		}
 	}
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
 			factor = 0.6
 			any_backed_character = {
@@ -20144,9 +19751,7 @@ character_event = {
 						trait = incapable
 					}
 					prisoner = no
-					NOT = {
-						is_inaccessible_trigger = yes
-					}
+					is_inaccessible_trigger = no
 				}
 				NOT = {
 					has_character_flag = murder_in_motion
@@ -20181,10 +19786,8 @@ character_event = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -20201,10 +19804,8 @@ character_event = {
 		name = "EVTOPTB7900" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -20237,10 +19838,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -20387,13 +19986,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = diligent
-						}
-						NOT = {
 							trait = paranoid
-						}
-						NOT = {
 							trait = trusting
 						}
 						random = 75
@@ -20458,13 +20053,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = diligent
-					}
-					NOT = {
 						trait = paranoid
-					}
-					NOT = {
 						trait = trusting
 					}
 					random = 75
@@ -20855,7 +20446,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		OR = {
@@ -20872,9 +20462,7 @@ character_event = {
 			}
 			prisoner = no
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			trait = decadent
 			dynasty = ROOT
 		}
@@ -20886,8 +20474,8 @@ character_event = {
 			power = 0.025
 		}
 	}
-	weight_multiplier = {
-		factor = 0.01645
+	mean_time_to_happen = {
+		years = 608
 		modifier = {
 			factor = 0.7
 			plot_power_contribution = {
@@ -21031,10 +20619,8 @@ character_event = {
 		name = "EVTOPTB7950" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -21058,10 +20644,8 @@ character_event = {
 
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				intrigue = 10
 			}
 		}
@@ -21107,10 +20691,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -21125,7 +20707,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 	is_part_of_plot = yes
 	trigger = {
 		any_backed_character = {
@@ -21143,9 +20724,7 @@ character_event = {
 					trait = incapable
 				}
 				prisoner = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				trait = decadent
 				dynasty = PREV
 			}
@@ -21160,8 +20739,8 @@ character_event = {
 			}
 		}
 	}
-	weight_multiplier = {
-		factor = 0.01645
+	mean_time_to_happen = {
+		years = 608
 		modifier = {
 			factor = 0.6
 			any_backed_character = {
@@ -21355,9 +20934,7 @@ character_event = {
 						trait = incapable
 					}
 					prisoner = no
-					NOT = {
-						is_inaccessible_trigger = yes
-					}
+					is_inaccessible_trigger = no
 					trait = decadent
 					dynasty = PREV
 				}
@@ -21394,10 +20971,8 @@ character_event = {
 		name = "EVTOPTB8151" # Ask the Plotter for funds
 
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -21414,10 +20989,8 @@ character_event = {
 		name = "EVTOPTB7950" # Bribe servants
 
 		trigger = {
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -21450,10 +21023,8 @@ character_event = {
 
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				intrigue = 10
-			}
-			NOT = {
 				event_target:plot_leader = {
 					plot_power = 1.0
 				}
@@ -21613,22 +21184,12 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = drunkard
-					}
-					NOT = {
 						trait = hedonist
-					}
-					NOT = {
 						trait = lustful
-					}
-					NOT = {
 						trait = gluttonous
-					}
-					NOT = {
 						trait = slothful
-					}
-					NOT = {
 						trait = proud
 					}
 					random = 75
@@ -21709,22 +21270,12 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = drunkard
-						}
-						NOT = {
 							trait = hedonist
-						}
-						NOT = {
 							trait = lustful
-						}
-						NOT = {
 							trait = gluttonous
-						}
-						NOT = {
 							trait = slothful
-						}
-						NOT = {
 							trait = proud
 						}
 						random = 75
@@ -22230,7 +21781,7 @@ character_event = {
 # if = {
 # limit = {
 
-# religion = catholic
+# religion_group = old_world_group
 # }
 
 # k_papal_state = {
@@ -23408,10 +22959,8 @@ letter_event = {
 						}
 						if = {
 							limit = {
-								NOT = {
+								nor = {
 									has_law = succ_gavelkind
-								}
-								NOT = {
 									has_law = succ_feudal_elective
 								}
 								NAND = {

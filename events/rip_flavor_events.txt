@@ -801,16 +801,10 @@ character_event = {
 			limit = {
 				prisoner = no
 				is_female = yes
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					character = event_target:lover_2
-				}
-				NOT = {
 					character = event_target:lover_3
-				}
-				NOT = {
 					age = 45
 				}
 				is_marriage_adult = yes
@@ -819,12 +813,10 @@ character_event = {
 					trait = incapable
 				}
 				has_lover = no
-				NOT = {
+				nor = {
 					spouse = {
 						character = ROOT
 					}
-				}
-				NOT = {
 					consort = {
 						character = ROOT
 					}
@@ -837,16 +829,10 @@ character_event = {
 			limit = {
 				prisoner = no
 				is_female = yes
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					character = event_target:lover_1
-				}
-				NOT = {
 					character = event_target:lover_3
-				}
-				NOT = {
 					age = 45
 				}
 				is_marriage_adult = yes
@@ -855,12 +841,10 @@ character_event = {
 					trait = incapable
 				}
 				has_lover = no
-				NOT = {
+				nor = {
 					spouse = {
 						character = ROOT
 					}
-				}
-				NOT = {
 					consort = {
 						character = ROOT
 					}
@@ -873,19 +857,11 @@ character_event = {
 			limit = {
 				prisoner = no
 				is_female = yes
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					character = event_target:lover_1
-				}
-				NOT = {
 					character = event_target:lover_2
-				}
-				NOT = {
 					character = ROOT
-				}
-				NOT = {
 					age = 45
 				}
 				is_marriage_adult = yes
@@ -894,12 +870,10 @@ character_event = {
 					trait = incapable
 				}
 				has_lover = no
-				NOT = {
+				nor = {
 					spouse = {
 						character = ROOT
 					}
-				}
-				NOT = {
 					consort = {
 						character = ROOT
 					}
@@ -915,13 +889,9 @@ character_event = {
 				is_adult = yes
 				has_lover = no
 				trait = homosexual
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					trait = incapable
-				}
-				NOT = {
 					character = event_target:lover_h_2
 				}
 			}
@@ -934,13 +904,9 @@ character_event = {
 				is_adult = yes
 				has_lover = no
 				trait = homosexual
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					trait = incapable
-				}
-				NOT = {
 					character = event_target:lover_h_1
 				}
 			}
@@ -4185,9 +4151,7 @@ character_event = {
 	trigger = {
 		is_tribal = no
 		is_nomadic = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		higher_tier_than = COUNT
 		stewardship = 6
 		any_demesne_province = {
@@ -5386,12 +5350,10 @@ character_event = {
 					modifier = {
 						factor = 0
 						OR = {
-							NOT = {
+							nor = {
 								event_target:rip_widow = {
 									always = yes
 								}
-							}
-							NOT = {
 								event_target:rip_child = {
 									always = yes
 								}
@@ -6010,8 +5972,8 @@ character_event = {
 			text = EVTOPTB_RIP_29019_TOOLTIP
 		}
 		reverse_opinion = {
-		 	who = FROM
-		 	modifier = opinion_neglectful_parent
+			who = FROM
+			modifier = opinion_neglectful_parent
 		}
 	}
 }
@@ -6504,16 +6466,10 @@ character_event = {
 						is_married = yes
 						any_child = {
 							age = 2
-							NOT = {
+							nor = {
 								age = 13
-							}
-							NOT = {
 								trait = brave
-							}
-							NOT = {
 								trait = willful
-							}
-							NOT = {
 								trait = rowdy
 							}
 						}
@@ -6523,16 +6479,10 @@ character_event = {
 					limit = {
 						any_child = {
 							age = 2
-							NOT = {
+							nor = {
 								age = 13
-							}
-							NOT = {
 								trait = brave
-							}
-							NOT = {
 								trait = willful
-							}
-							NOT = {
 								trait = rowdy
 							}
 						}
@@ -6651,16 +6601,10 @@ character_event = {
 		random_child = {
 			limit = {
 				age = 2
-				NOT = {
+				nor = {
 					age = 13
-				}
-				NOT = {
 					trait = brave
-				}
-				NOT = {
 					trait = willful
-				}
-				NOT = {
 					trait = rowdy
 				}
 			}
@@ -6706,11 +6650,9 @@ character_event = {
 				}
 				if = {
 					limit = {
-						NOR = {
+						nor = {
 							trait = craven
 							trait = berserker
-						}
-						NOT = {
 							has_dlc = "Zeus"
 						}
 					}
@@ -7967,10 +7909,8 @@ character_event = {
 						any_courtier = {
 							is_female = no
 							block_general_event_trigger = no
-							NOT = {
+							nor = {
 								is_lover = ROOT
-							}
-							NOT = {
 								is_close_relative = ROOT
 							}
 						}
@@ -7983,10 +7923,8 @@ character_event = {
 						any_courtier = {
 							is_female = yes
 							block_general_event_trigger = no
-							NOT = {
+							nor = {
 								is_lover = ROOT
-							}
-							NOT = {
 								is_close_relative = ROOT
 							}
 						}
@@ -8092,12 +8030,12 @@ character_event = {
 	option = {
 		name = EVTOPTA_RIP_29401
 		random_list = {
-		 	60 = {
+			60 = {
 				character_event = {
 					id = RIP.29402 tooltip = EVTOPTA_RIP_29401_SUCCESS
 				}
 			}
-		 	40 = {
+			40 = {
 				character_event = {
 					id = RIP.29403 tooltip = EVTOPTA_RIP_29401_FAILURE
 				}
@@ -8339,12 +8277,12 @@ character_event = {
 	option = {
 		name = EVTOPTA_RIP_29501
 		random_list = {
-		 	50 = {
+			50 = {
 				character_event = {
 					id = RIP.29502 tooltip = EVTOPTA_RIP_29501_SUCCESS days = 30
 				}
 			}
-		 	50 = {
+			50 = {
 				character_event = {
 					id = RIP.29503 tooltip = EVTOPTA_RIP_29501_FAILURE days = 15
 				}
@@ -8355,12 +8293,12 @@ character_event = {
 	option = {
 		name = EVTOPTB_RIP_29501
 		random_list = {
-		 	80 = {
+			80 = {
 				character_event = {
 					id = RIP.29502 tooltip = EVTOPTA_RIP_29501_SUCCESS days = 30
 				}
 			}
-		 	20 = {
+			20 = {
 				character_event = {
 					id = RIP.29504 tooltip = EVTOPTB_RIP_29501_FAILURE days = 15
 				}
@@ -8500,10 +8438,8 @@ character_event = {
 	option = {
 		random_spouse = {
 			limit = {
-				NOT = {
+				nor = {
 					has_minor_title = title_court_physician
-				}
-				NOT = {
 					is_lover = ROOT
 				}
 				block_general_event_trigger = no
@@ -8811,10 +8747,8 @@ character_event = {
 				event_target:caretaker = {
 					is_child_of = ROOT
 				}
-				NOT = {
+				nor = {
 					is_friend = event_target:caretaker
-				}
-				NOT = {
 					event_target:caretaker = {
 						has_character_flag = bad_caretaker
 					}
@@ -9108,10 +9042,8 @@ character_event = {
 		FROM = {
 			is_child_of = ROOT
 		}
-		NOT = {
+		nor = {
 			has_character_modifier = good_relationship_omen
-		}
-		NOT = {
 			has_character_modifier = bad_relationship_omen
 		}
 	}
@@ -12786,7 +12718,7 @@ character_event = {
 						name = Eugenia
 						culture = italian
 						race = italian
-						religion = catholic
+						religion_group = old_world_group
 						trait = mastermind_theologian
 						trait = nun
 						trait = chaste
@@ -12812,7 +12744,7 @@ character_event = {
 						name = Augusto
 						culture = italian
 						race = italian
-						religion = catholic
+						religion_group = old_world_group
 						trait = mastermind_theologian
 						trait = monk
 						trait = chaste
@@ -13222,7 +13154,7 @@ narrative_event = {
 				hidden_tooltip = {
 					FROM = {
 						#leave_court_effect = yes
-		 				death = {
+						death = {
 							death_reason = death_missing
 						}
 					}
@@ -13514,10 +13446,8 @@ character_event = {
 	option = {
 		trigger = {
 			trait = deceitful
-			NOT = {
+			nor = {
 				trait = schemer
-			}
-			NOT = {
 				AND = {
 					trait = strategist
 					is_smart_trigger = yes
@@ -14764,7 +14694,7 @@ character_event = {
 				random_traits = no
 				name = "Ramirez"
 				dynasty = none
-				religion = catholic
+				religion_group = old_world_group
 				culture = scottish
 				female = no
 				age = 1500
@@ -14830,7 +14760,7 @@ character_event = {
 				random_traits = no
 				name = "Arthur"
 				dynasty = none
-				religion = catholic
+				religion_group = old_world_group
 				culture = breton
 				female = no
 				age = 950

@@ -370,34 +370,27 @@ character_event = {
 	capable_only = yes
 	only_rulers = yes
 	prisoner = yes
-	is_triggered_only = yes
 
 	trigger = {
 		host = {
 			war = no
 		}
-		NOT = {
+		nor = {
 			has_character_modifier = zun_judgement
-		}
-		NOT = {
 			has_character_modifier = the_oubliette
-		}
-		NOT = {
 			has_character_modifier = house_arrest
-		}
-		NOT = {
 			has_character_flag = asked_for_better_prison
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 1
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = gregarious
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = content
 		}
 	}
@@ -690,13 +683,10 @@ character_event = {
 	only_playable = yes
 	prisoner = no
 	capable_only = yes
-	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			trait = kind
-		}
-		NOT = {
 			trait = just
 		}
 		OR = {
@@ -723,26 +713,26 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = impaler
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = possessed
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = cruel
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = paranoid
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = slothful
 		}
 	}
@@ -763,23 +753,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTB50010 # Oil up the rack!
-		if = {
-			limit = {
-				NOT = {
-					religion = jain
-				}
-			}
-			piety = -10
-		}
-		if = {
-			limit = {
-				religion = shallyan
-			}
-			piety = -30
-			custom_tooltip = {
-				text = jain_ahimsa_tooltip
-			}
-		}
 		random_courtier = {
 			limit = {
 				age = 14

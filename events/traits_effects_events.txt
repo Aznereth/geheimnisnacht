@@ -918,9 +918,7 @@ character_event = {
 	trigger = {
 		trait = chaste
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		OR = {
 			tier = baron
 			tier = count
@@ -1175,9 +1173,7 @@ character_event = {
 	trigger = {
 		trait = temperate
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_vassal = {
 			tier = baron
 			trait = gluttonous
@@ -1228,9 +1224,7 @@ character_event = {
 	trigger = {
 		trait = gluttonous
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		OR = {
 			trait = charitable
 			trait = gregarious
@@ -1307,9 +1301,7 @@ character_event = {
 	trigger = {
 		trait = gluttonous
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			in_command = no
@@ -1627,9 +1619,7 @@ character_event = {
 
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = greedy
 		treasury = 100
 		OR = {
@@ -1955,9 +1945,7 @@ character_event = {
 	trigger = {
 		in_command = no
 		trait = greedy
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		OR = {
 			trait = wroth
 			trait = gluttonous
@@ -2023,9 +2011,7 @@ character_event = {
 
 	trigger = {
 		trait = charitable
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		OR = {
 			any_courtier = {
 				age = 16
@@ -2148,9 +2134,7 @@ character_event = {
 
 	trigger = {
 		trait = charitable
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			prisoner = no
 			OR = {
@@ -2778,9 +2762,7 @@ character_event = {
 	trigger = {
 		trait = slothful
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			OR = {
 				has_job_title = job_treasurer
@@ -2876,9 +2858,7 @@ character_event = {
 	trigger = {
 		trait = slothful
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			prisoner = no
@@ -3065,9 +3045,7 @@ character_event = {
 	trigger = {
 		trait = diligent
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_vassal = {
 			NOT = {
 				opinion = {
@@ -3180,9 +3158,7 @@ character_event = {
 	trigger = {
 		trait = diligent
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_vassal = {
 			age = 16
 			any_courtier = {
@@ -3430,9 +3406,7 @@ character_event = {
 	trigger = {
 		trait = envious
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			NOT = {
@@ -3584,9 +3558,7 @@ character_event = {
 	trigger = {
 		trait = envious
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			NOT = {
@@ -3735,9 +3707,7 @@ character_event = {
 	trigger = {
 		trait = envious
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			NOT = {
@@ -3886,9 +3856,7 @@ character_event = {
 	trigger = {
 		trait = envious
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			NOT = {
@@ -3927,13 +3895,9 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					personality_traits = 6
-				}
-				NOT = {
 					trait = proud
-				}
-				NOT = {
 					trait = wroth
 				}
 			}
@@ -4041,9 +4005,7 @@ character_event = {
 	trigger = {
 		trait = envious
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			NOT = {
@@ -4474,9 +4436,7 @@ character_event = {
 	trigger = {
 		trait = kind
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		treasury = 20
 		OR = {
 			trait = charitable
@@ -5084,9 +5044,7 @@ character_event = {
 	trigger = {
 		trait = patient
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			trait = wroth
@@ -5350,9 +5308,7 @@ character_event = {
 		any_courtier = {
 			age = 16
 			is_female = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				trait = cynical
 				is_heretic = yes
@@ -5384,9 +5340,7 @@ character_event = {
 			limit = {
 				age = 16
 				is_female = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = cynical
 					is_heretic = yes
@@ -5829,9 +5783,7 @@ character_event = {
 	trigger = {
 		trait = proud
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			prisoner = no
@@ -7195,9 +7147,7 @@ character_event = {
 			is_inaccessible_trigger = yes
 		}
 		any_courtier = {
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				trait = hunter
 				trait = brave
@@ -7252,9 +7202,7 @@ character_event = {
 
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = craven
 		OR = {
 			NOT = {
@@ -7560,9 +7508,7 @@ character_event = {
 	trigger = {
 		trait = brave
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 20
 			is_female = no
@@ -7731,9 +7677,7 @@ character_event = {
 	trigger = {
 		trait = brave
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1
@@ -7781,9 +7725,7 @@ character_event = {
 	trigger = {
 		trait = brave
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		OR = {
 			religion_group = old_world_group
 			religion_group = ormazd_gods_group
@@ -7952,9 +7894,7 @@ character_event = {
 	trigger = {
 		trait = shy
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1
@@ -8001,9 +7941,7 @@ character_event = {
 	trigger = {
 		trait = shy
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			is_female = no
@@ -8133,9 +8071,7 @@ character_event = {
 	trigger = {
 		trait = shy
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1
@@ -8495,9 +8431,7 @@ character_event = {
 		trait = ambitious
 		in_command = no
 		is_priest = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			opinion = {
 				who = ROOT value = 75
@@ -8505,9 +8439,7 @@ character_event = {
 			reverse_opinion = {
 				who = ROOT value = 50
 			}
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				is_priest = yes
 				has_job_title = job_spiritual
@@ -8560,9 +8492,7 @@ character_event = {
 	trigger = {
 		trait = ambitious
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		is_priest = no
 		any_courtier = {
 			religion_group = ormazd_gods_group
@@ -8809,9 +8739,7 @@ character_event = {
 	trigger = {
 		trait = content
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			prisoner = no
@@ -9246,21 +9174,15 @@ character_event = {
 
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = arbitrary
 		any_courtier = {
 			age = 16
 			prisoner = no
 			in_command = no
-			NOT = {
+			nor = {
 				is_inaccessible_trigger = yes
-			}
-			NOT = {
 				trait = incapable
-			}
-			NOT = {
 				character = ROOT
 			}
 			OR = {
@@ -9300,13 +9222,9 @@ character_event = {
 			limit = {
 				age = 16
 				prisoner = no
-				NOT = {
+				nor = {
 					is_inaccessible_trigger = yes
-				}
-				NOT = {
 					trait = incapable
-				}
-				NOT = {
 					character = ROOT
 				}
 				OR = {
@@ -9428,9 +9346,7 @@ character_event = {
 
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = arbitrary
 		any_courtier = {
 			age = 16
@@ -9650,9 +9566,7 @@ character_event = {
 	trigger = {
 		trait = arbitrary
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		OR = {
 			is_ruler = yes
 			has_job_title = job_marshal
@@ -9822,9 +9736,7 @@ character_event = {
 	trigger = {
 		trait = just
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			in_command = no
 			age = 16
@@ -9960,9 +9872,7 @@ character_event = {
 	trigger = {
 		trait = just
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1
@@ -10054,9 +9964,7 @@ character_event = {
 	trigger = {
 		trait = just
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			in_command = no
@@ -10666,16 +10574,12 @@ character_event = {
 
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = cynical
 		any_courtier = {
 			age = 16
 			in_command = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				trait = zealous
 				is_priest = yes
@@ -10730,15 +10634,11 @@ character_event = {
 	trigger = {
 		trait = cynical
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			in_command = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			religion_group = ormazd_gods_group
 			OR = {
 				trait = zealous
@@ -10793,9 +10693,7 @@ character_event = {
 
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = zealous
 		higher_tier_than = baron
 		is_councillor = no
@@ -11470,9 +11368,7 @@ character_event = {
 	trigger = {
 		trait = paranoid
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1
@@ -11813,9 +11709,7 @@ character_event = {
 	trigger = {
 		trait = trusting
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		OR = {
 			tier = count
 			tier = duke
@@ -11990,9 +11884,7 @@ character_event = {
 	trigger = {
 		trait = trusting
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			prisoner = no
@@ -12279,9 +12171,7 @@ character_event = {
 	is_triggered_only = yes
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = celibate
 		OR = {
 			trait = chaste
@@ -12467,9 +12357,7 @@ character_event = {
 			age = 16
 			is_priest = yes
 			is_female = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				trait = hedonist
 				trait = lustful
@@ -12504,9 +12392,7 @@ character_event = {
 				age = 16
 				is_priest = yes
 				is_female = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = hedonist
 					trait = lustful
@@ -12806,9 +12692,7 @@ character_event = {
 		}
 		any_courtier = {
 			age = 16
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				learning = 10
 				trait = scholar
@@ -12840,9 +12724,7 @@ character_event = {
 		random_courtier = {
 			limit = {
 				age = 16
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					learning = 10
 					trait = scholar
@@ -13076,9 +12958,7 @@ character_event = {
 			limit = {
 				age = 16
 				in_command = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				is_priest = yes
 				has_job_action = no
 				OR = {
@@ -14064,9 +13944,7 @@ character_event = {
 		any_courtier = {
 			age = 16
 			in_command = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				learning = 10
 				trait = gardener
@@ -14552,9 +14430,7 @@ character_event = {
 		any_courtier = {
 			age = 16
 			is_councillor = yes
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				trait = brave
 				trait = diligent
@@ -14583,9 +14459,7 @@ character_event = {
 			limit = {
 				age = 16
 				is_councillor = yes
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = brave
 					trait = diligent
@@ -15127,15 +15001,11 @@ character_event = {
 	trigger = {
 		trait = mystic
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			in_command = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				is_priest = yes
 				has_job_title = job_spiritual
@@ -15166,9 +15036,7 @@ character_event = {
 			limit = {
 				age = 16
 				in_command = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					is_priest = yes
 					has_job_title = job_spiritual
@@ -15994,9 +15862,7 @@ character_event = {
 	trigger = {
 		trait = impaler
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		OR = {
 			trait = wroth
 			trait = deceitful
@@ -16425,9 +16291,7 @@ character_event = {
 		any_courtier = {
 			age = 16
 			in_command = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				learning = 10
 				trait = impaler
@@ -17321,9 +17185,7 @@ character_event = {
 			is_female = no
 			is_abroad = no
 			prisoner = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				martial = 10
 				trait = duelist
@@ -18413,9 +18275,7 @@ character_event = {
 		any_courtier = {
 			age = 16
 			in_command = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				martial = 10
 				trait = hunter
@@ -18448,9 +18308,7 @@ character_event = {
 			limit = {
 				age = 16
 				in_command = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					martial = 10
 					trait = hunter
@@ -18647,9 +18505,7 @@ character_event = {
 	is_triggered_only = yes
 	trigger = {
 		trait = hunter
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		OR = {
 			any_courtier = {
 				age = 16
@@ -19011,9 +18867,7 @@ character_event = {
 		any_courtier = {
 			age = 16
 			in_command = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				has_job_title = job_marshal
 				has_job_title = job_spymaster
@@ -19038,9 +18892,7 @@ character_event = {
 		trigger = {
 			job_spymaster = {
 				has_job_action = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = ambitious
 					trait = diligent
@@ -19060,9 +18912,7 @@ character_event = {
 		trigger = {
 			job_marshal = {
 				has_job_action = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = ambitious
 					trait = diligent
@@ -19090,9 +18940,7 @@ character_event = {
 			any_child = {
 				is_abroad = no
 				prisoner = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				is_female = no
 				age = 14
 				OR = {
@@ -19106,9 +18954,7 @@ character_event = {
 			limit = {
 				is_abroad = no
 				prisoner = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				is_female = no
 				age = 14
 				OR = {
@@ -19406,15 +19252,11 @@ character_event = {
 	trigger = {
 		trait = hunter
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_courtier = {
 			age = 16
 			in_command = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			is_councillor = yes
 			has_job_action = no
 			OR = {
@@ -19453,9 +19295,7 @@ character_event = {
 			job_chancellor = {
 				in_command = no
 				has_job_action = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = trusting
 					NOT = {
@@ -19484,9 +19324,7 @@ character_event = {
 			job_marshal = {
 				in_command = no
 				has_job_action = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = trusting
 					NOT = {
@@ -19515,9 +19353,7 @@ character_event = {
 			job_treasurer = {
 				in_command = no
 				has_job_action = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = trusting
 					NOT = {
@@ -19546,9 +19382,7 @@ character_event = {
 			job_spymaster = {
 				in_command = no
 				has_job_action = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = trusting
 					NOT = {
@@ -19577,9 +19411,7 @@ character_event = {
 			job_spiritual = {
 				in_command = no
 				has_job_action = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = trusting
 					NOT = {
@@ -19609,9 +19441,7 @@ character_event = {
 				age = 13
 				is_abroad = no
 				prisoner = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = craven
 					trait = paranoid
@@ -19623,9 +19453,7 @@ character_event = {
 				age = 16
 				is_abroad = no
 				prisoner = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = craven
 					trait = paranoid
@@ -19777,9 +19605,7 @@ character_event = {
 	trigger = {
 		trait = poet
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		OR = {
 			trait = charitable
 			trait = gregarious
@@ -20032,9 +19858,7 @@ character_event = {
 		any_courtier = {
 			age = 16
 			in_command = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			OR = {
 				trait = gluttonous
 				trait = greedy
@@ -20060,9 +19884,7 @@ character_event = {
 			limit = {
 				age = 16
 				in_command = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				OR = {
 					trait = gluttonous
 					trait = greedy
@@ -20097,9 +19919,7 @@ character_event = {
 			limit = {
 				age = 16
 				in_command = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				trait = zealous
 				OR = {
 					trait = chaste
@@ -20891,15 +20711,11 @@ character_event = {
 	is_triggered_only = yes
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = falconer
 		spouse = {
 			is_alive = yes
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 		}
 		num_of_children = 3
 		any_child = {
@@ -21298,9 +21114,7 @@ character_event = {
 	is_triggered_only = yes
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = falconer
 		any_courtier = {
 			prisoner = no
@@ -21918,9 +21732,7 @@ character_event = {
 	trigger = {
 		trait = gregarious
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		any_vassal = {
 			prisoner = no
 			war = no
@@ -21935,10 +21747,8 @@ character_event = {
 		OR = {
 			trait = diligent
 			trait = ambitious
-			NOT = {
+			nor = {
 				trait = slothful
-			}
-			NOT = {
 				trait = content
 			}
 		}
@@ -22271,16 +22081,12 @@ character_event = {
 	is_triggered_only = yes
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = gregarious
 		any_courtier = {
 			age = 16
 			in_command = no
-			NOT = {
-				is_inaccessible_trigger = yes
-			}
+			is_inaccessible_trigger = no
 			trait = proud
 			opinion = {
 				who = ROOT value = 10
@@ -22305,9 +22111,7 @@ character_event = {
 			limit = {
 				age = 16
 				in_command = no
-				NOT = {
-					is_inaccessible_trigger = yes
-				}
+				is_inaccessible_trigger = no
 				trait = proud
 				opinion = {
 					who = ROOT value = 10
@@ -22649,9 +22453,7 @@ character_event = {
 	is_triggered_only = yes
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = wroth
 		any_courtier = {
 			age = 16
@@ -22843,9 +22645,7 @@ character_event = {
 	is_triggered_only = yes
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = craven
 		OR = {
 			NOT = {
@@ -22984,9 +22784,7 @@ character_event = {
 	war = no
 	trigger = {
 		in_command = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 		trait = brave
 	}
 	weight_multiplier = {
@@ -23033,9 +22831,7 @@ character_event = {
 	trigger = {
 		in_command = no
 		trait = content
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 	weight_multiplier = {
 		factor = 1

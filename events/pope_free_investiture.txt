@@ -18,7 +18,6 @@ character_event = {
 	prisoner = no
 	only_capable = yes
 	war = no
-	is_triggered_only = yes
 
 	trigger = {
 		controls_religion = yes
@@ -29,10 +28,8 @@ character_event = {
 		any_independent_ruler = {
 			religion = ROOT
 			rightful_religious_head = ROOT
-			NOT = {
+			nor = {
 				has_character_flag = pope_wants_our_law_changed
-			}
-			NOT = {
 				has_character_flag = pope_respects_our_law
 			}
 			primary_title = {
@@ -45,10 +42,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 2
+	mean_time_to_happen = {
+		years = 4
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = zealous
 		}
 	}
@@ -66,10 +63,8 @@ character_event = {
 			limit = {
 				religion = ROOT
 				rightful_religious_head = ROOT
-				NOT = {
+				nor = {
 					has_character_flag = pope_wants_our_law_changed
-				}
-				NOT = {
 					has_character_flag = pope_respects_our_law
 				}
 				primary_title = {
@@ -413,7 +408,6 @@ character_event = {
 	only_capable = yes
 	war = no
 	has_character_flag = pope_currently_demanding
-	is_triggered_only = yes
 
 	trigger = {
 		controls_religion = yes
@@ -438,10 +432,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 2
+	mean_time_to_happen = {
+		years = 4
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = zealous
 		}
 	}
@@ -471,7 +465,7 @@ character_event = {
 			random_realm_lord = {
 				limit = {
 					is_theocracy = yes
-	 				NOT = {
+					NOT = {
 						has_character_flag = pope_bribing
 					}
 				}
@@ -609,7 +603,6 @@ character_event = {
 	only_capable = yes
 	war = no
 	has_character_flag = pope_currently_demanding
-	is_triggered_only = yes
 
 	trigger = {
 		controls_religion = yes
@@ -636,10 +629,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 2
+	mean_time_to_happen = {
+		years = 4
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = ambitious
 		}
 	}

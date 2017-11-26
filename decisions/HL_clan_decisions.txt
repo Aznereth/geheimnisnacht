@@ -27,10 +27,8 @@ targetted_decisions = {
 			}
 			is_nomadic = yes
 			trait = creature_human
-			NOT = {
+			nor = {
 				religion_group = necromantic_group
-			}
-			NOT = {
 				religion_group = chaos_gods_group
 			}
 		}
@@ -38,13 +36,9 @@ targetted_decisions = {
 			is_nomadic = yes
 			is_playable = yes
 			trait = creature_human
-			NOT = {
+			nor = {
 				religion_group = necromantic_group
-			}
-			NOT = {
 				religion_group = chaos_gods_group
-			}
-			NOT = {
 				religion = FROM
 			}
 			same_realm = FROM
@@ -67,6 +61,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision adopt_faith for [Root.GetBestName]"
 			FROM = {
 				religion = ROOT
 				piety = -50
@@ -122,10 +117,8 @@ targetted_decisions = {
 						}
 						if = {
 							limit = {
-								NOT = {
+								nor = {
 									religion = ROOT
-								}
-								NOT = {
 									character = FROM
 								}
 							}
@@ -150,10 +143,8 @@ targetted_decisions = {
 							}
 							if = {
 								limit = {
-									NOT = {
+									nor = {
 										religion = ROOT
-									}
-									NOT = {
 										character = FROM
 									}
 								}
@@ -324,6 +315,7 @@ targetted_decisions = {
 			}
 		}
 		effect = {
+			log = "work decision declare_feud for [Root.GetBestName]"
 			clan_title = {
 				FROM = {
 					clan_title = {

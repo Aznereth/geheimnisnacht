@@ -22,10 +22,8 @@ character_event = {
 		# Chance of trait adjustments
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = honest
-				}
-				NOT = {
 					trait = deceitful
 				}
 				random = 85 # 15% chance
@@ -205,10 +203,8 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			lifestyle_traits = 1
-		}
-		NOT = {
 			has_character_flag = wol_no_to_intrigue_trait
 		}
 	}
@@ -580,13 +576,9 @@ character_event = {
 				modifier = {
 					factor = 0
 					FROMFROM = {
-						NOT = {
+						nor = {
 							is_married = ROOT
-						}
-						NOT = {
 							is_consort = ROOT
-						}
-						NOT = {
 							any_lover = {
 								OR = {
 									is_married = ROOT
@@ -1109,10 +1101,8 @@ character_event = {
 				limit = {
 					FROMFROMFROM = {
 						is_father_real_father = no
-						NOT = {
+						nor = {
 							trait = bastard
-						}
-						NOT = {
 							trait = legit_bastard
 						}
 					}
@@ -1483,12 +1473,10 @@ character_event = {
 			FROMFROMFROM = {
 				ai = yes
 				is_playable = yes
-				NOT = {
+				nor = {
 					liege = {
 						character = ROOT
 					}
-				}
-				NOT = {
 					has_opinion_modifier = {
 						who = ROOT modifier = opinion_coerced_into_joining_faction
 					}
@@ -3761,10 +3749,8 @@ character_event = {
 								prisoner = no
 								is_ill = no
 								is_adult = yes
-								NOT = {
+								nor = {
 									trait = incapable
-								}
-								NOT = {
 									character = PREVPREV
 								}
 								OR = {
@@ -3992,14 +3978,12 @@ character_event = {
 			FROM = {
 				OR = {
 					trait = greedy
-					NOT = {
+					nor = {
 						personal_opinion_diff = {
 							first = ROOT
 							second = liege
 							value = 20
 						}
-					}
-					NOT = {
 						personal_opinion_diff = {
 							first = event_target:target_captive
 							second = liege
@@ -4623,7 +4607,6 @@ character_event = {
 	only_playable = yes
 	prisoner = no
 	only_capable = yes
-	is_triggered_only = yes
 
 	trigger = {
 		has_focus = focus_intrigue
@@ -4653,38 +4636,38 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 5
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = schemer
 			NOT = {
 				trait = paranoid
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOT = {
 				trait = paranoid
 			}
 			has_character_modifier = wol_schemer_2
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			NOT = {
 				trait = paranoid
 			}
 			has_character_modifier = wol_schemer_1
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOT = {
 				trait = paranoid
 			}
 			has_character_modifier = seduced_loyal_spy_maid
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			job_spymaster = {
 				NOT = {
 					attribute_diff = {
@@ -4696,7 +4679,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			job_spymaster = {
 				NOT = {
 					attribute_diff = {
@@ -4708,7 +4691,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			job_spymaster = {
 				attribute_diff = {
 					attribute = intrigue
@@ -4718,7 +4701,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			job_spymaster = {
 				attribute_diff = {
 					attribute = intrigue
@@ -4728,7 +4711,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.25
+			factor = 4.0
 			trait = paranoid
 			job_spymaster = {
 				NOR = {

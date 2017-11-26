@@ -669,13 +669,13 @@ character_event = {
 				factor = 1.5
 				has_pious_trait_trigger = yes
 			}
-			modifier = {
-				factor = 2
-				has_crusade_trait_trigger = yes
-				NOT = {
-					trait = mujahid
-				}
-			}
+			# modifier = {
+				# factor = 2
+				# has_crusade_trait_trigger = yes
+				# NOT = {
+					# trait = mujahid
+				# }
+			# }
 		}
 	}
 }
@@ -1690,10 +1690,8 @@ character_event = {
 		}
 		random_courtier_or_vassal = {
 			limit = {
-				NOT = {
+				nor = {
 					society_member_of = the_assassins
-				}
-				NOT = {
 					religion = ormazd
 				}
 				is_adult = yes
@@ -1703,10 +1701,8 @@ character_event = {
 		}
 		random_courtier_or_vassal = {
 			limit = {
-				NOT = {
+				nor = {
 					society_member_of = the_assassins
-				}
-				NOT = {
 					religion = ormazd
 				}
 				trait = zealous
@@ -2309,7 +2305,6 @@ character_event = {
 	is_in_society = yes
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 
 	trigger = {
 		society_member_of = the_assassins
@@ -2331,80 +2326,80 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.03003
+	mean_time_to_happen = {
+		years = 333
 		modifier = {
 			society_rank = {
 				society = the_assassins
 				rank == 3
 			}
-			factor = 0.33
+			factor = 3
 		}
 		modifier = {
 			society_rank = {
 				society = the_assassins
 				rank == 2
 			}
-			factor = 0.57
+			factor = 1.75
 		}
 		modifier = {
 			plot_target_char = {
 				is_inaccessible_trigger = yes
 			}
-			factor = 0.67
+			factor = 1.5
 		}
 		modifier = {
 			plot_target_char = {
 				prisoner = yes
 			}
-			factor = 0.67
+			factor = 1.5
 		}
 		modifier = {
 			plot_power = 0.1
-			factor = 1.67
+			factor = 0.6
 		}
 		modifier = {
 			plot_power = 0.2
-			factor = 1.67
+			factor = 0.6
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.3
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.4
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.5
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.6
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.7
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.8
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.9
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 1
 		}
 		modifier = {
-			factor = 3.33
+			factor = 0.3
 			plot_power = 1.5
 		}
 		modifier = {
-			factor = 3.33
+			factor = 0.3
 			plot_power = 2
 		}
 	}
@@ -2570,7 +2565,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -2594,80 +2588,80 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.03003
+	mean_time_to_happen = {
+		years = 333
 		modifier = {
 			society_rank = {
 				society = the_assassins
 				rank == 3
 			}
-			factor = 0.33
+			factor = 3
 		}
 		modifier = {
 			society_rank = {
 				society = the_assassins
 				rank == 2
 			}
-			factor = 0.57
+			factor = 1.75
 		}
 		modifier = {
 			plot_target_char = {
 				is_inaccessible_trigger = yes
 			}
-			factor = 0.67
+			factor = 1.5
 		}
 		modifier = {
 			plot_target_char = {
 				prisoner = yes
 			}
-			factor = 0.67
+			factor = 1.5
 		}
 		modifier = {
 			plot_power = 0.1
-			factor = 1.67
+			factor = 0.6
 		}
 		modifier = {
 			plot_power = 0.2
-			factor = 1.67
+			factor = 0.6
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.3
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.4
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.5
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.6
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.7
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.8
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.9
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 1
 		}
 		modifier = {
-			factor = 3.33
+			factor = 0.3
 			plot_power = 1.5
 		}
 		modifier = {
-			factor = 3.33
+			factor = 0.3
 			plot_power = 2
 		}
 	}
@@ -4556,9 +4550,7 @@ character_event = {
 			has_character_modifier = quest_cooldown_timer
 		}
 		is_society_grandmaster = no
-		NOT = {
-			is_inaccessible_trigger = yes
-		}
+		is_inaccessible_trigger = no
 	}
 
 	immediate = {
@@ -4642,10 +4634,8 @@ character_event = {
 							any_neighbor_province = {
 								owner = {
 									top_liege = {
-										NOT = {
+										nor = {
 											character = ROOT
-										}
-										NOT = {
 											religion = ormazd
 										}
 										any_realm_province = {
@@ -4765,10 +4755,8 @@ character_event = {
 					NOT = {
 						any_independent_ruler = {
 							is_within_diplo_range = ROOT # Not using assassins_appropriate_target_trigger here to also find vassals/commanders
-							NOT = {
+							nor = {
 								religion = ormazd
-							}
-							NOT = {
 								society_member_of = the_assassins
 							}
 							any_war = {
@@ -4789,10 +4777,8 @@ character_event = {
 				random_independent_ruler = {
 					limit = {
 						is_within_diplo_range = ROOT # Not using assassins_appropriate_target_trigger here to also find vassals/commanders
-						NOT = {
+						nor = {
 							religion = ormazd
-						}
-						NOT = {
 							society_member_of = the_assassins
 						}
 						any_war = {
@@ -5047,20 +5033,16 @@ character_event = {
 			random_playable_ruler = {
 				limit = {
 					assassins_appropriate_target_trigger = yes
-					NOT = {
+					nor = {
 						religion = ormazd
-					}
-					NOT = {
 						society_member_of = the_assassins
 					}
 					OR = {
 						NOT = {
 							any_playable_ruler = {
 								assassins_appropriate_target_trigger = yes
-								NOT = {
+								nor = {
 									religion = ormazd
-								}
-								NOT = {
 									society_member_of = the_assassins
 								}
 								OR = {
@@ -5642,31 +5624,31 @@ province_event = {
 # 			location = { is_quest_target = yes }
 
 # 			OR = {
-# 	 			location = {
+# 				location = {
 
-# 	 				any_quester_targeting_this = {
-# 	 					character = FROMFROM
+# 					any_quester_targeting_this = {
+# 						character = FROMFROM
 
-# 	 					NOT = { is_vassal_or_below = ROOT }
-# 	 					has_quest = quest_the_assassins_convert_province
+# 						NOT = { is_vassal_or_below = ROOT }
+# 						has_quest = quest_the_assassins_convert_province
 
-# 	 				}
-# 	 			}
+# 					}
+# 				}
 
-# 	 			location = {
-# 	 				any_quester_targeting_this = {
+# 				location = {
+# 					any_quester_targeting_this = {
 
-# 	 					is_vassal_or_below = FROMFROM
-# 	 					NOR = {
+# 						is_vassal_or_below = FROMFROM
+# 						NOR = {
 
-# 	 						character = ROOT
-# 	 						is_vassal_or_below = ROOT
+# 							character = ROOT
+# 							is_vassal_or_below = ROOT
 
-# 	 					}
-# 	 					has_quest = quest_the_assassins_convert_province
+# 						}
+# 						has_quest = quest_the_assassins_convert_province
 
-# 	 				}
-# 	 			}
+# 					}
+# 				}
 
 # 			}
 # 		}
@@ -5678,34 +5660,34 @@ province_event = {
 # 			location = {
 
 # 				any_quester_targeting_this = {
-# 		 			limit = {
+# 					limit = {
 
-# 		 				OR = {
-# 		 					AND = {
+# 						OR = {
+# 							AND = {
 
-# 		 						character = FROMFROM
-# 			 					NOT = { is_vassal_or_below = ROOT }
+# 								character = FROMFROM
+# 								NOT = { is_vassal_or_below = ROOT }
 
-# 			 					has_quest = quest_the_assassins_convert_province
-# 		 					}
+# 								has_quest = quest_the_assassins_convert_province
+# 							}
 
-# 		 					AND = {
-# 		 						is_vassal_or_below = FROMFROM
+# 							AND = {
+# 								is_vassal_or_below = FROMFROM
 
-# 			 					NOR = {
-# 			 						character = ROOT
+# 								NOR = {
+# 									character = ROOT
 
-# 			 						is_vassal_or_below = ROOT
-# 			 					}
+# 									is_vassal_or_below = ROOT
+# 								}
 
-# 		 					}
-# 		 				}
+# 							}
+# 						}
 
-# 		 				has_quest = quest_the_assassins_convert_province
-# 		 			}
+# 						has_quest = quest_the_assassins_convert_province
+# 					}
 
 # 					wealth = 5000
-# 		 		}
+# 				}
 
 # 			}
 # 		}
@@ -5828,96 +5810,91 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	min_age = 16
-	is_triggered_only = yes
 
 	trigger = {
 		society_member_of = the_assassins
 		has_plot = plot_assassins_collect_debt
-		NOT = {
+		nor = {
 			has_character_flag = collecting_debt
-		}
-		NOT = {
 			has_character_flag = collected_debt_failure
-		}
-		NOT = {
 			has_character_flag = collected_debt_success
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.06024
+	mean_time_to_happen = {
+		years = 166
 		modifier = {
 			society_rank = {
 				society = the_assassins
 				rank == 3
 			}
-			factor = 0.33
+			factor = 3
 		}
 		modifier = {
 			society_rank = {
 				society = the_assassins
 				rank == 2
 			}
-			factor = 0.57
+			factor = 1.75
 		}
 		modifier = {
 			plot_target_char = {
 				is_inaccessible_trigger = yes
 			}
-			factor = 0.67
+			factor = 1.5
 		}
 		modifier = {
 			plot_target_char = {
 				prisoner = yes
 			}
-			factor = 0.67
+			factor = 1.5
 		}
 		modifier = {
 			plot_power = 0.1
-			factor = 1.67
+			factor = 0.6
 		}
 		modifier = {
 			plot_power = 0.2
-			factor = 1.67
+			factor = 0.6
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.3
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.4
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.5
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.6
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.7
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.8
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 0.9
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_power = 1
 		}
 		modifier = {
-			factor = 3.33
+			factor = 0.3
 			plot_power = 1.5
 		}
 		modifier = {
-			factor = 3.33
+			factor = 0.3
 			plot_power = 2
 		}
 	}
@@ -6104,28 +6081,28 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	hide_from = yes
 	desc = {
-	 	trigger = {
-	 		OR = {
-	 			trait = paranoid
-	 			trait = schemer
-	 			intrigue = 15
+		trigger = {
+			OR = {
+				trait = paranoid
+				trait = schemer
+				intrigue = 15
 
 			}
 
 		}
-	 	text = EVTDESC_MNM_6209_A
+		text = EVTDESC_MNM_6209_A
 	}
 	desc = {
-	 	trigger = {
-	 		NOR = {
-	 			trait = paranoid
-	 			trait = schemer
-	 			intrigue = 15
+		trigger = {
+			NOR = {
+				trait = paranoid
+				trait = schemer
+				intrigue = 15
 
 			}
 
 		}
-	 	text = EVTDESC_MNM_6209_B
+		text = EVTDESC_MNM_6209_B
 	}
 	is_triggered_only = yes
 
@@ -6139,8 +6116,8 @@ character_event = {
 			limit = {
 				OR = {
 					trait = paranoid
-		 			trait = schemer
-		 			intrigue = 15
+					trait = schemer
+					intrigue = 15
 				}
 			}
 			custom_tooltip = {
@@ -6151,8 +6128,8 @@ character_event = {
 			limit = {
 				NOR = {
 					trait = paranoid
-		 			trait = schemer
-		 			intrigue = 15
+					trait = schemer
+					intrigue = 15
 				}
 			}
 			custom_tooltip = {
@@ -6161,13 +6138,9 @@ character_event = {
 			if = {
 				limit = {
 					has_dlc = "Reapers"
-					NOT = {
+					nor = {
 						has_character_flag = developing_illness
-					}
-					NOT = {
 						has_character_flag = disease_not_serious
-					}
-					NOT = {
 						trait = vomiting
 					}
 				}
@@ -6181,10 +6154,8 @@ character_event = {
 			}
 			if = {
 				limit = {
-					NOT = {
+					nor = {
 						has_dlc = "Reapers"
-					}
-					NOT = {
 						trait = ill
 					}
 				}
@@ -6706,10 +6677,8 @@ society_quest_event = {
 									religion_group = ormazd_gods_group
 								}
 								AND = {
-									NOT = {
+									nor = {
 										religion = ormazd
-									}
-									NOT = {
 										ROOT = {
 											any_realm_province = {
 												any_neighbor_province = {
@@ -6753,10 +6722,8 @@ society_quest_event = {
 									religion_group = ormazd_gods_group
 								}
 								AND = {
-									NOT = {
+									nor = {
 										religion = ormazd
-									}
-									NOT = {
 										ROOT = {
 											any_realm_province = {
 												any_neighbor_province = {
@@ -7286,8 +7253,8 @@ character_event = {
 						AND = {
 							trait = paranoid
 							any_realm_character = {
-		 						same_sex = root
-		 						NOT = {
+								same_sex = root
+								NOT = {
 									character = ROOT
 								}
 							}
@@ -8663,14 +8630,14 @@ character_event = {
 				}
 			}
 			random_realm_character = {
-		 		limit = {
-		 			same_sex = root
-		 			NOT = {
+				limit = {
+					same_sex = root
+					NOT = {
 						character = ROOT
 					}
 
 				}
-		 		save_event_target_as = drug_cheater_lover
+				save_event_target_as = drug_cheater_lover
 
 			}
 			save_event_target_as = drug_cheater_spouse
@@ -9328,15 +9295,11 @@ character_event = {
 					age = 12
 					is_ruler = no
 					is_abroad = no
-					NOT = {
+					nor = {
 						any_spouse = {
 							is_landed = yes
 						}
-					}
-					NOT = {
 						age = 21
-					}
-					NOT = {
 						has_character_flag = assassin_protege_1_flag
 					}
 					OR = {
@@ -9356,18 +9319,12 @@ character_event = {
 					age = 12
 					is_ruler = no
 					is_abroad = no
-					NOT = {
+					nor = {
 						any_spouse = {
 							is_landed = yes
 						}
-					}
-					NOT = {
 						age = 21
-					}
-					NOT = {
 						has_character_flag = assassin_protege_1_flag
-					}
-					NOT = {
 						has_character_flag = assassin_protege_2_flag
 					}
 					OR = {
@@ -9387,21 +9344,13 @@ character_event = {
 					age = 12
 					is_ruler = no
 					is_abroad = no
-					NOT = {
+					nor = {
 						any_spouse = {
 							is_landed = yes
 						}
-					}
-					NOT = {
 						age = 21
-					}
-					NOT = {
 						has_character_flag = assassin_protege_1_flag
-					}
-					NOT = {
 						has_character_flag = assassin_protege_2_flag
-					}
-					NOT = {
 						has_character_flag = assassin_protege_3_flag
 					}
 					OR = {
@@ -10608,16 +10557,16 @@ character_event = {
 					}
  					set_character_flag = won_outstrong
  					random_list = {
-	 					75 = {
+						75 = {
 							set_character_flag = modifier_outstrong
 						}
-	 					25 = {
-	 						modifier = {
+						25 = {
+							modifier = {
 								OR = {
 									is_strong_trigger = yes is_weak_trigger = yes
 								} factor = 0
 							}
-	 						set_character_flag = trait_robust
+							set_character_flag = trait_robust
 
 						}
 					}
@@ -11052,12 +11001,12 @@ character_event = {
 		add_rival = FROM
 		FROM = {
  			if = {
-	 			limit = {
+				limit = {
 					NOT = {
 						trait = wounded
 					}
 				}
-	 			add_trait = wounded
+				add_trait = wounded
 			}
 		}
 	}
@@ -11517,9 +11466,9 @@ character_event = {
 				is_friend = FROM
 			}
  			reverse_opinion = {
-	 			who = FROM
-	 			modifier = opinion_grateful
-	 			years = 10
+				who = FROM
+				modifier = opinion_grateful
+				years = 10
 			}
 		}
 		if = {
@@ -11575,10 +11524,8 @@ character_event = {
 			block_general_event_trigger = no
 			ai = yes
 			higher_society_rank_than_prev_trigger = yes
-			NOT = {
+			nor = {
 				is_rival = ROOT
-			}
-			NOT = {
 				has_opinion_modifier = {
 					who = ROOT modifier = opinion_very_grateful
 				}
@@ -11598,10 +11545,8 @@ character_event = {
 							block_general_event_trigger = no
 							ai = yes
 							higher_society_rank_than_prev_trigger = yes
-							NOT = {
+							nor = {
 								is_rival = ROOT
-							}
-							NOT = {
 								has_opinion_modifier = {
 									who = ROOT modifier = opinion_very_grateful
 								}
@@ -11623,10 +11568,8 @@ character_event = {
 						block_general_event_trigger = no
 						ai = yes
 						higher_society_rank_than_prev_trigger = yes
-						NOT = {
+						nor = {
 							is_rival = ROOT
-						}
-						NOT = {
 							has_opinion_modifier = {
 								who = ROOT modifier = opinion_very_grateful
 							}
@@ -11653,10 +11596,8 @@ character_event = {
 							block_general_event_trigger = no
 							ai = yes
 							higher_society_rank_than_prev_trigger = yes
-							NOT = {
+							nor = {
 								is_rival = ROOT
-							}
-							NOT = {
 								has_opinion_modifier = {
 									who = ROOT modifier = opinion_very_grateful
 								}
@@ -11676,10 +11617,8 @@ character_event = {
 						block_general_event_trigger = no
 						ai = yes
 						higher_society_rank_than_prev_trigger = yes
-						NOT = {
+						nor = {
 							is_rival = ROOT
-						}
-						NOT = {
 							has_opinion_modifier = {
 								who = ROOT modifier = opinion_very_grateful
 							}
@@ -11704,10 +11643,8 @@ character_event = {
 							same_society_as = ROOT
 							ai = yes
 							higher_society_rank_than_prev_trigger = yes
-							NOT = {
+							nor = {
 								is_rival = ROOT
-							}
-							NOT = {
 								has_opinion_modifier = {
 									who = ROOT modifier = opinion_very_grateful
 								}
@@ -11728,10 +11665,8 @@ character_event = {
 						same_society_as = ROOT
 						ai = yes
 						higher_society_rank_than_prev_trigger = yes
-						NOT = {
+						nor = {
 							is_rival = ROOT
-						}
-						NOT = {
 							has_opinion_modifier = {
 								who = ROOT modifier = opinion_very_grateful
 							}
@@ -11763,10 +11698,8 @@ character_event = {
 					same_society_as = ROOT
 					ai = yes
 					higher_society_rank_than_prev_trigger = yes
-					NOT = {
+					nor = {
 						is_rival = ROOT
-					}
-					NOT = {
 						has_opinion_modifier = {
 							who = ROOT modifier = opinion_very_grateful
 						}
@@ -11833,62 +11766,62 @@ character_event = {
 	immediate = {
 		log = "work event id = MNM.6922 for [Root.GetBestName]"
  		hidden_effect = {
-	 		FROM = {
-	 			random_lover = {
+			FROM = {
+				random_lover = {
 					save_event_target_as = lover_of_target
 				}
-		 		if = {
-		 			limit = {
-		 				has_character_flag = blackmail_lover
-		 				NOT = {
+				if = {
+					limit = {
+						has_character_flag = blackmail_lover
+						NOT = {
 							any_lover = {
 								is_alive = yes
 							}
 						}
 
 					}
-		 			host = {
-		 				if = {
-		 					limit = {
+					host = {
+						if = {
+							limit = {
 								prefers_men_trigger = yes
 							}
-		 					create_random_diplomat = {
-		 						female = no
-		 						random_traits = yes
-		 						dynasty = none
-		 						age = 30
+							create_random_diplomat = {
+								female = no
+								random_traits = yes
+								dynasty = none
+								age = 30
 
 							}
-		 					new_character = {
-		 						add_lover = event_target:assassin_blackmail_target
-		 						save_event_target_as = lover_of_target
+							new_character = {
+								add_lover = event_target:assassin_blackmail_target
+								save_event_target_as = lover_of_target
 
 							}
 
 						}
-		 				if = {
-		 					limit = {
+						if = {
+							limit = {
 								prefers_men_trigger = no
 							}
-		 					create_random_diplomat = {
-		 						female = yes
-		 						random_traits = yes
-		 						dynasty = none
-		 						age = 30
+							create_random_diplomat = {
+								female = yes
+								random_traits = yes
+								dynasty = none
+								age = 30
 
 							}
-		 					new_character = {
-		 						add_lover = event_target:assassin_blackmail_target
-		 						save_event_target_as = lover_of_target
+							new_character = {
+								add_lover = event_target:assassin_blackmail_target
+								save_event_target_as = lover_of_target
 
 							}
 
 						}
-		 				if = {
-		 					limit = {
+						if = {
+							limit = {
 								trait = homosexual
 							}
-		 					event_target:lover_of_target = {
+							event_target:lover_of_target = {
 								add_trait = homosexual
 							}
 

@@ -16,60 +16,37 @@ character_event = {
 	prisoner = no
 	min_age = 16
 	is_married = yes
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
 			has_polygamy = no
 			is_female = no
 		}
-		NOT = {
+		nor = {
 			trait = infirm
-		}
-		NOT = {
 			is_inaccessible_trigger = yes
-		}
-		NOT = {
 			trait = on_hajj
-		}
-		NOT = {
 			trait = on_pilgrimage
-		}
-		NOT = {
 			trait = imbecile
-		}
-		NOT = {
 			trait = inbred
 		}
 		in_command = no
 		any_spouse = {
-			NOT = {
+			nor = {
 				culture_group = daemonic_group
-			}
-			NOT = {
 				trait = pet_consort
 			}
 			prisoner = no
-			NOT = {
+			nor = {
 				trait = infirm
-			}
-			NOT = {
 				is_inaccessible_trigger = yes
-			}
-			NOT = {
 				trait = incapable
-			}
-			NOT = {
 				trait = on_pilgrimage
 			}
 			any_lover = {
-				NOT = {
+				nor = {
 					character = ROOT
-				}
-				NOT = {
 					has_character_modifier = wol_court_tomcat
-				}
-				NOT = {
 					has_character_modifier = wol_court_vixen
 				}
 				prisoner = no
@@ -77,69 +54,67 @@ character_event = {
 					is_consort = PREV
 				}
 			}
-			NOT = {
+			nor = {
 				has_character_modifier = wol_court_tomcat
-			}
-			NOT = {
 				has_character_modifier = wol_court_vixen
 			}
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.33333
+	mean_time_to_happen = {
+		years = 30
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = paranoid
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = genius
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = schemer
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			OR = {
 				trait = quick
 				trait = shrewd
 			}
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			has_focus = focus_intrigue
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = envious
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = ambitious
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = just
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = content
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			OR = {
 				trait = slow
 				trait = dull
 			}
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			trait = trusting
 		}
 	}
@@ -150,50 +125,30 @@ character_event = {
 		random_spouse = {
 			limit = {
 				prisoner = no
-				NOT = {
+				nor = {
 					trait = infirm
-				}
-				NOT = {
 					is_inaccessible_trigger = yes
-				}
-				NOT = {
 					trait = incapable
-				}
-				NOT = {
 					trait = on_pilgrimage
-				}
-				NOT = {
 					has_character_modifier = wol_court_tomcat
-				}
-				NOT = {
 					has_character_modifier = wol_court_vixen
-				}
-				NOT = {
 					reverse_has_opinion_modifier = {
 						who = ROOT
 						modifier = opinion_cuckolded
 					}
-				}
-				NOT = {
 					reverse_has_opinion_modifier = {
 						who = ROOT
 						modifier = opinion_cuckolded_private
 					}
-				}
-				NOT = {
 					reverse_has_opinion_modifier = {
 						who = ROOT
 						modifier = slut_seductress
 					}
 				}
 				any_lover = {
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						has_character_modifier = wol_court_tomcat
-					}
-					NOT = {
 						has_character_modifier = wol_court_vixen
 					}
 					prisoner = no
@@ -219,13 +174,9 @@ character_event = {
 		log = "work event id = WoL.1001 for [Root.GetBestName]"
 		random_lover = {
 			limit = {
-				NOT = {
+				nor = {
 					character = FROM
-				}
-				NOT = {
 					has_character_modifier = wol_court_tomcat
-				}
-				NOT = {
 					has_character_modifier = wol_court_vixen
 				}
 			}
@@ -258,10 +209,8 @@ character_event = {
 	desc = {
 		text = EVTDESC_WOL_1003
 		trigger = {
-			NOT = {
+			nor = {
 				has_character_flag = tipped_off_about_spouse_affair
-			}
-			NOT = {
 				has_character_flag = spy_spouse_affair
 			}
 			FROMFROM = {
@@ -278,10 +227,8 @@ character_event = {
 	desc = {
 		text = EVTDESC_WOL_1003_CR
 		trigger = {
-			NOT = {
+			nor = {
 				has_character_flag = tipped_off_about_spouse_affair
-			}
-			NOT = {
 				has_character_flag = spy_spouse_affair
 			}
 			FROMFROM = {
@@ -430,10 +377,8 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = arbitrary
-				}
-				NOT = {
 					trait = depressed
 				}
 			}
@@ -834,10 +779,8 @@ character_event = {
 	desc = {
 		text = EVTDESC_WOL_1007
 		trigger = {
-			NOT = {
+			nor = {
 				has_character_flag = wol_denounced_after_lover_admission
-			}
-			NOT = {
 				has_character_flag = wol_denounced_after_spying
 			}
 		}
@@ -993,10 +936,8 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = arbitrary
-				}
-				NOT = {
 					trait = depressed
 				}
 			}
@@ -1245,10 +1186,8 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = paranoid
-				}
-				NOT = {
 					trait = trusting
 				}
 			}
@@ -1919,10 +1858,8 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = paranoid
-				}
-				NOT = {
 					trait = trusting
 				}
 			}
@@ -2280,10 +2217,8 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = paranoid
-				}
-				NOT = {
 					trait = trusting
 				}
 			}
@@ -3086,10 +3021,8 @@ character_event = {
 			}
 			if = {
 				limit = {
-					NOT = {
+					nor = {
 						trait = arbitrary
-					}
-					NOT = {
 						trait = depressed
 					}
 				}
@@ -3203,10 +3136,8 @@ character_event = {
 		log = "work event id = WoL.1036 for [Root.GetBestName]"
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = brave
-				}
-				NOT = {
 					trait = craven
 				}
 			}
@@ -3388,10 +3319,8 @@ character_event = {
 	desc = {
 		text = EVTDESC_WOL_1036
 		trigger = {
-			NOT = {
+			nor = {
 				trait = wounded
-			}
-			NOT = {
 				is_maimed_trigger = yes
 			}
 		}
@@ -3621,10 +3550,8 @@ character_event = {
 		add_rival = FROMFROM
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = cruel
-				}
-				NOT = {
 					trait = kind
 				}
 			}
@@ -3686,10 +3613,8 @@ character_event = {
 		log = "work event id = WoL.1039 for [Root.GetBestName]"
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = brave
-				}
-				NOT = {
 					trait = craven
 				}
 			}
@@ -3871,10 +3796,8 @@ character_event = {
 	desc = {
 		text = EVTDESC_WOL_1039
 		trigger = {
-			NOT = {
+			nor = {
 				trait = wounded
-			}
-			NOT = {
 				is_maimed_trigger = yes
 			}
 		}
@@ -4092,10 +4015,8 @@ character_event = {
 		add_rival = FROMFROM
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					trait = cruel
-				}
-				NOT = {
 					trait = kind
 				}
 			}
@@ -4153,30 +4074,21 @@ character_event = {
 	has_dlc = "Way of Life"
 	capable_only = yes
 	min_age = 16
-	is_triggered_only = yes
 
 	trigger = {
 		has_lover = yes
-		NOT = {
+		nor = {
 			culture_group = daemonic_group
-		}
-		NOT = {
 			trait = pet_consort
 		}
 		any_lover = {
-			NOT = {
+			nor = {
 				culture_group = daemonic_group
-			}
-			NOT = {
 				trait = pet_consort
-			}
-			NOT = {
 				reverse_opinion = {
 					who = ROOT
 					value = 25
 				}
-			}
-			NOT = {
 				has_character_flag = gbc_courtly_lover
 			}
 		}
@@ -4185,34 +4097,34 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 10
 		modifier = {
-			factor = 5.00
+			factor = 0.2
 			trait = cruel
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = cynical
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = wroth
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = patient
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = kind
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			has_focus = focus_seduction
 		}
 	}
@@ -4538,7 +4450,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	capable_only = yes
-	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
@@ -4546,10 +4457,8 @@ character_event = {
 		}
 		num_of_lovers = 2
 		any_lover = {
-			NOT = {
+			nor = {
 				culture_group = daemonic_group
-			}
-			NOT = {
 				trait = pet_consort
 			}
 			prisoner = no
@@ -4559,54 +4468,54 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.8
+	mean_time_to_happen = {
+		years = 6
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = depressed
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = slothful
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			num_of_lovers = 3
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			num_of_lovers = 4
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			num_of_lovers = 6
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			num_of_lovers = 8
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			num_of_lovers = 10
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = wroth
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = patient
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = diligent
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			OR = {
 				trait = seducer
 				trait = seductress
@@ -4620,10 +4529,8 @@ character_event = {
 		log = "work event id = WoL.1150 for [Root.GetBestName]"
 		random_lover = {
 			limit = {
-				NOT = {
+				nor = {
 					culture_group = daemonic_group
-				}
-				NOT = {
 					trait = pet_consort
 				}
 				prisoner = no
@@ -4728,7 +4635,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	capable_only = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_lover = {
@@ -4743,16 +4649,10 @@ character_event = {
 			}
 			spouse = {
 				prisoner = no
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					character = ROOT
-				}
-				NOT = {
 					is_lover = PREV
-				}
-				NOT = {
 					opinion = {
 						who = PREV
 						value = 0
@@ -4775,30 +4675,30 @@ character_event = {
 		has_regent = no
 	}
 
-	weight_multiplier = {
-		factor = 0.83333
+	mean_time_to_happen = {
+		years = 12
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = kind
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = diligent
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = depressed
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = stressed
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = slothful
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = cruel
 		}
 	}
@@ -4818,16 +4718,10 @@ character_event = {
 				}
 				spouse = {
 					prisoner = no
-					NOT = {
+					nor = {
 						trait = incapable
-					}
-					NOT = {
 						character = ROOT
-					}
-					NOT = {
 						is_lover = PREV
-					}
-					NOT = {
 						opinion = {
 							who = PREV
 							value = 0
@@ -5184,17 +5078,13 @@ character_event = {
 		unprotected_sex_effect = yes
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					has_character_modifier = wol_court_tomcat
-				}
-				NOT = {
 					has_character_modifier = wol_court_vixen
 				}
 				FROM = {
-					NOT = {
+					nor = {
 						has_character_modifier = wol_court_tomcat
-					}
-					NOT = {
 						has_character_modifier = wol_court_vixen
 					}
 				}
@@ -5231,17 +5121,13 @@ character_event = {
 		unprotected_sex_effect = yes
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					has_character_modifier = wol_court_tomcat
-				}
-				NOT = {
 					has_character_modifier = wol_court_vixen
 				}
 				FROM = {
-					NOT = {
+					nor = {
 						has_character_modifier = wol_court_tomcat
-					}
-					NOT = {
 						has_character_modifier = wol_court_vixen
 					}
 				}
@@ -5310,10 +5196,8 @@ character_event = {
 				FROM = {
 					trait = lunatic_3
 				}
-				NOT = {
+				nor = {
 					trait = lunatic_3
-				}
-				NOT = {
 					trait = possessed
 				}
 			}

@@ -1485,10 +1485,8 @@ character_event = {
 							random_courtier = {
 								limit = {
 									is_abroad = no
-									NOT = {
+									nor = {
 										character = PREVPREV
-									}
-									NOT = {
 										character = PREV
 									}
 								}
@@ -1509,13 +1507,9 @@ character_event = {
 								random_courtier = {
 									limit = {
 										is_abroad = no
-										NOT = {
+										nor = {
 											character = PREVPREVPREV
-										}
-										NOT = {
 											character = PREVPREV
-										}
-										NOT = {
 											character = PREV
 										}
 									}
@@ -1536,16 +1530,10 @@ character_event = {
 									random_courtier = {
 										limit = {
 											is_abroad = no
-											NOT = {
+											nor = {
 												character = PREVPREVPREVPREV
-											}
-											NOT = {
 												character = PREVPREVPREV
-											}
-											NOT = {
 												character = PREVPREV
-											}
-											NOT = {
 												character = PREV
 											}
 										}
@@ -1722,7 +1710,6 @@ character_event = {
 	culture_group = beastman_group
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 
 	trigger = {
 		has_job_action = action_despoil_land
@@ -1748,10 +1735,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.8
+	mean_time_to_happen = {
+		years = 6
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			location = {
 				capital_holding = {
 					is_tribal = yes
@@ -1759,81 +1746,81 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			liege = {
 				tier = count
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 2
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 3
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 4
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 5
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 9
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 10
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 11
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 12
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 13
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = wroth
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = lunatic_3
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = lunatic_2
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			trait = lunatic_1
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = possessed
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = cruel
 		}
 	}
@@ -1878,13 +1865,9 @@ character_event = {
 				}
 				if = {
 					limit = {
-						NOT = {
+						nor = {
 							has_province_modifier = beastmen_scourging_2
-						}
-						NOT = {
 							has_province_modifier = beastmen_scourging_1
-						}
-						NOT = {
 							has_province_modifier = beastmen_scourging_3
 						}
 					}
@@ -1977,7 +1960,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	culture_group = beastman_group
-	is_triggered_only = yes
 
 	trigger = {
 		has_job_action = action_despoil_land
@@ -1995,10 +1977,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.47619
+	mean_time_to_happen = {
+		years = 21
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			location = {
 				capital_holding = {
 					is_tribal = yes
@@ -2006,63 +1988,63 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = content
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = kind
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = charitable
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = shy
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = wroth
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = lunatic_3
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = lunatic_2
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			trait = lunatic_1
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = possessed
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = cruel
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			location = {
 				has_province_modifier = beastmen_scourging_1
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			location = {
 				has_province_modifier = beastmen_scourging_2
 			}
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			location = {
 				has_province_modifier = beastmen_scourging_3
 			}
@@ -2330,7 +2312,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	culture_group = beastman_group
-	is_triggered_only = yes
 
 	trigger = {
 		liege = {
@@ -2350,10 +2331,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 5
 		modifier = {
-			factor = 0.40
+			factor = 2.5
 			location = {
 				capital_holding = {
 					is_tribal = yes
@@ -2361,81 +2342,81 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			liege = {
 				tier = count
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 2
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 3
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 4
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 5
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 9
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 10
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 11
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 12
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 13
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = wroth
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = lunatic_3
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = lunatic_2
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			trait = lunatic_1
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = possessed
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = cruel
 		}
 	}
@@ -2480,13 +2461,9 @@ character_event = {
 				}
 				if = {
 					limit = {
-						NOT = {
+						nor = {
 							has_province_modifier = beastmen_scourging_2
-						}
-						NOT = {
 							has_province_modifier = beastmen_scourging_1
-						}
-						NOT = {
 							has_province_modifier = beastmen_scourging_3
 						}
 					}
@@ -2538,7 +2515,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	culture_group = beastman_group
-	is_triggered_only = yes
 
 	trigger = {
 		liege = {
@@ -2556,10 +2532,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.50000
+	mean_time_to_happen = {
+		years = 20
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			location = {
 				capital_holding = {
 					is_tribal = yes
@@ -2567,63 +2543,63 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = content
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = kind
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = charitable
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = shy
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = wroth
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = lunatic_3
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = lunatic_2
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			trait = lunatic_1
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = possessed
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = cruel
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			location = {
 				has_province_modifier = beastmen_scourging_1
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			location = {
 				has_province_modifier = beastmen_scourging_2
 			}
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			location = {
 				has_province_modifier = beastmen_scourging_3
 			}
@@ -2850,7 +2826,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	culture_group = beastman_group
-	is_triggered_only = yes
 
 	trigger = {
 		liege = {
@@ -2879,10 +2854,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.8
+	mean_time_to_happen = {
+		years = 6
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			location = {
 				capital_holding = {
 					is_tribal = yes
@@ -2890,81 +2865,81 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			liege = {
 				tier = count
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 2
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 3
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 4
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 5
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 9
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 10
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 11
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 12
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 13
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = wroth
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = lunatic_3
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = lunatic_2
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			trait = lunatic_1
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = possessed
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = cruel
 		}
 	}
@@ -3104,7 +3079,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	culture_group = beastman_group
-	is_triggered_only = yes
 
 	trigger = {
 		liege = {
@@ -3127,10 +3101,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.47619
+	mean_time_to_happen = {
+		years = 21
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			location = {
 				capital_holding = {
 					is_tribal = yes
@@ -3138,63 +3112,63 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = content
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = kind
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = charitable
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			trait = shy
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = wroth
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = lunatic_3
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = lunatic_2
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			trait = lunatic_1
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = possessed
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = cruel
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			location = {
 				has_province_modifier = beastmen_scourging_1
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			location = {
 				has_province_modifier = beastmen_scourging_2
 			}
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			location = {
 				has_province_modifier = beastmen_scourging_3
 			}
@@ -3303,7 +3277,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	culture_group = beastman_group
-	is_triggered_only = yes
 
 	trigger = {
 		liege = {
@@ -3329,10 +3302,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 5
 		modifier = {
-			factor = 0.40
+			factor = 2.5
 			location = {
 				capital_holding = {
 					is_tribal = yes
@@ -3340,81 +3313,81 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			liege = {
 				tier = count
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 2
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 3
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 4
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 5
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 9
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 10
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 11
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 12
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 13
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = wroth
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = lunatic_3
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = lunatic_2
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			trait = lunatic_1
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = possessed
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = cruel
 		}
 	}
@@ -3489,7 +3462,6 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 
 	trigger = {
 		liege = {
@@ -3512,10 +3484,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 2
 		modifier = {
-			factor = 0.40
+			factor = 2.5
 			location = {
 				capital_holding = {
 					is_tribal = yes
@@ -3523,61 +3495,61 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.40
+			factor = 2.5
 			location = {
 				has_province_modifier = beastman_herdstone
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 2
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 3
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 4
 			}
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			NOT = {
 				martial = 5
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 9
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 10
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 11
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 12
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			martial = 13
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = zealous
 		}
 		modifier = {
-			factor = 0.40
+			factor = 2.5
 			trait = craven
 		}
 	}
@@ -3767,11 +3739,13 @@ character_event = {
 			trait = creature_dwarf
 			trait = creature_chaos_dwarf
 		}
-		or = {
-			region = world_chaos_wastes
-			region = world_old_world
-			region = world_greater_araby
-			region = world_norsca
+		location = {
+			or = {
+				region = world_chaos_wastes
+				region = world_old_world
+				region = world_greater_araby
+				region = world_norsca
+			}
 		}
 	}
 
@@ -3812,8 +3786,8 @@ character_event = {
 				}
 			}
 			90 = {
- 			 	modifier = {
- 			 		factor = 0.6
+ 				modifier = {
+ 					factor = 0.6
  					has_global_flag = morrslieb_full
 
 				}

@@ -774,19 +774,11 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				nor = {
 					has_character_modifier = necromantic_power_1
-				}
-				NOT = {
 					has_character_modifier = necromantic_power_2
-				}
-				NOT = {
 					has_character_modifier = necromantic_power_3
-				}
-				NOT = {
 					has_character_modifier = necromantic_power_4
-				}
-				NOT = {
 					has_character_modifier = necromantic_power_5
 				}
 			}
@@ -2458,22 +2450,12 @@ character_event = {
 			}
 			any_playable_ruler = {
 				limit = {
-					NOT = {
+					nor = {
 						culture_group = imperial_group
-					}
-					NOT = {
 						culture_group = kislevite_group
-					}
-					NOT = {
 						culture_group = estalian_group
-					}
-					NOT = {
 						culture_group = tilean_group
-					}
-					NOT = {
 						culture_group = bretonnian_group
-					}
-					NOT = {
 						culture_group = dwarf_group
 					}
 					ai = no
@@ -2526,22 +2508,12 @@ character_event = {
 			}
 			any_playable_ruler = {
 				limit = {
-					NOT = {
+					nor = {
 						culture_group = imperial_group
-					}
-					NOT = {
 						culture_group = kislevite_group
-					}
-					NOT = {
 						culture_group = estalian_group
-					}
-					NOT = {
 						culture_group = tilean_group
-					}
-					NOT = {
 						culture_group = bretonnian_group
-					}
-					NOT = {
 						culture_group = dwarf_group
 					}
 					ai = no
@@ -2582,7 +2554,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		has_plot = plot_steal_carstein_ring
@@ -2605,10 +2576,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.01429
+	mean_time_to_happen = {
+		years = 700
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_target_char = {
 				check_variable = {
 					which = carstein_death_count
@@ -2617,7 +2588,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_target_char = {
 				check_variable = {
 					which = carstein_death_count
@@ -2626,7 +2597,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_target_char = {
 				check_variable = {
 					which = carstein_death_count
@@ -2635,7 +2606,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_target_char = {
 				check_variable = {
 					which = carstein_death_count
@@ -2644,49 +2615,49 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_target_char = {
 				in_command = yes
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_target_char = {
 				realm_size = 150
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = 0.8
 			learning = 10
 		}
 		modifier = {
-			factor = 1.25
+			factor = 0.8
 			learning = 15
 		}
 		modifier = {
-			factor = 1.25
+			factor = 0.8
 			learning = 20
 		}
 		modifier = {
-			factor = 1.25
+			factor = 0.8
 			learning = 25
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			has_focus = focus_intrigue
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			trait = schemer
 		}
 		modifier = {
-			factor = 0.59
+			factor = 1.7
 			plot_target_char = {
 				trait = in_hiding
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -2694,7 +2665,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -2702,7 +2673,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -2710,7 +2681,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -2718,7 +2689,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -2726,7 +2697,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -2734,7 +2705,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -2742,7 +2713,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -2750,21 +2721,21 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				plot_power = 2.0
@@ -2799,10 +2770,8 @@ character_event = {
 	option = {
 		name = "EVTOPTBsvampires14" # Buy the poison
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				learning = 10
 			}
 		}
@@ -2826,10 +2795,8 @@ character_event = {
 		name = "EVTOPTBsvampires14" # Buy the poison
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				learning = 10
 			}
 		}
@@ -2875,10 +2842,8 @@ character_event = {
 		name = "EVTOPTDsvampires14" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -2894,7 +2859,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	is_part_of_plot = yes
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -2921,10 +2885,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.02857
+	mean_time_to_happen = {
+		years = 350
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_target_char = {
 				check_variable = {
 					which = carstein_death_count
@@ -2933,7 +2897,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_target_char = {
 				check_variable = {
 					which = carstein_death_count
@@ -2942,7 +2906,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_target_char = {
 				check_variable = {
 					which = carstein_death_count
@@ -2951,7 +2915,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_target_char = {
 				check_variable = {
 					which = carstein_death_count
@@ -2960,49 +2924,49 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_target_char = {
 				in_command = yes
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			plot_target_char = {
 				realm_size = 150
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = 0.8
 			learning = 10
 		}
 		modifier = {
-			factor = 1.25
+			factor = 0.8
 			learning = 15
 		}
 		modifier = {
-			factor = 1.25
+			factor = 0.8
 			learning = 20
 		}
 		modifier = {
-			factor = 1.25
+			factor = 0.8
 			learning = 25
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			has_focus = focus_intrigue
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			trait = schemer
 		}
 		modifier = {
-			factor = 0.59
+			factor = 1.7
 			plot_target_char = {
 				trait = in_hiding
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				ROOT = {
@@ -3015,7 +2979,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				ROOT = {
@@ -3028,7 +2992,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				ROOT = {
@@ -3041,7 +3005,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				ROOT = {
@@ -3054,7 +3018,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				ROOT = {
@@ -3067,7 +3031,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				ROOT = {
@@ -3080,7 +3044,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				ROOT = {
@@ -3093,7 +3057,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				ROOT = {
@@ -3106,7 +3070,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				ROOT = {
@@ -3119,21 +3083,21 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_steal_carstein_ring
 				plot_power = 2.0
@@ -3168,10 +3132,8 @@ character_event = {
 	option = {
 		name = "EVTOPTBsvampires14001" # Ask the Plotter for funds
 		trigger = {
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				any_backed_character = {
 					has_plot = plot_steal_carstein_ring
 					plot_power = 1.0
@@ -3195,10 +3157,8 @@ character_event = {
 	option = {
 		name = "EVTOPTBsvampires14001" # Buy the poison
 		trigger = {
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				any_backed_character = {
 					has_plot = plot_steal_carstein_ring
 					plot_power = 1.0
@@ -3246,10 +3206,8 @@ character_event = {
 		name = "EVTOPTDsvampires14001" # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				any_backed_character = {
 					has_plot = plot_steal_carstein_ring
 					plot_power = 1.0
@@ -3400,13 +3358,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = slothful
-						}
-						NOT = {
 							in_command = yes
-						}
-						NOT = {
 							trait = paranoid
 						}
 						random = 75
@@ -3467,13 +3421,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = slothful
-					}
-					NOT = {
 						in_command = yes
-					}
-					NOT = {
 						trait = paranoid
 					}
 					random = 75
@@ -4005,11 +3955,11 @@ character_event = {
 
 	immediate = {
 		log = "work event id = svampires.16 for [Root.GetBestName]"
+		set_character_flag = started_duke
 	}
 
 	option = {
 		name = EVTOPTAsvampires16
-		set_character_flag = started_duke
 		k_aquitaine = {
 			e_bretonnia = {
 				holder_scope = {
@@ -4052,7 +4002,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTBsvampires16
-		set_character_flag = started_duke
 		location = {
 			ROOT = {
 				spawn_unit = {
@@ -4107,7 +4056,6 @@ character_event = {
 	picture = GFX_evt_vampire_knight
 	capable_only = yes
 	religion_group = necromantic_group
-	is_triggered_only = yes
 
 	trigger = {
 		trait = vampire_blood_visible
@@ -4119,25 +4067,25 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.33333
+	mean_time_to_happen = {
+		years = 30
 		modifier = {
-			factor = 1.18
+			factor = 0.85
 			trait = ambitious
 
 		}
 		modifier = {
-			factor = 1.18
+			factor = 0.85
 			trait = brave
 
 		}
 		modifier = {
-			factor = 0.54
+			factor = 1.85
 			trait = craven
 
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2
 			trait = content
 
 		}
@@ -4201,10 +4149,8 @@ character_event = {
 			}
 		}
 		trait = vampire_blood_visible
-		NOT = {
+		nor = {
 			trait = chaste
-		}
-		NOT = {
 			trait = celibate
 		}
 		primary_title = {
@@ -4215,28 +4161,14 @@ character_event = {
 						is_married = no
 						is_consort = no
 						is_adult = yes
-						NOT = {
+						nor = {
 							trait = incapable
-						}
-						NOT = {
 							trait = infirm
-						}
-						NOT = {
 							trait = maimed
-						}
-						NOT = {
 							trait = blinded
-						}
-						NOT = {
 							trait = eunuch
-						}
-						NOT = {
 							trait = undernourished
-						}
-						NOT = {
 							trait = fat
-						}
-						NOT = {
 							age = 40
 						}
 						is_vampire_trigger = no
@@ -4305,28 +4237,14 @@ character_event = {
 							is_married = no
 							is_consort = no
 							is_adult = yes
-							NOT = {
+							nor = {
 								trait = incapable
-							}
-							NOT = {
 								trait = infirm
-							}
-							NOT = {
 								trait = maimed
-							}
-							NOT = {
 								trait = blinded
-							}
-							NOT = {
 								trait = eunuch
-							}
-							NOT = {
 								trait = undernourished
-							}
-							NOT = {
 								trait = fat
-							}
-							NOT = {
 								age = 40
 							}
 							is_vampire_trigger = no
@@ -4526,7 +4444,7 @@ province_event = {
 		name = EVTOPTAsvampires21
 		build_holding = {
 			type = castle
-		 	holder = FROMFROM
+			holder = FROMFROM
 		}
 	}
 }
@@ -4567,78 +4485,77 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	religion_group = necromantic_group
-	is_triggered_only = yes
 
 	trigger = {
 		is_incapacitated_trigger = no
 		is_visible_vampire_trigger = yes
 	}
 
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 5
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = vampire_strigoi_visible
 
 		}
 		modifier = {
-			factor = 0.36
+			factor = 2.75
 			trait = vampire_blood_visible
 
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			trait = vampire_carstein_visible
 
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10
 			trait = vampire_lahmian_visible
 
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3
 			independent = no
 
 		}
 		modifier = {
-			factor = 0.14
+			factor = 7
 			independent = no
 			lower_tier_than = KING
 
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			NOT = {
 				piety = 1000
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			NOT = {
 				piety = 1500
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			NOT = {
 				piety = 750
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			NOT = {
 				piety = 500
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			NOT = {
 				piety = 250
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			NOT = {
 				piety = 100
 			}
@@ -6099,10 +6016,8 @@ character_event = {
 
 	trigger = {
 		liege = {
-			NOT = {
+			nor = {
 				has_character_modifier = expelled_strigany
-			}
-			NOT = {
 				top_liege = {
 					has_character_modifier = expelled_strigany
 				}
@@ -6349,10 +6264,8 @@ character_event = {
 
 	trigger = {
 		liege = {
-			NOT = {
+			nor = {
 				has_character_modifier = expelled_strigany
-			}
-			NOT = {
 				top_liege = {
 					has_character_modifier = expelled_strigany
 				}
@@ -6574,10 +6487,8 @@ character_event = {
 
 	trigger = {
 		liege = {
-			NOT = {
+			nor = {
 				has_character_modifier = expelled_strigany
-			}
-			NOT = {
 				top_liege = {
 					has_character_modifier = expelled_strigany
 				}
@@ -6833,10 +6744,8 @@ character_event = {
 
 	trigger = {
 		liege = {
-			NOT = {
+			nor = {
 				has_character_modifier = expelled_strigany
-			}
-			NOT = {
 				top_liege = {
 					has_character_modifier = expelled_strigany
 				}
@@ -6931,10 +6840,8 @@ character_event = {
 
 	trigger = {
 		liege = {
-			NOT = {
+			nor = {
 				has_character_modifier = expelled_strigany
-			}
-			NOT = {
 				top_liege = {
 					has_character_modifier = expelled_strigany
 				}
@@ -6967,7 +6874,7 @@ character_event = {
 			capital_scope = {
 				build_holding = {
 					type = tribal
-		 			holder = ROOT
+					holder = ROOT
 				}
 			}
 		}
@@ -7075,13 +6982,12 @@ character_event = {
 # Strigany in Strygos turn Voragi
 province_event = {
 	id = svampires.39
-	is_triggered_only = yes
 	culture = strigany
 	desc = EVTDESCAsvampires39
 	picture = GFX_evt_wandering_strigany
 
-	weight_multiplier = {
-		factor = 0.16667
+	mean_time_to_happen = {
+		years = 60
 	}
 
 	trigger = {
@@ -7103,22 +7009,19 @@ province_event = {
 # Strygos dejure starts being flocked by Strigany
 province_event = {
 	id = svampires.40
-	is_triggered_only = yes
 	desc = EVTDESCAsvampires40
 	picture = GFX_evt_wandering_strigany
 
-	weight_multiplier = {
-		factor = 0.16667
+	mean_time_to_happen = {
+		years = 60
 	}
 
 	trigger = {
 		has_global_flag = strygos_culture_swapping
 		has_global_flag = strygos_reformed
 		region = world_badlands_strygos
-		NOT = {
+		nor = {
 			culture = strigany
-		}
-		NOT = {
 			culture = strygan
 		}
 		owner = {
@@ -7235,17 +7138,13 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		NOT = {
+		nor = {
 			location = {
 				has_province_modifier = province_slave_raid
 			}
-		}
-		NOT = {
 			location = {
 				has_province_modifier = province_scourged
 			}
-		}
-		NOT = {
 			location = {
 				has_province_modifier = province_slave_raid_chaos_dwarf
 			}
@@ -9262,13 +9161,10 @@ province_event = {
 	religion_group = necromantic_group
 	desc = EVTDESCsvampires71001
 	picture = GFX_evt_vampire_jade_eyes
-	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_province_modifier = jade_mayhem
-		}
-		NOT = {
 			culture = nehekharan
 		}
 		owner = {
@@ -9276,32 +9172,32 @@ province_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.16129
+	mean_time_to_happen = {
+		years = 62
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			is_capital = yes
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				war = yes
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			has_province_modifier = province_scourged
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			has_province_modifier = province_slave_raid_chaos_dwarf
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			has_province_modifier = province_slave_raid
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOT = {
 				owner = {
 					top_liege = {
@@ -9311,7 +9207,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				top_liege = {
 					realm_size = 80
@@ -9319,7 +9215,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				top_liege = {
 					realm_size = 120
@@ -9327,7 +9223,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				top_liege = {
 					realm_size = 150
@@ -9335,7 +9231,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				top_liege = {
 					realm_size = 200
@@ -9343,7 +9239,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				top_liege = {
 					any_courtier = {
@@ -9354,7 +9250,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				top_liege = {
 					any_courtier = {
@@ -9365,7 +9261,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				top_liege = {
 					any_courtier = {
@@ -9376,7 +9272,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			owner = {
 				top_liege = {
 					any_courtier = {
@@ -9420,16 +9316,11 @@ province_event = {
 	id = svampires.71002
 	desc = EVTDESCsvampires71002
 	picture = GFX_evt_vampire_jade_eyes
-	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		nor = {
 			has_province_modifier = jade_mayhem
-		}
-		NOT = {
 			culture = nehekharan
-		}
-		NOT = {
 			religion_group = necromantic_group
 		}
 		owner = {
@@ -9437,30 +9328,30 @@ province_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.24390
+	mean_time_to_happen = {
+		years = 41
 		modifier = {
-			factor = 0.25
+			factor = 4
 			culture_group = lizardman_group
 		}
 		modifier = {
-			factor = 0.80
+			factor = 1.25
 			is_capital = yes
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5
 			has_province_modifier = province_scourged
 		}
 		modifier = {
-			factor = 0.36
+			factor = 2.75
 			has_province_modifier = province_slave_raid_chaos_dwarf
 		}
 		modifier = {
-			factor = 0.36
+			factor = 2.75
 			has_province_modifier = province_slave_raid
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOT = {
 				owner = {
 					top_liege = {
@@ -9470,7 +9361,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				top_liege = {
 					realm_size = 80
@@ -9478,7 +9369,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				top_liege = {
 					realm_size = 120
@@ -9486,7 +9377,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				top_liege = {
 					realm_size = 150
@@ -9494,7 +9385,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			owner = {
 				top_liege = {
 					realm_size = 200
@@ -9937,10 +9828,8 @@ character_event = {
 				FROM = {
 					owner = {
 						top_liege = {
-							NOT = {
+							nor = {
 								character = PREV
-							}
-							NOT = {
 								character = ROOT
 							}
 						}
@@ -10028,10 +9917,8 @@ character_event = {
 						random_courtier = {
 							limit = {
 								is_abroad = no
-								NOT = {
+								nor = {
 									religion_group = necromantic_group
-								}
-								NOT = {
 									character = PREV
 								}
 							}
@@ -10052,13 +9939,9 @@ character_event = {
 							random_courtier = {
 								limit = {
 									is_abroad = no
-									NOT = {
+									nor = {
 										religion_group = necromantic_group
-									}
-									NOT = {
 										character = PREVPREV
-									}
-									NOT = {
 										character = PREV
 									}
 								}
@@ -10079,16 +9962,10 @@ character_event = {
 								random_courtier = {
 									limit = {
 										is_abroad = no
-										NOT = {
+										nor = {
 											religion_group = necromantic_group
-										}
-										NOT = {
 											character = PREVPREVPREV
-										}
-										NOT = {
 											character = PREVPREV
-										}
-										NOT = {
 											character = PREV
 										}
 									}
@@ -10109,19 +9986,11 @@ character_event = {
 									random_courtier = {
 										limit = {
 											is_abroad = no
-											NOT = {
+											nor = {
 												religion_group = necromantic_group
-											}
-											NOT = {
 												character = PREVPREVPREVPREV
-											}
-											NOT = {
 												character = PREVPREVPREV
-											}
-											NOT = {
 												character = PREVPREV
-											}
-											NOT = {
 												character = PREV
 											}
 										}
@@ -10258,7 +10127,6 @@ character_event = {
 	capable_only = yes
 	only_playable = yes
 	prisoner = no
-	is_triggered_only = yes
 
 	trigger = {
 		higher_tier_than = COUNT
@@ -10289,54 +10157,54 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.05000
+	mean_time_to_happen = {
+		years = 200
 		modifier = {
-			factor = 1.18
+			factor = 0.85
 			trait = paranoid
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = diligent
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			trait = genius
 		}
 		modifier = {
-			factor = 1.18
+			factor = 0.85
 			stewardship = 20
 		}
 		modifier = {
-			factor = 1.18
+			factor = 0.85
 			learning = 20
 		}
 		modifier = {
-			factor = 1.18
+			factor = 0.85
 			religion = draconite
 		}
 		modifier = {
-			factor = 0.54
+			factor = 1.85
 			independent = no
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			ai = yes
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			location = {
 				province_id = 1758 # Tlaxtlan
 			}
 		}
 		modifier = {
-			factor = 1.33
+			factor = 0.75
 			location = {
 				province_id = 2420 # Mutiris
 			}
 		}
 		modifier = {
-			factor = 1.18
+			factor = 0.85
 			location = {
 				province_id = 1074 # Calxi
 			}
@@ -10877,10 +10745,8 @@ character_event = {
 		FROM = {
 			title = k_shadowrealm
 		}
-		NOT = {
+		nor = {
 			trait = vampire_mahtmasi_visible
-		}
-		NOT = {
 			trait = lore_necromancy
 		}
 	}
@@ -11137,7 +11003,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 
 	trigger = {
 		has_plot = plot_make_voodoo_doll
@@ -11145,16 +11010,10 @@ character_event = {
 			age = 16
 			prisoner = no
 			at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
-			NOT = {
+			nor = {
 				trait = in_hiding
-			}
-			NOT = {
 				trait = questing
-			}
-			NOT = {
 				trait = blood_questing
-			}
-			NOT = {
 				trait = monster_hunting
 			}
 		}
@@ -11168,10 +11027,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.03003
+	mean_time_to_happen = {
+		years = 333
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -11179,7 +11038,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -11187,7 +11046,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -11195,7 +11054,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -11203,7 +11062,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -11211,7 +11070,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -11219,7 +11078,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -11227,7 +11086,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -11235,7 +11094,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -11243,7 +11102,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.43
+			factor = 0.7
 			plot_power_contribution =
 			{
 				plotter = ROOT
@@ -11251,52 +11110,52 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				plot_power = 2.0
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			plot_target_char = {
 				trait = creature_halfling
 			}
 		}
 		modifier = {
-			factor = 0.67
+			factor = 1.5
 			plot_target_char = {
 				trait = creature_dwarf
 			}
 		}
 		modifier = {
-			factor = 0.57
+			factor = 1.75
 			plot_target_char = {
 				trait = creature_elf
 			}
 		}
 		modifier = {
-			factor = 0.36
+			factor = 2.75
 			plot_target_char = {
 				trait = vampire_strigoi_visible
 			}
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5
 			plot_target_char = {
 				trait = vampire_necrarch_visible
 			}
@@ -11330,10 +11189,8 @@ character_event = {
 	option = {
 		name = EVTOPTBsvampires.83 # Provide bribery
 		trigger = {
-			NOT = {
+			nor = {
 				plot_power = 0.5
-			}
-			NOT = {
 				learning = 10
 			}
 		}
@@ -11357,10 +11214,8 @@ character_event = {
 		name = EVTOPTBsvampires.83 # Provide bribery
 		trigger = {
 			plot_power = 0.5
-			NOT = {
+			nor = {
 				plot_power = 1.0
-			}
-			NOT = {
 				learning = 10
 			}
 		}
@@ -11406,10 +11261,8 @@ character_event = {
 		name = EVTOPTDsvampires.83 # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				plot_power = 1.0
 			}
 		}
@@ -11424,7 +11277,6 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	capable_only = yes
 	prisoner = no
-	is_triggered_only = yes
 
 	trigger = {
 		any_backed_character = {
@@ -11433,16 +11285,10 @@ character_event = {
 			plot_target_char = {
 				age = 16
 				prisoner = no
-				NOT = {
+				nor = {
 					trait = in_hiding
-				}
-				NOT = {
 					trait = questing
-				}
-				NOT = {
 					trait = blood_questing
-				}
-				NOT = {
 					trait = monster_hunting
 				}
 			}
@@ -11459,10 +11305,10 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.05000
+	mean_time_to_happen = {
+		years = 200
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				ROOT = {
@@ -11475,7 +11321,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				ROOT = {
@@ -11488,7 +11334,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				ROOT = {
@@ -11501,7 +11347,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				ROOT = {
@@ -11514,7 +11360,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				ROOT = {
@@ -11527,7 +11373,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				ROOT = {
@@ -11540,7 +11386,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				ROOT = {
@@ -11553,7 +11399,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				ROOT = {
@@ -11566,7 +11412,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 1.67
+			factor = 0.6
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				ROOT = {
@@ -11579,21 +11425,21 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				plot_power = 1.0
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				plot_power = 1.5
 			}
 		}
 		modifier = {
-			factor = 3.03
+			factor = 0.33
 			any_backed_character = {
 				has_plot = plot_make_voodoo_doll
 				plot_power = 2.0
@@ -11628,10 +11474,8 @@ character_event = {
 	option = {
 		name = EVTOPTBsvampires.83001 # Ask the Plotter for funds
 		trigger = {
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				any_backed_character = {
 					has_plot = plot_make_voodoo_doll
 					plot_power = 1.0
@@ -11655,10 +11499,8 @@ character_event = {
 	option = {
 		name = EVTOPTBsvampires.83001 # Provide funds
 		trigger = {
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				any_backed_character = {
 					has_plot = plot_make_voodoo_doll
 					plot_power = 1.0
@@ -11706,10 +11548,8 @@ character_event = {
 		name = EVTOPTDsvampires.83 # I cannot afford this
 		trigger = {
 			ai = no
-			NOT = {
+			nor = {
 				learning = 10
-			}
-			NOT = {
 				any_backed_character = {
 					has_plot = plot_make_voodoo_doll
 					plot_power = 1.0
@@ -11868,19 +11708,11 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = paranoid
-						}
-						NOT = {
 							trait = trusting
-						}
-						NOT = {
 							trait = deceitful
-						}
-						NOT = {
 							religion = shadowmen
-						}
-						NOT = {
 							religion = akghan
 						}
 						random = 75
@@ -11977,19 +11809,11 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = paranoid
-					}
-					NOT = {
 						trait = trusting
-					}
-					NOT = {
 						trait = deceitful
-					}
-					NOT = {
 						religion = shadowmen
-					}
-					NOT = {
 						religion = akghan
 					}
 					random = 75
@@ -14852,22 +14676,12 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = paranoid
-						}
-						NOT = {
 							trait = trusting
-						}
-						NOT = {
 							trait = deceitful
-						}
-						NOT = {
 							religion = shadowmen
-						}
-						NOT = {
 							trait = arabyan_scholar
-						}
-						NOT = {
 							religion = akghan
 						}
 						random = 75
@@ -14940,22 +14754,12 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = paranoid
-					}
-					NOT = {
 						trait = trusting
-					}
-					NOT = {
 						trait = deceitful
-					}
-					NOT = {
 						trait = arabyan_scholar
-					}
-					NOT = {
 						religion = shadowmen
-					}
-					NOT = {
 						religion = akghan
 					}
 					random = 75
@@ -15055,13 +14859,9 @@ character_event = {
 						random = 90
 					}
 					AND = {
-						NOT = {
+						nor = {
 							trait = temperate
-						}
-						NOT = {
 							trait = gluttonous
-						}
-						NOT = {
 							trait = paranoid
 						}
 						random = 75
@@ -15122,13 +14922,9 @@ character_event = {
 					random = 90
 				}
 				AND = {
-					NOT = {
+					nor = {
 						trait = temperate
-					}
-					NOT = {
 						trait = gluttonous
-					}
-					NOT = {
 						trait = paranoid
 					}
 					random = 75
@@ -15179,7 +14975,6 @@ character_event = {
 	picture = GFX_evt_vampire_politics
 	religion_group = necromantic_group
 	capable_only = yes
-	is_triggered_only = yes
 	prisoner = no
 	trigger = {
 		is_vampire_trigger = yes
@@ -15191,8 +14986,8 @@ character_event = {
 			can_love_trigger = yes
 		}
 	}
-	weight_multiplier = {
-		factor = 1
+	mean_time_to_happen = {
+		years = 5
 		modifier = {
 			factor = 0.8
 			trait = wroth

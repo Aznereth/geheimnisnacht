@@ -18,15 +18,12 @@ character_event = {
 	only_men = yes
 	min_age = 16
 	war = no
-	is_triggered_only = yes
 
 	trigger = {
 		independent = no
 		liege = {
-			NOT = {
+			nor = {
 				character = ROOT
-			}
-			NOT = {
 				holds_favor_on = ROOT
 			}
 			war = no
@@ -44,22 +41,22 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.25000
+	mean_time_to_happen = {
+		years = 40
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = envious
 		}
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10.0
 			trait = content
 		}
 	}
@@ -490,7 +487,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	min_age = 16
-	is_triggered_only = yes
 
 	trigger = {
 		independent = no
@@ -507,10 +503,8 @@ character_event = {
 			has_character_flag = requested_rival_removal
 		}
 		any_rival = {
-			NOT = {
+			nor = {
 				character = ROOT
-			}
-			NOT = {
 				character = liege
 			}
 			age = 16
@@ -520,26 +514,26 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.12500
+	mean_time_to_happen = {
+		years = 80
 		modifier = {
-			factor = 4.00
+			factor = 0.25
 			trait = deceitful
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = paranoid
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 0.25
+			factor = 4.0
 			trait = just
 		}
 		modifier = {
-			factor = 0.10
+			factor = 10.0
 			trait = honest
 		}
 	}
@@ -563,10 +557,8 @@ character_event = {
 			chance = 10
 			random_rival = {
 				limit = {
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						character = liege
 					}
 					age = 16
@@ -688,10 +680,8 @@ letter_event = {
 			random_vassal = {
 				limit = {
 					age = 16
-					NOT = {
+					nor = {
 						character = ROOT
-					}
-					NOT = {
 						character = FROM
 					}
 					has_character_flag = pleaded_innocence
@@ -1024,7 +1014,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	min_age = 16
-	is_triggered_only = yes
 
 	trigger = {
 		independent = no
@@ -1052,24 +1041,24 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.55556
+	mean_time_to_happen = {
+		years = 18
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOT = {
 				wealth = 0
 			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			wealth = 50
 		}
 		modifier = {
-			factor = 0.20
+			factor = 5.0
 			trait = charitable
 		}
 	}
@@ -1311,7 +1300,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	min_age = 16
-	is_triggered_only = yes
 
 	trigger = {
 		independent = no
@@ -1319,12 +1307,10 @@ character_event = {
 		liege = {
 			has_regent = no
 			war = no
-			NOT = {
+			nor = {
 				has_opinion_modifier = {
 					who = ROOT modifier = requested_land
 				}
-			}
-			NOT = {
 				character = ROOT
 			}
 			demesne_size = 3
@@ -1340,26 +1326,26 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.25000
+	mean_time_to_happen = {
+		years = 40
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = envious
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = kind
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = charitable
 		}
 		modifier = {
-			factor = 0.50
+			factor = 2.0
 			trait = content
 		}
 	}
@@ -1632,10 +1618,8 @@ character_event = {
 		liege = {
 			any_vassal = {
 				prisoner = no
-				NOT = {
+				nor = {
 					trait = incapable
-				}
-				NOT = {
 					character = PREV
 				}
 				OR = {
@@ -1661,10 +1645,8 @@ character_event = {
 			random_vassal = {
 				limit = {
 					prisoner = no
-					NOT = {
+					nor = {
 						trait = incapable
-					}
-					NOT = {
 						character = PREV
 					}
 					OR = {
@@ -1703,10 +1685,8 @@ letter_event = {
 			factor = 1
 			modifier = {
 				factor = 0.5
-				NOT = {
+				nor = {
 					trait = kind
-				}
-				NOT = {
 					opinion = {
 						who = FROM value = 50
 					}
@@ -1714,10 +1694,8 @@ letter_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = {
+				nor = {
 					trait = kind
-				}
-				NOT = {
 					opinion = {
 						who = FROM value = 0
 					}
@@ -1963,7 +1941,6 @@ character_event = {
 	prisoner = no
 	only_rulers = yes
 	lacks_dlc = "Conclave"
-	is_triggered_only = yes
 
 	trigger = {
 		is_republic = yes
@@ -1988,22 +1965,22 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		factor = 0.06024
+	mean_time_to_happen = {
+		years = 166
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOT = {
 				wealth = -10
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			NOT = {
 				wealth = -100
 			}
 		}
 		modifier = {
-			factor = 2.00
+			factor = 0.5
 			trait = greedy
 		}
 	}
