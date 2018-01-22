@@ -7,7 +7,7 @@ malekith = {
 		asur_mage
 		druchi_mage
 	}
-	opposite_opinion = -200
+	opposite_opinion = -100							//
 	combat_rating = 3
 	command_modifier = {
 		morale_defence = 0.1
@@ -189,15 +189,16 @@ king_settra = {
 		black_arkhan
 	}
 	immortal = yes
-	monthly_character_prestige = 0.01
+	monthly_character_prestige = 1
+	nehekharan_gods_opinion = 20
 	combat_rating = 7
 	customizer = no
-	ambition_opinion = -100
-	opposite_opinion = -100
+	ambition_opinion = -200
+	opposite_opinion = -200
 	command_modifier = {
-		religious_enemy = 0.01
+		religious_enemy = 0.1
 		morale_offence = 0.05
-		damage = 0.01
+		damage = 0.1
 	}
 	ai_zeal = 100
 	ai_ambition = 100
